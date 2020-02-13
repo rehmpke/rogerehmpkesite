@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row space-top space-bottom">
+      <div class="col text-center">
+          <h2 class="section-heading" style="color:#333333;">Work</h2>
+          <p>Some things I've been working on...</p>
+          <hr class="primary" /><br/></div>
+  </div>
+</div>
+{% assign sorted_work = site.work | sort: "order" %}
+{% for work in sorted_work %}
+<div class="work__projectdiv work__kcc container">
+  <div class="row space-bottom double">
+      <div class="work__projectimgdiv__imgdiv col-lg-6 col-md-12 col-md-12"><img src="{{ work.screen_image }}" width="90%" alt="{{ work.screen_image_alt }}" /></div>
+      <div class="work__projectdiv__description col-lg-6 col-md-12 col-sm-12 text-center">
+          <h3>{{ work.work_name }}</h3>
+          <p>{{ work.case_description }}</p>
+          <div class="work__projectdiv__languagebar">
+              {% for skill in work.skill_labels %}
+              <p class="label_language">{{ skill.label }}</p>
+              {% endfor %}
+          </div>
+          {% if work.current_site != "#" %}
+          <div class="view_live_div"><a class="btn btn-lg btn-primary btn-block view_live" href="{{ work.current_site }}" target="_blank" rel="noopener noreferrer">VIEW LIVE</a></div>
+          {% endif %}
+      </div>
+  </div>
+</div>
+{% endfor %}

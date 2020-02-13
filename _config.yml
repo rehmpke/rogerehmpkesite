@@ -1,0 +1,23 @@
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+title: "Roger Ehmpke"
+email: "rehmpke@gmail.com"
+google-tag_key: 'GTM-T38CTSL'
+description: >- # this means to ignore newlines until "baseurl:"
+  "Roger Ehmpke, Frontend Web Developer."
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: rehmpke
+github_username:  rehmpke
+collections:
+  work:
+    output: false
+  recomendations:
+    output: false
+exclude:
+  - ".jekyll-cache/"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "node_modules/"
+  - "package.json"
+  - "package-lock.json"
+  - "README.md"
