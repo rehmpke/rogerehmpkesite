@@ -8,6 +8,7 @@ cache:
 script:
   - yarn test
 before_deploy:
+  - nvm install 12.16.1.
   - yarn global add travis-ci-cloudfront-invalidation
   - yarn run build
 deploy:
