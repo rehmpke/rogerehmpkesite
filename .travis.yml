@@ -5,6 +5,10 @@ cache:
   yarn: true
   directories:
     - node_modules
+language: ruby
+  cache: bundler
+  rvm:
+    - 2.5.3
 before_deploy:
   - nvm install 12.16.1
   - gem install jekyll bundler
