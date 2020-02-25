@@ -7,6 +7,8 @@ cache:
     - node_modules
 before_deploy:
   - nvm install 12.16.1
+  - gem install jekyll bundler
+  - bundle exec jekyll serve
   - yarn global add travis-ci-cloudfront-invalidation
   - pyenv global 3.7.1
   - pip install -U pip
