@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    build: "aws s3 cp ./_site/ s3://rogerehmpke.com --recursive"
+    "build": "aws s3 cp ./_site/ s3://rogerehmpke.com --recursive"
   },
   "author": "Roger Ehmpke",
   "license": "ISC"
