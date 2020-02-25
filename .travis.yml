@@ -3,9 +3,9 @@ cache: bundler
 rvm:
   - 2.6.3
 before_deploy:
-  - bundle install
   - nvm install 12.16.1
-  - gem install jekyll bundler
+  - bundle install
+  - gem install jekyll
   - bundle exec jekyll build
   - yarn global add travis-ci-cloudfront-invalidation
   - pyenv global 3.7.1
