@@ -3,10 +3,8 @@ cache: bundler
 rvm:
   - 2.6.3
 before_deploy:
-  - gem install rake
-  - gem install bundler
+  - gem install bundler jekyll
   - bundle install
-  - gem install jekyll
   - echo "******** Building Jekyll site ********"
   - jekyll build
   - echo "******** Uploading to S3 ********"
