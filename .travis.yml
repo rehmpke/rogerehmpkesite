@@ -2,11 +2,10 @@ language: ruby
 cache: bundler
 rvm:
   - 2.6.3
-before_deploy:
-  - gem install bundler jekyll
+install:
   - bundle install
-  - echo "******** Building Jekyll site ********"
-  - jekyll build
+script: bundle exec jekyll build
+before_deploy:
   - echo "******** Uploading to S3 ********"
   - yarn global add travis-ci-cloudfront-invalidation
   - pyenv global 3.7.1
