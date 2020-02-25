@@ -3,6 +3,7 @@ cache: bundler
 rvm:
   - 2.6.3
 before_deploy:
+  - gem install bundler
   - bundle install
   - jekyll build
   - yarn global add travis-ci-cloudfront-invalidation
