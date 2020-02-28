@@ -459,11 +459,12 @@ a:hover {
 
 .hero-shot {
     color: #fff;
-    background: linear-gradient(to left, #3b4874, rgba(220,36,48,0.8)),url(/assets/img/bg-code.jpg);
+    background: linear-gradient(to left, #3b4874, rgba(220,36,48,0.8)),url(/assets/img/IMG_6447.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-    height: 300%
+    height: 300%;
+    background-position-y: 0, -108px;
 }
 
 .hero-shot a {
