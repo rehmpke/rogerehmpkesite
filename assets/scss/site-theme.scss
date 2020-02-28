@@ -1,0 +1,22 @@
+// Variables
+@import '0-tools/vars';
+
+// Base items
+@import '1-base/typography';
+@import '1-base/links';
+@import '1-base/buttons';
+@import '1-base/img';
+
+// Modular components
+@import '2-modules/header';
+@import '2-modules/footer';
+
+// Layout items
+@import '3-layout/positioning';
+@import '3-layout/margins';
+@import '3-layout/padding';
+@import '3-layout/tables';
+@import '3-layout/section';
+
+// Page specific styling
+@import '4-pages/home';
