@@ -1,10 +1,10 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #404040;
-  font-family: "Source Sans Pro",Verdana,sans-serif;
-  font-size: 18px;
-  font-weight: 400;
+  color: $grey-body-text;
+  font-family: $font-family-paragraph;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
   line-height: 25.5px
 }
 
@@ -15,8 +15,8 @@ p.centered {
 h1,h2,h3,h4,h5 {
   margin: 0 0 25.5px 0;
   color: #fff;
-  font-family: "Roboto Slab",serif;
-  font-weight: 400
+  font-family: $font-family-headings;
+  font-weight: $font-weight-regular;
 }
 
 h1.centered,h2.centered,h3.centered,h4.centered,h5.centered {
@@ -25,7 +25,7 @@ h1.centered,h2.centered,h3.centered,h4.centered,h5.centered {
 
 h1 {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: $font-weight-bolder;
   line-height: normal;
   letter-spacing: -1px
 }
@@ -37,7 +37,7 @@ h2 {
 @media only screen and (min-device-width: 768px) {
   h1 {
       font-size: 32px;
-      font-weight: 600;
+      font-weight: $font-weight-bolder;
       line-height: normal;
       letter-spacing: -2px
   }
@@ -110,13 +110,13 @@ h5 {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: "Roboto Slab",serif;
-  font-weight: 600;
+  font-family: $font-family-headings;
+  font-weight: $font-weight-bolder;
   letter-spacing: 1px
 }
 
 strong {
-  font-weight: 700
+  font-weight: $font-weight-bold
 }
 
 em {
@@ -129,7 +129,7 @@ em {
 
 .caption,.article-text figcaption {
   color: #76736c;
-  font-family: "Source Sans Pro",Verdana,sans-serif;
+  font-family: $font-family-paragraph;
   font-size: 14px;
   line-height: 20px;
   margin: 5px 0 12.5px 0
@@ -148,14 +148,14 @@ em {
 }
 
 small {
-  font-family: "Source Sans Pro",Verdana,sans-serif;
+  font-family: $font-family-paragraph;
   font-size: 15px;
   line-height: 20px
 }
 
 blockquote {
   padding: 15px;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: $font-weight-bolder;
   color: #000
 }

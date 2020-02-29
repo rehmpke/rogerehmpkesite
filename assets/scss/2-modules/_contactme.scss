@@ -13,9 +13,9 @@
 .contactme {
   padding-bottom: 25px;
   padding-top: 25px;
-  font-family: "Source Sans Pro",Verdana,sans-serif;
-  color: #555555;
-  background: #fdcc52;
+  font-family: $font-family-paragraph;
+  color: $grey-contactme-light-text;
+  background: $contactme-background-yellow;
   background: -webkit-linear-gradient(#fdcc52, #fdc539);
   background: linear-gradient(#fdcc52, #fdc539)
 }
@@ -26,7 +26,7 @@
 }
 
 .contactme .btn-primary {
-  background-color: #3b4874;
-  border-color: #3b4874;
-  color: #fff
+  background-color: $contactme-button-background-blue;
+  border-color: $contactme-button-background-blue;
+  color: $dark-button-text;
 }

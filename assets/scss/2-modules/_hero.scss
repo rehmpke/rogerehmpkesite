@@ -1,6 +1,6 @@
 .hero-shot {
-  color: #fff;
-  background: linear-gradient(to left, #3b4874, rgba(220,36,48,0.8)),url(/assets/img/IMG_6447.jpg);
+  color: $hero-shot-text;
+  background: linear-gradient(to left, #3b4874, rgba(220,36,48,0.8)),url(#{$imagedir}IMG_6447.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -9,9 +9,9 @@
 }
 
 .hero-shot a {
-  color: #fdcc52
+  color: $hero-shot-link-gold;
 }
 
 .hero-shot a:hover {
-  color: #fcbd20
+  color: $hero-shot-link-hover-gold
 }

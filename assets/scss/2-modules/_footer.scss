@@ -1,5 +1,5 @@
 .global-footer {
-  font-family: "Source Sans Pro",Verdana,sans-serif;
+  font-family: $font-family-paragraph;
   line-height: 20px
 }
 
@@ -27,7 +27,7 @@
 
 .footer-site-map a {
   color: #3b4874;
-  font-weight: bold
+  font-weight: $font-weight-bold
 }
 
 .social-sharing {
@@ -36,7 +36,7 @@
 
 @media only screen and (min-width: 768px) {
   .social-sharing.align-right {
-      text-align:right
+      text-align: right
   }
 
   .social-sharing.align-left {
@@ -45,22 +45,22 @@
 }
 
 .social-sharing-icon.white {
-  fill: #813a59
+  fill: $social-sharing-icon;
 }
 
 .social-sharing-icon.white :hover {
-  fill: #3b4874
+  fill: $social-sharing-icon-hover;
 }
 
 .social-sharing-caption {
-  font-family: "Source Sans Pro",Verdana,sans-serif;
+  font-family: $font-family-paragraph;
   font-size: 24px;
   vertical-align: middle
 }
 
 @media only screen and (max-width: 600px) {
   .social-sharing-caption:not(.small) {
-      display:block;
+      display: block;
       width: 80%;
       margin: 0 auto 10px auto
   }

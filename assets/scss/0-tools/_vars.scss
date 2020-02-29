@@ -6,7 +6,7 @@ $font-family-headings: 'Roboto Slab', serif;
 $font-family-paragraph: 'Source Sans Pro', Verdana, sans-serif;
 
 // Fonts
-$font-size-base: 1rem;
+$font-size-base: 1.125rem;
 
 $font-weight-light: 300;
 $font-weight-regular: 400;
@@ -21,6 +21,11 @@ $imagedir:'/assets/img/';
 // Colors
 
 // Site primary colors
+$primary-gold: #fdcc52;
+$primary-red-violet: #813a59;
+$primary-blue: #3b4874;
+
+$secondary-saturated-gold: #fcbd20;
 
 // black and white
 $black: #000;
@@ -36,10 +41,20 @@ $grey-6: #3c3c3c;
 $grey-7: #222;
 
 // layout
+$grey-body-text: $grey-6;
+$hero-shot-text: $white;
+$grey-contactme-light-text: $grey-5;
+$contactme-background-yellow: $primary-gold;
 
 // buttons
+$contactme-button-background-blue: $primary-blue; //used for background and border
+$dark-button-text: $white;
 
 // links
+$hero-shot-link-gold: $primary-gold;
+$hero-shot-link-hover-gold: $secondary-saturated-gold;
+$social-sharing-icon: $primary-red-violet;
+$social-sharing-icon-hover: $primary-blue;
 
 html,body {
   overflow-x: hidden
