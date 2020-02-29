@@ -1,0 +1,13 @@
+a {
+  color: #3b4874;
+  -moz-transition: color 0.15s;
+  -o-transition: color 0.15s;
+  -webkit-transition: color 0.15s;
+  transition: color 0.15s;
+  text-decoration: none;
+  outline: 0 !important
+}
+
+a:hover {
+  color: #BFBFBF
+}

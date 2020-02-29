@@ -1,0 +1,32 @@
+@media only screen and (max-width: 919px) {
+  .contactme .row {
+      padding-top:10px
+  }
+
+  .contactme .row:before {
+      top: -55px;
+      left: 50%;
+      margin-left: -30px
+  }
+}
+
+.contactme {
+  padding-bottom: 25px;
+  padding-top: 25px;
+  font-family: "Source Sans Pro",Verdana,sans-serif;
+  color: #555555;
+  background: #fdcc52;
+  background: -webkit-linear-gradient(#fdcc52, #fdc539);
+  background: linear-gradient(#fdcc52, #fdc539)
+}
+
+.contactme label {
+  font-size: 13px;
+  padding-left: 13px
+}
+
+.contactme .btn-primary {
+  background-color: #3b4874;
+  border-color: #3b4874;
+  color: #fff
+}
