@@ -235,18 +235,17 @@ img[data-src] {
   .contactme .row {
     padding-top: 10px; }
   .contactme .row:before {
-    top: -55px;
     left: 50%;
-    margin-left: -30px; } }
+    margin-left: -30px;
+    top: -55px; } }
 
 .contactme {
-  padding-bottom: 25px;
-  padding-top: 25px;
-  font-family: "Source Sans Pro", Verdana, sans-serif;
-  color: #555;
   background: #fdcc52;
   background: -webkit-linear-gradient(#fdcc52, #fdc539);
-  background: linear-gradient(#fdcc52, #fdc539); }
+  background: linear-gradient(#fdcc52, #fdc539);
+  color: #555;
+  padding-bottom: 25px;
+  padding-top: 25px; }
 
 .contactme label {
   font-size: 0.8125rem;

@@ -1,23 +1,23 @@
 @media only screen and (max-width: 919px) {
   .contactme .row {
-      padding-top:10px
+    padding-top:10px
   }
 
   .contactme .row:before {
-      top: -55px;
-      left: 50%;
-      margin-left: -30px
+    left: 50%;
+    margin-left: -30px;
+    top: -55px
+
   }
 }
 
 .contactme {
-  padding-bottom: 25px;
-  padding-top: 25px;
-  font-family: $font-family-paragraph;
-  color: $grey-contactme-light-text;
   background: $contactme-background-yellow;
   background: -webkit-linear-gradient(#fdcc52, #fdc539);
-  background: linear-gradient(#fdcc52, #fdc539)
+  background: linear-gradient(#fdcc52, #fdc539);
+  color: $grey-contactme-light-text;
+  padding-bottom: 25px;
+  padding-top: 25px
 }
 
 .contactme label {
