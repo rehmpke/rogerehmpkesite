@@ -1,47 +1,26 @@
 .global-footer {
-  font-family: $font-family-paragraph;
   line-height: 20px
 }
 
-.global-footer a:hover {
-  color: #999999
-}
-
 .footer-site-map {
-  color: #3b4874;
-  font-size: 15px;
-  padding: 0 0
+  font-size: 0.9375rem;
 }
 
 @media screen and (max-width: 800px) and (min-width: 481px) {
   .footer-site-map {
-      padding:0 0 30px
+      padding-bottom: 30px;
   }
 }
 
 @media screen and (max-width: 481px) {
   .footer-site-map {
-      padding:50px 0 30px
+      padding-bottom: 30px;
+      padding-top: 50px;
   }
 }
 
 .footer-site-map a {
-  color: #3b4874;
   font-weight: $font-weight-bold
-}
-
-.social-sharing {
-  text-align: center
-}
-
-@media only screen and (min-width: 768px) {
-  .social-sharing.align-right {
-      text-align: right
-  }
-
-  .social-sharing.align-left {
-      text-align: left
-  }
 }
 
 .social-sharing-icon.white {
@@ -52,24 +31,8 @@
   fill: $social-sharing-icon-hover;
 }
 
-.social-sharing-caption {
-  font-family: $font-family-paragraph;
-  font-size: 24px;
-  vertical-align: middle
-}
-
-@media only screen and (max-width: 600px) {
-  .social-sharing-caption:not(.small) {
-      display: block;
-      width: 80%;
-      margin: 0 auto 10px auto
-  }
-}
-
 .social-sharing-icon {
   margin-left: 10px;
-  font-size: 34px;
-  text-decoration: none !important;
   vertical-align: middle
 }
 
@@ -79,13 +42,5 @@
 
 .social-sharing-icon.small {
   margin-left: 5px;
-  font-size: 22px
-}
-
-.social-sharing.no-caption .social-sharing-icon:first-child {
-  margin-left: 0
-}
-
-.social-sharing.no-caption .social-sharing-icon:last-child {
-  margin-right: 0
+  font-size: 1.375rem
 }
