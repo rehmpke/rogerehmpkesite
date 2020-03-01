@@ -1,5 +1,5 @@
 a {
-  color: #3b4874;
+  color: $link-color;
   -moz-transition: color 0.15s;
   -o-transition: color 0.15s;
   -webkit-transition: color 0.15s;
@@ -9,5 +9,5 @@ a {
 }
 
 a:hover {
-  color: #BFBFBF
+  color: $link-hover-color;
 }
