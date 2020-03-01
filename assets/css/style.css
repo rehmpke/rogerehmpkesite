@@ -23,17 +23,17 @@ h1.centered, h2.centered, h3.centered, h4.centered, h5.centered {
   text-align: center; }
 
 h1 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 600;
   line-height: normal;
   letter-spacing: -1px; }
 
 h2 {
-  font-size: 2.7em; }
+  font-size: 3.0375rem; }
 
 @media only screen and (min-device-width: 768px) {
   h1 {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 600;
     line-height: normal;
     letter-spacing: -2px; } }
@@ -52,43 +52,42 @@ h2 {
   h1 {
     width: 256px; }
   h2 {
-    font-size: 1.9em;
+    font-size: 3.0375rem;
     line-height: 1.0;
     letter-spacing: -0.5px; } }
 
 h3 {
-  font-size: 30px;
+  font-size: 1.875rem;
   line-height: 28.5px;
   letter-spacing: -0.5px; }
 
 @media only screen and (min-width: 768px) {
   h3 {
-    font-size: 28px;
+    font-size: 1.875rem;
     line-height: 31px; } }
 
 h4 {
-  font-size: 19px;
+  font-size: 1.1875rem;
   line-height: 25.5px; }
 
 @media only screen and (min-width: 768px) {
   h4 {
-    font-size: 23px;
+    font-size: 1.4375rem;
     line-height: 28.5px;
     letter-spacing: -0.5px; } }
 
 h5 {
-  font-size: 17px;
+  font-size: 1.0625rem;
   line-height: 23.5px;
   margin-bottom: 12.75px; }
 
 @media only screen and (min-width: 768px) {
   h5 {
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 25.5px;
     letter-spacing: -0.5px; } }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto Slab", serif;
   font-weight: 600;
   letter-spacing: 1px; }
 
@@ -104,7 +103,7 @@ em {
 .caption, .article-text figcaption {
   color: #76736c;
   font-family: "Source Sans Pro", Verdana, sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 20px;
   margin: 5px 0 12.5px 0; }
 
@@ -119,7 +118,7 @@ em {
 
 small {
   font-family: "Source Sans Pro", Verdana, sans-serif;
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 20px; }
 
 blockquote {
@@ -138,7 +137,7 @@ a {
   outline: 0 !important; }
 
 a:hover {
-  color: #BFBFBF; }
+  color: #999; }
 
 .btn-primary {
   background-color: #fdcc52;
@@ -253,7 +252,7 @@ img[data-src] {
   background: linear-gradient(#fdcc52, #fdc539); }
 
 .contactme label {
-  font-size: 13px;
+  font-size: 0.8125rem;
   padding-left: 13px; }
 
 .contactme .btn-primary {
@@ -262,37 +261,22 @@ img[data-src] {
   color: #fff; }
 
 .global-footer {
-  font-family: "Source Sans Pro", Verdana, sans-serif;
   line-height: 20px; }
 
-.global-footer a:hover {
-  color: #999999; }
-
 .footer-site-map {
-  color: #3b4874;
-  font-size: 15px;
-  padding: 0 0; }
+  font-size: 0.9375rem; }
 
 @media screen and (max-width: 800px) and (min-width: 481px) {
   .footer-site-map {
-    padding: 0 0 30px; } }
+    padding-bottom: 30px; } }
 
 @media screen and (max-width: 481px) {
   .footer-site-map {
-    padding: 50px 0 30px; } }
+    padding-bottom: 30px;
+    padding-top: 50px; } }
 
 .footer-site-map a {
-  color: #3b4874;
   font-weight: 700; }
-
-.social-sharing {
-  text-align: center; }
-
-@media only screen and (min-width: 768px) {
-  .social-sharing.align-right {
-    text-align: right; }
-  .social-sharing.align-left {
-    text-align: left; } }
 
 .social-sharing-icon.white {
   fill: #813a59; }
@@ -300,35 +284,9 @@ img[data-src] {
 .social-sharing-icon.white :hover {
   fill: #3b4874; }
 
-.social-sharing-caption {
-  font-family: "Source Sans Pro", Verdana, sans-serif;
-  font-size: 24px;
-  vertical-align: middle; }
-
-@media only screen and (max-width: 600px) {
-  .social-sharing-caption:not(.small) {
-    display: block;
-    width: 80%;
-    margin: 0 auto 10px auto; } }
-
 .social-sharing-icon {
   margin-left: 10px;
-  font-size: 34px;
-  text-decoration: none !important;
   vertical-align: middle; }
-
-.social-sharing-icon i {
-  vertical-align: middle; }
-
-.social-sharing-icon.small {
-  margin-left: 5px;
-  font-size: 22px; }
-
-.social-sharing.no-caption .social-sharing-icon:first-child {
-  margin-left: 0; }
-
-.social-sharing.no-caption .social-sharing-icon:last-child {
-  margin-right: 0; }
 
 .row.space-top {
   padding-top: 25px; }
