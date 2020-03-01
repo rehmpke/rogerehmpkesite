@@ -1,13 +1,13 @@
 .btn-primary {
-  background-color: #fdcc52;
+  background-color: $primary-button;
   border-radius: 23px;
-  border-color: #fdcc52;
-  color: #242c47
+  border-color: $primary-button;
+  color: $light-button-text
 }
 
 .btn-primary:hover {
-  background-color: #813a59;
-  border-color: #813a59
+  background-color: $primary-button-hover;
+  border-color: $primary-button-hover
 }
 
 .btn-group-lg>.btn,.btn-lg {
