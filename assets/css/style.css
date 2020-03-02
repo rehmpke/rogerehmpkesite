@@ -23,8 +23,8 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-size: 1.5rem;
   font-weight: 600;
-  line-height: normal;
-  letter-spacing: -1px; }
+  letter-spacing: -1px;
+  line-height: normal; }
 
 @media screen and (min-width: 360px) {
   h1 {
@@ -43,19 +43,19 @@ h1 {
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 1.9rem;
-    line-height: normal;
-    letter-spacing: -2px; } }
+    letter-spacing: -2px;
+    line-height: normal; } }
 
 @media screen and (min-width: 1500px) {
   h1 {
     font-size: 2rem;
-    line-height: normal;
-    letter-spacing: -2px; } }
+    letter-spacing: -2px;
+    line-height: normal; } }
 
 h2 {
   font-size: 2.1rem;
-  line-height: 1.0;
-  letter-spacing: -0.5px; }
+  letter-spacing: -0.5px;
+  line-height: 1.0; }
 
 @media screen and (min-width: 360px) {
   h2 {
@@ -75,8 +75,8 @@ h2 {
 
 h3 {
   font-size: 1.6rem;
-  line-height: 28.5px;
-  letter-spacing: -0.5px; }
+  letter-spacing: -0.5px;
+  line-height: 28.5px; }
 
 @media screen and (min-width: 576px) {
   h3 {
@@ -94,8 +94,8 @@ h4 {
 @media screen and (min-width: 768px) {
   h4 {
     font-size: 1.1875rem;
-    line-height: 28.5px;
-    letter-spacing: -0.5px; } }
+    letter-spacing: -0.5px;
+    line-height: 28.5px; } }
 
 h5 {
   font-size: 1.0625rem;
@@ -105,8 +105,8 @@ h5 {
 @media screen and (min-width: 768px) {
   h5 {
     font-size: 1.25rem;
-    line-height: 25.5px;
-    letter-spacing: -0.5px; } }
+    letter-spacing: -0.5px;
+    line-height: 25.5px; } }
 
 strong {
   font-weight: 700; }
@@ -139,27 +139,27 @@ small {
   line-height: 20px; }
 
 blockquote {
+  color: #000;
   padding: 15px;
   font-size: 1.25rem;
-  font-weight: 600;
-  color: #000; }
+  font-weight: 600; }
 
 a {
   color: #3b4874;
+  outline: 0 !important;
+  text-decoration: none;
   -moz-transition: color 0.15s;
   -o-transition: color 0.15s;
   -webkit-transition: color 0.15s;
-  transition: color 0.15s;
-  text-decoration: none;
-  outline: 0 !important; }
+  transition: color 0.15s; }
 
 a:hover {
   color: #999; }
 
 .btn-primary {
   background-color: #fdcc52;
-  border-radius: 23px;
   border-color: #fdcc52;
+  border-radius: 23px;
   color: #222; }
 
 .btn-primary:hover {
@@ -177,13 +177,13 @@ img[data-src] {
   opacity: 0; }
 
 .hero-shot {
-  color: #fff;
   background: linear-gradient(to left, #3b4874, rgba(220, 36, 48, 0.8)), url(/assets/img/IMG_6447.jpg);
+  background-position: top center;
+  background-position-y: 0, -108px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
-  height: 300%;
-  background-position-y: 0, -108px; }
+  color: #fff;
+  height: 300%; }
 
 .hero-shot a {
   color: #fdcc52; }
@@ -214,8 +214,8 @@ img[data-src] {
 .label_language {
   background: #813a59;
   color: #fff;
-  padding: 3px 10px;
-  margin: 0 5px; }
+  margin: 0 5px;
+  padding: 3px 10px; }
 
 .work__projectdiv h3 {
   color: #727272;
@@ -233,11 +233,11 @@ img[data-src] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 6px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   margin: 0 auto;
+  padding: 6px;
   text-align: center;
   width: 50%; }
 

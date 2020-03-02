@@ -1,11 +1,11 @@
 .hero-shot {
-  color: $hero-shot-text;
   background: linear-gradient(to left, #3b4874, rgba(220,36,48,0.8)),url(#{$imagedir}IMG_6447.jpg);
+  background-position: top center;
+  background-position-y: 0, -108px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
+  color: $hero-shot-text;
   height: 300%;
-  background-position-y: 0, -108px;
 }
 
 .hero-shot a {
