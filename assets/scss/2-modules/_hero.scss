@@ -12,6 +12,14 @@
   color: $heading--hero-shot;
 }
 
+.hero-shot__img--circle {
+  border-radius: 50%;
+  border-width: 7px;
+  border-style: solid;
+  border-color: $circle__border--hero-shot;
+  margin:0 auto
+}
+
 .hero-shot a {
   color: $hero-shot-link-gold;
 }

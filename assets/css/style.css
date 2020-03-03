@@ -190,6 +190,13 @@ img[data-src] {
 .heading--hero-shot {
   color: #fff; }
 
+.hero-shot__img--circle {
+  border-radius: 50%;
+  border-width: 7px;
+  border-style: solid;
+  border-color: #242c47;
+  margin: 0 auto; }
+
 .hero-shot a {
   color: #fdcc52; }
 
