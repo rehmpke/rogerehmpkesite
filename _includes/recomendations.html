@@ -2,7 +2,7 @@
   <div class="container">
       <div class="row space-top">
           <div class="col text-center">
-              <h2 class="section-heading" style="color:#333333;">Recomendations</h2>
+              <h2>Recomendations</h2>
               <hr class="primary" /><br/></div>
       </div>
   </div>
@@ -12,8 +12,8 @@
         {% for recomendation in sorted_recomendation %}
           <div class="col-sm-12 col-lg-12 col-md-12 text-center">
               <div class="testimonial-box">
-                  <h3 style="color:#333333;">{{ recomendation.recomended_person }}<br/><span style="font-weight: normal;font-size: 1.3rem;">{{ recomendation.recomended_title }}</span></h3>
-                  <p class="text-muted">{{ recomendation.recomended_quote }}</p>
+                  <h3>{{ recomendation.recomended_person }}<br/><span style="font-weight: normal;font-size: 1.3rem;">{{ recomendation.recomended_title }}</span></h3>
+                  <p>{{ recomendation.recomended_quote }}</p>
               </div>
           </div>
           {% if forloop.first %}<br/><br/>{% endif %}

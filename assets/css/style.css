@@ -14,13 +14,13 @@ p.centered {
   text-align: center; }
 
 h1, h2, h3, h4, h5 {
-  color: #fff;
   font-family: "Roboto Slab", serif;
   font-weight: 600;
   letter-spacing: 1px;
   margin: 0 0 25.5px 0; }
 
 h1 {
+  color: #3c3c3c;
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -1px;
@@ -53,6 +53,7 @@ h1 {
     line-height: normal; } }
 
 h2 {
+  color: #222;
   font-size: 2.1rem;
   letter-spacing: -0.5px;
   line-height: 1.0; }
@@ -74,6 +75,7 @@ h2 {
     font-size: 3.0375rem; } }
 
 h3 {
+  color: #3c3c3c;
   font-size: 1.6rem;
   letter-spacing: -0.5px;
   line-height: 28.5px; }
@@ -185,6 +187,9 @@ img[data-src] {
   color: #fff;
   height: 300%; }
 
+.heading--hero-shot {
+  color: #fff; }
+
 .hero-shot a {
   color: #fdcc52; }
 
@@ -218,7 +223,6 @@ img[data-src] {
   padding: 3px 10px; }
 
 .work__projectdiv h3 {
-  color: #727272;
   margin: 5% 0;
   text-align: center; }
 
@@ -266,6 +270,9 @@ img[data-src] {
   color: #555;
   padding-bottom: 25px;
   padding-top: 25px; }
+
+.contactme p {
+  color: #222; }
 
 .contactme label {
   font-size: 0.8125rem;
