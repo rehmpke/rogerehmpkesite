@@ -153,26 +153,6 @@ em {
   margin-bottom: 3px !important
 }
 
-.caption,.article-text figcaption {
-  color: #76736c;
-  font-family: $font-family-paragraph;
-  font-size: 0.875rem;
-  line-height: 20px;
-  margin: 5px 0 12.5px 0
-}
-
-.caption.light,.article-text figcaption.light {
-  color: #d4d4d4
-}
-
-.caption.dark,.article-text figcaption.dark {
-  color: #000
-}
-
-.caption.centered,.article-text figcaption.centered {
-  text-align: center
-}
-
 small {
   font-family: $font-family-paragraph;
   font-size: 0.9375rem;
