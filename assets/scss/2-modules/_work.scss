@@ -22,8 +22,8 @@
 }
 
 .label_language {
-  background: #813a59;
-  color: #fff;
+  background: $label-language-background;
+  color: $label-language__text;
   margin: 0 5px;
   padding: 3px 10px
 }
