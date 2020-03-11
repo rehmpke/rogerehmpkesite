@@ -23,3 +23,7 @@ exclude:
   - "package-lock.json"
   - "README.md"
   - "assets/scss/"
+  - "assets/js/src/"
+  - "postcss.config.js"
+  - "buildtools/"
+  - "webpack.config.js"
