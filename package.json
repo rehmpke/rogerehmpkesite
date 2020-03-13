@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "webpack --watch --mode development",
+    "dev": "webpack --watch --mode development --hot",
     "build": "aws s3 cp ./_site s3://rogerehmpke.com --recursive"
   },
   "devDependencies": {
