@@ -10,7 +10,7 @@
 {% for work in sorted_work %}
 <div class="work__projectdiv work__kcc container">
   <div class="row space-bottom double">
-      <div class="work__projectimgdiv__imgdiv col-lg-6 col-md-12 col-md-12"><img src="{{ work.screen_image }}" width="90%" alt="{{ work.screen_image_alt }}" /></div>
+      <div class="work__projectimgdiv__imgdiv col-lg-6 col-md-12 col-md-12"><img src="{{ work.screen_image }}" width="90%" data-src="{{ work.screen_image }}" alt="{{ work.screen_image_alt }}" /></div>
       <div class="work__projectdiv__description col-lg-6 col-md-12 col-sm-12 text-center">
           <h3>{{ work.work_name }}</h3>
           <p>{{ work.case_description }}</p>
