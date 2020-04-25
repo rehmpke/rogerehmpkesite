@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "05fa4c900d426ce610e8";
+/******/ 	var hotCurrentHash = "2789b7870dd2f0ab877d";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -803,7 +803,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Footer\", function() { return Footer; });\nclass Footer {\n  constructor() {\n    // Sets copyright year\n    function footerDate() {\n      const d = new Date();\n      const fullYear = d.getFullYear();\n      document.getElementById('currentYear').innerHTML = fullYear;\n    }\n\n    return footerDate();\n  }\n\n}\n\n//# sourceURL=webpack:///./assets/js/src/footer.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Footer\", function() { return Footer; });\nclass Footer {\n  constructor() {\n    // Sets copyright year\n    function footerDate() {\n      const d = new Date();\n      const fullYear = d.getFullYear();\n      document.querySelector('#currentYear').innerHTML = fullYear;\n    }\n\n    return footerDate();\n  }\n\n}\n\n//# sourceURL=webpack:///./assets/js/src/footer.js?");
 
 /***/ }),
 
@@ -815,7 +815,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../scss/style.scss */ \"./assets/scss/style.scss\");\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_style_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _src_footer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/footer.js */ \"./assets/js/src/footer.js\");\n\n\nlet footer = new _src_footer_js__WEBPACK_IMPORTED_MODULE_1__[\"Footer\"]();\nfooter.footerDate;\n\n//# sourceURL=webpack:///./assets/js/src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../scss/style.scss */ \"./assets/scss/style.scss\");\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_style_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _src_footer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/footer.js */ \"./assets/js/src/footer.js\");\n/* harmony import */ var _src_lazyload_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../src/lazyload.js */ \"./assets/js/src/lazyload.js\");\n\n\n\nlet footer = new _src_footer_js__WEBPACK_IMPORTED_MODULE_1__[\"Footer\"]();\nfooter.footerDate;\n\n//# sourceURL=webpack:///./assets/js/src/index.js?");
+
+/***/ }),
+
+/***/ "./assets/js/src/lazyload.js":
+/*!***********************************!*\
+  !*** ./assets/js/src/lazyload.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction lazyLoad() {\n  //   const lazyLoadImages = document.querySelectorAll('img[data-src]');\n  //   lazyLoadImages.forEach((img) => {\n  //     img.src = img.dataset.src;\n  //     img.onload = () => img.removeAttribute('data-src');\n  //   });\n  // }\n  //\n  // create config object: rootMargin and threshold\n  // are two properties exposed by the interface\n  const config = {\n    rootMargin: '0px 0px 50px 0px',\n    threshold: 0\n  }; // register the config object with an instance\n  // of intersectionObserver\n\n  let observer = new IntersectionObserver(function (entries, self) {\n    // iterate over each entry\n    entries.forEach(entry => {\n      // process just the images that are intersecting.\n      // isIntersecting is a property exposed by the interface\n      if (entry.isIntersecting) {\n        // custom function that copies the path to the img\n        // from data-src to src\n        preloadImage(entry.target); // the image is now in place, stop watching\n\n        self.unobserve(entry.target);\n      }\n    });\n  }, config);\n  const imgs = document.querySelectorAll('[data-src]');\n  imgs.forEach(img => {\n    observer.observe(img);\n  });\n\n  function preloadImage(img) {\n    const src = img.getAttribute('data-src');\n\n    if (!src) {\n      return;\n    }\n\n    img.src = src;\n\n    _updateMonitoring();\n  } // Just for the monitoring purpose. Isn't needed in real projects\n\n\n  function _updateMonitoring() {// const container = document.getElementById('isIntersecting');\n    // const placeholder = container.querySelector('.placeholder')\n    // loaded += 1;\n    // placeholder.innerHTML = loaded;\n    // container.style.opacity = 1;\n  }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (lazyLoad);\n\n//# sourceURL=webpack:///./assets/js/src/lazyload.js?");
 
 /***/ }),
 
