@@ -3,7 +3,7 @@ export class Footer {  constructor() {
 function footerDate() {
   const d = new Date();
   const fullYear = d.getFullYear();
-  document.getElementById('currentYear').innerHTML = fullYear;
+  document.querySelector('#currentYear').innerHTML = fullYear;
 }
 
 return footerDate();
