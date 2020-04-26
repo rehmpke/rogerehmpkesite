@@ -5,3 +5,6 @@ import lazyload from '../src/lazyload.js';
 let footer=new Footer();
 footer.footerDate;
 
+document.addEventListener('DOMContentLoaded', function() {
+  lazyload();
+});
