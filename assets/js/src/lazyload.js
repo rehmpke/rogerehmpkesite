@@ -40,16 +40,6 @@ function lazyLoad() {
     const src = img.getAttribute('data-src');
     if (!src) { return; }
     img.src = src;
-    _updateMonitoring();
-  }
-  
-  // Just for the monitoring purpose. Isn't needed in real projects
-  function _updateMonitoring() {
-    // const container = document.getElementById('isIntersecting');
-    // const placeholder = container.querySelector('.placeholder')
-    // loaded += 1;
-    // placeholder.innerHTML = loaded;
-    // container.style.opacity = 1;
   }
   
   }
