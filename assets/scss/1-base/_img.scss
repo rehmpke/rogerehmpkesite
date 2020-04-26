@@ -1,6 +1,6 @@
 img {
   opacity: 1;
-  transition: opacity 0.3s
+  transition: opacity 1.5s cubic-bezier(0.25, 0.1, 0, 1.49);
 }
 
 img[data-src] {
