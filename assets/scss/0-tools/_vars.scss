@@ -23,13 +23,12 @@ $imagedir:'/assets/img/';
 // Colors
 
 // Site primary colors
-$primary-gold: #fdcc52;
-$primary-red-gradient: rgba(215, 27, 39, 0.8);
 $primary-red-violet: #9D394B;
 $primary-blue: #3b4874;
-
-$secondary-saturated-gold: #fcbd20;
 $primary-blue-darker: #242c47;
+$primary-gradient: $primary-blue, rgba(215, 27, 39, 0.8);
+$primary-gold: #fdcc52;
+$secondary-saturated-gold: #fcbd20;
 
 // black and white
 $black: #000;
