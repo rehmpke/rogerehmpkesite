@@ -10,17 +10,17 @@
 {% for work in sorted_work %}
 <div class="work__projectdiv work__kcc container">
   <div class="row space-bottom double">
-      <div class="work__projectimgdiv__imgdiv col-lg-6 col-md-12 col-md-12"><img width="90%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{{ work.screen_image }}" alt="{{ work.screen_image_alt }}" /></div>
-      <div class="work__projectdiv__description col-lg-6 col-md-12 col-sm-12 text-center">
+      <div class="work__projectimgdiv__imgdiv col-lg-4 col-md-12 col-md-12"><img width="90%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{{ work.screen_image }}" alt="{{ work.screen_image_alt }}" /></div>
+      <div class="work__projectdiv__description col-lg-7 col-md-12 col-sm-12">
           <h3>{{ work.work_name }}</h3>
           <p>{{ work.case_description }}</p>
           <div class="work__projectdiv__languagebar">
               {% for skill in work.skill_labels %}
-              <p class="label_language">{{ skill.label }}</p>
+              <span class="label_language">{{ skill.label }}</span>
               {% endfor %}
           </div>
           {% if work.current_site != "#" %}
-          <div class="view_live_div"><a class="btn btn-lg btn-primary btn-block view_live" href="{{ work.current_site }}" target="_blank" rel="noopener noreferrer">VIEW LIVE</a></div>
+          <div class="view_live_div"><a class="btn btn-lg btn-primary view_live" href="{{ work.current_site }}" target="_blank" rel="noopener noreferrer">VIEW LIVE</a></div>
           {% endif %}
       </div>
   </div>
