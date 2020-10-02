@@ -1,5 +1,5 @@
 .hero-shot {
-  background: linear-gradient(to left, #3b4874, rgba(220,36,48,0.8)),url(#{$imagedir}IMG_6447.jpg);
+  background: linear-gradient(to left, #3b4874, #{$primary-red-gradient}),url(#{$imagedir}IMG_6447.jpg);
   background-position: top center;
   background-position-y: 0, -108px;
   background-repeat: no-repeat;
@@ -10,11 +10,12 @@
 
 .heading--hero-shot {
   color: $heading--hero-shot;
+  font-weight: $font-weight-extra-bold;
 }
 
 .hero-shot__img--circle {
   border-radius: 50%;
-  border-width: 7px;
+  border-width: 8px;
   border-style: solid;
   border-color: $circle__border--hero-shot;
   margin:0 auto
