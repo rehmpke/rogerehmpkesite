@@ -16,26 +16,21 @@
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center
 }
 
 .label_language {
   background: $label-language-background;
   color: $label-language__text;
-  margin: 0 5px;
+  margin: 5px;
   padding: 3px 10px
 }
 
 .work__projectdiv h3 {
   margin: 5% 0;
-  text-align: center
 }
 
 .work__projectdiv p {
   margin-bottom: 5%;
-  text-align: center
 }
 
 .view_live_div {
@@ -43,14 +38,7 @@
 }
 
 .view_live {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   margin: 0 auto;
-  padding: 6px;
+  padding: 6px 50px;
   text-align: center;
-  width: 50%
 }
