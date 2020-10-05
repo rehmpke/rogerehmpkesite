@@ -13,7 +13,7 @@
 
 .contactme {
   background: $contactme-background-yellow;
-  background: linear-gradient(#fdcc52, #fdc539);
+  background: linear-gradient(#{$contactme-gradient});
   color: $grey-contactme-light-text;
   padding-bottom: 25px;
   padding-top: 25px
