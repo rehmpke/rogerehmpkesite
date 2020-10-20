@@ -40,15 +40,13 @@
   margin: 5% 0;
 }
 
-.work__projectdiv p {
-  margin-bottom: 5%;
-}
-
 .view_live_div {
-  margin-top: 15px
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
-.view_live:hover {
+.view_live:hover,
+.view_live:focus {
   color: #fff;
 }
 

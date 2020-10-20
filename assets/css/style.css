@@ -119,7 +119,8 @@ a {
   text-decoration: none;
   transition: color 0.15s; }
 
-a:hover {
+a:hover,
+a:focus {
   color: #999; }
 
 .btn {
@@ -134,7 +135,8 @@ a:hover {
   padding: 0.5em 2em;
   text-align: center; }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus {
   background-color: #9D394B;
   border-color: #9D394B; }
 
@@ -178,7 +180,8 @@ img[data-src] {
 .hero-shot a {
   color: #fdcc52; }
 
-.hero-shot a:hover {
+.hero-shot a:hover,
+.hero-shot a:focus {
   color: #fcbd20; }
 
 @media screen and (min-width: 768px) {
@@ -237,13 +240,12 @@ img[data-src] {
 .work__projectdiv h3 {
   margin: 5% 0; }
 
-.work__projectdiv p {
-  margin-bottom: 5%; }
-
 .view_live_div {
-  margin-top: 15px; }
+  margin-top: 2em;
+  margin-bottom: 2em; }
 
-.view_live:hover {
+.view_live:hover,
+.view_live:focus {
   color: #fff; }
 
 @media screen and (min-width: 900px) {
@@ -349,7 +351,8 @@ form {
 .social-sharing-icon.white {
   fill: #9D394B; }
 
-.social-sharing-icon.white :hover {
+.social-sharing-icon.white :hover,
+.social-sharing-icon.white :focus {
   fill: #3b4874; }
 
 .social-sharing-icon {

@@ -12,7 +12,8 @@
   text-align: center;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus {
   background-color: $primary-button-hover;
   border-color: $primary-button-hover
 }

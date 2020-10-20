@@ -31,7 +31,8 @@
   color: $hero-shot-link-gold;
 }
 
-.hero-shot a:hover {
+.hero-shot a:hover,
+.hero-shot a:focus {
   color: $hero-shot-link-hover-gold
 }
 

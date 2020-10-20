@@ -17,7 +17,8 @@
   fill: $social-sharing-icon;
 }
 
-.social-sharing-icon.white :hover {
+.social-sharing-icon.white :hover,
+.social-sharing-icon.white :focus {
   fill: $social-sharing-icon-hover;
 }
 

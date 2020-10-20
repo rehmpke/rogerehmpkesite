@@ -5,6 +5,7 @@ a {
   transition: color 0.15s;
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: $link-hover-color;
 }
