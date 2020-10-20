@@ -1,4 +1,6 @@
 img {
+  display: block;
+  max-width: 100%;
   opacity: 1;
   transition: opacity 1.5s cubic-bezier(0.25, 0.1, 0, 1.49);
 }

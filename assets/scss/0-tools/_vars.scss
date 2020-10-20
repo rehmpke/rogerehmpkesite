@@ -45,14 +45,14 @@ $grey-6: #3c3c3c;
 $grey-7: #222;
 
 // layout
-$grey-body-text: $grey-6;
-$body__text--dark: $grey-6;
-$body__text--darker: $grey-7;
+$grey-body-text: $primary-blue-darker;
+$body__text--dark: $primary-blue-darker;
+$body__text--darker: $primary-blue-darker;
 $hero-shot-text: $white;
-$heading__section--dark: $grey-7;
-$heading__subhead--dark: $grey-6;
+$heading__section--dark: $primary-blue-darker;
+$heading__subhead--dark: $primary-blue-darker;
 $heading--hero-shot: $white;
-$grey-contactme-light-text: $grey-5;
+$grey-contactme-light-text: $primary-blue-darker;
 $circle__border--hero-shot: $primary-blue-darker;
 $label-language-background: $primary-red-violet;
 $label-language__text: $white;
@@ -75,4 +75,8 @@ $social-sharing-icon-hover: $primary-blue;
 
 html,body {
   overflow-x: hidden
+}
+
+.text-center {
+  text-align: center;
 }

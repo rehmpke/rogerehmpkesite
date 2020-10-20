@@ -6,7 +6,10 @@
   background-color: $primary-button;
   border-color: $primary-button;
   border-radius: 23px;
-  color: $light-button-text
+  color: $light-button-text;
+  margin: 0 auto;
+  padding: 0.5em 2em;
+  text-align: center;
 }
 
 .btn-primary:hover {

@@ -1,23 +1,19 @@
-<section id="recomendations">
-  <div class="container">
-      <div class="row space-top">
-          <div class="col text-center">
-              <h2>Recomendations</h2>
-              <hr class="primary" /><br/></div>
-      </div>
+<section class="recomendations space-top space-bottom" id="recomendations">
+  <div class="recomendations__container">
+  <div>
+      <h2>Recomendations</h2>
+      <hr class="primary" /><br/>
   </div>
-  <div class="container">
-      <div class="row space-bottom">
+  <div>
         {% assign sorted_recomendation = site.recomendations | sort: "order" %}
         {% for recomendation in sorted_recomendation %}
-          <div class="col-sm-12 col-lg-12 col-md-12 text-center">
-              <div class="testimonial-box">
+          <div>
+              <div class="testimonial-box space-bottom">
                   <h3>{{ recomendation.recomended_person }}<br/><span style="font-weight: normal;font-size: 1.3rem;">{{ recomendation.recomended_title }}</span></h3>
                   <p>{{ recomendation.recomended_quote }}</p>
               </div>
           </div>
-          {% if forloop.first %}<br/><br/>{% endif %}
         {% endfor %}
-      </div>
   </div>
+</div>
 </section>

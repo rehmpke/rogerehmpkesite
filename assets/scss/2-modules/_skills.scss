@@ -1,8 +1,19 @@
-.skills-list {
-  list-style: none;
-  padding-left: 0
-}
+.skills {
+  grid-column: 1;
+  grid-row: 4;
+  text-align: center;
 
-.skill-label {
-  font-weight: $font-weight-semi-bold;
+  &__container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &-list {
+    list-style: none;
+    padding-left: 0
+  }
+
+  &-label {
+    font-weight: $font-weight-semi-bold;
+  }
 }

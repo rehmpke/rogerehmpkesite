@@ -1,22 +1,19 @@
-@media only screen and (max-width: 919px) {
-  .contactme .row {
-    padding-top:10px
-  }
 
-  .contactme .row:before {
-    left: 50%;
-    margin-left: -30px;
-    top: -55px
-
-  }
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .contactme {
   background: $contactme-background-yellow;
   background: linear-gradient(#{$contactme-gradient});
-  color: $grey-contactme-light-text;
-  padding-bottom: 25px;
-  padding-top: 25px
+  grid-column: 1;
+  grid-row: 6;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align: center;
 }
 
 .contactme p {
@@ -25,11 +22,35 @@
 
 .contactme label {
   font-size: 0.8125rem;
-  padding-left: 13px
+  padding-left: 1em;
 }
 
 .contactme .btn-primary {
   background-color: $contactme-button-background-blue;
   border-color: $contactme-button-background-blue;
   color: $dark-button-text;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-group {
+  text-align: left;
+}
+
+form {
+  max-width: 400px;
 }

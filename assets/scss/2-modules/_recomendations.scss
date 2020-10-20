@@ -1,0 +1,12 @@
+.recomendations {
+  grid-column: 1;
+  grid-row: 5;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  &__container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}

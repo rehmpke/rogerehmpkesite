@@ -1,22 +1,12 @@
 .global-footer {
-  line-height: 20px
+  line-height: 20px;
+  text-align: center;
+  grid-column: 1;
+  grid-row: 7;
 }
 
 .footer-site-map {
   font-size: 0.9375rem;
-}
-
-@media screen and (max-width: 800px) and (min-width: 481px) {
-  .footer-site-map {
-      padding-bottom: 30px;
-  }
-}
-
-@media screen and (max-width: 481px) {
-  .footer-site-map {
-      padding-bottom: 30px;
-      padding-top: 50px;
-  }
 }
 
 .footer-site-map a {

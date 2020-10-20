@@ -1,0 +1,14 @@
+.about {
+  background-color: #fff;
+  text-align: center;
+  display: grid;
+  grid-column: 1;
+  grid-row-start: 2;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  .about__content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
