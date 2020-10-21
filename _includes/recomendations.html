@@ -9,7 +9,8 @@
         {% for recomendation in sorted_recomendation %}
           <div>
               <div class="testimonial-box space-bottom">
-                  <h3>{{ recomendation.recomended_person }}<br/><span style="font-weight: normal;font-size: 1.3rem;">{{ recomendation.recomended_title }}</span></h3>
+                  <h3>{{ recomendation.recomended_person }}<br/>
+                    <span class="testimonial__title">{{ recomendation.recomended_title }}</span></h3>
                   <p>{{ recomendation.recomended_quote }}</p>
               </div>
           </div>
