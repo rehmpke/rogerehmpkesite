@@ -154,7 +154,7 @@ img[data-src] {
   opacity: 0; }
 
 .hero-shot {
-  background: linear-gradient(to left, #3b4874, rgba(215, 27, 39, 0.8)), url(/assets/img/IMG_6447.jpg);
+  background: linear-gradient(to left, #3b4874, rgba(215, 27, 39, 0.8)), url(/assets/img/IMG_6447.webp);
   background-position: top center;
   background-position-y: 0, -108px;
   background-repeat: no-repeat;
@@ -269,6 +269,8 @@ img[data-src] {
 .skills {
   grid-column: 1;
   grid-row: 4;
+  padding-left: 1em;
+  padding-right: 1em;
   text-align: center; }
   .skills__container {
     max-width: 900px;
