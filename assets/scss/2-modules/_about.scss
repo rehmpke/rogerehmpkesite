@@ -1,11 +1,16 @@
 .about {
-  background-color: #fff;
+  background-color: $primary-blue-darker;
+  color: $white;
   text-align: center;
   display: grid;
   grid-column: 1;
   grid-row-start: 2;
   padding-left: 1em;
   padding-right: 1em;
+
+  h2 { color: $white; }
+
+  hr.primary { color: $white; }
 
   .about__content {
     max-width: 900px;

@@ -160,6 +160,7 @@ img[data-src] {
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   grid-column: 1;
   grid-row: 1;
   padding-left: 1em;
@@ -170,6 +171,7 @@ img[data-src] {
 
 .heading--hero-shot {
   color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   font-weight: 800; }
 
 .hero-shot__img--circle {
@@ -179,11 +181,13 @@ img[data-src] {
   border-color: #242c47; }
 
 .hero-shot a {
-  color: #fdcc52; }
+  color: #fdcc52;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
 
 .hero-shot a:hover,
 .hero-shot a:focus {
-  color: #fcbd20; }
+  color: #fcbd20;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
 
 @media screen and (min-width: 768px) {
   .hero-shot__container {
@@ -198,13 +202,18 @@ img[data-src] {
     grid-column: 9/ span 4; } }
 
 .about {
-  background-color: #fff;
+  background-color: #242c47;
+  color: #fff;
   text-align: center;
   display: grid;
   grid-column: 1;
   grid-row-start: 2;
   padding-left: 1em;
   padding-right: 1em; }
+  .about h2 {
+    color: #fff; }
+  .about hr.primary {
+    color: #fff; }
   .about .about__content {
     max-width: 900px;
     margin: 0 auto; }

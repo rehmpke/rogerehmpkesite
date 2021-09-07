@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: $hero-shot-text;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
   grid-column: 1;
   grid-row: 1;
   padding-left: 1em;
@@ -17,6 +18,7 @@
 
 .heading--hero-shot {
   color: $heading--hero-shot;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
   font-weight: $font-weight-extra-bold;
 }
 
@@ -29,11 +31,13 @@
 
 .hero-shot a {
   color: $hero-shot-link-gold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 }
 
 .hero-shot a:hover,
 .hero-shot a:focus {
-  color: $hero-shot-link-hover-gold
+  color: $hero-shot-link-hover-gold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 }
 
 @media screen and (min-width: 768px) {
@@ -44,11 +48,11 @@
     grid-gap: 1em;
     margin: 0 auto;
   }
-  
+
   .hero-shot__content {
     grid-column: 1/9;
   }
-  
+
   .hero-shot__img--circle {
     grid-column: 9/ span 4;
   }
