@@ -13,7 +13,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #242c47;
+  color: #fff;
   display: grid;
   font-family: "Poppins", Verdana, sans-serif;
   font-size: 1.125rem;
@@ -32,7 +32,7 @@ h1, h2, h3, h4 {
   margin: 0; }
 
 h1 {
-  color: #242c47;
+  color: #fff;
   font-family: "Roboto slab", Verdana, sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
@@ -40,14 +40,14 @@ h1 {
   line-height: normal; }
 
 h2 {
-  color: #242c47;
+  color: #fff;
   font-size: 2.1rem;
   font-weight: 600;
   letter-spacing: -1.9px;
   line-height: 1.0; }
 
 h3 {
-  color: #242c47;
+  color: #fff;
   font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: -0.5px;
@@ -111,10 +111,10 @@ hr {
   margin-top: 1em;
   margin-bottom: 1em;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  border-top: 1px solid rgba(252, 252, 252, 0.1); }
 
 a {
-  color: #3b4874;
+  color: #fff;
   outline: 0 !important;
   text-decoration: none;
   transition: color 0.15s; }
@@ -219,7 +219,7 @@ img[data-src] {
     margin: 0 auto; }
 
 .work {
-  background-color: #fff;
+  background-color: #242c47;
   padding-left: 1em;
   padding-right: 1em;
   grid-column-start: 1/ span 12;
@@ -276,6 +276,7 @@ img[data-src] {
     grid-column-start: 1; } }
 
 .skills {
+  background-color: #242c47;
   grid-column: 1;
   grid-row: 4;
   padding-left: 1em;
@@ -291,6 +292,7 @@ img[data-src] {
     font-weight: 600; }
 
 .recomendations {
+  background-color: #242c47;
   grid-column: 1;
   grid-row: 5;
   text-align: center;
@@ -318,6 +320,9 @@ textarea {
   padding-left: 1em;
   padding-right: 1em;
   text-align: center; }
+
+.contactme h2 {
+  color: #242c47; }
 
 .contactme p {
   color: #242c47; }
@@ -353,6 +358,7 @@ form {
   max-width: 400px; }
 
 .global-footer {
+  background: linear-gradient(to left, #3b4874, rgba(215, 27, 39, 0.8));
   line-height: 20px;
   text-align: center;
   grid-column: 1;
@@ -365,7 +371,7 @@ form {
   font-weight: 700; }
 
 .social-sharing-icon.white {
-  fill: #9D394B; }
+  fill: #fff; }
 
 .social-sharing-icon.white :hover,
 .social-sharing-icon.white :focus {

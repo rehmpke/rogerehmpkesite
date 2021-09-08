@@ -1,5 +1,5 @@
 .work {
-  background-color: #fff;
+  background-color: $primary-blue-darker;
   padding-left: 1em;
   padding-right: 1em;
   grid-column-start: 1/ span 12;
@@ -69,7 +69,7 @@
     grid-column: 1/12;
     margin-bottom: 1.5em;
   }
-  
+
   .work__projectimgdiv__imgdiv {
     grid-column-start: 1;
   }

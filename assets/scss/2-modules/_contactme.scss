@@ -16,8 +16,12 @@ textarea {
   text-align: center;
 }
 
+.contactme h2 {
+  color: $primary-blue-darker;
+}
+
 .contactme p {
-  color: $body__text--darker;
+  color: $primary-blue-darker;
 }
 
 .contactme label {

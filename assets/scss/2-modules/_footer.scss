@@ -1,4 +1,5 @@
 .global-footer {
+  background: linear-gradient(to left, #{$primary-gradient});
   line-height: 20px;
   text-align: center;
   grid-column: 1;
