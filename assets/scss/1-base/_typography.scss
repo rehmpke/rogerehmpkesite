@@ -8,6 +8,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $primary-blue-darker;
   color: $body__text--dark;
   display: grid;
   font-family: $font-family-paragraph;

@@ -13,6 +13,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #242c47;
   color: #fff;
   display: grid;
   font-family: "Poppins", Verdana, sans-serif;
@@ -159,6 +160,8 @@ img[data-src] {
   background-position-y: 0, -108px;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 78%);
+          clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 78%);
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   grid-column: 1;
@@ -176,7 +179,7 @@ img[data-src] {
 
 .hero-shot__img--circle {
   border-radius: 50%;
-  border-width: 8px;
+  border-width: 12px;
   border-style: solid;
   border-color: #242c47; }
 
