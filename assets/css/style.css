@@ -361,7 +361,7 @@ form {
   max-width: 400px; }
 
 .global-footer {
-  background: #9D394B;
+  background: linear-gradient(to left, #3b4874, rgba(215, 27, 39, 0.8));
   line-height: 20px;
   text-align: center;
   grid-column: 1;
