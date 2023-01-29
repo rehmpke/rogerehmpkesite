@@ -294,6 +294,8 @@ img[data-src] {
     margin: 0 auto;
     padding-left: 0;
     text-align: left; }
+  .skills-list-item {
+    margin-bottom: 7px; }
   .skills-label {
     font-weight: 800; }
 
