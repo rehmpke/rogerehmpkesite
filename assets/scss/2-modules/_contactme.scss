@@ -22,12 +22,15 @@ textarea {
 
 .contactme p {
   color: $primary-blue-darker;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  text-align: left;
 }
 
 .contactme label {
+  color: $primary-blue-darker;
   font-size: 0.8125rem;
   padding-left: 1em;
-  color: $primary-blue-darker;
 }
 
 .contactme .btn-primary {
