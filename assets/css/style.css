@@ -290,7 +290,10 @@ img[data-src] {
     margin: 0 auto; }
   .skills-list {
     list-style: none;
-    padding-left: 0; }
+    max-width: 560px;
+    margin: 0 auto;
+    padding-left: 0;
+    text-align: left; }
   .skills-label {
     font-weight: 600; }
 
