@@ -332,7 +332,8 @@ textarea {
 
 .contactme label {
   font-size: 0.8125rem;
-  padding-left: 1em; }
+  padding-left: 1em;
+  color: #242c47; }
 
 .contactme .btn-primary {
   background-color: #3b4874;
