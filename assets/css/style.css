@@ -240,7 +240,7 @@ hr.primary {
   .about__projectdiv {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column: 1/12;
+    grid-column: 2/12;
     margin-bottom: 1.5em; }
   .about__projectimgdiv__imgdiv {
     grid-column-start: 1; } }
@@ -297,7 +297,7 @@ hr.primary {
   .work__projectdiv {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column: 1/12;
+    grid-column: 2/12;
     margin-bottom: 1.5em; }
   .work__projectimgdiv__imgdiv {
     grid-column-start: 1; } }
