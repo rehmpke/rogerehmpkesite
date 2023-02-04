@@ -304,11 +304,15 @@ hr.primary {
     grid-column-start: 1; } }
 
 .skills {
-  background-color: #242c47;
+  background: linear-gradient(to left, #3b4874, rgba(215, 27, 39, 0.8)), url(/assets/img/img_6447.webp);
+  -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
   grid-column: 1;
   grid-row: 4;
+  padding-bottom: 3em;
   padding-left: 1em;
   padding-right: 1em;
+  padding-top: 8em;
   text-align: center; }
   .skills__container {
     max-width: 900px;

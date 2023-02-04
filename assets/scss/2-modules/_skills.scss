@@ -1,9 +1,12 @@
 .skills {
-  background-color: $primary-blue-darker;
+  background: linear-gradient(to left, #{$primary-gradient}),url(#{$imagedir}img_6447.webp);
+  clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
   grid-column: 1;
   grid-row: 4;
+  padding-bottom: 3em;
   padding-left: 1em;
   padding-right: 1em;
+  padding-top: 8em;
   text-align: center;
 
   &__container {
