@@ -1,17 +1,19 @@
 <section class="recomendations space-top space-bottom" id="recomendations">
   <div class="recomendations__container">
+    <div class="recomendations__content">
   <div>
       <h2>Recomendations</h2>
       <hr class="primary" /><br/>
   </div>
-  <div>
+</div>
+  <div class="testimonial__projectdiv testimonial__kcc container">
         {% assign sorted_recomendation = site.recomendations | sort: "order" %}
         {% for recomendation in sorted_recomendation %}
           <div>
-              <div class="testimonial-box space-bottom">
+              <div class="testimonial__box space-bottom">
                   <h3>{{ recomendation.recomended_person }}<br/>
                     <span class="testimonial__title">{{ recomendation.recomended_title }}</span></h3>
-                  <p>{{ recomendation.recomended_quote }}</p>
+                  <p class="testimonial__paragraph">{{ recomendation.recomended_quote }}</p>
               </div>
           </div>
         {% endfor %}

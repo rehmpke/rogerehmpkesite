@@ -12,7 +12,47 @@
   }
 }
 
+.testimonial__box h3 {
+  font-size: 1.93rem;
+  line-height: 31px;
+}
+
 .testimonial__title {
   font-weight: $font-weight-bold;
-  font-size: 1.3rem;
+  font-size: 1.01rem;
+  line-height: 1.10;
+}
+
+@media screen and (min-width: 900px) {
+  .testimonial__container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1em;
+  margin: 0 auto;
+}
+
+  .testimonial__content {
+    grid-column: 1/ span 12;
+  }
+
+  .testimonial__projectdiv {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column: 3/12;
+    margin-bottom: 1.5em;
+  }
+
+  .testimonial__projectimgdiv__imgdiv {
+    grid-column-start: 1;
+  }
+
+  .testimonial__box {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .testimonial__paragraph {
+    font-size: 0.899em;
+  }
 }
