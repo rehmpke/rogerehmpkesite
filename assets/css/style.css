@@ -257,6 +257,7 @@ hr.primary {
     text-align: center; }
 
 .work__projectimgdiv__imgdiv img {
+  margin-left: 35px;
   width: 100%;
   max-width: 350px; }
 
@@ -288,7 +289,7 @@ hr.primary {
 @media screen and (min-width: 900px) {
   .work__container {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
     grid-gap: 1em;
     margin: 0 auto; }
