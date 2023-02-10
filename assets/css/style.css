@@ -128,10 +128,12 @@ a:focus {
   font-weight: 600; }
 
 .btn-primary {
-  background-color: #fdcc52;
+  background-color: transparent;
   border-color: #fdcc52;
-  border-radius: 23px;
-  color: #222;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  color: #fff;
   margin: 20px auto;
   padding: 0.5em 2em;
   text-align: center; }

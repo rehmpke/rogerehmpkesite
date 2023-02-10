@@ -3,10 +3,12 @@
 }
 
 .btn-primary {
-  background-color: $primary-button;
+  background-color: transparent;
   border-color: $primary-button;
-  border-radius: 23px;
-  color: $light-button-text;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  color: $dark-button-text;
   margin: 20px auto;
   padding: 0.5em 2em;
   text-align: center;
