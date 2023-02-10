@@ -28,8 +28,6 @@ $primary-blue: #3b4874;
 $primary-blue-darker: #242c47;
 $primary-gold: #fdcc52;
 $secondary-saturated-gold: #fcbd20;
-$primary-gradient: $primary-blue, rgba(215, 27, 39, 0.8);
-$contactme-gradient: $primary-gold, #fdc539;
 
 // black and white
 $black: #000;
@@ -43,6 +41,10 @@ $grey-4: #999;
 $grey-5: #555;
 $grey-6: #3c3c3c;
 $grey-7: #222;
+
+// gradients
+$primary-gradient: $primary-blue, rgba(215, 27, 39, 0.8);
+$contactme-gradient: $primary-gold, #fdc539;
 
 // layout
 $grey-body-text: $white;
