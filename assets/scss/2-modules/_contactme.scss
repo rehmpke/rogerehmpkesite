@@ -16,11 +16,11 @@ textarea {
 }
 
 .contactme h2 {
-  color: $primary-blue-darker;
+  color: $white;
 }
 
 .contactme p {
-  color: $primary-blue-darker;
+  color: $white;
   padding-left: 0.6em;
   padding-right: 0.6em;
   text-align: left;
@@ -33,8 +33,8 @@ textarea {
 }
 
 .contactme .btn-primary {
-  background-color: $contactme-button-background-blue;
-  border-color: $contactme-button-background-blue;
+  background-color: transparent;
+  border-color: $primary-button;
   color: $dark-button-text;
 }
 

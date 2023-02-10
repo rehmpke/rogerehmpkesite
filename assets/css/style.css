@@ -385,10 +385,10 @@ textarea {
   text-align: center; }
 
 .contactme h2 {
-  color: #242c47; }
+  color: #fff; }
 
 .contactme p {
-  color: #242c47;
+  color: #fff;
   padding-left: 0.6em;
   padding-right: 0.6em;
   text-align: left; }
@@ -399,8 +399,8 @@ textarea {
   padding-left: 1em; }
 
 .contactme .btn-primary {
-  background-color: #3b4874;
-  border-color: #3b4874;
+  background-color: transparent;
+  border-color: #fdcc52;
   color: #fff; }
 
 .form-control {
