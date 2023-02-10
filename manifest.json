@@ -5,7 +5,7 @@
   "display": "browser",
   "background_color": "#fff",
   "description": "Roger Ehmpke - Frontend Web Developer website.",
-  "theme_color": "#3b4874",
+  "theme_color": "#3c3c3c",
   "icons": [{
     "src": "assets/img/homescreen48.png",
     "sizes": "48x48",
