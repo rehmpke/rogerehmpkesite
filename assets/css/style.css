@@ -138,8 +138,8 @@ a:focus {
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #9D394B;
-  border-color: #9D394B; }
+  background-color: #be3455;
+  border-color: #be3455; }
 
 .btn-group-lg > .btn, .btn-lg {
   font-size: 1.25rem; }
@@ -155,7 +155,7 @@ img[data-src] {
   opacity: 0; }
 
 .hero-shot {
-  background: linear-gradient(to left, #3b4874, rgba(215, 27, 39, 0.8)), url(/assets/img/img_6447.webp);
+  background: linear-gradient(to left, #4f101f, rgba(190, 52, 85, 0.8)), url(/assets/img/img_6447.webp);
   background-position: top center;
   background-position-y: 0, -108px;
   background-repeat: no-repeat;
@@ -270,7 +270,7 @@ hr.primary {
   flex-wrap: wrap; }
 
 .label_language {
-  background: #9D394B;
+  background: #be3455;
   color: #fff;
   margin: 5px;
   padding: 3px 10px; }
@@ -304,7 +304,7 @@ hr.primary {
     grid-column-start: 1; } }
 
 .skills {
-  background: linear-gradient(to left, #3b4874, rgba(215, 27, 39, 0.8)), url(/assets/img/img_6447.webp);
+  background: linear-gradient(to left, #4f101f, rgba(190, 52, 85, 0.8)), url(/assets/img/img_6447.webp);
   -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
   grid-column: 1;
@@ -425,7 +425,7 @@ form {
   max-width: 400px; }
 
 .global-footer {
-  background: #9D394B;
+  background: #be3455;
   line-height: 20px;
   text-align: center;
   grid-column: 1;

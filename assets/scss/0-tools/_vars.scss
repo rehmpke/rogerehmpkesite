@@ -23,7 +23,7 @@ $imagedir:'/assets/img/';
 // Colors
 
 // Site primary colors
-$primary-red-violet: #9D394B;
+$primary-magenta: rgb(190, 52, 85);
 $primary-blue: #3b4874;
 $primary-blue-darker: #242c47;
 $primary-gold: #fdcc52;
@@ -43,7 +43,7 @@ $grey-6: #3c3c3c;
 $grey-7: #222;
 
 // gradients
-$primary-gradient: $primary-blue, rgba(215, 27, 39, 0.8);
+$primary-gradient: rgb(79,16,31), rgba(190, 52, 85, 0.8);
 
 // layout
 $grey-body-text: $white;
@@ -55,13 +55,13 @@ $heading__subhead--dark: $white;
 $heading--hero-shot: $white;
 $grey-contactme-light-text: $primary-blue-darker;
 $circle__border--hero-shot: $primary-blue-darker;
-$label-language-background: $primary-red-violet;
+$label-language-background: $primary-magenta;
 $label-language__text: $white;
 $contactme-background-yellow: $primary-gold;
 
 // buttons
 $primary-button: $primary-gold; //used for background and border
-$primary-button-hover: $primary-red-violet; //used for background and border
+$primary-button-hover: $primary-magenta; //used for background and border
 $contactme-button-background-blue: $primary-blue; //used for background and border
 $dark-button-text: $white;
 $light-button-text: $grey-7;
