@@ -377,8 +377,7 @@ textarea {
   line-height: inherit; }
 
 .contactme {
-  background: #fdcc52;
-  background: linear-gradient(#3c3c3c, #3c3c3c);
+  background: #3c3c3c;
   grid-column: 1;
   grid-row: 6;
   padding-left: 1em;

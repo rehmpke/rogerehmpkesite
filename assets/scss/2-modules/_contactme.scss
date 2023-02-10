@@ -7,8 +7,7 @@ textarea {
 }
 
 .contactme {
-  background: $contactme-background-yellow;
-  background: linear-gradient(#{$contactme-gradient});
+  background: $grey-6;
   grid-column: 1;
   grid-row: 6;
   padding-left: 1em;
