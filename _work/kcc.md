@@ -8,7 +8,7 @@ skill_labels:
   - label: 'CSS/SASS'
   - label: HTML
   - label: Collaborative
-  - label: Gulp
+  - label: Webpack
 current_site: "http://www.kcc.edu"
 screen_image: "./assets/img/kcc-screen.png"
 screen_image_alt: "computer screen with an image of kcc redesign project"
