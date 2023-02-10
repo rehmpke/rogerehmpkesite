@@ -396,7 +396,7 @@ textarea {
   text-align: left; }
 
 .contactme label {
-  color: #242c47;
+  color: #fff;
   font-size: 0.8125rem;
   padding-left: 1em; }
 
@@ -404,6 +404,13 @@ textarea {
   background-color: transparent;
   border-color: #fdcc52;
   color: #fff; }
+
+.contactme form {
+  border-color: #fdcc52;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 20px; }
 
 .form-control {
   display: block;
@@ -414,7 +421,7 @@ textarea {
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
-  background-color: #fff;
+  background-color: transparent;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: .25rem;

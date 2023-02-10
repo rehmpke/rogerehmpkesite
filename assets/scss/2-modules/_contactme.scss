@@ -27,7 +27,7 @@ textarea {
 }
 
 .contactme label {
-  color: $primary-blue-darker;
+  color: $white;
   font-size: 0.8125rem;
   padding-left: 1em;
 }
@@ -36,6 +36,14 @@ textarea {
   background-color: transparent;
   border-color: $primary-gold;
   color: $dark-button-text;
+}
+
+.contactme form {
+  border-color: $primary-gold;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 20px;
 }
 
 .form-control {
@@ -47,7 +55,7 @@ textarea {
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
-  background-color: #fff;
+  background-color: transparent;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: .25rem;
