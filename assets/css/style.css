@@ -184,7 +184,7 @@ img[data-src] {
   border-radius: 50%;
   border-width: 12px;
   border-style: solid;
-  border-color: #3c3c3c;
+  border-color: #D4CACD;
   margin-left: auto;
   margin-right: auto; }
 
@@ -452,7 +452,7 @@ form {
 
 .social-sharing-icon.white :hover,
 .social-sharing-icon.white :focus {
-  fill: #3b4874; }
+  fill: #fff; }
 
 .social-sharing-icon {
   margin-left: 10px;
