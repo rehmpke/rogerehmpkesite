@@ -1709,10 +1709,9 @@ eval("var global = __webpack_require__(/*! ../internals/global */ \"./node_modul
 /*!********************************!*\
   !*** ./assets/scss/style.scss ***!
   \********************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function() {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://RogerEhmpke/./assets/scss/style.scss?");
+eval("throw new Error(\"Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\\nSassError: Undefined variable: \\\"$contactme-gradient\\\".\\n        on line 11 of assets/scss/2-modules/_contactme.scss\\n        from line 17 of assets/scss/style.scss\\n>> nd: linear-gradient(#{$contactme-gradient});\\n\\n   ------------------------------------------^\\n\\n    at processResult (/Users/rehmpke/repositories/rogerehmpkesite/node_modules/webpack/lib/NormalModule.js:758:19)\\n    at /Users/rehmpke/repositories/rogerehmpkesite/node_modules/webpack/lib/NormalModule.js:860:5\\n    at /Users/rehmpke/repositories/rogerehmpkesite/node_modules/loader-runner/lib/LoaderRunner.js:400:11\\n    at /Users/rehmpke/repositories/rogerehmpkesite/node_modules/loader-runner/lib/LoaderRunner.js:252:18\\n    at context.callback (/Users/rehmpke/repositories/rogerehmpkesite/node_modules/loader-runner/lib/LoaderRunner.js:124:13)\\n    at Object.callback (/Users/rehmpke/repositories/rogerehmpkesite/node_modules/sass-loader/dist/index.js:54:7)\\n    at Object.done [as callback] (/Users/rehmpke/repositories/rogerehmpkesite/node_modules/neo-async/async.js:8069:18)\\n    at options.error (/Users/rehmpke/repositories/rogerehmpkesite/node_modules/node-sass/lib/index.js:293:32)\");\n\n//# sourceURL=webpack://RogerEhmpke/./assets/scss/style.scss?");
 
 /***/ })
 

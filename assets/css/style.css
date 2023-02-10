@@ -378,7 +378,7 @@ textarea {
 
 .contactme {
   background: #fdcc52;
-  background: linear-gradient(#fdcc52, #fdc539);
+  background: linear-gradient(#3c3c3c, #3c3c3c);
   grid-column: 1;
   grid-row: 6;
   padding-left: 1em;
