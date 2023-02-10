@@ -13,7 +13,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #242c47;
+  background-color: #3c3c3c;
   color: #fff;
   display: grid;
   font-family: "Poppins", Verdana, sans-serif;
@@ -184,7 +184,7 @@ img[data-src] {
   border-radius: 50%;
   border-width: 12px;
   border-style: solid;
-  border-color: #242c47;
+  border-color: #3c3c3c;
   margin-left: auto;
   margin-right: auto; }
 
@@ -210,7 +210,7 @@ img[data-src] {
     grid-column: 9/ span 4; } }
 
 .about {
-  background-color: #242c47;
+  background-color: #3c3c3c;
   color: #fff;
   padding-left: 1em;
   padding-right: 1em;
@@ -248,7 +248,7 @@ hr.primary {
     grid-column-start: 1; } }
 
 .work {
-  background-color: #242c47;
+  background-color: #3c3c3c;
   padding-left: 1em;
   padding-right: 1em;
   grid-column-start: 1/ span 12;
@@ -315,7 +315,8 @@ hr.primary {
   padding-left: 1em;
   padding-right: 1em;
   padding-top: 8em;
-  text-align: center; }
+  text-align: center;
+  transform: scaleZ(1); }
   .skills__container {
     max-width: 900px;
     margin: 0 auto; }
@@ -331,7 +332,7 @@ hr.primary {
     font-weight: 800; }
 
 .recomendations {
-  background-color: #242c47;
+  background-color: #3c3c3c;
   grid-column: 1;
   grid-row: 5;
   text-align: center;
@@ -379,7 +380,7 @@ textarea {
   line-height: inherit; }
 
 .contactme {
-  background: #3c3c3c;
+  background: #222;
   grid-column: 1;
   grid-row: 6;
   padding-left: 1em;
@@ -434,7 +435,7 @@ form {
   max-width: 400px; }
 
 .global-footer {
-  background: #be3455;
+  background: linear-gradient(to left, #4f101f, rgba(190, 52, 85, 0.8)), url(/assets/img/img_6447.webp);
   line-height: 20px;
   text-align: center;
   grid-column: 1;
