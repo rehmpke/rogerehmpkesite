@@ -1,6 +1,7 @@
 .skills {
   background: linear-gradient(to left, #{$primary-gradient}),url(#{$imagedir}img_6447.webp);
   clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
+  color: $white;
   grid-column: 1;
   grid-row: 4;
   padding-bottom: 3em;
@@ -29,5 +30,13 @@
 
   &-label {
     font-weight: $font-weight-extra-bold;
+  }
+
+  & h2 {
+    color: $white;
+  }
+
+  & hr {
+    border-top: 1px solid rgb(256, 256, 256 / 0.2);
   }
 }

@@ -1,5 +1,6 @@
 .global-footer {
   background: linear-gradient(to left, #{$primary-gradient}),url(#{$imagedir}img_6447.webp);
+  color: $white;
   line-height: 20px;
   text-align: center;
   grid-column: 1;

@@ -1,6 +1,6 @@
 .about {
-  background-color: $grey-6;
-  color: $white;
+  background-color: $primary-silver-plate;
+  color: $secondary-midnight-blue;
   padding-left: 1em;
   padding-right: 1em;
   grid-column: 1;
@@ -19,9 +19,7 @@
   }
 }
 
-  h2 { color: $white; }
-
-  hr.primary { color: $white; }
+  h2 { color: $secondary-midnight-blue; }
 
 
 @media screen and (min-width: 900px) {
