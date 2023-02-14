@@ -8,8 +8,8 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $grey-6;
-  color: $body__text--dark;
+  background-color: $primary-silver-plate;
+  color: $secondary-midnight-blue;
   display: grid;
   font-family: $font-family-paragraph;
   font-size: $font-size-base;
@@ -141,5 +141,5 @@ hr {
   margin-top: 1em;
   margin-bottom: 1em;
   border: 0;
-  border-top: 1px solid rgba(252, 252, 252, 0.1);
+  border-top: 1px solid rgba(42, 42, 53, 0.2);
 }

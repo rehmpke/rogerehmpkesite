@@ -7,7 +7,7 @@ textarea {
 }
 
 .contactme {
-  background: $grey-7;
+  background: $secondary-midnight-blue;
   grid-column: 1;
   grid-row: 6;
   padding-left: 1em;
@@ -32,14 +32,8 @@ textarea {
   padding-left: 1em;
 }
 
-.contactme .btn-primary {
-  background-color: transparent;
-  border-color: $primary-gold;
-  color: $dark-button-text;
-}
-
 .contactme form {
-  border-color: $primary-gold;
+  border-color: $primary-silver-plate;
   border-width: 1px;
   border-style: solid;
   border-radius: 5px;
@@ -57,7 +51,7 @@ textarea {
   color: #495057;
   background-color: transparent;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid $primary-silver-plate;
   border-radius: .25rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }

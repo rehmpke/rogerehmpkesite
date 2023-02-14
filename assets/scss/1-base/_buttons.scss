@@ -7,7 +7,7 @@
   border-color: $primary-button;
   border-radius: 5px;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   color: $dark-button-text;
   margin: 20px auto;
   padding: 0.5em 2em;
@@ -17,7 +17,8 @@
 .btn-primary:hover,
 .btn-primary:focus {
   background-color: $primary-button-hover;
-  border-color: $primary-button-hover
+  border-color: $primary-button-hover;
+  color: $secondary-midnight-blue;
 }
 
 .btn-group-lg>.btn,.btn-lg {

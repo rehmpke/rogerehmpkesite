@@ -1,5 +1,5 @@
 .work {
-  background-color: $grey-6;
+  background-color: $primary-silver-plate;
   padding-left: 1em;
   padding-right: 1em;
   grid-column-start: 1/ span 12;
@@ -44,11 +44,6 @@
 .view_live_div {
   margin-top: 2em;
   margin-bottom: 2em;
-}
-
-.view_live:hover,
-.view_live:focus {
-  color: #fff;
 }
 
 @media screen and (min-width: 900px) {
