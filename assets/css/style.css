@@ -303,7 +303,9 @@ h2 {
   .work__projectimgdiv__imgdiv {
     grid-column-start: 1; }
   .work__projectimgdiv__imgdiv img {
-    margin-left: 45px; } }
+    margin-left: 45px; }
+  .work__kcc.container {
+    padding-bottom: 0; } }
 
 .skills {
   background: linear-gradient(to left, #082742, rgba(15, 76, 129, 0.8)), url(/assets/img/img_6447.webp);
