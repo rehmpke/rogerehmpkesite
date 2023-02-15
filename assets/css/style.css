@@ -355,7 +355,7 @@ h2 {
 
 .testimonial__title {
   font-weight: 700;
-  font-size: 1.01rem;
+  font-size: 1.16rem;
   line-height: 1.10; }
 
 @media screen and (min-width: 900px) {
@@ -378,7 +378,9 @@ h2 {
     padding-left: 25px;
     padding-right: 25px; }
   .testimonial__paragraph {
-    font-size: 0.899em; } }
+    font-size: 0.899em; }
+  .testimonial__title {
+    font-size: 1.01rem; } }
 
 input,
 textarea {
