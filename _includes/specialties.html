@@ -1,0 +1,21 @@
+<section class="specialties space-top--specialties double space-bottom--specialties" id="specialties">
+  <div class="specialties__container">
+    <div class="specialties__content">
+  <div>
+      <h2>Specialties</h2>
+      <hr class="primary" /><br/>
+  </div>
+</div>
+  <div class="specialties__specialtydiv container">
+    {% assign sorted_specialties = site.specialties | sort: "order" %}
+    {% for specialties in sorted_specialties %}
+      <div>
+          <div class="specialty__box space-bottom">
+              <h3>{{ specialties.specialty_title }}</h3>
+              <p class="specialties__paragraph">{{ specialties.specialty_paragraph }}</p>
+          </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+</section>
