@@ -38,7 +38,7 @@ $grey-7: #222;
 // Site primary colors
 $primary-blue: #0f4c81;
 $primary-blue-darker: #071f35;
-$primary-silver-plate: #bcb29e;
+$secondary-silver-plate: #bcb29e;
 $secondary-midnight-blue: #2a2a35;
 
 // gradients
@@ -63,7 +63,7 @@ $dark-button-text: $white;
 $light-button-text: $secondary-midnight-blue;
 
 // links
-$link-color: $primary-silver-plate;
+$link-color: $secondary-silver-plate;
 $link-hover-color: $white;
 
 html,body {
