@@ -16,12 +16,12 @@
 }
 
 .social-sharing-icon.white {
-  fill: $social-sharing-icon;
+  fill: $link-color;
 }
 
 .social-sharing-icon.white :hover,
 .social-sharing-icon.white :focus {
-  fill: $social-sharing-icon-hover;
+  fill: $link-hover-color;
 }
 
 .social-sharing-icon {

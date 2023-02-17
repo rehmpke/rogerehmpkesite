@@ -115,14 +115,14 @@ hr {
   border-top: 1px solid rgba(42, 42, 53, 0.2); }
 
 a {
-  color: #fff;
+  color: #bcb29e;
   outline: 0 !important;
   text-decoration: none;
   transition: color 0.15s; }
 
 a:hover,
 a:focus {
-  color: #999; }
+  color: #fff; }
 
 .btn {
   font-weight: 600; }
@@ -190,12 +190,10 @@ img[data-src] {
   margin-right: auto; }
 
 .hero-shot a {
-  color: #bcb29e;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
 
 .hero-shot a:hover,
 .hero-shot a:focus {
-  color: #bcb29e;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
 
 @media screen and (min-width: 768px) {
@@ -448,7 +446,7 @@ textarea {
   font-weight: 700; }
 
 .social-sharing-icon.white {
-  fill: #fff; }
+  fill: #bcb29e; }
 
 .social-sharing-icon.white :hover,
 .social-sharing-icon.white :focus {
