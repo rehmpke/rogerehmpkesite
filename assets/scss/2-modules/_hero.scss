@@ -34,13 +34,13 @@
 }
 
 .hero-shot a {
-  color: $primary-silver-plate;
+  color: $hero-shot-link;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 }
 
 .hero-shot a:hover,
 .hero-shot a:focus {
-  color: $hero-shot-link-hover-gold;
+  color: $hero-shot-link-hover;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 }
 
