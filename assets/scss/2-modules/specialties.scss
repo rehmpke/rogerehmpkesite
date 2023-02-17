@@ -1,7 +1,8 @@
-.recomendations {
-  background-color: $secondary-silver-plate;
+.specialties {
+  background-color: $white;
+  clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
   grid-column: 1;
-  grid-row: 6;
+  grid-row: 3;
   text-align: center;
   padding-left: 1em;
   padding-right: 1em;
@@ -12,19 +13,19 @@
   }
 }
 
-.testimonial__box h3 {
+.specialties__box h3 {
   font-size: 1.93rem;
   line-height: 31px;
 }
 
-.testimonial__title {
+.specialties__title {
   font-weight: $font-weight-bold;
   font-size: 1.16rem;
   line-height: 1.10;
 }
 
 @media screen and (min-width: 900px) {
-  .testimonial__container {
+  .specialties__container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto;
@@ -32,31 +33,31 @@
   margin: 0 auto;
 }
 
-  .testimonial__content {
+  .specialties__content {
     grid-column: 1/ span 12;
   }
 
-  .testimonial__projectdiv {
+  .specialties__projectdiv {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-column: 3/12;
     margin-bottom: 1.5em;
   }
 
-  .testimonial__projectimgdiv__imgdiv {
+  .specialties__projectimgdiv__imgdiv {
     grid-column-start: 1;
   }
 
-  .testimonial__box {
+  .specialties__box {
     padding-left: 25px;
     padding-right: 25px;
   }
 
-  .testimonial__paragraph {
+  .specialties__paragraph {
     font-size: 0.899em;
   }
 
-  .testimonial__title {
+  .specialties__title {
     font-size: 1.01rem;
   }
 
