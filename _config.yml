@@ -10,6 +10,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: rehmpke
 github_username:  rehmpke
 collections:
+  specialties:
+    output: false
   work:
     output: false
   recomendations:

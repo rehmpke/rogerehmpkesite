@@ -13,12 +13,12 @@
   }
 }
 
-.specialties__box h3 {
+.specialty__box h3 {
   font-size: 1.93rem;
   line-height: 31px;
 }
 
-.specialties__title {
+.specialty__title {
   font-weight: $font-weight-bold;
   font-size: 1.16rem;
   line-height: 1.10;
@@ -37,28 +37,28 @@
     grid-column: 1/ span 12;
   }
 
-  .specialties__projectdiv {
+  .specialties__specialtydiv {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-column: 3/12;
     margin-bottom: 1.5em;
   }
 
-  .specialties__projectimgdiv__imgdiv {
-    grid-column-start: 1;
-  }
-
-  .specialties__box {
+  .specialty__box {
     padding-left: 25px;
     padding-right: 25px;
   }
 
-  .specialties__paragraph {
+  .specialty__paragraph {
     font-size: 0.899em;
   }
 
-  .specialties__title {
+  .specialty__title {
     font-size: 1.01rem;
+  }
+
+  .space-top--specialties {
+    padding-top: 9em;
   }
 
 }
