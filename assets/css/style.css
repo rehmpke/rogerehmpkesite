@@ -382,61 +382,56 @@ h2 {
   .testimonial__title {
     font-size: 1.01rem; } }
 
-input,
-textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit; }
-
 .contactme {
   background: #2a2a35;
+  color: #fff;
   grid-column: 1;
   grid-row: 6;
   padding-left: 1em;
-  padding-right: 1em;
-  text-align: center; }
+  padding-right: 1em; }
 
 .contactme h2 {
-  color: #fff; }
-
-.contactme p {
   color: #fff;
-  padding-left: 0.6em;
-  padding-right: 0.6em;
-  text-align: left; }
+  text-align: center; }
 
 .contactme label {
-  color: #fff;
   font-size: 0.8125rem;
   padding-left: 1em; }
+
+.contactme p {
+  padding-left: 0.6em;
+  padding-right: 0.6em; }
 
 .contactme form {
   border-color: #bcb29e;
   border-width: 1px;
   border-style: solid;
   border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
   padding: 20px; }
 
 .form-control {
-  display: block;
-  width: 100%;
-  height: calc(1.5em + .75rem + 2px);
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  background-color: transparent;
   background-clip: padding-box;
+  background-color: transparent;
   border: 1px solid #bcb29e;
   border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  height: calc(1.5em + .75rem + 2px);
+  line-height: 1.5;
+  padding: .375rem .75rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  width: 100%; }
 
-.form-group {
-  text-align: left; }
+.form-group__button {
+  text-align: center; }
 
-form {
-  max-width: 400px; }
+input,
+textarea {
+  font-family: inherit; }
 
 .global-footer {
   background: linear-gradient(to left, #082742, rgba(15, 76, 129, 0.8)), url(/assets/img/img_6447.webp);
