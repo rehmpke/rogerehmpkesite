@@ -480,10 +480,10 @@ textarea {
 .global-footer {
   background: linear-gradient(to left, #082742, rgba(15, 76, 129, 0.8)), url(/assets/img/img_6447.webp);
   color: #fff;
-  line-height: 20px;
-  text-align: center;
   grid-column: 1;
-  grid-row: 8; }
+  grid-row: 8;
+  line-height: 20px;
+  text-align: center; }
 
 .footer-site-map {
   font-size: 0.9375rem; }
