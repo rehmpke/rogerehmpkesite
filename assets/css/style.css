@@ -210,11 +210,10 @@ img[data-src] {
 
 .about {
   background-color: #bcb29e;
-  color: #2a2a35;
-  padding-left: 1em;
-  padding-right: 1em;
   grid-column: 1;
-  grid-row: 2; }
+  grid-row: 2;
+  padding-left: 1em;
+  padding-right: 1em; }
   .about__container {
     max-width: 900px; }
   .about__content {
@@ -229,16 +228,16 @@ h2 {
 @media screen and (min-width: 900px) {
   .about__container {
     display: grid;
+    grid-gap: 1em;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
-    grid-gap: 1em;
     margin: 0 auto; }
   .about__content {
     grid-column: 1/ span 12; }
   .about__projectdiv {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     grid-column: 2/12;
+    grid-template-columns: repeat(2, 1fr);
     margin-bottom: 1.5em; }
   .about__projectimgdiv__imgdiv {
     grid-column-start: 1; } }
