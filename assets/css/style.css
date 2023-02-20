@@ -10,7 +10,6 @@ html, body {
   box-sizing: border-box; }
 
 body {
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #bcb29e;
@@ -21,6 +20,7 @@ body {
   font-weight: 400;
   grid-template: repeat(8, auto)/1fr;
   line-height: 27.97px;
+  margin: 0;
   width: 100%; }
 
 p {
@@ -41,14 +41,12 @@ h1 {
   line-height: normal; }
 
 h2 {
-  color: #fff;
   font-size: 2.1rem;
   font-weight: 600;
   letter-spacing: -1.9px;
   line-height: 1.0; }
 
 h3 {
-  color: #2a2a35;
   font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: -0.5px;
@@ -221,9 +219,6 @@ img[data-src] {
   .about__p {
     padding: 0 5%;
     text-align: left; }
-
-h2 {
-  color: #2a2a35; }
 
 @media screen and (min-width: 900px) {
   .about__container {
