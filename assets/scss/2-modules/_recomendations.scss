@@ -2,13 +2,13 @@
   background-color: $secondary-silver-plate;
   grid-column: 1;
   grid-row: 6;
-  text-align: center;
   padding-left: 1em;
   padding-right: 1em;
+  text-align: center;
 
   &__container {
-    max-width: 900px;
     margin: 0 auto;
+    max-width: 900px;
   }
 }
 
@@ -18,17 +18,17 @@
 }
 
 .testimonial__title {
-  font-weight: $font-weight-bold;
   font-size: 1.16rem;
+  font-weight: $font-weight-bold;
   line-height: 1.10;
 }
 
 @media screen and (min-width: 900px) {
   .testimonial__container {
   display: grid;
+  grid-gap: 1em;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto;
-  grid-gap: 1em;
   margin: 0 auto;
 }
 
@@ -38,8 +38,8 @@
 
   .testimonial__projectdiv {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
     grid-column: 3/12;
+    grid-template-columns: repeat(3,1fr);
     margin-bottom: 1.5em;
   }
 
@@ -59,5 +59,4 @@
   .testimonial__title {
     font-size: 1.01rem;
   }
-
 }
