@@ -1,13 +1,13 @@
 # rogerehmpkesite
 
+## Start Dev using and watching with Webpack
+
+`npm run dev`
+
 ## Running Jekyll
 
-`bundle exec jekyll serve`
+`bundle exec jekyll serve --livereload`
 
 ## Triggering the push to AWS
 
-There are two ways to trigger the push. and invalidating the code
-
-Method 1 — One is simply pushing code to github, this triggers the travis.yml workflow.
-
-Method 2 - The other method is using a script npm run build. In this case I invalidate the code seperatly in AWS cloudfront.
+I am using AWS Ampland to push currently.
