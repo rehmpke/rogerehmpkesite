@@ -21,4 +21,4 @@ $ gem install bundler
 
 ## Triggering the push to AWS
 
-I am using AWS Ampland to push currently.
+I am using AWS Ampland to push currently. It is setup to automatically see changes on master
