@@ -1,28 +1,28 @@
 <section class="work space-top space-bottom" id="Work">
     <div class="work__container">
-    <div class="work__content">
-        <div class="work__description">
-            <h2>Work</h2>
-            <hr class="primary" />
+        <div class="work__content">
+            <div class="work__description">
+                <h2>Work</h2>
+                <hr class="primary" />
+            </div>
         </div>
+        {% assign sorted_work = site.work | sort: "order" %}
+        {% for work in sorted_work %}
+        <div class="work__projectdiv work__kcc container">
+            <div class="work__projectimgdiv__imgdiv"><img width="90%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{{ work.screen_image }}" alt="{{ work.screen_image_alt }}" /></div>
+            <div class="work__projectdiv__description">
+                <h3>{{ work.work_name }}</h3>
+                <p>{{ work.case_description }}</p>
+                <div class="work__projectdiv__languagebar">
+                    {% for skill in work.skill_labels %}
+                    <span class="label_language">{{ skill.label }}</span>
+                    {% endfor %}
+                </div>
+                {% if work.current_site != "#" %}
+                <div class="view_live_div"><a class="btn-primary" href="{{ work.current_site }}" target="_blank" rel="noopener noreferrer">VIEW LIVE</a></div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
     </div>
-{% assign sorted_work = site.work | sort: "order" %}
-{% for work in sorted_work %}
-<div class="work__projectdiv work__kcc container">
-      <div class="work__projectimgdiv__imgdiv"><img width="90%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{{ work.screen_image }}" alt="{{ work.screen_image_alt }}" /></div>
-      <div class="work__projectdiv__description">
-          <h3>{{ work.work_name }}</h3>
-          <p>{{ work.case_description }}</p>
-          <div class="work__projectdiv__languagebar">
-              {% for skill in work.skill_labels %}
-              <span class="label_language">{{ skill.label }}</span>
-              {% endfor %}
-          </div>
-          {% if work.current_site != "#" %}
-          <div class="view_live_div"><a class="btn-primary" href="{{ work.current_site }}" target="_blank" rel="noopener noreferrer">VIEW LIVE</a></div>
-          {% endif %}
-      </div>
-</div>
-{% endfor %}
-</div>
 </section>
