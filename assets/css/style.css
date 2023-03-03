@@ -149,10 +149,6 @@ a:focus {
   color: #fff;
 }
 
-.btn {
-  font-weight: 600;
-}
-
 .btn-primary {
   background-color: transparent;
   border-color: #fff;
@@ -160,6 +156,8 @@ a:focus {
   border-style: solid;
   border-width: 2px;
   color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
   margin: 20px auto;
   padding: 0.5em 2em;
   text-align: center;
@@ -172,10 +170,6 @@ a:focus {
   background-color: #fff;
   border-color: #fff;
   color: #2a2a35;
-}
-
-.btn-group-lg > .btn, .btn-lg {
-  font-size: 1.25rem;
 }
 
 img {
