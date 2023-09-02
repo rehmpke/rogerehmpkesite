@@ -9,7 +9,7 @@ skill_labels:
   - label: HTML
   - label: Collaborative
   - label: Webpack
-current_site: "http://www.kcc.edu"
+current_site: "https://www.kcc.edu"
 screen_image: "./assets/img/kcc-screen.png"
 screen_image_alt: "computer screen with an image of kcc redesign project"
 case_description: "Provide architecture and website development oversight. Develop a user experience for editors and&nbsp;users."
