@@ -11,5 +11,5 @@ skill_labels:
 current_site: "#"
 screen_image: "./assets/img/kcc-screen2.png"
 screen_image_alt: "computer screen with an image of Economic Alliance of Kankakee project"
-case_description: "Redesigned their site and provide a better editing experience for the&nbsp;Alliance"
+case_description: "Redesigned their site, enhancing the editing experience for the Alliance."
 ---
