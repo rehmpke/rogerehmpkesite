@@ -1,5 +1,5 @@
 ---
 specialty_title: "Web Accessibility"
 order: 5
-specialty_paragraph: "II ensure compliance with accessibility guidelines and improve user experience for people with disabilities"
+specialty_paragraph: "Ensuring compliance with accessibility guidelines, enhancing user experiences for all."
 ---
