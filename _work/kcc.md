@@ -12,5 +12,5 @@ skill_labels:
 current_site: "https://www.kcc.edu"
 screen_image: "./assets/img/kcc-screen.png"
 screen_image_alt: "computer screen with an image of kcc redesign project"
-case_description: "Provide architecture and website development oversight. Develop a user experience for editors and&nbsp;users."
+case_description: "Providing architecture and website development oversight. Creating a user-friendly experience for editors and users."
 ---
