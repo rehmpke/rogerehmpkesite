@@ -262,6 +262,15 @@ img[data-src] {
   text-align: left;
 }
 
+.about a {
+  color: #fff;
+}
+
+.about a:hover,
+.about a:focus {
+  color: #0f4c81;
+}
+
 @media screen and (min-width: 900px) {
   .about__container {
     display: grid;
