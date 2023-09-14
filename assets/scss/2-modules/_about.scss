@@ -18,6 +18,14 @@
   }
 }
 
+.about a {
+  color: $secondary-link-color;
+}
+
+.about a:hover,
+.about a:focus {
+  color: $secondary-link-hover-color;
+}
 
 @media screen and (min-width: 900px) {
   .about__container {
