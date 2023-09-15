@@ -263,12 +263,12 @@ img[data-src] {
 }
 
 .about a {
-  color: #fff;
+  color: #0f4c81;
 }
 
 .about a:hover,
 .about a:focus {
-  color: #0f4c81;
+  color: #fff;
 }
 
 @media screen and (min-width: 900px) {
