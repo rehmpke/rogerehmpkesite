@@ -261,6 +261,9 @@ img[data-src] {
   padding: 0 5%;
   text-align: left;
 }
+.about__workwith-heading {
+  margin-left: 0.5em;
+}
 
 .about a {
   color: #0f4c81;
