@@ -470,7 +470,7 @@ img[data-src] {
 }
 
 .recomendations {
-  background-color: #bcb29e;
+  background-color: #fff;
   grid-column: 1;
   grid-row: 6;
   padding-left: 1em;
