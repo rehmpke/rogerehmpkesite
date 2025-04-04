@@ -190,8 +190,7 @@ img[data-src] {
   background-position-y: 0, -108px;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%);
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   grid-column: 1;
@@ -298,8 +297,7 @@ img[data-src] {
 }
 .specialties {
   background-color: #fff;
-  -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
   grid-column: 1;
   grid-row: 3;
   text-align: center;
@@ -434,8 +432,7 @@ img[data-src] {
 }
 .skills {
   background: linear-gradient(to left, #082742, rgba(15, 76, 129, 0.8)), url(/assets/img/img_6447.webp);
-  -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
   color: #fff;
   grid-column: 1;
   grid-row: 5;
@@ -467,7 +464,7 @@ img[data-src] {
   color: #fff;
 }
 .skills hr {
-  border-top: 1px solid rgb(255, 255, 255);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .recomendations {

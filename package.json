@@ -23,7 +23,7 @@
     "not ie_mob <= 8"
   ],
   "scripts": {
-    "dev": "webpack --watch --mode development",
+    "dev": "webpack --mode development",
     "build": "aws s3 cp ./_site s3://rogerehmpke.com --recursive"
   },
   "devDependencies": {

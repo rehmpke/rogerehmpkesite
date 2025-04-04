@@ -10,6 +10,9 @@ module.exports = {
     filename: 'index.js',
     path: path.resolve(__dirname, './assets/js/')
   },
+  stats: {
+    children: true
+  },
   module: {
     rules: [
       {
