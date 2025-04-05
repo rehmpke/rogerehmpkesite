@@ -1,5 +1,6 @@
 a {
   color: $link-color;
+  font-weight: $font-weight-medium;
   outline: 0 !important;
   text-decoration: none;
   transition: color 0.15s;
@@ -8,4 +9,5 @@ a {
 a:hover,
 a:focus {
   color: $link-hover-color;
+  text-decoration: underline;
 }

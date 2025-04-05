@@ -2,9 +2,9 @@
 // =============================
 
 // Font Families
-$font-family-headings: 'Poppins', Verdana, sans-serif;
+$font-family-headings: 'IBM Plex Sans', Verdana, sans-serif;
 $font-family-heading-roger: 'Roboto slab', Verdana, sans-serif;
-$font-family-paragraph: 'Poppins', Verdana, sans-serif;
+$font-family-paragraph: 'IBM Plex Sans', Verdana, sans-serif;
 
 // Fonts
 $font-size-base: 1.125rem;
@@ -12,7 +12,7 @@ $font-size-base: 1.125rem;
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
-$font-weight-semi-bold: 600;
+$font-weight-semi-bold: 700;
 $font-weight-bold: 700;
 $font-weight-extra-bold: 800;
 $font-weight-black: 900;
@@ -36,13 +36,13 @@ $grey-6: #3c3c3c;
 $grey-7: #222;
 
 // Site primary colors
-$primary-blue: #0f4c81;
+$primary-blue: #146C82;
 $primary-blue-darker: #071f35;
 $secondary-driftwood: #C9B89C;
 $secondary-midnight-blue: #2a2a35;
 
 // gradients
-$primary-gradient: #082742, rgba(15, 76, 129, 0.8);
+$primary-gradient: rgba(10, 60, 80, 1.0),rgba(10, 60, 80, 0.9); //r#082742, rgba(15, 76, 129, 0.8)
 
 // layout
 $grey-body-text: $white;
@@ -52,7 +52,7 @@ $hero-shot-text: $white;
 $heading__section--dark: $secondary-midnight-blue;
 $heading__subhead--dark: $secondary-midnight-blue;
 $heading--hero-shot: $white;
-$circle__border--hero-shot: $secondary-silver-driftwood;
+$circle__border--hero-shot: $secondary-driftwood;
 $label-language-background: $primary-blue;
 $label-language__text: $white;
 
@@ -63,7 +63,7 @@ $dark-button-text: $white;
 $light-button-text: $secondary-midnight-blue;
 
 // links
-$link-color: $secondary-silver-driftwood;
+$link-color: $secondary-driftwood;
 $link-hover-color: $white;
 $secondary-link-color: $primary-blue;
 $secondary-link-hover-color: $white;

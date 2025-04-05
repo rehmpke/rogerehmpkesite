@@ -14,13 +14,14 @@
 
 .testimonial__box h3 {
   font-size: 1.93rem;
-  line-height: 31px;
+  line-height: 1.2;
+  max-width: 42ch;
 }
 
 .testimonial__title {
   font-size: 1.16rem;
   font-weight: $font-weight-bold;
-  line-height: 1.10;
+  line-height: 1.35;
 }
 
 @media screen and (min-width: 900px) {
