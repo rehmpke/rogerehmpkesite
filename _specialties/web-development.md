@@ -1,5 +1,5 @@
 ---
 specialty_title: "Web Development"
 order: 1
-specialty_paragraph: "Proficiency in HTML, CSS, JavaScript, EXPRESS, REACT and responsive design."
+specialty_paragraph: "Proficient in HTML, CSS, and JavaScript with experience in modern frameworks like React and Express. Strong foundation in responsive design principles and front-end architecture."
 ---
