@@ -1,9 +1,16 @@
 # rogerehmpkesite
 
-## Requirements
+This repository powers [rogerehmpke.com](https://www.rogerehmpke.com), a clarity-led portfolio site focused on UX strategy, accessibility, and content systems in higher education and public sector work.
 
- - Jekyll & Bundler:
-```shell
+The site is custom built using Jekyll and Webpack, with a streamlined dev workflow and CI/CD to AWS.
+
+---
+
+## 🔧 Requirements
+
+### Jekyll & Bundler (Ruby)
+
+```bash
 $ gem install jekyll
 $ gem install bundler
 ```
