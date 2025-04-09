@@ -11,9 +11,9 @@
         {% for recomendation in sorted_recomendation %}
           <div>
               <div class="testimonial__box space-bottom">
-                  <h3>{{ recomendation.recomended_person }}<br/>
-                    <span class="testimonial__title">{{ recomendation.recomended_title }}</span></h3>
-                  <p class="testimonial__paragraph">{{ recomendation.recomended_quote }}</p>
+                  <h3 style="text-align: left;">{{ recomendation.recomended_person }}<br/>
+                    <span class="testimonial__title" style="text-align: left;">{{ recomendation.recomended_title }}</span></h3>
+                  <p class="testimonial__paragraph" style="text-align: left;">{{ recomendation.recomended_quote }}</p>
               </div>
           </div>
         {% endfor %}
