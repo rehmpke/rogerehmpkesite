@@ -473,10 +473,12 @@ img[data-src] {
 
 .recomendations {
   background-color: #fff;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
   grid-column: 1;
   grid-row: 6;
   padding-left: 1em;
   padding-right: 1em;
+  padding-top: 9em;
   text-align: center;
 }
 .recomendations__container {
@@ -515,6 +517,9 @@ img[data-src] {
   }
   .testimonial__projectimgdiv__imgdiv {
     grid-column-start: 1;
+  }
+  .space-top--testimonial {
+    padding-top: 7em;
   }
   .testimonial__box {
     padding-left: 25px;
