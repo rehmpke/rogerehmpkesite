@@ -527,31 +527,41 @@ img[data-src] {
     font-size: 1.01rem;
   }
 }
-.contactme {
-  background: #2a2a35;
+.global-footer {
+  background: linear-gradient(to left, rgb(10, 60, 80), rgba(10, 60, 80, 0.9)), url(/assets/img/img_6447.webp);
   color: #fff;
   grid-column: 1;
   grid-row: 7;
+  line-height: 20px;
   padding-left: 1em;
   padding-right: 1em;
-}
-
-.contactme h2 {
-  color: #fff;
   text-align: center;
 }
-
-.contactme label {
-  font-size: 0.8125rem;
-  padding-left: 1em;
+.global-footer__container {
+  margin: 0 auto;
+  max-width: 900px;
 }
 
-.contactme p {
-  padding-left: 0.6em;
-  padding-right: 0.6em;
+@media screen and (min-width: 900px) {
+  .global-footer__container {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    margin: 0 auto;
+  }
+  .global-footer__content {
+    grid-column: 1/span 12;
+  }
+  .global-footer__div {
+    display: grid;
+    grid-column: 6/12;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 1.5em;
+  }
 }
-
-.contactme form {
+form {
+  background: #2a2a35;
   border-color: #C9B89C;
   border-width: 1px;
   border-style: solid;
@@ -560,6 +570,7 @@ img[data-src] {
   margin-right: auto;
   max-width: 400px;
   padding: 20px;
+  text-align: left;
 }
 
 .form-control {
@@ -578,6 +589,21 @@ img[data-src] {
   width: 100%;
 }
 
+.global-footer h2 {
+  color: #fff;
+  text-align: center;
+}
+
+.global-footer label {
+  font-size: 0.8125rem;
+  padding-left: 1em;
+}
+
+.global-footer p {
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+
 .form-group__button {
   text-align: center;
 }
@@ -588,17 +614,11 @@ textarea {
   font-family: inherit;
 }
 
-.global-footer {
-  background: linear-gradient(to left, rgb(10, 60, 80), rgba(10, 60, 80, 0.9)), url(/assets/img/img_6447.webp);
-  color: #fff;
-  grid-column: 1;
-  grid-row: 8;
-  line-height: 20px;
-  text-align: center;
-}
-
 .footer-site-map {
   font-size: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .footer-site-map a {
@@ -617,6 +637,15 @@ textarea {
 .social-sharing-icon {
   margin-left: 10px;
   vertical-align: middle;
+}
+
+.contactme {
+  background: #2a2a35;
+  color: #fff;
+  grid-column: 1;
+  grid-row: 7;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .space-top {

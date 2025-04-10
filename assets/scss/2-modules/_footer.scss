@@ -2,13 +2,97 @@
   background: linear-gradient(to left, #{$primary-gradient}),url(#{$imagedir}img_6447.webp);
   color: $white;
   grid-column: 1;
-  grid-row: 8;
+  grid-row: 7;
   line-height: 20px;
+  padding-left: 1em;
+  padding-right: 1em;
   text-align: center;
+
+  &__container {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .global-footer__container {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    margin: 0 auto;
+  }
+  .global-footer__content {
+    grid-column: 1/ span 12;
+  }
+
+  .global-footer__div {
+    display: grid;
+    grid-column: 6/12;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 1.5em;
+  }
+}
+
+form {
+  background: $secondary-midnight-blue;
+  border-color: $secondary-driftwood;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+  padding: 20px;
+  text-align: left;
+}
+
+.form-control {
+  background-clip: padding-box;
+  background-color: transparent;
+  border: 1px solid $secondary-driftwood;
+  border-radius: .25rem;
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  height: calc(1.5em + .75rem + 2px);
+  line-height: 1.5;
+  outline: none;
+  padding: .375rem .75rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  width: 100%;
+}
+
+.global-footer h2 {
+  color: $white;
+  text-align: center;
+}
+
+.global-footer label {
+  font-size: 0.8125rem;
+  padding-left: 1em;
+}
+
+.global-footer p {
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+
+.form-group__button {
+  text-align: center;
+}
+
+input,
+textarea {
+  color: #fff;
+  font-family: inherit;
 }
 
 .footer-site-map {
   font-size: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .footer-site-map a {
@@ -27,4 +111,13 @@
 .social-sharing-icon {
   margin-left: 10px;
   vertical-align: middle
+}
+
+.contactme {
+  background: $secondary-midnight-blue;
+  color: $white;
+  grid-column: 1;
+  grid-row: 7;
+  padding-left: 1em;
+  padding-right: 1em;
 }
