@@ -72,6 +72,9 @@ If you're looking to collaborate or connect, the contact form is available at th
         }
     }
 
+    const pageContext = document.querySelector("meta[name='ai-context']")?.content || "";
+    const combinedContext = pageContext.length > 10 ? `${pageContext}\n\n${introText}` : introText;
+
     document.getElementById('ai-widget-button').onclick = () => {
         const box = document.getElementById('ai-widget-box');
         box.style.display = box.style.display === 'none' ? 'block' : 'none';
@@ -89,7 +92,7 @@ If you're looking to collaborate or connect, the contact form is available at th
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 question: input,
-                contextBlock: introText,
+                contextBlock: combinedContext,
                 messageHistory: chatHistory
             })
         })
