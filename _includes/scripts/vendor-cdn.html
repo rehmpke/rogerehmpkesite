@@ -52,6 +52,7 @@
 <script>
     const endpoint = "https://tei23dyloh.execute-api.us-east-1.amazonaws.com/prod/gptAssistantHandler";
     const introText = "Roger Ehmpke is a digital strategist focused on AI-first design in higher ed. This assistant answers based on his projects, ethics, and strategy work.";
+    let chatHistory = [];
 
     document.getElementById('ai-widget-button').onclick = () => {
         const box = document.getElementById('ai-widget-box');
@@ -61,15 +62,21 @@
     function submitPrompt() {
         const input = document.getElementById('ai-widget-input').value;
         const log = document.getElementById('ai-widget-log');
+        chatHistory.push({ role: "user", content: input });
         log.innerHTML += `<p><strong>You:</strong> ${input}</p>`;
 
         fetch(endpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ question: input, context: introText })
+            body: JSON.stringify({
+                question: input,
+                contextBlock: introText,
+                messageHistory: chatHistory
+            })
         })
             .then(res => res.json())
             .then(data => {
+                chatHistory.push({ role: "assistant", content: data.answer });
                 log.innerHTML += `<p><strong>Assistant:</strong> ${data.answer}</p>`;
                 document.getElementById('ai-widget-input').value = '';
             })
