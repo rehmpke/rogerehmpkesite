@@ -2,6 +2,7 @@
 ==================================================-->
 <script src="./assets/js/index.js"></script>
 
+
 <!-- 🚀 Roger's Personal AI Assistant -->
 <div id="ai-widget-button">💬 Ask Me About My Work</div>
 <div id="ai-widget-box" style="display:none">
@@ -54,6 +55,14 @@
     const introText = "Roger Ehmpke is a digital strategist focused on AI-first design in higher ed. This assistant answers based on his projects, ethics, and strategy work.";
     let chatHistory = [];
 
+    if (sessionStorage.getItem("gptChatHistory")) {
+        try {
+            chatHistory = JSON.parse(sessionStorage.getItem("gptChatHistory")) || [];
+        } catch (e) {
+            chatHistory = [];
+        }
+    }
+
     document.getElementById('ai-widget-button').onclick = () => {
         const box = document.getElementById('ai-widget-box');
         box.style.display = box.style.display === 'none' ? 'block' : 'none';
@@ -63,6 +72,7 @@
         const input = document.getElementById('ai-widget-input').value;
         const log = document.getElementById('ai-widget-log');
         chatHistory.push({ role: "user", content: input });
+        sessionStorage.setItem("gptChatHistory", JSON.stringify(chatHistory));
         log.innerHTML += `<p><strong>You:</strong> ${input}</p>`;
 
         fetch(endpoint, {
@@ -77,6 +87,7 @@
             .then(res => res.json())
             .then(data => {
                 chatHistory.push({ role: "assistant", content: data.answer });
+                sessionStorage.setItem("gptChatHistory", JSON.stringify(chatHistory));
                 log.innerHTML += `<p><strong>Assistant:</strong> ${data.answer}</p>`;
                 document.getElementById('ai-widget-input').value = '';
             })
