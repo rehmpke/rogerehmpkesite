@@ -2,8 +2,7 @@
 ==================================================-->
 <script src="./assets/js/index.js"></script>
 
-
-<!-- 🚀 Roger's Personal AI Assistant -->
+<!-- GPT Assistant Chat Widget -->
 <div id="ai-widget-button">💬 Ask Me About My Work</div>
 <div id="ai-widget-box" style="display:none">
     <div id="ai-widget-log" aria-live="polite"></div>
@@ -52,9 +51,19 @@
 
 <script>
     const endpoint = "https://tei23dyloh.execute-api.us-east-1.amazonaws.com/prod/gptAssistantHandler";
-    const introText = "Roger Ehmpke is a digital strategist focused on AI-first design in higher ed. This assistant answers based on his projects, ethics, and strategy work.";
-    let chatHistory = [];
+    const introText = `
+Roger Ehmpke leads UX, accessibility, and CMS strategy at Kankakee Community College. 
+He helps mission-driven teams simplify complex systems through clarity, inclusive design, 
+and web governance. 
 
+He’s known for shaping digital transformation in higher ed and mentoring designers and developers. 
+Previously a web design instructor and CMS architect, he builds accessible platforms that scale. 
+Ask about his AI-first prototypes, leadership roles, or team coaching.
+
+If you're looking to collaborate or connect, the contact form is available at the bottom of this page.
+`;
+
+    let chatHistory = [];
     if (sessionStorage.getItem("gptChatHistory")) {
         try {
             chatHistory = JSON.parse(sessionStorage.getItem("gptChatHistory")) || [];
@@ -88,7 +97,7 @@
             .then(data => {
                 chatHistory.push({ role: "assistant", content: data.answer });
                 sessionStorage.setItem("gptChatHistory", JSON.stringify(chatHistory));
-                log.innerHTML += `<p><strong>Assistant:</strong> ${data.answer}</p>`;
+                log.innerHTML += `<p><strong>Assistant:</strong> ${data.answer}<br><em>Need more info? <a href='#contact'>Contact Roger here.</a></em></p>`;
                 document.getElementById('ai-widget-input').value = '';
             })
             .catch(err => {
