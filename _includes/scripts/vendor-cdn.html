@@ -51,17 +51,16 @@
 
 <script>
     const endpoint = "https://tei23dyloh.execute-api.us-east-1.amazonaws.com/prod/gptAssistantHandler";
-    const introText = `
-Roger Ehmpke leads UX, accessibility, and CMS strategy at Kankakee Community College. 
-He helps mission-driven teams simplify complex systems through clarity, inclusive design, 
-and web governance. 
+   const introText = `
+Hi there—I'm here to help you learn more about Roger Ehmpke's work.
 
-He’s known for shaping digital transformation in higher ed and mentoring designers and developers. 
-Previously a web design instructor and CMS architect, he builds accessible platforms that scale. 
-Ask about his AI-first prototypes, leadership roles, or team coaching.
+Roger leads UX, accessibility, and content systems strategy in higher ed, with a focus on simplifying complex digital platforms through inclusive design and web governance.  
 
-If you're looking to collaborate or connect, the contact form is available at the bottom of this page.
+He's known for shaping digital transformation efforts and mentoring designers and teams. If you're exploring the site and have questions about his strategy, projects, or digital leadership work, feel free to ask.
+
+And if you're looking to connect or collaborate, there's a contact form at the bottom of this page.
 `;
+
 
     let chatHistory = [];
     if (sessionStorage.getItem("gptChatHistory")) {
