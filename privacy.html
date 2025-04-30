@@ -22,13 +22,13 @@ layout: page-layout
             (city-level), and pages visited. This data is anonymized whenever possible and used strictly to improve the site
             experience.</p>
 
-            <p style="text-align: left;"><strong>AI Assistant (GPT Chat):</strong></p>
+            <p style="text-align: left;"><strong>Site Chat Assistant:</strong></p>
             <ul style="text-align: left;">
                 <li>Your question is submitted to a secure AWS Lambda function when using the chat interface.</li>
-                <li>The question is securely transmitted to OpenAI’s GPT model via encrypted API.</li>
+                <li>The question is securely transmitted to OpenAI's GPT model via encrypted API.</li>
                 <li>Responses are generated based on predefined site context and your input.</li>
                 <li>No personal data is stored on our server; however, your browser may temporarily retain chat history using
-                    <code>sessionStorage</code> for continuity.</li>
+                    <code>sessionStorage</code> (used temporarily by your browser).</li>
                 <li>Please avoid including sensitive personal data in chat interactions.</li>
             </ul>
 
@@ -38,7 +38,7 @@ layout: page-layout
             <ul style="text-align: left;">
                 <li>Contact submissions are used exclusively for follow-up communication.</li>
                 <li>Analytics insights help refine site structure and user experience.</li>
-                <li>AI chat input is processed in real-time and is not stored or reused.</li>
+                <li>Chat input is processed in real-time and is not stored or reused.</li>
             </ul>
 
             <hr />
@@ -47,7 +47,7 @@ layout: page-layout
             <ul style="text-align: left;">
                 <li><strong>Google Analytics:</strong> Collects anonymized site usage data.</li>
                 <li><strong>OpenAI:</strong> Provides the GPT language model via secure API.</li>
-                <li><strong>AWS (Amazon Web Services):</strong> Hosts the backend function that routes chat requests.</li>
+                <li><strong>AWS (Amazon Web Services):</strong> Hosts the backend service that securely delivers chat requests.</li>
             </ul>
 
             <hr />
