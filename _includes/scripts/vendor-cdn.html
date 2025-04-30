@@ -100,7 +100,7 @@ If you're looking to collaborate or connect, the contact form is available at th
             .then(data => {
                 chatHistory.push({ role: "assistant", content: data.answer });
                 sessionStorage.setItem("gptChatHistory", JSON.stringify(chatHistory));
-                log.innerHTML += `<p><strong>Assistant:</strong> ${data.answer}<br><em>Need more info? <a href='#contact'>Contact Roger here.</a></em></p>`;
+                log.innerHTML += `<p><strong>Assistant:</strong> ${data.answer}<br><em>Need more info? <a href='/#contact'>Contact Roger here.</a></em></p>`;
                 document.getElementById('ai-widget-input').value = '';
             })
             .catch(err => {
