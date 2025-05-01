@@ -49,6 +49,13 @@
     }
 </style>
 
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.5/purify.min.js"
+  integrity="sha512-/CUtA84sWWqWEBejNrrtWa7Yc4cth3Ome2ymvCKOo9YcZ4sh98tndUy4LutE2xGcAgD4fyz16y+gSyJdGCB5ww=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
 <script>
     const endpoint = "https://tei23dyloh.execute-api.us-east-1.amazonaws.com/prod/gptAssistantHandler";
    const introText = `
@@ -82,15 +89,16 @@ And if you're looking to connect or collaborate, there's a contact form at the b
     function submitPrompt() {
         const input = document.getElementById('ai-widget-input').value;
         const log = document.getElementById('ai-widget-log');
-        chatHistory.push({ role: "user", content: input });
+        const cleanInput = DOMPurify.sanitize(input, { USE_PROFILES: { html: true } });
+        chatHistory.push({ role: "user", content: cleanInput });
         sessionStorage.setItem("gptChatHistory", JSON.stringify(chatHistory));
-        log.innerHTML += `<p><strong>You:</strong> ${input}</p>`;
+        log.innerHTML += `<p><strong>You:</strong> ${cleanInput}</p>`;
 
         fetch(endpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                question: input,
+                question: cleanInput,
                 contextBlock: combinedContext,
                 messageHistory: chatHistory
             })
@@ -100,7 +108,7 @@ And if you're looking to connect or collaborate, there's a contact form at the b
                 chatHistory.push({ role: "assistant", content: data.answer });
                 sessionStorage.setItem("gptChatHistory", JSON.stringify(chatHistory));
                 log.innerHTML += `<p><strong>Assistant:</strong> ${data.answer}<br><em>Need more info? <a href='/#contact'>Contact Roger here.</a></em></p>`;
-                document.getElementById('ai-widget-input').value = '';
+                input = '';
             })
             .catch(err => {
                 log.innerHTML += `<p><em>Error connecting to assistant.</em></p>`;
