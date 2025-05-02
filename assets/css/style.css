@@ -270,7 +270,8 @@ img[data-src] {
 }
 
 .about a {
-  color: #146C82;
+  color: #004763;
+  font-weight: 700;
 }
 
 .about a:hover,
@@ -392,7 +393,7 @@ img[data-src] {
 }
 
 .label_language {
-  background: #146C82;
+  background: #004763;
   color: #fff;
   margin: 5px;
   padding: 3px 10px;
