@@ -408,6 +408,11 @@ img[data-src] {
   margin-bottom: 2em;
 }
 
+.view_live_div .btn-primary {
+  color: #1b3d4f;
+  border-color: #1b3d4f;
+}
+
 @media screen and (min-width: 900px) {
   .work__container {
     display: grid;
