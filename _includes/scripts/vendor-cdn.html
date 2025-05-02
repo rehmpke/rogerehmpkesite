@@ -58,16 +58,15 @@
 
 <script>
     const endpoint = "https://tei23dyloh.execute-api.us-east-1.amazonaws.com/prod/gptAssistantHandler";
-   const introText = `
+    const introText = `
 Hi there—I'm here to help you learn more about Roger Ehmpke's work.
 
-Roger leads UX, accessibility, and content systems strategy in higher ed, with a focus on simplifying complex digital platforms through inclusive design and web governance.  
+Roger leads UX, accessibility, and content systems strategy in higher ed, with a focus on simplifying complex digital platforms through inclusive design and web governance.
 
 He's known for shaping digital transformation efforts and mentoring designers and teams. If you're exploring the site and have questions about his strategy, projects, or digital leadership work, feel free to ask.
 
 And if you're looking to connect or collaborate, there's a contact form at the bottom of this page.
 `;
-
 
     let chatHistory = [];
     if (sessionStorage.getItem("gptChatHistory")) {
@@ -87,9 +86,11 @@ And if you're looking to connect or collaborate, there's a contact form at the b
     };
 
     function submitPrompt() {
-        const input = document.getElementById('ai-widget-input').value;
+        const inputField = document.getElementById('ai-widget-input');
+        const input = inputField.value;
         const log = document.getElementById('ai-widget-log');
         const cleanInput = DOMPurify.sanitize(input, { USE_PROFILES: { html: true } });
+
         chatHistory.push({ role: "user", content: cleanInput });
         sessionStorage.setItem("gptChatHistory", JSON.stringify(chatHistory));
         log.innerHTML += `<p><strong>You:</strong> ${cleanInput}</p>`;
@@ -108,9 +109,10 @@ And if you're looking to connect or collaborate, there's a contact form at the b
                 chatHistory.push({ role: "assistant", content: data.answer });
                 sessionStorage.setItem("gptChatHistory", JSON.stringify(chatHistory));
                 log.innerHTML += `<p><strong>Assistant:</strong> ${data.answer}<br><em>Need more info? <a href='/#contact'>Contact Roger here.</a></em></p>`;
-                input = '';
+                inputField.value = '';
             })
             .catch(err => {
+                console.error("Chat fetch error:", err);
                 log.innerHTML += `<p><em>Error connecting to assistant.</em></p>`;
             });
     }
