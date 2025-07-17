@@ -1,0 +1,30 @@
+.isthisrightforme {
+    background-color: $secondary-driftwood;
+    grid-column: 1;
+    grid-row: 2;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    &__container {
+        max-width: 900px;
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__p {
+        margin-top: 0;
+        padding: 0 5%;
+        text-align: left;
+    }
+
+    &__workwith-heading {
+        margin-left: 0.5em;
+    }
+}
+
+.isthisrightforme .btn-primary {
+    color: #1b3d4f;
+    border-color: #1b3d4f;
+}

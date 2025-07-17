@@ -1,0 +1,58 @@
+.about-consulting {
+  background-color: $white;
+  grid-column: 1;
+  grid-row: 3;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  &__container {
+    max-width: 900px;
+  }
+
+  &__content {
+    text-align: center;
+  }
+  &__p {
+    margin-top: 0;
+    padding: 0 5%;
+    text-align: left;
+  }
+  &__workwith-heading {
+    margin-left: 0.5em;
+  }
+}
+
+.about-consulting a {
+  color: $secondary-link-color;
+  font-weight: $font-weight-semi-bold;
+}
+
+.about-consulting a:hover,
+.about-consulting a:focus {
+  color: $secondary-link-hover-color;
+}
+
+@media screen and (min-width: 900px) {
+  .about-consulting__container {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  margin: 0 auto;
+}
+
+  .about-consulting__content {
+    grid-column: 1/ span 12;
+  }
+
+  .about-consulting__projectdiv {
+    display: grid;
+    grid-column: 2/12;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 1.5em;
+  }
+
+  .about-consulting__projectimgdiv__imgdiv {
+    grid-column-start: 1;
+  }
+}

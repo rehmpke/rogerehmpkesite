@@ -1,0 +1,22 @@
+<section class="recomendations-consulting space-top--testimonial" id="recomendations">
+  <div class="recomendations-consulting__container">
+    <div class="recomendations-consulting__content">
+  <div>
+      <h2>Recomendations</h2>
+      <p class="intro">Here’s what clients and collaborators say about working with me on web systems and strategy.</p>
+  </div>
+</div>
+  <div class="testimonial__projectdiv testimonial__kcc container">
+        {% assign sorted_recomendation = site.recomendations | sort: "order" %}
+        {% for recomendation in sorted_recomendation %}
+          <div>
+              <div class="testimonial__box space-bottom">
+                  <h3 style="text-align: left;">{{ recomendation.recomended_person }}<br/>
+                    <span class="testimonial__title" style="text-align: left;">{{ recomendation.recomended_title }}</span></h3>
+                  <p class="testimonial__paragraph" style="text-align: left;">{{ recomendation.recomended_quote }}</p>
+              </div>
+          </div>
+        {% endfor %}
+  </div>
+</div>
+</section>

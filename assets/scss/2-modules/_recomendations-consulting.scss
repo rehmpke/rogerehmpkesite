@@ -1,0 +1,68 @@
+.recomendations-consulting {
+  background-color: $secondary-driftwood;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  grid-column: 1;
+  grid-row: 6;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 9em;
+  text-align: center;
+
+  &__container {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+}
+
+.testimonial__box h3 {
+  font-size: 1.93rem;
+  line-height: 1.2;
+  max-width: 42ch;
+}
+
+.testimonial__title {
+  font-size: 1.16rem;
+  font-weight: $font-weight-bold;
+  line-height: 1.35;
+}
+
+@media screen and (min-width: 900px) {
+  .testimonial__container {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  margin: 0 auto;
+}
+
+  .testimonial__content {
+    grid-column: 1/ span 12;
+  }
+
+  .testimonial__projectdiv {
+    display: grid;
+    grid-column: 3/12;
+    grid-template-columns: repeat(3,1fr);
+    margin-bottom: 1.5em;
+  }
+
+  .testimonial__projectimgdiv__imgdiv {
+    grid-column-start: 1;
+  }
+
+  .space-top--testimonial {
+    padding-top: 7em;
+  }
+  .testimonial__box {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .testimonial__paragraph {
+    font-size: 0.899em;
+  }
+
+  .testimonial__title {
+    font-size: 1.01rem;
+  }
+}
