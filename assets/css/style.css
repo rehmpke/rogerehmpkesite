@@ -188,7 +188,7 @@ img[data-src] {
 }
 
 .hero-shot {
-  background: linear-gradient(to left, rgb(10, 60, 80), rgba(10, 60, 80, 0.9)), url(/assets/img/img_6447.webp);
+  background: linear-gradient(to left, rgb(10, 60, 80), rgba(10, 60, 80, 0.9)), url(/assets/img/compass-background.png);
   background-position: top center;
   background-position-y: 0, -108px;
   background-repeat: no-repeat;
