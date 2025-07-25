@@ -1,5 +1,5 @@
 ---
-specialty_title: "User-Centric Focus"
+specialty_title: "UX & Accessibility"
 order: 2
-specialty_paragraph: "Deep commitment to accessibility and UX. Fluent in WCAG, ARIA, and Section 508. Apply data-informed decisions through Google Analytics, Tag Manager, and Looker Studio."
+specialty_paragraph: "<a href='/accessibility-in-practice.html' style='color:#004763; font-weight:700;'>WCAG/508 compliance, inclusive design, screen reader readiness</a>, and equitable access planning."
 ---
