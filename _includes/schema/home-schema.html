@@ -77,7 +77,69 @@
                 "CMS Architecture (WordPress, SharePoint, Jekyll/CloudCannon)",
                 "AI & Automation Readiness",
                 "Web Performance & Analytics"
-            ]
+            ],
+            "contactPoint": [{
+                "@type": "ContactPoint",
+                "contactType": "Business inquiries",
+                "url": "https://www.rogerehmpke.com/#contact",
+                "areaServed": "US",
+                "availableLanguage": ["en"]
+            }],
+            "potentialAction": {
+                "@type": "ContactAction",
+                "target": "https://www.rogerehmpke.com/#contact",
+                "name": "Contact Roger"
+            }
+        },
+
+        /* --- Projects (as CreativeWork) --- */
+        {
+            "@type": "CreativeWork",
+            "@id": "https://www.rogerehmpke.com/#project-kcc",
+            "name": "Kankakee Community College Website Strategy & Modernization",
+            "description": "Lead strategist for the college's public-facing platforms and intranet — including CMS modernization, AI-aware schema, and long-term governance upgrades.",
+            "url": "https://www.kcc.edu/",
+            "keywords": ["Higher Ed", "Web Strategy", "Accessibility", "CMS Architecture", "AI Readiness"],
+            "about": { "@id": "https://www.rogerehmpke.com/#person" },
+            "inLanguage": "en-US",
+            "isPartOf": { "@id": "https://www.rogerehmpke.com/#about" }
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "https://www.rogerehmpke.com/#project-eak",
+            "name": "Economic Alliance of Kankakee County — Redesign & CMS Rebuild",
+            "description": "Content-forward, accessible redesign and WordPress build aligned with organizational goals for a regional economic development organization.",
+            "url": "https://www.kankakeeedc.com/",
+            "keywords": ["UX", "Responsive Design", "WordPress", "Economic Development"],
+            "about": { "@id": "https://www.rogerehmpke.com/#person" },
+            "inLanguage": "en-US",
+            "isPartOf": { "@id": "https://www.rogerehmpke.com/#about" }
+        },
+
+        /* --- Testimonials (as Review about the Person) --- */
+        {
+            "@type": "Review",
+            "@id": "https://www.rogerehmpke.com/#review-lisa-wogan",
+            "reviewBody": "Roger's methodical approach and proactive attitude helped produce a website that exceeded our needs.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "author": { "@type": "Person", "name": "Lisa M. Wogan", "jobTitle": "Economic Development Professional" },
+            "itemReviewed": { "@id": "https://www.rogerehmpke.com/#person" }
+        },
+        {
+            "@type": "Review",
+            "@id": "https://www.rogerehmpke.com/#review-febin",
+            "reviewBody": "Roger's creativity and attention to detail made him a pleasure to work with.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "author": { "@type": "Person", "name": "Febin Mootheril", "jobTitle": "President & CEO" },
+            "itemReviewed": { "@id": "https://www.rogerehmpke.com/#person" }
+        },
+        {
+            "@type": "Review",
+            "@id": "https://www.rogerehmpke.com/#review-ron-sattar",
+            "reviewBody": "Highly skilled and strategic. Roger managed our project from start to finish with clarity and care.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "author": { "@type": "Person", "name": "Ron Sattar", "jobTitle": "Business and IT Consultant" },
+            "itemReviewed": { "@id": "https://www.rogerehmpke.com/#person" }
         }
     ]
 }
