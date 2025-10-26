@@ -3,28 +3,40 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{page.title}}</title>
-    <meta name="description" content="Roger Ehmpke helps higher ed teams bring clarity to complex web systems—through UX leadership, accessible design, and digital strategy. 25+ years in content governance, CMS architecture, and operational UX.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Roger Ehmpke, higher ed UX, web strategy, content governance, CMS design, accessibility, frontend leadership, digital strategy, web systems, operational UX">
+    <title>{{page.title}}</title>
+    <meta name="description" content="Roger Ehmpke leads strategic web and digital experience for higher education — aligning accessibility, UX, content governance, CMS architecture, and AI readiness to reduce complexity and support institutional goals." />
+    <meta name="keywords" content="Roger Ehmpke, higher education web, higher ed UX, accessibility, WCAG, content governance, CMS architecture, digital strategy, AI readiness, schema, web leadership" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="theme-color" content="{{ site.themecolor }}">
+    <meta name="color-scheme" content="light dark" />
     <meta name='ai-context' content='{{ page.ai_context | escape }}'>
-    {% include scripts/google-tag.html %}
-    {% include styles/vendor.html %}
+    <link rel="canonical" href="https://www.rogerehmpke.com">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="./manifest.json">
     {% include styles/fonts.html %}
     {% include styles/main.html %}
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="canonical" href="https://www.rogerehmpke.com">
-    <link rel="manifest" href="./manifest.json">
-    <meta property="og:title" content="Roger Ehmpke – Clarity-led Web Strategy for Higher Ed & Complex Systems">
-    <meta property="og:site_name" content="Roger Ehmpke">
-    <meta property="og:url" content="https://www.rogerehmpke.com">
-    <meta property="og:description" content="UX leadership, accessibility, and digital systems strategy for higher ed teams. Roger Ehmpke brings clarity to complex platforms through thoughtful design and governance.">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@rehmpke">
-    <meta name="twitter:title" content="Roger Ehmpke – Web Strategy for Higher Ed & Complex Systems">
-    <meta name="twitter:description" content="Digital clarity for higher ed. UX, accessibility, and CMS leadership to support mission-driven teams.">
-    <meta name="twitter:image" content="https://www.rogerehmpke.com/assets/img/roger.webp">
-
+    {% include styles/vendor.html %}
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Roger Ehmpke — Strategic Digital Leadership for Higher Ed Web Ecosystems" />
+    <meta property="og:description" content="Accessibility, UX, content governance, and AI readiness — delivered with clarity for higher education web systems." />
+    <meta property="og:site_name" content="Roger Ehmpke" />
+    <meta property="og:url" content="https://www.rogerehmpke.com/" />
+    <meta property="og:image" content="https://www.rogerehmpke.com/assets/img/og-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Roger Ehmpke — Strategic digital leadership for higher ed web ecosystems" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@rehmpke" />
+    <meta name="twitter:creator" content="@rehmpke" />
+    <meta name="twitter:title" content="Roger Ehmpke — Strategic Digital Leadership for Higher Ed" />
+    <meta name="twitter:description" content="Clarity-led strategy for accessible, sustainable, AI-aware web systems in higher education." />
+    <meta name="twitter:image" content="https://www.rogerehmpke.com/assets/img/og-card.jpg" />
+    <meta name="twitter:image:alt" content="Roger Ehmpke — strategic web leadership banner" />
+    <link rel="preload" as="image" href="/assets/img/roger.webp" imagesrcset="/assets/img/roger.webp 1x" imagesizes="(max-width: 600px) 300px, 300px" />
+    {% include scripts/google-tag.html %}
+    {% include schema/home-schema.html %}
 </head>
 <body>
