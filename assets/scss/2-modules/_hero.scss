@@ -1,7 +1,7 @@
 @use '../0-tools/vars' as *;
 
 .hero-shot {
-  background: linear-gradient(to left, #{$primary-gradient}),url(#{$imagedir}compass-background.png);
+  background: linear-gradient(to left, #{$primary-gradient}),url(#{$imagedir}compass-background.webp);
   background-position: top center;
   background-position-y: 0, -108px;
   background-repeat: no-repeat;
