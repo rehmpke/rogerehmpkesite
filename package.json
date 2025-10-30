@@ -1,51 +1,63 @@
 {
   "name": "RogerEhmpke",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.1.1",
+  "description": "Modern build for Jekyll site with Webpack and Babel",
+  "author": "Roger Ehmpke",
+  "license": "ISC",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production && aws s3 cp ./_site s3://rogerehmpke.com --recursive"
+  },
   "babel": {
     "presets": [
       [
         "@babel/preset-env",
         {
+          "bugfixes": true,
+          "modules": false,
           "useBuiltIns": "usage",
-          "corejs": {
-            "version": 3,
-            "proposals": true
-          }
+          "corejs": 3,
+          "exclude": [
+            "@babel/plugin-transform-regenerator",
+            "@babel/plugin-transform-async-to-generator"
+          ]
         }
       ]
     ]
   },
-  "browserslist": [
-    "defaults",
-    "ie >=11",
-    "not ie <= 8",
-    "not ie_mob <= 8"
-  ],
-  "scripts": {
-    "dev": "webpack --mode development",
-    "build": "aws s3 cp ./_site s3://rogerehmpke.com --recursive"
+  "browserslist": {
+    "production": [
+      "defaults and supports es6-module",
+      "not dead",
+      "not op_mini all",
+      "not IE 11",
+      "not Edge < 79"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "last 1 edge version"
+    ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "autoprefixer": "^10.2.6",
-    "babel-loader": "^8.1.0",
-    "css-loader": "^5.2.4",
-    "mini-css-extract-plugin": "^1.5.1",
-    "postcss": "^8.3.4",
-    "postcss-loader": "^5.2.0",
-    "sass": "^1.58.3",
-    "sass-loader": "^13.0.2",
-    "style-loader": "^2.0.0",
+    "@babel/cli": "^7.26.0",
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "autoprefixer": "^10.4.20",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^6.10.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "postcss": "^8.4.33",
+    "postcss-loader": "^7.3.4",
+    "sass-embedded": "^1.93.2",
+    "sass-loader": "^14.2.1",
+    "style-loader": "^3.3.4",
     "url-loader": "^4.1.1",
-    "webpack": "^5.36.1",
-    "webpack-cli": "^4.6.0"
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "core-js": "^3.6.5"
-  },
-  "author": "Roger Ehmpke",
-  "license": "ISC"
+    "core-js": "^3.38.1"
+  }
 }

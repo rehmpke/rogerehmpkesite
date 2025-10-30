@@ -1,3 +1,5 @@
+@use '../0-tools/vars' as *;
+
 .global-footer {
   background: linear-gradient(to left, #{$primary-gradient}),url(#{$imagedir}img_6447.webp);
   color: $white;

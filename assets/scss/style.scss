@@ -1,31 +1,31 @@
 // Variables
-@import '0-tools/vars';
+@use '0-tools/vars' as *;
 
 // Base items
-@import '1-base/typography';
-@import '1-base/links';
-@import '1-base/buttons';
-@import '1-base/img';
+@use '1-base/typography' as *;
+@use '1-base/links' as *;
+@use '1-base/buttons' as *;
+@use '1-base/img' as *;
 
 // Modular components
-@import '2-modules/header';
-@import '2-modules/hero';
-@import '2-modules/about';
-@import '2-modules/about-consulting';
-@import '2-modules/specialties.scss';
-@import '2-modules/work';
-@import '2-modules/isthisrightforme.scss';
-@import '2-modules/skills';
-@import '2-modules/recomendations';
-@import '2-modules/recomendations-consulting';
-@import '2-modules/footer';
+@use '2-modules/header' as *;
+@use '2-modules/hero' as *;
+@use '2-modules/about' as *;
+@use '2-modules/about-consulting' as *;
+@use '2-modules/specialties' as *;
+@use '2-modules/work' as *;
+@use '2-modules/isthisrightforme' as *;
+@use '2-modules/skills' as *;
+@use '2-modules/recomendations' as *;
+@use '2-modules/recomendations-consulting' as *;
+@use '2-modules/footer' as *;
 
-// Layout items
-@import '3-layout/positioning';
-@import '3-layout/margins';
-@import '3-layout/padding';
-@import '3-layout/tables';
-@import '3-layout/section';
+// Layout
+@use '3-layout/positioning' as *;
+@use '3-layout/margins' as *;
+@use '3-layout/padding' as *;
+@use '3-layout/tables' as *;
+@use '3-layout/section' as *;
 
-// Page specific styling
-@import '4-pages/home';
+// Page specific
+@use '4-pages/home' as *;

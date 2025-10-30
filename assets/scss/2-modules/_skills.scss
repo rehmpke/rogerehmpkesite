@@ -1,3 +1,5 @@
+@use '../0-tools/vars' as *;
+
 .skills {
   background: linear-gradient(to left, #{$primary-gradient}),url(#{$imagedir}img_6447.webp);
   clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);

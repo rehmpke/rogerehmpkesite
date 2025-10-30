@@ -1,3 +1,5 @@
+@use '../0-tools/vars' as *;
+
 .about {
   background-color: $secondary-driftwood;
   grid-column: 1;
