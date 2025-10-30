@@ -11,7 +11,7 @@
         {% assign sorted_work = site.work | sort: "order" %}
         {% for work in sorted_work %}
         <div class="work__projectdiv work__kcc container">
-            <div class="work__projectimgdiv__imgdiv"><img width="90%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{{ work.screen_image }}" alt="{{ work.screen_image_alt }}" /></div>
+            <div class="work__projectimgdiv__imgdiv"><img width="90%" src="data:image/webp;base64,UklGRiIAAABXRUJQVlA4ICAAAAAwAgCdASoBAAEAAIAAFgCdASoBAAEAAIAAFgCdASoBAAEAAIAAFg..." data-src="{{ work.screen_image }}" alt="{{ work.screen_image_alt }}" /></div>
             <div class="work__projectdiv__description">
                 <h3>{{ work.work_name }}</h3>
                 <p>{{ work.case_description }}</p>

@@ -7,7 +7,7 @@ skill_labels:
   - label: WordPress
   - label: Economic Development
 current_site: "#"
-screen_image: "./assets/img/kcc-screen2.png"
+screen_image: "./assets/img/kcc-screen2.webp"
 screen_image_alt: "computer screen with an image of Economic Alliance of Kankakee project"
 case_description: "<p>Led redesign and CMS rebuild for a regional economic development organization. Delivered a content-forward, accessible site aligned with organizational goals.</p>"
 ---
