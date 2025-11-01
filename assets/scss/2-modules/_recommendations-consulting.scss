@@ -1,7 +1,7 @@
 @use '../0-tools/vars' as *;
 
 .recommendations-consulting {
-  background-color: $secondary-driftwood;
+  background-color: $secondary-sand;
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
   grid-column: 1;
   grid-row: 6;
