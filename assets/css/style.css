@@ -18,7 +18,7 @@ html, body {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #C9B89C;
+  background-color: #C7B08B;
   color: #2a2a35;
   display: grid;
   font-family: "IBM Plex Sans", Verdana, sans-serif;
@@ -141,7 +141,7 @@ hr {
 }
 
 a {
-  color: #C9B89C;
+  color: #C7B08B;
   font-weight: 500;
   outline: 0 !important;
   text-decoration: none;
@@ -220,7 +220,7 @@ img[data-src] {
   border-radius: 50%;
   border-width: 14px;
   border-style: solid;
-  border-color: #C9B89C;
+  border-color: #C7B08B;
   box-shadow: 0 4px 12px rgba(10, 60, 80, 0.9);
   margin-left: auto;
   margin-right: auto;
@@ -251,7 +251,7 @@ img[data-src] {
   }
 }
 .about {
-  background-color: #C9B89C;
+  background-color: #C7B08B;
   grid-column: 1;
   grid-row: 2;
   padding-left: 1em;
@@ -414,7 +414,7 @@ img[data-src] {
   }
 }
 .work {
-  background-color: #C9B89C;
+  background-color: #C7B08B;
   padding-left: 1em;
   padding-right: 1em;
   grid-column-start: 1/span 12;
@@ -497,7 +497,7 @@ img[data-src] {
   }
 }
 .isthisrightforme {
-  background-color: #C9B89C;
+  background-color: #C7B08B;
   grid-column: 1;
   grid-row: 2;
   padding-left: 1em;
@@ -622,7 +622,7 @@ img[data-src] {
   }
 }
 .recomendations-consulting {
-  background-color: #C9B89C;
+  background-color: #C7B08B;
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
   grid-column: 1;
   grid-row: 6;
@@ -723,7 +723,7 @@ img[data-src] {
 }
 form {
   background: #2a2a35;
-  border-color: #C9B89C;
+  border-color: #C7B08B;
   border-width: 1px;
   border-style: solid;
   border-radius: 5px;
@@ -737,7 +737,7 @@ form {
 .form-control {
   background-clip: padding-box;
   background-color: transparent;
-  border: 1px solid #C9B89C;
+  border: 1px solid #C7B08B;
   border-radius: 0.25rem;
   display: block;
   font-size: 1rem;
@@ -787,7 +787,7 @@ textarea {
 }
 
 .social-sharing-icon.white {
-  fill: #C9B89C;
+  fill: #C7B08B;
 }
 
 .social-sharing-icon.white :hover,
