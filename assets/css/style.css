@@ -560,7 +560,7 @@ img[data-src] {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.recomendations {
+.recommendations {
   background-color: #fff;
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
   grid-column: 1;
@@ -570,7 +570,7 @@ img[data-src] {
   padding-top: 9em;
   text-align: center;
 }
-.recomendations__container {
+.recommendations__container {
   margin: 0 auto;
   max-width: 900px;
 }
@@ -621,7 +621,7 @@ img[data-src] {
     font-size: 1.01rem;
   }
 }
-.recomendations-consulting {
+.recommendations-consulting {
   background-color: #C7B08B;
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
   grid-column: 1;
@@ -631,7 +631,7 @@ img[data-src] {
   padding-top: 9em;
   text-align: center;
 }
-.recomendations-consulting__container {
+.recommendations-consulting__container {
   margin: 0 auto;
   max-width: 900px;
 }

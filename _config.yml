@@ -14,7 +14,7 @@ collections:
     output: false
   work:
     output: false
-  recomendations:
+  recommendations:
     output: false
 exclude:
   - ".jekyll-cache/"
