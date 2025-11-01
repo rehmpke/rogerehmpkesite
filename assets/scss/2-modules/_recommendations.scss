@@ -5,6 +5,7 @@
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
   grid-column: 1;
   grid-row: 6;
+  padding-bottom: 3rem;
   padding-left: 1em;
   padding-right: 1em;
   padding-top: 9em;
@@ -62,6 +63,7 @@
 
   .testimonial__paragraph {
     font-size: 0.899em;
+    line-height: 1.4;
   }
 
   .testimonial__title {
