@@ -310,53 +310,69 @@ img[data-src] {
   background-color: #fff;
   grid-column: 1;
   grid-row: 3;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-inline: 1em;
 }
 .about-consulting__container {
   max-width: 900px;
+  margin-inline: auto;
 }
-.about-consulting__content {
+.about-consulting {
+  /* Title block */
+}
+.about-consulting__header {
   text-align: center;
 }
-.about-consulting__p {
-  margin-top: 0;
-  padding: 0 5%;
+.about-consulting__header h2 {
+  margin: 0 0 0.25rem;
+}
+.about-consulting__header .primary {
+  /* decorative rule: accessible + consistent */
+  border: 0;
+  height: 2px;
+  width: 4rem;
+  background: #004763;
+  margin: 0.5rem auto 1.25rem;
+}
+.about-consulting {
+  /* Body copy */
+}
+.about-consulting__content {
   text-align: left;
 }
-.about-consulting__workwith-heading {
-  margin-left: 0.5em;
+.about-consulting {
+  /* Back-compat: support both old and new paragraph classes */
 }
-
+.about-consulting .about__p, .about-consulting__p {
+  margin: 0 0 1rem;
+  padding: 0 5%;
+}
+.about-consulting {
+  /* Links */
+}
 .about-consulting a {
   color: #004763;
   font-weight: 700;
 }
-
-.about-consulting a:hover,
-.about-consulting a:focus {
+.about-consulting a:hover, .about-consulting a:focus {
   color: #fff;
 }
 
-@media screen and (min-width: 900px) {
+/* Responsive grid */
+@media (min-width: 900px) {
   .about-consulting__container {
     display: grid;
-    grid-gap: 1em;
-    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-template-rows: auto;
-    margin: 0 auto;
+  }
+  .about-consulting__header {
+    grid-column: 1/-1;
   }
   .about-consulting__content {
-    grid-column: 1/span 12;
-  }
-  .about-consulting__projectdiv {
-    display: grid;
-    grid-column: 2/12;
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 1.5em;
-  }
-  .about-consulting__projectimgdiv__imgdiv {
-    grid-column-start: 1;
+    /* centered readable measure */
+    grid-column: 2/span 10;
+    max-width: 65ch;
+    margin-inline: auto;
   }
 }
 .specialties {
