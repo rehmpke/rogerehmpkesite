@@ -4,57 +4,115 @@
   background-color: $secondary-sand;
   grid-column: 1;
   grid-row: 2;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-inline: 1em;
 
   &__container {
     max-width: 900px;
+    margin-inline: auto;
   }
 
-  &__content {
+  /* Title block */
+  &__header {
     text-align: center;
+
+    h2 {
+      margin: 0 0 .4rem;
+    }
+
+    .primary {
+      border: 0;
+      height: 1px;
+      background: rgba(0, 0, 0, .15);
+      width: 100%;
+      margin: .5rem 0 1.25rem;
+    }
   }
-  &__p {
-    margin-top: 0;
-    padding: 0 5%;
+
+  /* Base layout */
+  &__content {
     text-align: left;
   }
+
+  /* Paragraphs */
+  .about__p,
+  &__p {
+    margin: 0 0 1rem;
+    padding: 0 5%;
+  }
+
+  /* Headings & list */
   &__workwith-heading {
-    margin-left: 0.5em;
+    margin: 1rem 5% .5rem;
+  }
+
+  &__ul {
+    margin: 0 5% 1.5rem;
+    padding-left: 1.25rem;
+  }
+
+  /* Links */
+  a {
+    color: $secondary-link-color;
+    font-weight: $font-weight-semi-bold;
+
+    &:hover,
+    &:focus {
+      color: $secondary-link-hover-color;
+    }
   }
 }
 
-.about a {
-  color: $secondary-link-color;
-  font-weight: $font-weight-semi-bold;
-}
+/* Desktop layout */
+@media (min-width: 900px) {
+  .about {
+    &__container {
+      display: grid;
+      gap: 1em;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-template-rows: auto;
+    }
 
-.about a:hover,
-.about a:focus {
-  color: $secondary-link-hover-color;
-}
+    &__header {
+      grid-column: 1 / -1;
 
-@media screen and (min-width: 900px) {
-  .about__container {
-  display: grid;
-  grid-gap: 1em;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto;
-  margin: 0 auto;
-}
+      .primary {
+        width: 100%;
+        margin: .75rem 0 1.5rem;
+      }
+    }
 
-  .about__content {
-    grid-column: 1/ span 12;
-  }
+    &__content {
+      grid-column: 1 / -1;
+      display: grid;
+      gap: 1.25rem 1.5rem;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      align-items: start;
+    }
 
-  .about__projectdiv {
-    display: grid;
-    grid-column: 2/12;
-    grid-template-columns: repeat(2,1fr);
-    margin-bottom: 1.5em;
-  }
+    /* Left column */
+    &__left {
+      grid-column: 2 / span 5;
+      max-width: 65ch;
 
-  .about__projectimgdiv__imgdiv {
-    grid-column-start: 1;
+      .about__p {
+        padding: 0;
+        margin: 0 0 1rem;
+      }
+    }
+
+    /* Right column */
+    &__side {
+      grid-column: 8 / span 4;
+      grid-row: 1; // forces top alignment
+      align-self: start;
+
+      .about__workwith-heading {
+        margin: 0 0 .5rem;
+      }
+
+      .about__ul {
+        margin: 0;
+      }
+    }
   }
 }
