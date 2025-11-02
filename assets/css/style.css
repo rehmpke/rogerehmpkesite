@@ -574,102 +574,127 @@ img[data-src] {
     padding-bottom: 0;
   }
 }
-/* ==========================================================================
-   Module: IsThisRightForMe
-   ========================================================================== */
+/* ============================================================
+Module: Is This Right For Me (Clarity Session – Fit & Outcomes)
+Safe standalone version — no @use conflicts, no undefined vars
+============================================================ */
+/* Local fallback tokens — isolated to avoid collisions */
 .isthisrightforme {
-  background-color: #C7B08B;
+  background-color: var(--secondary-sand, #c9ad8a);
   grid-column: 1;
   grid-row: 2;
-  padding-inline: 1em;
-  /* Container */
+  padding: 2em 1em;
 }
 .isthisrightforme__container {
-  max-width: 900px;
-  margin-inline: auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .isthisrightforme {
-  /* Content */
+  /* Main section title */
+}
+.isthisrightforme__title {
+  font-weight: 800;
+  line-height: 1.2;
+  font-size: clamp(1.8rem, 2vw + 1rem, 2.4rem);
+  margin: 0 0 clamp(1rem, 2vw, 1.5rem);
+  text-align: left;
+  color: var(--text-color, #1b2a35);
+}
+.isthisrightforme {
+  /* Two-column grid */
 }
 .isthisrightforme__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  align-items: start;
+  margin-bottom: clamp(1.25rem, 2.5vw, 2rem);
+}
+@media (min-width: 900px) {
+  .isthisrightforme__content {
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: clamp(1.25rem, 3vw, 3rem);
+         column-gap: clamp(1.25rem, 3vw, 3rem);
+  }
+}
+.isthisrightforme__col {
   text-align: left;
 }
 .isthisrightforme {
-  /* Typography rhythm */
+  /* Subheadings (Is This You / What You’ll Get) */
 }
-.isthisrightforme h2 {
-  margin: 0 0 0.35rem;
-}
-.isthisrightforme p {
-  margin: 0 0 1rem;
+.isthisrightforme h3 {
+  font-weight: 800;
+  line-height: 1.2;
+  font-size: clamp(1.4rem, 1.5vw + 0.8rem, 1.8rem);
+  margin: 0 0 0.5rem;
+  color: var(--text-color, #1b2a35);
 }
 .isthisrightforme {
-  /* --- List hard reset (kills global flex/grid/custom bullets) --- */
+  /* Lists */
 }
-.isthisrightforme ul,
-.isthisrightforme ol {
-  display: block !important;
-  list-style: disc outside !important;
-  margin: 0 0 1.25rem !important;
-  padding-left: 1.25rem !important;
-  /* cancel any multi-column inheritance */
-  -moz-column-count: initial !important;
-       column-count: initial !important;
-  -moz-column-gap: initial !important;
-       column-gap: initial !important;
+.isthisrightforme ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin: 0;
 }
 .isthisrightforme li {
-  display: list-item !important;
-  margin: 0 0 0.5rem;
-  text-indent: 0;
+  margin: 0.35rem 0;
 }
-.isthisrightforme {
-  /* nuke global custom bullets */
-}
-.isthisrightforme li::before {
-  content: none !important;
-}
-.isthisrightforme {
-  /* CTA override you use here */
-}
-.isthisrightforme .btn-primary {
-  color: #1b3d4f;
-  border-color: #1b3d4f;
-}
-.isthisrightforme .btn-primary:hover, .isthisrightforme .btn-primary:focus {
-  color: #123142;
-  border-color: #123142;
-}
-
 .isthisrightforme li::marker {
-  color: #004763;
+  color: #207F82;
+}
+.isthisrightforme {
+  /* Footer actions (fee + CTA) */
+}
+.isthisrightforme__actions {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: clamp(0.75rem, 1.5vw, 1rem);
+  text-align: center;
+}
+.isthisrightforme__fee {
+  margin: 0 0 0.75rem;
+  font-weight: 600;
+  color: var(--text-color, #1b2a35);
+}
+.isthisrightforme__cta {
+  margin: 0;
+}
+.isthisrightforme__cta .btn-primary {
+  display: inline-block;
+  min-width: 18ch;
+  text-align: center;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  border: 2px solid #207F82;
+  color: #207F82;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.isthisrightforme__cta .btn-primary:hover, .isthisrightforme__cta .btn-primary:focus {
+  color: #186669;
+  border-color: #186669;
 }
 
-/* =========================
-   Desktop layout (≥900px)
-   ========================= */
-@media (min-width: 900px) {
-  .isthisrightforme__content {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem 2rem;
-    align-items: start;
-  }
-  .isthisrightforme {
-    /* Headings span both columns */
-  }
-  .isthisrightforme__content > h2 {
-    grid-column: 1/-1;
-  }
-}
-/* Safety net: if legacy HTML accidentally used .about__* inside this section */
-.isthisrightforme .about__container,
-.isthisrightforme .about__content {
-  display: block !important;
-  max-width: 900px;
-  margin-inline: auto;
+/* General link consistency inside module */
+.isthisrightforme a {
+  color: #207F82;
+  font-weight: 600;
+  text-decoration: none;
 }
 
+.isthisrightforme a:hover,
+.isthisrightforme a:focus {
+  color: #186669;
+}
+
+/* Optional: max width tightening for large viewports */
+@media (min-width: 1200px) {
+  .isthisrightforme__container {
+    max-width: 1100px;
+  }
+}
 .skills {
   background: linear-gradient(to left, rgb(10, 60, 80), rgba(10, 60, 80, 0.8)), url(/assets/img/img_6447.webp);
   clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
