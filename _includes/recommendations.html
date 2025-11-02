@@ -1,22 +1,22 @@
 <section class="recommendations space-top--testimonial" id="recommendations" aria-labelledby="recommendations-h2">
   <div class="recommendations__container">
     <div class="recommendations__content">
-  <div>
-      <h2 id="recommendations-h2">Recommendations</h2>
-      <p class="intro">A few words from collaborators on past strategy and development work.</p>
+      <header class="recommendations__header">
+        <h2 id="recommendations-h2">Recommendations</h2>
+        <p class="intro">A few words from collaborators on past strategy and development work.</p>
+      </header>
+    </div>
+    <div class="recommendations__list container">
+      {% assign sorted_recommendation = site.recommendations | sort: "order" %}
+      {% for recommendation in sorted_recommendation %}
+        <article class="recommendations__box space-bottom" itemscope itemtype="https://schema.org/Recommendation">
+          <h3 class="recommendations__name" itemprop="name">{{ recommendation.recommended_person }}</h3>
+          <p class="recommendations__title" itemprop="jobTitle">{{ recommendation.recommended_title }}</p>
+          <blockquote class="recommendations__quote" itemprop="reviewbody">
+            {{ recommendation.recommended_quote }}
+          </blockquote>
+        </article>
+      {% endfor %}
+    </div>
   </div>
-</div>
-  <div class="testimonial__projectdiv testimonial__kcc container">
-        {% assign sorted_recommendation = site.recommendations | sort: "order" %}
-        {% for recommendation in sorted_recommendation %}
-          <div>
-              <div class="testimonial__box space-bottom">
-                  <h3 style="text-align: left;">{{ recommendation.recommended_person }}</h3>
-                    <p class="testimonial__title" style="text-align: left;">{{ recommendation.recommended_title }}</p>
-                  <p class="testimonial__paragraph" style="text-align: left;">{{ recommendation.recommended_quote }}</p>
-              </div>
-          </div>
-        {% endfor %}
-  </div>
-</div>
 </section>

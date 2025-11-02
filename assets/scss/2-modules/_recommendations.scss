@@ -1,72 +1,98 @@
 @use '../0-tools/vars' as *;
 
+/* Recommendations aligned to Skills */
 .recommendations {
-  background-color: $white;
+  background: $white;
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
   grid-column: 1;
   grid-row: 6;
-  padding-bottom: 3rem;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 9em;
+  padding: 8em 1em 3rem; // matches Skills top/bottom rhythm
   text-align: center;
 
   &__container {
-    margin: 0 auto;
-    max-width: 900px;
-  }
-}
-
-.testimonial__box h3 {
-  font-size: 1.93rem;
-  line-height: 1.2;
-  max-width: 42ch;
-}
-
-.testimonial__title {
-  font-size: 1.16rem;
-  font-weight: $font-weight-bold;
-  line-height: 1.35;
-}
-
-@media screen and (min-width: 900px) {
-  .testimonial__container {
-  display: grid;
-  grid-gap: 1em;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto;
-  margin: 0 auto;
-}
-
-  .testimonial__content {
-    grid-column: 1/ span 12;
-  }
-
-  .testimonial__projectdiv {
     display: grid;
-    grid-column: 3/12;
-    grid-template-columns: repeat(3,1fr);
-    margin-bottom: 1.5em;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    max-width: 800px; // same as Skills
+    margin: 0 auto;
   }
 
-  .testimonial__projectimgdiv__imgdiv {
-    grid-column-start: 1;
+  &__intro {
+    max-width: 800px;
+    margin: 0 auto 2rem;
   }
 
-  .space-top--testimonial {
-    padding-top: 7em;
-  }
-  .testimonial__box {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .testimonial__paragraph {
-    font-size: 0.899em;
-    line-height: 1.4;
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;  // mobile first
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
   }
 
-  .testimonial__title {
-    font-size: 1.01rem;
+  /* &__box {
+    background: $white;
+    text-align: left;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    padding: 1.25rem 1.5rem;
+  } */
+
+  &__name {
+    margin: 0 0 .25rem 0;
+    font-weight: $font-weight-extra-bold;
+    color: $primary-blue-darker;
+    line-height: 1.15;
+  }
+
+  &__title {
+    margin: 0 0 .75rem 0;
+    font-weight: $font-weight-bold;
+    color: $grey-7;
+  }
+
+  &__quote {
+    margin: 0;
+    color: $grey-6;
+  }
+
+  /* Section heading colors */
+  & h2 {
+    color: $primary-blue-darker;
+    font-size: clamp(2.13rem, 6.5vw, 2.6rem);
+        /* only this H2 */
+  }
+
+  /* ===========================
+     RESPONSIVE BREAKPOINTS
+     =========================== */
+
+  // Tablet landscape (2-column)
+  @media screen and (min-width: 640px) and (max-width: 1023px) {
+    &__container {
+        grid-column: 1/ span 12;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    & h2 {
+      font-size: 3.1rem;
+    }
+  }
+
+  // Desktop (3-column)
+  @media screen and (min-width: 1024px) {
+    &__list {
+     grid-template-columns: repeat(3, 1fr);
+    }
+
+    & h2 {
+        font-size: 3.1rem;
+    }
   }
 }
