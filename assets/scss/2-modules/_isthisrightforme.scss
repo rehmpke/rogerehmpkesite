@@ -1,60 +1,99 @@
 @use '../0-tools/vars' as *;
 
+/* ==========================================================================
+   Module: IsThisRightForMe
+   ========================================================================== */
+
 .isthisrightforme {
     background-color: $secondary-sand;
     grid-column: 1;
     grid-row: 2;
     padding-inline: 1em;
 
+    /* Container */
     &__container {
         max-width: 900px;
         margin-inline: auto;
     }
 
+    /* Content */
     &__content {
         text-align: left;
     }
 
-    /* type rhythm */
+    /* Typography rhythm */
     h2 {
-        margin: 0 0 .25rem;
-    }
-
-    ul {
-        margin: 0 0 1.25rem;
-        padding-left: 1.25rem;
+        margin: 0 0 .35rem;
     }
 
     p {
         margin: 0 0 1rem;
     }
 
-    /* CTA color override you had */
+    /* --- List hard reset (kills global flex/grid/custom bullets) --- */
+    ul,
+    ol {
+        display: block !important;
+        list-style: disc outside !important;
+        margin: 0 0 1.25rem !important;
+        padding-left: 1.25rem !important;
+
+        /* cancel any multi-column inheritance */
+        column-count: initial !important;
+        column-gap: initial !important;
+    }
+
+    li {
+        display: list-item !important;
+        margin: 0 0 .5rem;
+        text-indent: 0;
+    }
+
+    /* nuke global custom bullets */
+    li::before {
+        content: none !important;
+    }
+
+    /* CTA override you use here */
     .btn-primary {
         color: #1b3d4f;
         border-color: #1b3d4f;
+
+        &:hover,
+        &:focus {
+            color: #123142;
+            border-color: #123142;
+        }
     }
 }
 
-/* Desktop: clean two-column lists, headings span both columns */
+.isthisrightforme li::marker {
+    color: $secondary-link-color;
+}
+
+/* =========================
+   Desktop layout (≥900px)
+   ========================= */
 @media (min-width: 900px) {
     .isthisrightforme {
         &__content {
-            display: grid;
+            display: grid !important;
             grid-template-columns: 1fr 1fr;
             gap: 1.25rem 2rem;
             align-items: start;
         }
 
-        h2 {
+        /* Headings span both columns */
+        &__content>h2 {
             grid-column: 1 / -1;
         }
     }
 }
 
-/* Safety net: if old HTML with .about__container/content remains, neutralize it here */
+/* Safety net: if legacy HTML accidentally used .about__* inside this section */
 .isthisrightforme .about__container,
 .isthisrightforme .about__content {
-    display: block;
+    display: block !important;
+    max-width: 900px;
     margin-inline: auto;
 }

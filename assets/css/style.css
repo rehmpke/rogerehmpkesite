@@ -1,6 +1,7 @@
 /*!***********************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./assets/scss/style.scss ***!
   \***********************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
 html, body {
   overflow-x: hidden;
 }
@@ -573,56 +574,99 @@ img[data-src] {
     padding-bottom: 0;
   }
 }
+/* ==========================================================================
+   Module: IsThisRightForMe
+   ========================================================================== */
 .isthisrightforme {
   background-color: #C7B08B;
   grid-column: 1;
   grid-row: 2;
   padding-inline: 1em;
+  /* Container */
 }
 .isthisrightforme__container {
   max-width: 900px;
   margin-inline: auto;
 }
+.isthisrightforme {
+  /* Content */
+}
 .isthisrightforme__content {
   text-align: left;
 }
 .isthisrightforme {
-  /* type rhythm */
+  /* Typography rhythm */
 }
 .isthisrightforme h2 {
-  margin: 0 0 0.25rem;
-}
-.isthisrightforme ul {
-  margin: 0 0 1.25rem;
-  padding-left: 1.25rem;
+  margin: 0 0 0.35rem;
 }
 .isthisrightforme p {
   margin: 0 0 1rem;
 }
 .isthisrightforme {
-  /* CTA color override you had */
+  /* --- List hard reset (kills global flex/grid/custom bullets) --- */
+}
+.isthisrightforme ul,
+.isthisrightforme ol {
+  display: block !important;
+  list-style: disc outside !important;
+  margin: 0 0 1.25rem !important;
+  padding-left: 1.25rem !important;
+  /* cancel any multi-column inheritance */
+  -moz-column-count: initial !important;
+       column-count: initial !important;
+  -moz-column-gap: initial !important;
+       column-gap: initial !important;
+}
+.isthisrightforme li {
+  display: list-item !important;
+  margin: 0 0 0.5rem;
+  text-indent: 0;
+}
+.isthisrightforme {
+  /* nuke global custom bullets */
+}
+.isthisrightforme li::before {
+  content: none !important;
+}
+.isthisrightforme {
+  /* CTA override you use here */
 }
 .isthisrightforme .btn-primary {
   color: #1b3d4f;
   border-color: #1b3d4f;
 }
+.isthisrightforme .btn-primary:hover, .isthisrightforme .btn-primary:focus {
+  color: #123142;
+  border-color: #123142;
+}
 
-/* Desktop: clean two-column lists, headings span both columns */
+.isthisrightforme li::marker {
+  color: #004763;
+}
+
+/* =========================
+   Desktop layout (≥900px)
+   ========================= */
 @media (min-width: 900px) {
   .isthisrightforme__content {
-    display: grid;
+    display: grid !important;
     grid-template-columns: 1fr 1fr;
     gap: 1.25rem 2rem;
     align-items: start;
   }
-  .isthisrightforme h2 {
+  .isthisrightforme {
+    /* Headings span both columns */
+  }
+  .isthisrightforme__content > h2 {
     grid-column: 1/-1;
   }
 }
-/* Safety net: if old HTML with .about__container/content remains, neutralize it here */
+/* Safety net: if legacy HTML accidentally used .about__* inside this section */
 .isthisrightforme .about__container,
 .isthisrightforme .about__content {
-  display: block;
+  display: block !important;
+  max-width: 900px;
   margin-inline: auto;
 }
 
