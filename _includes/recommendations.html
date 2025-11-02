@@ -9,13 +9,13 @@
     <div class="recommendations__list container">
       {% assign sorted_recommendation = site.recommendations | sort: "order" %}
       {% for recommendation in sorted_recommendation %}
-        <article class="recommendations__box space-bottom" itemscope itemtype="https://schema.org/Recommendation">
+        <div class="recommendations__box space-bottom" itemscope itemtype="https://schema.org/Recommendation">
           <h3 class="recommendations__name" itemprop="name">{{ recommendation.recommended_person }}</h3>
           <p class="recommendations__title" itemprop="jobTitle">{{ recommendation.recommended_title }}</p>
           <blockquote class="recommendations__quote" itemprop="reviewbody">
             {{ recommendation.recommended_quote }}
           </blockquote>
-        </article>
+        </div>
       {% endfor %}
     </div>
   </div>
