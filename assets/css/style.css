@@ -196,7 +196,7 @@ img[data-src] {
   background-position-y: 0, -108px;
   background-repeat: no-repeat;
   background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   grid-column: 1;
@@ -236,6 +236,9 @@ img[data-src] {
 }
 
 @media screen and (min-width: 768px) {
+  .hero-shot {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%);
+  }
   .hero-shot__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -358,7 +361,7 @@ img[data-src] {
 }
 .specialties {
   background-color: #fff;
-  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 11%, 100% 100%, 0% 100%);
   grid-column: 1;
   grid-row: 3;
   text-align: center;
@@ -383,6 +386,9 @@ img[data-src] {
 }
 
 @media screen and (min-width: 900px) {
+  .specialties {
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  }
   .specialties__container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
