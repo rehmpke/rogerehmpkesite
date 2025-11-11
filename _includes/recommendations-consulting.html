@@ -1,22 +1,20 @@
-<section class="recommendations-consulting space-top--testimonial" id="recommendations">
-  <div class="recommendations-consulting__container">
-    <div class="recommendations-consulting__content">
-      <div>
-        <h2>Recommendations</h2>
-        <p class="intro">Here's what clients and collaborators say about working with me on web systems and strategy.
-        </p>
-      </div>
+<section class="recommendations space-top--testimonial" id="recommendations" aria-labelledby="recommendations-h2">
+  <div class="recommendations__container">
+    <div class="recommendations__content">
+      <header class="recommendations__header">
+        <h2 id="recommendations-h2">Recommendations</h2>
+        <p class="intro">Here's what clients and collaborators say about working with me on web systems and strategy.</p>
+      </header>
     </div>
-
-    <div class="testimonial__projectdiv testimonial__kcc container">
+    <div class="recommendations__list container">
       {% assign sorted_recommendation = site.recommendations | sort: "order" %}
       {% for recommendation in sorted_recommendation %}
-      <div>
-        <div class="testimonial__box space-bottom">
-          <h3>{{ recommendation.recommended_person }}</h3>
-          <p><span class="testimonial__title">{{ recommendation.recommended_title }}</span></p>
-          <p class="testimonial__paragraph">{{ recommendation.recommended_quote }}</p>
-        </div>
+      <div class="recommendations__box space-bottom" itemscope itemtype="https://schema.org/Recommendation">
+        <h3 class="recommendations__name" itemprop="name">{{ recommendation.recommended_person }}</h3>
+        <p class="recommendations__title" itemprop="jobTitle">{{ recommendation.recommended_title }}</p>
+        <blockquote class="recommendations__quote" itemprop="reviewbody">
+          {{ recommendation.recommended_quote }}
+        </blockquote>
       </div>
       {% endfor %}
     </div>

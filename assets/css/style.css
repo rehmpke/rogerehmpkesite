@@ -819,102 +819,88 @@ Safe standalone version — no @use conflicts, no undefined vars
   }
 }
 
-/* =========================================
-   Recommendations (Consulting / tan section)
-   ========================================= */
-.recommendations-consulting {
-  background-color: #C7B08B;
-  clip-path: polygon(0 0, 100% 12%, 100% 100%, 0% 100%);
+/* Recommendations aligned to Skills */
+.recommendations {
+  background: #C7B08B;
   grid-column: 1;
   grid-row: 6;
-  /* reduced top padding, same bottom rhythm */
-  padding: 7em 1em 3.75rem;
+  padding: 8em 1em 3rem;
   text-align: center;
 }
-.recommendations-consulting__container {
+.recommendations__container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1em;
+  max-width: 800px;
   margin: 0 auto;
-  max-width: 900px;
 }
-.recommendations-consulting__content {
-  max-width: 58ch;
-  margin: 0 auto 1.25rem;
+.recommendations__intro {
+  max-width: 800px;
+  margin: 0 auto 2rem;
 }
-.recommendations-consulting__content h2 {
-  color: #071f35;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  margin: 0 0 0.25em 0;
-  /* slightly tighter */
-  font-size: clamp(2.13rem, 6.5vw, 2.6rem);
-  line-height: 1.1;
-}
-.recommendations-consulting__content .intro {
-  max-width: 60ch;
-  margin: 0 auto 0;
-  color: #222;
-}
-.recommendations-consulting {
-  /* Card grid */
-}
-.recommendations-consulting .testimonial__projectdiv {
+.recommendations__list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
   margin: 0;
+  padding: 0;
+  list-style: none;
   text-align: left;
 }
-.recommendations-consulting {
-  /* Card block */
+.recommendations {
+  /* &__box {
+    background: $white;
+    text-align: left;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    padding: 1.25rem 1.5rem;
+  } */
 }
-.recommendations-consulting .testimonial__box {
-  padding: 0 25px;
-}
-.recommendations-consulting .testimonial__box h3 {
-  font-size: 1.9rem;
-  line-height: 1.2;
-  max-width: 42ch;
+.recommendations__name {
   margin: 0 0 0.25rem 0;
   font-weight: 800;
   color: #071f35;
-  letter-spacing: -0.005em;
+  line-height: 1.15;
 }
-.recommendations-consulting .testimonial__box .testimonial__title {
-  display: block;
-  margin: 0 0 0.6rem 0;
-  font-size: 1.1rem;
+.recommendations__title {
+  margin: 0 0 0.75rem 0;
   font-weight: 700;
-  line-height: 1.35;
   color: #222;
 }
-.recommendations-consulting .testimonial__box .testimonial__paragraph {
+.recommendations__quote {
   margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.45;
   color: #3c3c3c;
-  max-width: 60ch;
 }
-.recommendations-consulting {
-  /* Breakpoints */
+.recommendations {
+  /* Section heading colors */
 }
-@media (min-width: 640px) and (max-width: 1023px) {
-  .recommendations-consulting .testimonial__projectdiv {
-    grid-template-columns: repeat(2, 1fr);
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
-    row-gap: 1.75rem;
+.recommendations h2 {
+  color: #071f35;
+  font-size: clamp(2.13rem, 6.5vw, 2.6rem);
+  /* only this H2 */
+}
+.recommendations {
+  /* ===========================
+     RESPONSIVE BREAKPOINTS
+     =========================== */
+}
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  .recommendations__container {
+    grid-column: 1/span 12;
   }
-  .recommendations-consulting__content h2 {
+  .recommendations__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .recommendations h2 {
     font-size: 3.1rem;
   }
 }
-@media (min-width: 1024px) {
-  .recommendations-consulting .testimonial__projectdiv {
+@media screen and (min-width: 1024px) {
+  .recommendations__list {
     grid-template-columns: repeat(3, 1fr);
-    -moz-column-gap: 2.25rem;
-         column-gap: 2.25rem;
-    row-gap: 2rem;
   }
-  .recommendations-consulting__content h2 {
+  .recommendations h2 {
     font-size: 3.1rem;
   }
 }
