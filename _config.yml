@@ -29,3 +29,5 @@ exclude:
   - "postcss.config.js"
   - "buildtools/"
   - "webpack.config.js"
+plugins:
+  - "jekyll-sitemap"

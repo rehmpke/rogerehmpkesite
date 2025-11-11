@@ -1,7 +1,9 @@
 source "https://rubygems.org"
 
-ruby ">= 3.1", "< 3.4"
-
 gem "jekyll", "~> 4.4.1"
 
-gem "webrick", "~> 1.8"
+group :development do
+  gem "webrick", "~> 1.8"   # only for `jekyll serve`
+end
+
+gem "jekyll-sitemap"        # generates /sitemap.xml (tiny cost)
