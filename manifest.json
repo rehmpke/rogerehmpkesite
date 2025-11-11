@@ -1,11 +1,14 @@
 {
   "name": "RogerEhmpke",
   "short_name": "Roger E.",
+  "id": "/",
   "start_url": "/",
-  "display": "browser",
-  "background_color": "#fff",
-  "description": "Roger Ehmpke - Frontend Web Developer website.",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
   "theme_color": "#071f35",
+  "description": "Roger Ehmpke - Strategic Digital Leadership for Higher Ed Web Ecosystems",
+  "lang": "en",
   "icons": [{
     "src": "assets/img/homescreen48.png",
     "sizes": "48x48",
