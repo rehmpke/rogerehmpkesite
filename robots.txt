@@ -1,5 +1,4 @@
-# www.robotstxt.org/
-
-# Allow crawling of all content
+# robots.txt for https://www.rogerehmpke.com
 User-agent: *
 Disallow:
+Sitemap: https://www.rogerehmpke.com/sitemap.xml
