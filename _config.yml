@@ -5,8 +5,8 @@ google-tag_key: "GTM-T38CTSL"
 themecolor: '#071f35' # for meta theme-color site best practices
 description: >- # this means to ignore newlines until "baseurl:"
   "Roger Ehmpke, Frontend Web Developer."
+url: "https://www.rogerehmpke.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: rehmpke
 github_username:  rehmpke
 collections:
