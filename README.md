@@ -128,7 +128,9 @@ No manual S3 uploads are required.
 
 ---
 
-## 📁 File Structure (Simplified)
+## 📁 Key Directories
+
+Only the folders relevant to the Jekyll/webpack workflow are shown.
 
 ```
 rogerehmpkesite/
