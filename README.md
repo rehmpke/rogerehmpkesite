@@ -1,9 +1,9 @@
 # rogerehmpke.com
 
-[![Deploy Status](https://img.shields.io/badge/Amplify-Automated_Deploys-ff9900)](...)
-![Node Version](...)
-![Jekyll](...)
-![License](...)
+[![Amplify](https://img.shields.io/badge/AWS%20Amplify-Automated%20Deploys-ff9900?style=flat&logo=awsamplify&logoColor=white)]()
+![Node Version](https://img.shields.io/badge/Node-22.15.0-339933?style=flat&logo=node.js&logoColor=white)
+![Jekyll](https://img.shields.io/badge/Jekyll-Custom%20Build-CC0000?style=flat&logo=jekyll&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat)
 
 This repository powers [rogerehmpke.com](https://www.rogerehmpke.com), a clarity-led portfolio site focused on UX strategy, accessibility, and content systems in higher education and public sector work.
 
