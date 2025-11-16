@@ -130,6 +130,7 @@ No manual S3 uploads are required.
 
 📁 File Structure (Simplified)
 
+```
 assets/
   css/
   js/
@@ -145,6 +146,7 @@ package.json
 postcss.config.js
 README.md
 LICENSE
+```
 
 ---
 
