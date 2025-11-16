@@ -23,7 +23,8 @@ $ gem install bundler
 $ bundle install
 ```
 
-### Nodejs / npm  
+### Nodejs / npm
+
 I use **NVM (Node Version Manager)**:  
 https://github.com/creationix/nvm
 
@@ -44,6 +45,7 @@ $ nvm use
 This project uses a split-pipeline workflow:
 
 ### 1. Jekyll handles:
+
 - Page rendering  
 - Collections + includes  
 - Layout structure  
@@ -52,6 +54,7 @@ This project uses a split-pipeline workflow:
 - Final HTML output (`_site`)  
 
 ### 2. Webpack handles:
+
 - JavaScript bundling  
 - Sass → CSS via `sass-embedded`  
 - PostCSS + Autoprefixer for browser compatibility  
@@ -59,6 +62,7 @@ This project uses a split-pipeline workflow:
 - Custom `MyHashWebpackPlugin` writes `_data/hash.yml` for cache-busting  
 
 **Outputs:**
+
 - `assets/css/style.css`  
 - `assets/js/index.js`
 
@@ -72,9 +76,14 @@ This project uses a split-pipeline workflow:
 
 This architecture keeps the project lightweight, predictable, and extremely maintainable.
 
+### Why Amplify?
+
+I use AWS Amplify here for simplicity. I manage CloudFront and lower-level AWS services in other projects, but for a single-maintainer portfolio, Amplify handles CI/CD, build, and static hosting in one place. The deployment workflow stays trivial: push to `master` → build → deploy, with no extra infrastructure to babysit.
+
 ## 🚀 Development
 
 ### Start Webpack (asset bundling)
+
 ```bash
 $ npm run dev
 ```
@@ -99,6 +108,10 @@ $ bundle exec jekyll serve --livereload
 
 This regenerates the site and serves it from _site/ while Webpack handles live asset compilation.
 
+### Contact Form
+
+The contact form is backed by a small AWS Lambda function. Submissions are handled server-side without a dedicated app server, keeping the architecture lightweight while still avoiding client-only email hacks.
+
 ---
 
 ## 📦 Production Build (Amplify)
@@ -118,13 +131,14 @@ No manual S3 uploads are required.
 
 ## 🧰 Tech Stack
 
-- Jekyll 4.4.x — static site generation
-- Webpack 5 — bundling and asset pipeline
-- Babel — ESNext → browser-ready JS
-- Sass (sass-embedded) — modern SCSS compiler
-- PostCSS + Autoprefixer — CSS transformations
-- Custom Webpack Hash Plugin — cache busting
-- AWS Amplify — CI/CD + hosting
+- **Jekyll 4.4.x** — static site generation
+- **Webpack 5** — bundling and asset pipeline
+- **Babel** — ESNext → browser-ready JS
+- **Sass (sass-embedded)** — modern SCSS compiler
+- **PostCSS + Autoprefixer** — CSS transformations
+- **Custom Webpack Hash Plugin** — cache busting
+- **AWS Amplify** — CI/CD + hosting
+- **AWS Lambda** — serverless handler for contact form submissions
 
 ---
 
@@ -132,7 +146,7 @@ No manual S3 uploads are required.
 
 A focused view of the directories involved in the Jekyll + Webpack pipeline.
 
-```
+``` text
 rogerehmpkesite/
 ├── assets/              # Source JS/SCSS + built output from Webpack
 ├── _data/               # Contains hash.yml injected by Webpack for cache-busting
