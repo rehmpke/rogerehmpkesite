@@ -125,3 +125,23 @@ No manual S3 uploads are required.
 - PostCSS + Autoprefixer — CSS transformations
 - Custom Webpack Hash Plugin — cache busting
 - AWS Amplify — CI/CD + hosting
+
+---
+
+📁 File Structure (Simplified)
+
+assets/
+  css/
+  js/
+  img/
+_includes/
+_layouts/
+_sass/
+_data/
+_site/        # built output (ignored)
+Gemfile
+webpack.config.js
+package.json
+postcss.config.js
+README.md
+LICENSE
