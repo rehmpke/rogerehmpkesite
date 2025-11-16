@@ -1,4 +1,6 @@
 # robots.txt for https://www.rogerehmpke.com
+
 User-agent: *
-Disallow:
+Allow: /
+
 Sitemap: https://www.rogerehmpke.com/sitemap.xml
