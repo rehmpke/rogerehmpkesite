@@ -157,3 +157,4 @@ rogerehmpkesite/
 © 2025 Roger Ehmpke. All rights reserved.
 
 This repository is publicly visible for transparency but not licensed for reuse.
+See the `LICENSE` file for full details.
