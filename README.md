@@ -43,7 +43,7 @@ $ nvm use
 
 This project uses a split-pipeline workflow:
 
-### **1. Jekyll handles:**
+### 1. Jekyll handles:
 - Page rendering  
 - Collections + includes  
 - Layout structure  
@@ -51,7 +51,7 @@ This project uses a split-pipeline workflow:
 - SEO, schema, and metadata  
 - Final HTML output (`_site`)  
 
-### **2. Webpack handles:**
+### 2. Webpack handles:
 - JavaScript bundling  
 - Sass → CSS via `sass-embedded`  
 - PostCSS + Autoprefixer for browser compatibility  
@@ -62,7 +62,7 @@ This project uses a split-pipeline workflow:
 - `assets/css/style.css`  
 - `assets/js/index.js`
 
-### **3. AWS Amplify handles:
+### 3. AWS Amplify handles:
 
 - Automated detection of changes to the master branch
 - Install + build (Node + Ruby)
@@ -128,7 +128,7 @@ No manual S3 uploads are required.
 
 ---
 
-📁 File Structure (Simplified)
+## 📁 File Structure (Simplified)
 
 ```
 assets/
