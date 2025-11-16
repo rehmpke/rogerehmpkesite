@@ -137,12 +137,12 @@ rogerehmpkesite/
 ├── assets/              # Source JS/SCSS + built output from Webpack
 ├── _data/               # Contains hash.yml injected by Webpack for cache-busting
 ├── buildtools/          # Custom MyHashWebpackPlugin
-├── _sass/               # SCSS partials (Weback compiles these)
+├── _sass/               # SCSS partials (Webpack compiles these)
 ├── _includes/           # Jekyll partials
 ├── _layouts/            # Jekyll layouts
 ├── _site/               # Built site output (ignored)
 │
-├── package.json         # Webpack/babel/postcss config
+├── package.json         # Webpack/Babel/PostCSS config
 ├── webpack.config.js    # Webpack pipeline config
 ├── postcss.config.js    # Autoprefixer setup
 ├── Gemfile              # Ruby & Jekyll dependencies
