@@ -89,17 +89,15 @@ Webpack in **development** mode with:
 
 ---
 
-## Running Jekyll
+## Run Jekyll locally
 
-In a separate terminal:
+In a second terminal:
 
 ```bash
 $ bundle exec jekyll serve --livereload
 ```
 
-- Serves the site from the generated `_site` directory  
-- Rebuilds on content/layout changes  
-- Works alongside `npm run dev` (Webpack) so assets and pages stay in sync
+This regenerates the site and serves it from _site/ while Webpack handles live asset compilation.
 
 ---
 
