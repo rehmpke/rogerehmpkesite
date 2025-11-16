@@ -74,7 +74,7 @@ This architecture keeps the project lightweight, predictable, and extremely main
 
 ## 🚀 Development
 
-### **Start Webpack (asset bundling)
+### Start Webpack (asset bundling)
 ```bash
 $ npm run dev
 ```
@@ -89,7 +89,7 @@ Webpack in **development** mode with:
 
 ---
 
-## Run Jekyll locally
+### Run Jekyll locally
 
 In a second terminal:
 
