@@ -130,7 +130,7 @@ No manual S3 uploads are required.
 
 ## 📁 Key Directories
 
-Only the folders relevant to the Jekyll/webpack workflow are shown.
+A focused view of the directories involved in the Jekyll + Webpack pipeline.
 
 ```
 rogerehmpkesite/
