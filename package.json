@@ -1,12 +1,13 @@
 {
-  "name": "RogerEhmpke",
-  "version": "1.1.1",
-  "description": "Modern build for Jekyll site with Webpack and Babel",
+  "name": "rogerehmpke-site",
+  "version": "1.2.0",
+  "description": "Modern Jekyll + Webpack build pipeline for rogerehmpke.com",
   "author": "Roger Ehmpke",
   "license": "ISC",
   "scripts": {
     "dev": "webpack --mode development",
-    "build": "webpack --mode production && aws s3 cp ./_site s3://rogerehmpke.com --recursive"
+    "build": "NODE_ENV=production webpack --mode production",
+    "build:site": "npm run build && bundle exec jekyll build"
   },
   "babel": {
     "presets": [
