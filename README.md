@@ -1,7 +1,5 @@
 # rogerehmpke.com
 
-# rogerehmpke.com
-
 [![Deploy Status](https://img.shields.io/badge/Amplify-Automated_Deploys-ff9900)](...)
 ![Node Version](...)
 ![Jekyll](...)
