@@ -131,21 +131,21 @@ No manual S3 uploads are required.
 ## 📁 File Structure (Simplified)
 
 ```
-assets/
-  css/
-  js/
-  img/
-_includes/
-_layouts/
-_sass/
-_data/
-_site/        # built output (ignored)
-Gemfile
-webpack.config.js
-package.json
-postcss.config.js
-README.md
-LICENSE
+rogerehmpkesite/
+├── assets/              # Source JS/SCSS + built output from Webpack
+├── _data/               # Contains hash.yml injected by Webpack for cache-busting
+├── buildtools/          # Custom MyHashWebpackPlugin
+├── _sass/               # SCSS partials (Weback compiles these)
+├── _includes/           # Jekyll partials
+├── _layouts/            # Jekyll layouts
+├── _site/               # Built site output (ignored)
+│
+├── package.json         # Webpack/babel/postcss config
+├── webpack.config.js    # Webpack pipeline config
+├── postcss.config.js    # Autoprefixer setup
+├── Gemfile              # Ruby & Jekyll dependencies
+├── .nvmrc               # Node 22.15.0
+└── .ruby-version        # Ruby 3.3.4
 ```
 
 ---
