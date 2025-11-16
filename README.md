@@ -5,9 +5,9 @@
 ![Jekyll](https://img.shields.io/badge/Jekyll-Custom%20Build-CC0000?style=flat&logo=jekyll&logoColor=white)
 ![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-lightgrey?style=flat)
 
-This repository powers [rogerehmpke.com](https://www.rogerehmpke.com), a clarity-led portfolio site focused on UX strategy, accessibility, and content systems in higher education and public sector work.
+This repository powers [rogerehmpke.com](https://www.rogerehmpke.com), a clarity-led digital portfolio centered on UX strategy, accessibility, content governance, and sustainable web operations in higher education and public sector work.
 
-The site is custom built using **Jekyll** and a modern **Webpack 5** pipeline (Babel, Sass, PostCSS/Autoprefixer, custom hash data), with a streamlined dev workflow and CI/CD on **AWS**.
+The site is custom-built using Jekyll 4.4.x and a modern Webpack 5 pipeline (Babel, Sass, PostCSS/Autoprefixer, custom hash generation) with automatic CI/CD deployments via AWS Amplify.
 
 ---
 
@@ -20,6 +20,7 @@ Ruby Version: 3.3.4 (automatically applied via .ruby-version)
 ```bash
 $ gem install jekyll
 $ gem install bundler
+$ bundle install
 ```
 
 ### Nodejs / npm  
