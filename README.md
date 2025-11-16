@@ -39,7 +39,40 @@ $ nvm use
 
 ---
 
-## Start Dev using and watching with Webpack
+## 🧱 Architecture Overview
+
+This project uses a split-pipeline workflow:
+
+### **1. Jekyll handles:**
+- Page rendering  
+- Collections + includes  
+- Layout structure  
+- Sitemap generation (`jekyll-sitemap`)  
+- SEO, schema, and metadata  
+- Final HTML output (`_site`)  
+
+### **2. Webpack handles:**
+- JavaScript bundling  
+- Sass → CSS via `sass-embedded`  
+- PostCSS + Autoprefixer for browser compatibility  
+- Babel transforms using Browserslist targets  
+- Custom `MyHashWebpackPlugin` writes `_data/hash.yml` for cache-busting  
+
+**Outputs:**
+- `assets/css/style.css`  
+- `assets/js/index.js`
+
+### **3. AWS Amplify handles:
+
+- Automated detection of changes to the master branch
+- Install + build (Node + Ruby)
+- Runs Webpack production build
+- Runs Jekyll production build
+- Deploys the generated _site directory
+
+This architecture keeps the project lightweight, predictable, and extremely maintainable.
+
+## 🚀 Development
 
 ```bash
 $ npm run dev
