@@ -1,5 +1,12 @@
 # rogerehmpke.com
 
+# rogerehmpke.com
+
+[![Deploy Status](https://img.shields.io/badge/Amplify-Automated_Deploys-ff9900)](...)
+![Node Version](...)
+![Jekyll](...)
+![License](...)
+
 This repository powers [rogerehmpke.com](https://www.rogerehmpke.com), a clarity-led portfolio site focused on UX strategy, accessibility, and content systems in higher education and public sector work.
 
 The site is custom built using Jekyll and Webpack, with a streamlined dev workflow and CI/CD to AWS.
