@@ -3,11 +3,11 @@
 [![Amplify](https://img.shields.io/badge/AWS%20Amplify-Automated%20Deploys-ff9900?style=flat&logo=awsamplify&logoColor=white)]()
 ![Node Version](https://img.shields.io/badge/Node-22.15.0-339933?style=flat&logo=node.js&logoColor=white)
 ![Jekyll](https://img.shields.io/badge/Jekyll-Custom%20Build-CC0000?style=flat&logo=jekyll&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat)
+![License](https://img.shields.io/badge/License-ISC-lightgrey?style=flat)
 
-This repository powers [rogerehmpke.com](https://www.rogerehmpke.com), a clarity-focused portfolio built around UX strategy, accessibility, digital governance, and systems thinking in higher education and the public sector.
+This repository powers [rogerehmpke.com](https://www.rogerehmpke.com), a clarity-led portfolio site focused on UX strategy, accessibility, and content systems in higher education and public sector work.
 
-The site is custom-built using **Jekyll** and **Webpack**, with a clean development workflow and CI/CD deployments through **AWS Amplify**.
+The site is custom built using **Jekyll** and a modern **Webpack 5** pipeline (Babel, Sass, PostCSS/Autoprefixer, custom hash data), with a streamlined dev workflow and CI/CD on **AWS**.
 
 ---
 
@@ -25,72 +25,81 @@ I use **NVM (Node Version Manager)**:
 https://github.com/creationix/nvm
 
 - The `.nvmrc` file in this repo locks Node to **v22.15.0**  
-  (keeps builds reproducible and avoids dependency breakage)
+  (ensures consistent builds and avoids dependency issues)
 - Or install Node manually: https://nodejs.org/
 
----
+After installing NVM:
 
-## 🧰 Tech Stack
-
-- **Jekyll** — HTML templating, content structure, routing  
-- **Webpack** — asset bundling, SCSS, PostCSS, optimizations  
-- **SCSS** — modular styling  
-- **PostCSS + Autoprefixer** — modern CSS pipeline  
-- **AWS Amplify** — CI/CD + hosting  
-- **NVM** — consistent Node runtime  
-- **No themes, no frameworks** — fully hand-rolled for clarity and long-term maintainability  
-
----
-
-## 🎯 Project Goals
-
-- Keep the architecture lightweight, readable, and future-portable  
-- Maintain full control over accessibility and performance  
-- Keep content migration trivial (no vendor lock-in)  
-- Prioritize semantics, clarity, and sustainability over trends  
-- Make the build pipeline predictable and fast  
-- Ensure the site remains easy for future-you to maintain
+```bash
+$ nvm use
+```
 
 ---
 
 ## Start Dev using and watching with Webpack
 
 ```bash
-npm run dev
+$ npm run dev
 ```
 
-- Watches JS/CSS/SCSS  
-- Rebuilds assets automatically  
-- Keeps output lightweight and optimized
+This runs Webpack in **development** mode with:
+
+- `watch` enabled (rebuilds on change)
+- source maps for easier debugging
+- Babel transpilation targeting your `browserslist`
+- SCSS → CSS via `sass-embedded`, `postcss-loader`, and `autoprefixer`
+- CSS extracted to `assets/css/style.css`
+- JS bundled to `assets/js/index.js`
+- A custom `MyHashWebpackPlugin` writing a hash file to `_data/hash.yml` for cache-busting inside Jekyll templates
+
+Use this while you’re also running Jekyll locally.
 
 ---
 
 ## Running Jekyll
 
+In a separate terminal:
+
 ```bash
-bundle exec jekyll serve --livereload
+$ bundle exec jekyll serve --livereload
 ```
 
-- Serves the site locally  
-- Rebuilds on content/template changes  
-- Works concurrently with Webpack
+- Serves the site from the generated `_site` directory  
+- Rebuilds on content/layout changes  
+- Works alongside `npm run dev` (Webpack) so assets and pages stay in sync
 
 ---
 
 ## Triggering the push to AWS
 
-The site is deployed via **AWS Amplify**.
+The site is deployed via **AWS** infrastructure (e.g., Amplify or static hosting) wired to this repository.
 
-Amplify automatically watches the **master** branch and performs:
+Typical flow:
 
+1. Work locally with:
+
+   ```bash
+   $ npm run dev
+   $ bundle exec jekyll serve --livereload
+   ```
+
+2. When ready, commit and push changes to the main branch (e.g., `master`).
+
+Your AWS setup is configured to:
+
+- Detect changes pushed to the repo  
+- Run the appropriate build commands (Webpack + Jekyll build)  
+- Publish the contents of the Jekyll `_site` output as the live site
+
+Conceptually:
+
+```text
+Local changes
+  → git commit
+  → git push origin master
+  → AWS build (Webpack + Jekyll)
+  → Deploy updated _site to production
 ```
-Commit → Push to master → Build → Deploy → Live
-```
 
-No manual deployment steps needed.
+No manual S3 copy is required in the day-to-day workflow once AWS is wired up.
 
----
-
-Maintained by **Roger Ehmpke**  
-Director of Web Strategy & Digital Experience  
-https://www.rogerehmpke.com
