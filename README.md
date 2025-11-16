@@ -108,6 +108,8 @@ $ bundle exec jekyll serve --livereload
 
 This regenerates the site and serves it from _site/ while Webpack handles live asset compilation.
 
+---
+
 ### Contact Form
 
 The contact form is backed by a small AWS Lambda function. Submissions are handled server-side without a dedicated app server, keeping the architecture lightweight while still avoiding client-only email hacks.
