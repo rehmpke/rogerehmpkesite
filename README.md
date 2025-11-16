@@ -13,6 +13,8 @@ The site is custom built using **Jekyll** and a modern **Webpack 5** pipeline (B
 
 ## 🔧 Requirements
 
+Ruby Version: 3.3.4 (automatically applied via .ruby-version)
+
 ### Jekyll & Bundler (Ruby)
 
 ```bash
