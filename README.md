@@ -74,11 +74,12 @@ This architecture keeps the project lightweight, predictable, and extremely main
 
 ## 🚀 Development
 
+### **Start Webpack (asset bundling)
 ```bash
 $ npm run dev
 ```
 
-This runs Webpack in **development** mode with:
+Webpack in **development** mode with:
 
 - `watch` enabled (rebuilds on change)
 - source maps for easier debugging
