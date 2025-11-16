@@ -101,36 +101,27 @@ This regenerates the site and serves it from _site/ while Webpack handles live a
 
 ---
 
-## Triggering the push to AWS
+## 📦 Production Build (Amplify)
 
-The site is deployed via **AWS** infrastructure (e.g., Amplify or static hosting) wired to this repository.
+AWS Amplify performs:
 
-Typical flow:
+1. Install Ruby + Node dependencies
+2. Run Webpack production build
+3. Run Jekyll build
+4. Deploy _site as the live website
 
-1. Work locally with:
+Push to `master`→ automatic deployment.
 
-   ```bash
-   $ npm run dev
-   $ bundle exec jekyll serve --livereload
-   ```
+No manual S3 uploads are required.
 
-2. When ready, commit and push changes to the main branch (e.g., `master`).
+---
 
-Your AWS setup is configured to:
+## 🧰 Tech Stack
 
-- Detect changes pushed to the repo  
-- Run the appropriate build commands (Webpack + Jekyll build)  
-- Publish the contents of the Jekyll `_site` output as the live site
-
-Conceptually:
-
-```text
-Local changes
-  → git commit
-  → git push origin master
-  → AWS build (Webpack + Jekyll)
-  → Deploy updated _site to production
-```
-
-No manual S3 copy is required in the day-to-day workflow once AWS is wired up.
-
+- Jekyll 4.4.x — static site generation
+- Webpack 5 — bundling and asset pipeline
+- Babel — ESNext → browser-ready JS
+- Sass (sass-embedded) — modern SCSS compiler
+- PostCSS + Autoprefixer — CSS transformations
+- Custom Webpack Hash Plugin — cache busting
+- AWS Amplify — CI/CD + hosting
