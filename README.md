@@ -82,7 +82,7 @@ $ npm run dev
 Webpack in **development** mode with:
 
 - File watching
-- source maps for debugging
+- Source maps for debugging
 - SCSS → CSS processing
 - Babel transpilation
 - Hash injection for template cache busting
