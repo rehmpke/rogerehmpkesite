@@ -81,15 +81,11 @@ $ npm run dev
 
 Webpack in **development** mode with:
 
-- `watch` enabled (rebuilds on change)
-- source maps for easier debugging
-- Babel transpilation targeting your `browserslist`
-- SCSS → CSS via `sass-embedded`, `postcss-loader`, and `autoprefixer`
-- CSS extracted to `assets/css/style.css`
-- JS bundled to `assets/js/index.js`
-- A custom `MyHashWebpackPlugin` writing a hash file to `_data/hash.yml` for cache-busting inside Jekyll templates
-
-Use this while you’re also running Jekyll locally.
+- File watching
+- source maps for debugging
+- SCSS → CSS processing
+- Babel transpilation
+- Hash injection for template cache busting
 
 ---
 
