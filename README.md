@@ -145,3 +145,10 @@ package.json
 postcss.config.js
 README.md
 LICENSE
+
+---
+
+## 🔒 License
+
+© 2025 Roger Ehmpke. All rights reserved.
+This repository is publicly visible for transparency but not licensed for reuse.
