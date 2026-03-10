@@ -6,9 +6,9 @@ skill_labels:
   - label: Accessibility
   - label: CMS Architecture
   - label: AI Readiness
-  - label: Higher Ed
+  - label: Higher Education
 current_site: "https://www.kcc.edu"
 screen_image: "./assets/img/kcc-screen.webp"
 screen_image_alt: "computer screen with an image of kcc redesign project"
-case_description: "Lead strategist for the college’s public-facing platforms and intranet — including CMS modernization, AI-aware schema, and long-term governance upgrades."
+case_description: "Lead digital strategist responsible for the college’s public web platforms and intranet ecosystem — including CMS modernization, accessibility govenrance, analytics strategy, and AI-aware information arghitecture."
 ---
