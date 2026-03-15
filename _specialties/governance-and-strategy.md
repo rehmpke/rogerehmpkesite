@@ -1,5 +1,5 @@
 ---
 specialty_title: "Governance & Strategy"
 order: 1
-specialty_paragraph: "Aligning digital ecosystems with institutional structure, legal readiness, and organizational goals."
+specialty_paragraph: "Aligning digital platforms with institutional structure, policy frameworks, legal compliance, and long-term organizational goals."
 ---

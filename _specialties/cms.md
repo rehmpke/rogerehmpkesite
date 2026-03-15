@@ -1,5 +1,5 @@
 ---
 specialty_title: "CMS Architecture"
 order: 3
-specialty_paragraph: "WordPress, SharePoint, Jekyll/CloudCannon, Git-based systems, and content workflows for sustainable content management."
+specialty_paragraph: "WordPress, SharePoint, CloudCannon, Git-based workflows, and sustainable content governance models."
 ---
