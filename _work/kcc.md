@@ -10,5 +10,5 @@ skill_labels:
 current_site: "https://www.kcc.edu"
 screen_image: "./assets/img/kcc-screen.webp"
 screen_image_alt: "computer screen with an image of kcc redesign project"
-case_description: "Lead digital strategist responsible for the college’s public web platforms and intranet ecosystem — including CMS modernization, accessibility govenrance, analytics strategy, and AI-aware information arghitecture."
+case_description: "Lead digital strategist responsible for the college’s public web platforms and intranet ecosystem — including CMS modernization, accessibility governance, analytics strategy, and AI-aware information architecture."
 ---
