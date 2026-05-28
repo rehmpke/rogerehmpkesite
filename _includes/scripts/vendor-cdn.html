@@ -3,11 +3,12 @@
 <script src="./assets/js/index.js" defer></script>
 
 <!-- GPT Assistant Chat Widget -->
-<div id="ai-widget-button">💬 Looking for something? Just ask.</div>
+<div id="ai-widget-button">💬 Ask about Roger's work</div>
+
 <div id="ai-widget-box" style="display:none">
     <div id="ai-widget-log" aria-live="polite"></div>
     <textarea id="ai-widget-input" placeholder="Ask a question about my work or this site..."></textarea>
-    <button onclick="submitPrompt()">Ask</button>
+    <button type="button" onclick="submitPrompt()">Ask</button>
 </div>
 
 <style>
@@ -49,26 +50,29 @@
     }
 </style>
 
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.5/purify.min.js" defer
-  integrity="sha512-/CUtA84sWWqWEBejNrrtWa7Yc4cth3Ome2ymvCKOo9YcZ4sh98tndUy4LutE2xGcAgD4fyz16y+gSyJdGCB5ww=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.5/purify.min.js" defer
+    integrity="sha512-/CUtA84sWWqWEBejNrrtWa7Yc4cth3Ome2ymvCKOo9YcZ4sh98tndUy4LutE2xGcAgD4fyz16y+gSyJdGCB5ww=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
     const endpoint = "https://tei23dyloh.execute-api.us-east-1.amazonaws.com/prod/gptAssistantHandler";
+
     const introText = `
-Hi there—I'm here to help you learn more about Roger Ehmpke's work.
+Hi there — I'm here to help you learn more about Roger Ehmpke's work.
 
-Roger leads UX, accessibility, and content systems strategy in higher ed, with a focus on simplifying complex digital platforms through inclusive design and web governance.
+Roger leads higher-ed web strategy and digital experience, with a focus on accessibility governance, CMS architecture, UX, analytics, AI-ready content, and public-facing digital systems that are easier to govern and maintain.
 
-He's known for shaping digital transformation efforts and mentoring designers and teams. If you're exploring the site and have questions about his strategy, projects, or digital leadership work, feel free to ask.
+His work connects institutional strategy with technical execution — helping teams improve accessibility, clarify content, strengthen digital governance, and prepare web systems for changing search, AI, and compliance expectations.
 
-And if you're looking to connect or collaborate, there's a contact form at the bottom of this page.
+If you're exploring his work, projects, or digital leadership approach, feel free to ask. If you'd like to connect directly, there's a contact form at the bottom of this page.
+`;
+
+    const vagueQuestionInstruction = `
+If the user asks a short or vague question, infer that they may be asking about Roger Ehmpke's work, projects, experience, KCC role, accessibility governance, CMS architecture, AI-ready content, or higher-ed web strategy. Answer helpfully using the provided context instead of saying "No response."
 `;
 
     let chatHistory = [];
+
     if (sessionStorage.getItem("gptChatHistory")) {
         try {
             chatHistory = JSON.parse(sessionStorage.getItem("gptChatHistory")) || [];
@@ -78,38 +82,68 @@ And if you're looking to connect or collaborate, there's a contact form at the b
     }
 
     const pageContext = document.querySelector("meta[name='ai-context']")?.content || "";
-    const combinedContext = pageContext.length > 10 ? `${pageContext}\n\n${introText}` : introText;
 
-    document.getElementById('ai-widget-button').onclick = () => {
-        const box = document.getElementById('ai-widget-box');
-        box.style.display = box.style.display === 'none' ? 'block' : 'none';
+    const combinedContext = pageContext.length > 10
+        ? `${pageContext}\n\n${introText}\n\n${vagueQuestionInstruction}`
+        : `${introText}\n\n${vagueQuestionInstruction}`;
+
+    document.getElementById("ai-widget-button").onclick = () => {
+        const box = document.getElementById("ai-widget-box");
+        box.style.display = box.style.display === "none" ? "block" : "none";
     };
 
     function submitPrompt() {
-        const inputField = document.getElementById('ai-widget-input');
-        const input = inputField.value;
-        const log = document.getElementById('ai-widget-log');
-        const cleanInput = DOMPurify.sanitize(input, { USE_PROFILES: { html: true } });
+        const inputField = document.getElementById("ai-widget-input");
+        const input = inputField.value.trim();
+
+        if (!input) return;
+
+        const log = document.getElementById("ai-widget-log");
+
+        const cleanInput = window.DOMPurify
+            ? DOMPurify.sanitize(input, { USE_PROFILES: { html: true } })
+            : input.replace(/[<>&"]/g, "");
 
         chatHistory.push({ role: "user", content: cleanInput });
         sessionStorage.setItem("gptChatHistory", JSON.stringify(chatHistory));
+
         log.innerHTML += `<p><strong>You:</strong> ${cleanInput}</p>`;
 
         fetch(endpoint, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 question: cleanInput,
                 contextBlock: combinedContext,
-                messageHistory: chatHistory
+                messageHistory: chatHistory,
+                siteInstruction: vagueQuestionInstruction
             })
         })
             .then(res => res.json())
             .then(data => {
-                chatHistory.push({ role: "assistant", content: data.answer });
+                console.log("Assistant response:", data);
+
+                const answerText = typeof data.answer === "string"
+                    ? data.answer.trim()
+                    : "";
+
+                const rawAnswer =
+                    answerText &&
+                        answerText.toLowerCase() !== "no response." &&
+                        answerText.toLowerCase() !== "no response"
+                        ? answerText
+                        : "I can help with Roger's KCC work, accessibility governance, CMS architecture, AI-ready content, web strategy, or selected projects. Try asking something like: What does Roger do at KCC?";
+
+                const cleanAnswer = window.DOMPurify
+                    ? DOMPurify.sanitize(rawAnswer, { USE_PROFILES: { html: true } })
+                    : String(rawAnswer).replace(/[<>&"]/g, "");
+
+                chatHistory.push({ role: "assistant", content: cleanAnswer });
                 sessionStorage.setItem("gptChatHistory", JSON.stringify(chatHistory));
-                log.innerHTML += `<p><strong>Assistant:</strong> ${data.answer}<br><em>Need more info? <a href='/#contact'>Contact Roger here.</a></em></p>`;
-                inputField.value = '';
+
+                log.innerHTML += `<p><strong>Assistant:</strong> ${cleanAnswer}<br><em>Need more info? <a href="/#contact">Contact Roger here.</a></em></p>`;
+
+                inputField.value = "";
             })
             .catch(err => {
                 console.error("Chat fetch error:", err);
