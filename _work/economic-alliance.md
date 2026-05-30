@@ -1,13 +1,15 @@
 ---
-work_name: "Economic Alliance of Kankakee&nbsp;County"
-order: 3
-skill_labels: 
-  - label: UX Strategy
-  - label: Responsive Design
+work_name: "Economic Alliance CMS Rearchitecture"
+order: 5
+featured: false
+marker: "05"
+card_label: "Earlier Digital Systems Work"
+skill_labels:
   - label: WordPress
-  - label: Economic Development
+  - label: CMS Migration
+  - label: Information Architecture
+  - label: Local Government
+  - label: Analytics
 current_site: "#"
-screen_image: "./assets/img/kcc-screen2.webp"
-screen_image_alt: "computer screen with an image of Economic Alliance of Kankakee project"
-case_description: "<p>Led digital strategy and CMS redevelopment for a regional economic development organization. Delivered an accessible, content-forward platform aligned with the organization's mission and regional engagement goals.</p>"
+case_description: "Rearchitected an earlier regional economic development website from a difficult legacy CMS setup into a more maintainable WordPress structure, improving navigation, content organization, analytics readiness, and accessibility-minded publishing practices."
 ---

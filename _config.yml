@@ -4,7 +4,7 @@ email: "rehmpke@gmail.com"
 google-tag_key: "GTM-T38CTSL"
 themecolor: '#071f35' # for meta theme-color site best practices
 description: >- # this means to ignore newlines until "baseurl:"
-  "Roger Ehmpke, Frontend Web Developer."
+  Roger Ehmpke leads higher-ed web strategy, accessibility governance, CMS architecture, analytics, AI-ready content systems, and practical digital systems work.
 url: "https://www.rogerehmpke.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: rehmpke

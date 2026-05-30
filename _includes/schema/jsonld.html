@@ -1,0 +1,190 @@
+{% assign canonical_url = page.url | absolute_url %}
+{% assign page_description = page.schema_description | default: page.ai_context | default: site.description | strip_newlines %}
+{% assign page_type = page.schema_type | default: "WebPage" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}/",
+      "name": "Roger Ehmpke",
+      "description": "Strategic digital leadership for higher education web ecosystems, accessibility governance, CMS architecture, analytics, AI-ready content, and practical digital systems work.",
+      "inLanguage": "en-US",
+      "publisher": { "@id": "{{ site.url }}/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}/#person",
+      "name": "Roger Ehmpke",
+      "url": "{{ site.url }}/",
+      "image": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}/assets/img/roger.webp"
+      },
+      "jobTitle": "Director of Web Strategy & Digital Experience",
+      "worksFor": {
+        "@type": "CollegeOrUniversity",
+        "name": "Kankakee Community College",
+        "url": "https://www.kcc.edu/"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/rogerehmpke",
+        "https://github.com/rehmpke",
+        "https://x.com/rehmpke"
+      ],
+      "knowsAbout": [
+        "Higher education web strategy",
+        "Digital governance",
+        "Accessibility governance",
+        "ADA Title II readiness",
+        "WCAG 2.1 AA",
+        "Section 508",
+        "UX strategy",
+        "CMS architecture",
+        "Content governance",
+        "Static site architecture",
+        "SharePoint Online",
+        "Ellucian Experience",
+        "Power Automate",
+        "React application development",
+        "Web analytics",
+        "GA4",
+        "Google Search Console",
+        "AI-ready content systems",
+        "Structured information architecture",
+        "Cost-conscious digital systems"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Professional inquiries",
+        "url": "{{ site.url }}/#contact",
+        "areaServed": "US",
+        "availableLanguage": "en"
+      }
+    },
+    {
+      "@type": "{{ page_type }}",
+      "@id": "{{ canonical_url }}#webpage",
+      "url": "{{ canonical_url }}",
+      "name": {{ page.title | jsonify }},
+      "description": {{ page_description | jsonify }},
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "{{ site.url }}/#website" },
+      {% unless page.schema_type == "PrivacyPolicy" %}"about": { "@id": "{{ site.url }}/#person" },
+      "author": { "@id": "{{ site.url }}/#person" },{% endunless %}
+      "breadcrumb": { "@id": "{{ canonical_url }}#breadcrumb" }{% if page.schema_main_entity_id %},
+      "mainEntity": { "@id": "{{ canonical_url }}{{ page.schema_main_entity_id }}" }{% endif %}{% if page.url == "/" %},
+      "mainEntity": { "@id": "{{ site.url }}/#person" },
+      "hasPart": [
+        { "@id": "{{ site.url }}/case-studies/accessibility-program-mobilization/#creativework" },
+        { "@id": "{{ site.url }}/case-studies/accessible-campus-wayfinding-bridge/#creativework" },
+        { "@id": "{{ site.url }}/case-studies/kcc-public-website-redesign-content-governance/#creativework" },
+        { "@id": "{{ site.url }}/case-studies/kcc-intranet-recovery-workflow-modernization/#creativework" }
+      ]{% endif %}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ canonical_url }}#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ site.url }}/"
+        }{% if page.url != "/" and page.url contains "/case-studies/" %},
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Case Studies",
+          "item": "{{ site.url }}/case-studies/"
+        }{% unless page.url == "/case-studies/" %},
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ page.title | remove: "Roger Ehmpke - " | remove: "Roger Ehmpke – " | jsonify }},
+          "item": "{{ canonical_url }}"
+        }{% endunless %}{% elsif page.url != "/" %},
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ page.title | remove: "Roger Ehmpke - " | remove: "Roger Ehmpke – " | jsonify }},
+          "item": "{{ canonical_url }}"
+        }{% endif %}
+      ]
+    }{% if page.url == "/" %},
+    {
+      "@type": "ItemList",
+      "@id": "{{ site.url }}/#strategic-initiatives",
+      "name": "Strategic digital systems initiatives",
+      "description": "Selected higher-ed digital systems work led by Roger Ehmpke, including accessibility governance, accessible wayfinding, public website architecture, content governance, and intranet recovery.",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "url": "{{ site.url }}/case-studies/accessibility-program-mobilization/", "name": "Institutional Accessibility Program Mobilization" },
+        { "@type": "ListItem", "position": 2, "url": "{{ site.url }}/case-studies/accessible-campus-wayfinding-bridge/", "name": "Accessible Campus Wayfinding Bridge" },
+        { "@type": "ListItem", "position": 3, "url": "{{ site.url }}/case-studies/kcc-public-website-redesign-content-governance/", "name": "KCC Public Website Redesign and Content Governance" },
+        { "@type": "ListItem", "position": 4, "url": "{{ site.url }}/case-studies/kcc-intranet-recovery-workflow-modernization/", "name": "KCC Intranet Recovery and Workflow Modernization" }
+      ]
+    }{% endif %}{% if page.url == "/case-studies/" %},
+    {
+      "@type": "ItemList",
+      "@id": "{{ canonical_url }}#case-study-list",
+      "name": "Roger Ehmpke case studies",
+      "description": "Case studies showing Roger Ehmpke's work across accessibility governance, accessible wayfinding, public web architecture, content governance, intranet recovery, SharePoint Online, Ellucian Experience, and workflow automation.",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "url": "{{ site.url }}/case-studies/accessibility-program-mobilization/", "name": "Institutional Accessibility Program Mobilization" },
+        { "@type": "ListItem", "position": 2, "url": "{{ site.url }}/case-studies/accessible-campus-wayfinding-bridge/", "name": "Accessible Campus Wayfinding Bridge" },
+        { "@type": "ListItem", "position": 3, "url": "{{ site.url }}/case-studies/kcc-public-website-redesign-content-governance/", "name": "KCC Public Website Redesign and Content Governance" },
+        { "@type": "ListItem", "position": 4, "url": "{{ site.url }}/case-studies/kcc-intranet-recovery-workflow-modernization/", "name": "KCC Intranet Recovery and Workflow Modernization" }
+      ]
+    }{% endif %}{% if page.schema_main_entity_type == "CreativeWork" %},
+    {
+      "@type": "CreativeWork",
+      "@id": "{{ canonical_url }}#creativework",
+      "url": "{{ canonical_url }}",
+      "name": {{ page.schema_project_name | default: page.title | jsonify }},
+      "headline": {{ page.schema_project_name | default: page.title | jsonify }},
+      "description": {{ page.schema_description | default: page.ai_context | jsonify }},
+      "author": { "@id": "{{ site.url }}/#person" },
+      "creator": { "@id": "{{ site.url }}/#person" },
+      "publisher": { "@id": "{{ site.url }}/#person" },
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "{{ canonical_url }}#webpage" },
+      "about": [
+        { "@type": "Thing", "name": "{{ page.schema_about_primary }}" }{% for topic in page.schema_about_topics %},
+        { "@type": "Thing", "name": {{ topic | jsonify }} }{% endfor %}
+      ],
+      "keywords": [{% for keyword in page.schema_keywords %}{{ keyword | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %}],
+      "workExample": {
+        "@type": "CreativeWork",
+        "name": {{ page.schema_project_name | default: page.title | jsonify }},
+        "description": {{ page.schema_outcome | default: page.schema_description | jsonify }}
+      }{% if page.schema_organization %},
+      "sourceOrganization": {
+        "@type": "CollegeOrUniversity",
+        "name": {{ page.schema_organization | jsonify }},
+        "url": "https://www.kcc.edu/"
+      }{% endif %}{% if page.schema_date_range %},
+      "temporalCoverage": {{ page.schema_date_range | jsonify }}{% endif %}
+    }{% endif %}{% if page.schema_service_name %},
+    {
+      "@type": "ProfessionalService",
+      "@id": "{{ canonical_url }}#service",
+      "name": {{ page.schema_service_name | jsonify }},
+      "url": "{{ canonical_url }}",
+      "description": {{ page_description | jsonify }},
+      "provider": { "@id": "{{ site.url }}/#person" },
+      "areaServed": "US",
+      "serviceType": [
+        "Higher education web strategy",
+        "Accessibility governance",
+        "CMS modernization",
+        "Content governance",
+        "AI-ready content strategy"
+      ]
+    }{% endif %}
+  ]
+}
+</script>

@@ -1,21 +1,19 @@
-<section class="specialties space-top--specialties double space-bottom--specialties" id="specialties" aria-labelledby="specialties-h2">
-  <div class="specialties__container">
-    <div class="specialties__content">
-  <div>
-      <h2 id="specialties-h2">Skills & Specialties</h2>
-      <p class="skills__intro">These are the areas where I bring deep experience and practical leadership across higher education digital&nbsp;ecosystems.</p>
-  </div>
-</div>
-  <div class="specialties__specialtydiv container">
-    {% assign sorted_specialties = site.specialties | sort: "order" %}
-    {% for specialties in sorted_specialties %}
-      <div>
-          <div class="specialty__box space-bottom">
-              <h3 style="text-align: left;">{{ specialties.specialty_title }}</h3>
-              <p class="specialties__paragraph" style="text-align: left;">{{ specialties.specialty_paragraph }}</p>
-          </div>
-      </div>
-    {% endfor %}
-  </div>
-</div>
+<section class="site-section site-section--white" id="specialties" aria-labelledby="specialties-title">
+    <div class="site-shell">
+        <header class="site-section-header site-section-header--center">
+            <p class="site-section-label">Skills &amp; Specialties</p>
+            <h2 id="specialties-title">Practical leadership across higher-ed digital ecosystems</h2>
+            <p>These are the areas where I bring deep experience across strategy, accessibility, content systems, and implementation.</p>
+        </header>
+
+        <div class="site-card-grid site-card-grid--three">
+            {% assign sorted_specialties = site.specialties | sort: "order" %}
+            {% for specialty in sorted_specialties %}
+            <article class="site-info-card">
+                <h3>{{ specialty.specialty_title }}</h3>
+                <p>{{ specialty.specialty_paragraph }}</p>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
 </section>

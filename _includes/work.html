@@ -1,30 +1,103 @@
-<section class="work space-top space-bottom" id="work" aria-labelledby="work-h2">
-    <div class="work__container">
-        <div class="work__content">
-            <div class="work__description">
-                <h2 id="work-h2">Strategic Initiatives</h2>
-                <p class="intro">A selection of institutional digital initiatives where I've led web strategy, accessibility governance, and platform
-                modernization across higher education and regional organizations.</p>
-                <hr class="primary" />
-            </div>
-        </div>
-        {% assign sorted_work = site.work | sort: "order" %}
-        {% for work in sorted_work %}
-        <div class="work__projectdiv work__kcc container">
-            <div class="work__projectimgdiv__imgdiv"><img width="90%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/bXcAAAAASUVORK5CYII=" data-src="{{ work.screen_image }}" alt="{{ work.screen_image_alt }}" /></div>
-            <div class="work__projectdiv__description">
-                <h3>{{ work.work_name }}</h3>
-                <p>{{ work.case_description }}</p>
-                <div class="work__projectdiv__languagebar">
-                    {% for skill in work.skill_labels %}
-                    <span class="label_language">{{ skill.label }}</span>
-                    {% endfor %}
+<section class="site-section site-section--mist" id="work" aria-labelledby="work-title">
+    <div class="site-shell">
+        <header class="site-section-header site-section-header--center">
+            <p class="site-section-label">Strategic Initiatives</p>
+            <h2 id="work-title">Proof through systems, not slogans</h2>
+            <p>
+                A selection of institutional digital initiatives where I have led accessibility governance,
+                cost-saving platform decisions, public web architecture, intranet recovery, workflow automation,
+                and practical digital systems work.
+            </p>
+        </header>
+
+        <div class="site-project-grid site-project-grid--systems">
+            {% assign featured_work = site.work | where: "featured", true | sort: "order" %}
+            {% for work in featured_work %}
+            <article class="site-project-card site-project-card--system">
+                <div class="site-project-card__topline">
+                    <span class="site-project-card__mark" aria-hidden="true">{{ work.marker }}</span>
+                    <span class="site-card-label">{{ work.card_label | default: "Strategic Initiative" }}</span>
                 </div>
-                {% if work.current_site != "#" %}
-                <div class="view_live_div"><a class="btn-primary" href="{{ work.current_site }}" target="_blank" rel="noopener noreferrer">VIEW LIVE</a></div>
+
+                {% if work.visual_key %}
+                <div class="site-project-card__visual site-project-card__visual--{{ work.visual_key }}" aria-hidden="true">
+                    {% case work.visual_key %}
+                    {% when "accessibility" %}
+                    <div class="site-visual-diagram site-visual-diagram--governance">
+                        <span>Intake</span>
+                        <span>Evidence</span>
+                        <span>Training</span>
+                        <span>Review</span>
+                    </div>
+                    {% when "wayfinding" %}
+                    <div class="site-visual-map">
+                        <span class="site-visual-map__route"></span>
+                        <span class="site-visual-map__pin site-visual-map__pin--one"></span>
+                        <span class="site-visual-map__pin site-visual-map__pin--two"></span>
+                        <span class="site-visual-map__pin site-visual-map__pin--three"></span>
+                    </div>
+                    {% when "publicweb" %}
+                    <img src="/assets/img/kcc-screen.webp" width="720" height="405" alt="" loading="lazy" decoding="async">
+                    {% when "intranet" %}
+                    <div class="site-visual-flow">
+                        <span>SharePoint Online</span>
+                        <span>Power Automate</span>
+                        <span>Update / Newsroom</span>
+                        <span>Ellucian Experience</span>
+                    </div>
+                    {% endcase %}
+                </div>
                 {% endif %}
+
+                <div class="site-project-card__body site-project-card__body--system">
+                    <h3>{{ work.work_name }}</h3>
+                    <div class="site-project-card__summary">{{ work.case_description | markdownify }}</div>
+
+                    {% if work.value_line %}
+                    <p class="site-project-card__value">{{ work.value_line }}</p>
+                    {% endif %}
+
+                    <div class="site-tag-list" aria-label="Project focus areas">
+                        {% for skill in work.skill_labels %}
+                        <span>{{ skill.label }}</span>
+                        {% endfor %}
+                    </div>
+
+                    <div class="site-actions site-actions--card">
+                        {% if work.case_study_url %}
+                        <a class="site-button site-button--primary" href="{{ work.case_study_url }}">View case study</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        <div class="site-supporting-work" aria-labelledby="supporting-work-title">
+            <div>
+                <p class="site-section-label">Additional Experience Across Sectors</p>
+                <h3 id="supporting-work-title">Earlier work, same operating principles</h3>
+                <p>
+                    Earlier projects across local government, regional development, nonprofit, and small-business contexts
+                    shaped the same patterns I use today: clearer architecture, maintainable CMS workflows,
+                    accessibility-minded structure, analytics visibility, and practical content organization.
+                </p>
+            </div>
+            <div class="site-supporting-work__cards">
+                {% assign supporting_work = site.work | where: "featured", false | sort: "order" %}
+                {% for work in supporting_work %}
+                <article class="site-supporting-card">
+                    <p class="site-card-label">{{ work.card_label | default: "Supporting Project" }}</p>
+                    <h4>{{ work.work_name }}</h4>
+                    <div>{{ work.case_description | markdownify }}</div>
+                    <div class="site-tag-list" aria-label="Project focus areas">
+                        {% for skill in work.skill_labels %}
+                        <span>{{ skill.label }}</span>
+                        {% endfor %}
+                    </div>
+                </article>
+                {% endfor %}
             </div>
         </div>
-        {% endfor %}
     </div>
 </section>

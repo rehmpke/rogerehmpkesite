@@ -3,11 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preload" as="image" href="/assets/img/compass-background.webp">
+    {% assign page_description = page.schema_description | default: page.ai_context | default: site.description | strip_newlines %}
+    {% assign canonical_url = page.url | absolute_url %}
+    {% assign page_og_type = page.og_type | default: "website" %}
+    <link rel="preload" as="image" href="/assets/img/compass-background-light-careful.webp">
     <link rel="preload" as="image" href="/assets/img/roger.webp" imagesrcset="/assets/img/roger.webp 1x" imagesizes="(max-width: 600px) 300px, 300px" fetchpriority="high" />
     <title>{{ page.title }}</title>
-    <meta name="description" content="Roger Ehmpke leads higher-ed web strategy, accessibility governance, CMS architecture, analytics, AI-ready content, and digital systems that are easier to govern, maintain, and trust." />
+    <meta name="description" content="{{ page_description | escape }}" />
+    {% if page.schema_keywords %}
+    <meta name="keywords" content="{{ page.schema_keywords | join: ', ' | escape }}" />
+    {% else %}
     <meta name="keywords" content="Roger Ehmpke, higher education web strategy, higher ed digital governance, accessibility governance, WCAG, ADA Title II, Section 508, UX strategy, CMS architecture, content strategy, AI-ready content, GA4, web leadership" />
+    {% endif %}
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <meta name="copyright" content="© 2026 Roger Ehmpke. All rights reserved.">
     <meta name="license" content="All Rights Reserved">
@@ -21,12 +28,12 @@
     {% include styles/fonts.html %}
     {% include styles/main.html %}
     {% include styles/vendor.html %}
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="{{ page_og_type }}" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:title" content="Roger Ehmpke — Higher-Ed Web Strategy & Digital Governance" />
-    <meta property="og:description" content="Helping higher-ed teams make public web systems more accessible, governable, discoverable, and easier to maintain." />
+    <meta property="og:title" content="{{ page.title | escape }}" />
+    <meta property="og:description" content="{{ page_description | escape }}" />
     <meta property="og:site_name" content="Roger Ehmpke" />
-    <meta property="og:url" content="https://www.rogerehmpke.com/" />
+    <meta property="og:url" content="{{ canonical_url }}" />
     <meta property="og:image" content="https://www.rogerehmpke.com/assets/img/og-card.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -34,12 +41,13 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@rehmpke" />
     <meta name="twitter:creator" content="@rehmpke" />
-    <meta name="twitter:title" content="Roger Ehmpke — Higher-Ed Web Strategy & Digital Governance" />
-    <meta name="twitter:description" content="Helping higher-ed teams make public web systems more accessible, governable, discoverable, and easier to maintain." />
+    <meta name="twitter:title" content="{{ page.title | escape }}" />
+    <meta name="twitter:description" content="{{ page_description | escape }}" />
     <meta name="twitter:image" content="https://www.rogerehmpke.com/assets/img/og-card.jpg" />
     <meta name="twitter:image:alt" content="Roger Ehmpke — higher-ed web strategy and accessibility governance" />
     {% include scripts/google-tag.html %}
-    {% include schema/home-schema.html %}
+    {% include schema/jsonld.html %}
+    <link rel="preload" as="image" href="/assets/img/compass-background-dark.webp">
 </head>
 <body>
     <noscript>
