@@ -6,7 +6,7 @@
     {% assign page_description = page.schema_description | default: page.ai_context | default: site.description | strip_newlines %}
     {% assign canonical_url = page.url | absolute_url %}
     {% assign page_og_type = page.og_type | default: "website" %}
-    <link rel="preload" as="image" href="/assets/img/compass-background-light-careful.webp">
+    <link rel="preload" as="image" href="/assets/img/compass-background-light-original-source.webp">
     <link rel="preload" as="image" href="/assets/img/roger.webp" imagesrcset="/assets/img/roger.webp 1x" imagesizes="(max-width: 600px) 300px, 300px" fetchpriority="high" />
     <title>{{ page.title }}</title>
     <meta name="description" content="{{ page_description | escape }}" />

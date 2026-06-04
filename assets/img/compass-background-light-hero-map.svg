@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#31565d" stroke-opacity="0.075" stroke-width="1"/>
+    </pattern>
+    <filter id="soft" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="0.35"/>
+    </filter>
+    <linearGradient id="fade" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#f7faf7" stop-opacity="0.08"/>
+      <stop offset="0.58" stop-color="#dce8e6" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#f8f7f1" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1800" height="900" fill="url(#fade)"/>
+  <rect width="1800" height="900" fill="url(#grid)"/>
+
+  <!-- soft content panels / map frames -->
+  <g fill="none" stroke="#31565d" stroke-linecap="round" stroke-linejoin="round" filter="url(#soft)">
+    <rect x="70" y="120" width="420" height="148" rx="10" stroke-opacity="0.10" stroke-width="5"/>
+    <rect x="1060" y="590" width="470" height="145" rx="10" stroke-opacity="0.11" stroke-width="5"/>
+    <path d="M1120 650H1460M1120 690H1405" stroke-opacity="0.13" stroke-width="8"/>
+  </g>
+
+  <!-- main compass, anchored low/left for navigation identity -->
+  <g transform="translate(300 600)" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#soft)">
+    <circle r="250" stroke="#ffffff" stroke-opacity="0.23" stroke-width="8"/>
+    <circle r="198" stroke="#496f74" stroke-opacity="0.16" stroke-width="5"/>
+    <circle r="62" stroke="#ffffff" stroke-opacity="0.22" stroke-width="5"/>
+    <path d="M0 -205V-165M0 165V205M-205 0H-165M165 0H205" stroke="#ffffff" stroke-opacity="0.28" stroke-width="7"/>
+    <path d="M-36 36L92 -138L38 -34L-96 128Z" fill="#ffffff" fill-opacity="0.13" stroke="#ffffff" stroke-opacity="0.18" stroke-width="4"/>
+    <path d="M-4 -48L72 120L8 46L-74 -118Z" fill="#31565d" fill-opacity="0.07" stroke="#31565d" stroke-opacity="0.10" stroke-width="3"/>
+  </g>
+
+  <!-- route line, visible but not gimmicky -->
+  <path d="M210 365C390 255 580 300 680 430C765 540 680 650 795 722C940 814 1056 660 1135 548C1215 435 1328 422 1456 492" 
+        fill="none" stroke="#ffffff" stroke-opacity="0.26" stroke-width="8" stroke-linecap="round" stroke-dasharray="26 26" filter="url(#soft)"/>
+  <path d="M210 365C390 255 580 300 680 430C765 540 680 650 795 722C940 814 1056 660 1135 548C1215 435 1328 422 1456 492" 
+        fill="none" stroke="#31565d" stroke-opacity="0.06" stroke-width="4" stroke-linecap="round" stroke-dasharray="26 26"/>
+
+  <!-- X/O marks placed around, not over headline-heavy areas -->
+  <g fill="none" stroke-linecap="round" filter="url(#soft)">
+    <g stroke="#ffffff" stroke-opacity="0.28" stroke-width="10">
+      <path d="M210 315l55 55M265 315l-55 55"/>
+      <path d="M760 250l54 54M814 250l-54 54"/>
+      <path d="M1370 260l52 52M1422 260l-52 52"/>
+      <path d="M910 720l46 46M956 720l-46 46"/>
+    </g>
+    <g stroke="#31565d" stroke-opacity="0.11" stroke-width="7">
+      <circle cx="115" cy="250" r="32"/>
+      <circle cx="655" cy="210" r="30"/>
+      <circle cx="1280" cy="190" r="42"/>
+      <circle cx="1040" cy="750" r="34"/>
+    </g>
+  </g>
+
+  <!-- quiet directional arrows / system lines -->
+  <g fill="none" stroke="#31565d" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.10" stroke-width="6" filter="url(#soft)">
+    <path d="M520 430H720"/>
+    <path d="M690 400l32 30-32 30"/>
+    <path d="M1180 360H1535"/>
+    <path d="M1510 330l36 30-36 30"/>
+    <path d="M845 120v155" stroke-dasharray="20 22"/>
+  </g>
+</svg>

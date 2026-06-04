@@ -10,6 +10,7 @@
             {% assign sorted_recommendations = site.recommendations | sort: "order" %}
             {% for recommendation in sorted_recommendations %}
             <article class="site-quote-card" itemscope itemtype="https://schema.org/Recommendation">
+                <span class="site-quote-card__mark" aria-hidden="true">“</span>
                 <h3 itemprop="name">{{ recommendation.recommended_person }}</h3>
                 <p class="site-quote-card__title" itemprop="jobTitle">{{ recommendation.recommended_title }}</p>
                 <blockquote itemprop="reviewbody">{{ recommendation.recommended_quote }}</blockquote>

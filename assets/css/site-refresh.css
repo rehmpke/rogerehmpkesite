@@ -1634,3 +1634,903 @@ body > section.space-top.space-bottom a {
         max-width: 560px;
     }
 }
+
+
+/* ========================================================================== 
+   Hero simplification and About focus migration
+   --------------------------------------------------------------------------
+   Reduces above-the-fold visual choices by removing the extra hero proof pills
+   and moving the core capability language into the About section.
+   ========================================================================== */
+
+.site-hero .site-pill {
+    background: rgba(255, 251, 242, 0.72);
+    border-color: rgba(7, 31, 53, 0.11);
+    box-shadow: none;
+}
+
+.site-hero__aside--story {
+    justify-content: center;
+}
+
+.site-hero-person {
+    margin-inline: auto;
+}
+
+@media (min-width: 980px) {
+    .site-hero__grid--humanized {
+        grid-template-columns: minmax(0, 1.04fr) minmax(375px, 0.72fr);
+    }
+
+    .site-hero-person {
+        grid-template-columns: minmax(132px, 170px) minmax(245px, 1fr);
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .site-hero__grid--humanized {
+        grid-template-columns: minmax(0, 1.04fr) minmax(400px, 0.72fr);
+    }
+
+    .site-hero-person {
+        max-width: 560px;
+    }
+}
+
+.site-about-focus {
+    align-items: center;
+    background: rgba(255, 251, 242, 0.72);
+    border: 1px solid rgba(7, 31, 53, 0.12);
+    border-left: 5px solid var(--site-warm-accent, #b89b63);
+    border-radius: 1.35rem;
+    box-shadow: 0 14px 34px rgba(7, 31, 53, 0.065);
+    display: grid;
+    gap: clamp(1rem, 3vw, 1.8rem);
+    margin: 0 auto clamp(1.8rem, 4vw, 2.8rem);
+    max-width: 980px;
+    padding: clamp(1.1rem, 2.5vw, 1.55rem);
+}
+
+.site-about-focus__intro p:not(.site-section-label) {
+    color: #425968;
+    font-size: 1.02rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.site-about-focus__items {
+    display: grid;
+    gap: 0.58rem 0.68rem;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.site-about-focus__items span {
+    align-items: center;
+    background: rgba(238, 246, 243, 0.74);
+    border: 1px solid rgba(7, 31, 53, 0.11);
+    border-radius: 0.85rem;
+    color: var(--site-ink, #071f35);
+    display: flex;
+    font-size: 0.86rem;
+    font-weight: 750;
+    justify-content: flex-start;
+    line-height: 1.25;
+    min-height: 2.25rem;
+    padding: 0.52rem 0.72rem;
+}
+
+@media (min-width: 700px) {
+    .site-about-focus__items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .site-about-focus__items span:last-child {
+        grid-column: 1 / -1;
+        justify-content: center;
+        justify-self: center;
+        width: min(100%, 68%);
+    }
+}
+
+@media (min-width: 900px) {
+    .site-about-focus {
+        grid-template-columns: minmax(280px, 0.9fr) minmax(420px, 1.1fr);
+    }
+}
+
+
+/* ========================================================================== 
+   Hero human-anchor final balanced state
+   --------------------------------------------------------------------------
+   Single clean hero-card definition. Keeps the right-side card human and
+   editorial: portrait has presence, panel has air, and the closing line is
+   darker without reading like a bold slogan.
+   ========================================================================== */
+
+.site-hero__aside--story {
+    align-self: center;
+}
+
+.site-hero-anchor {
+    background:
+        radial-gradient(circle at 82% 8%, rgba(184, 155, 99, 0.12), transparent 34%),
+        linear-gradient(145deg, rgba(255, 251, 242, 0.78), rgba(238, 246, 243, 0.64));
+    border: 1px solid rgba(7, 31, 53, 0.10);
+    border-radius: 1.85rem;
+    box-shadow: 0 18px 42px rgba(7, 31, 53, 0.105);
+    margin-inline: auto;
+    max-width: 432px;
+    padding: clamp(0.78rem, 1.65vw, 1rem);
+    position: relative;
+}
+
+.site-hero-anchor::before {
+    background: linear-gradient(180deg, rgba(184, 155, 99, 0.72), rgba(0, 71, 99, 0.16));
+    border-radius: 999px;
+    content: "";
+    height: 58%;
+    left: 1.05rem;
+    opacity: 0.18;
+    position: absolute;
+    top: 22%;
+    width: 3px;
+}
+
+.site-hero-anchor__image {
+    aspect-ratio: 1.08 / 1;
+    border: 4px solid rgba(255, 251, 242, 0.92);
+    border-radius: 1.18rem;
+    box-shadow: 0 16px 34px rgba(7, 31, 53, 0.14);
+    margin: 0 clamp(0.2rem, 1vw, 0.45rem) -1.9rem auto;
+    max-width: 226px;
+    overflow: hidden;
+    position: relative;
+    width: min(50vw, 226px);
+    z-index: 2;
+}
+
+.site-hero-anchor__image img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 42%;
+    width: 100%;
+}
+
+.site-hero-anchor__panel {
+    background: rgba(255, 251, 242, 0.84);
+    border: 1px solid rgba(7, 31, 53, 0.09);
+    border-radius: 1.32rem;
+    padding: clamp(3.5rem, 5.05vw, 3.9rem) clamp(1.18rem, 2vw, 1.38rem) clamp(1.28rem, 2.15vw, 1.48rem);
+}
+
+.site-hero-anchor__panel p:not(.site-card-label) {
+    color: #304959;
+    font-size: 0.98rem;
+    line-height: 1.66;
+    margin: 0;
+}
+
+.site-hero-anchor__note {
+    color: #263d4c !important;
+    font-size: 0.94rem !important;
+    font-weight: 530 !important;
+    line-height: 1.56 !important;
+    margin-top: 0.68rem !important;
+}
+
+@media (min-width: 980px) {
+    .site-hero__grid--humanized {
+        grid-template-columns: minmax(0, 1.02fr) minmax(405px, 0.72fr);
+    }
+}
+
+@media (min-width: 1400px) {
+    .site-hero__grid--humanized {
+        grid-template-columns: minmax(0, 1.02fr) minmax(425px, 0.7fr);
+    }
+
+    .site-hero-anchor {
+        max-width: 440px;
+    }
+}
+
+@media (max-width: 700px) {
+    .site-hero-anchor {
+        max-width: 100%;
+    }
+
+    .site-hero-anchor::before {
+        display: none;
+    }
+
+    .site-hero-anchor__image {
+        aspect-ratio: 1.15 / 1;
+        margin-inline: auto;
+        max-width: 220px;
+    }
+}
+
+/* ========================================================================== 
+   About focus refinement: quieter signal list
+   --------------------------------------------------------------------------
+   Replaces the button-like tag cluster with a calmer editorial signal list so
+   the section reads as explanatory support, not another interactive control set.
+   ========================================================================== */
+
+.site-about-focus {
+    align-items: start;
+    background: linear-gradient(135deg, rgba(255, 251, 242, 0.68), rgba(248, 250, 247, 0.9));
+    border-color: rgba(7, 31, 53, 0.1);
+    border-left-color: rgba(184, 155, 99, 0.88);
+    box-shadow: 0 14px 32px rgba(7, 31, 53, 0.052);
+}
+
+.site-about-focus__items {
+    align-self: center;
+    display: grid;
+    gap: 0;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.site-about-focus__items span {
+    background: transparent;
+    border: 0;
+    border-top: 1px solid rgba(7, 31, 53, 0.1);
+    border-radius: 0;
+    color: #183040;
+    display: grid;
+    font-size: 0.95rem;
+    font-weight: 650;
+    grid-template-columns: 0.7rem minmax(0, 1fr);
+    justify-content: stretch;
+    line-height: 1.35;
+    min-height: auto;
+    padding: 0.62rem 0.1rem;
+}
+
+.site-about-focus__items span::before {
+    background: rgba(184, 155, 99, 0.95);
+    border-radius: 999px;
+    content: "";
+    height: 0.34rem;
+    margin-top: 0.42rem;
+    width: 0.34rem;
+}
+
+.site-about-focus__items span:first-child {
+    border-top: 0;
+}
+
+@media (min-width: 700px) {
+    .site-about-focus__items {
+        column-gap: 1.35rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 0;
+    }
+
+    .site-about-focus__items span:nth-child(1),
+    .site-about-focus__items span:nth-child(2) {
+        border-top: 0;
+    }
+
+    .site-about-focus__items span:last-child {
+        grid-column: auto;
+        justify-content: stretch;
+        justify-self: stretch;
+        width: auto;
+    }
+}
+
+@media (min-width: 900px) {
+    .site-about-focus {
+        grid-template-columns: minmax(300px, 0.95fr) minmax(430px, 1.05fr);
+        padding-right: clamp(1.35rem, 3vw, 2rem);
+    }
+}
+
+/* ========================================================================== 
+   About focus micro-adjustment: more breathing room in signal list
+   --------------------------------------------------------------------------
+   Keeps the quieter editorial-list direction, but removes the cramped/control
+   feeling by loosening the rhythm, softening dividers, and letting each signal
+   read as supporting text instead of a button or form element.
+   ========================================================================== */
+
+.site-about-focus__items {
+    align-self: center;
+    column-gap: clamp(1.4rem, 3vw, 2.15rem) !important;
+    row-gap: 0.68rem !important;
+}
+
+.site-about-focus__items span {
+    border-top: 0 !important;
+    border-bottom: 1px solid rgba(7, 31, 53, 0.075) !important;
+    color: #1b3342 !important;
+    font-size: 0.95rem !important;
+    font-weight: 640 !important;
+    line-height: 1.42 !important;
+    padding: 0.2rem 0.1rem 0.72rem !important;
+}
+
+.site-about-focus__items span::before {
+    background: rgba(184, 155, 99, 0.82) !important;
+    height: 0.3rem !important;
+    margin-top: 0.46rem !important;
+    width: 0.3rem !important;
+}
+
+@media (min-width: 700px) {
+    .site-about-focus__items {
+        row-gap: 0.82rem !important;
+    }
+
+    .site-about-focus__items span:last-child {
+        border-bottom-color: rgba(7, 31, 53, 0.055) !important;
+    }
+}
+
+/* ========================================================================== 
+   Final about/hero texture refinement
+   --------------------------------------------------------------------------
+   Removes the cropped IGN/DESIGN fragment from the hero texture and lets the
+   About signal band align more naturally with the two-column content system.
+   ========================================================================== */
+
+.site-hero__texture {
+    background-image: url('/assets/img/compass-background-light-noign.webp') !important;
+    background-position: 58% 48% !important;
+    background-size: 116% !important;
+}
+
+.site-about-focus {
+    gap: clamp(1.6rem, 4vw, 2.75rem) !important;
+    margin-inline: auto !important;
+    max-width: 1120px !important;
+    padding: clamp(1.45rem, 3vw, 2.05rem) clamp(1.55rem, 3.5vw, 2.35rem) !important;
+    width: 100% !important;
+}
+
+.site-about-focus__items {
+    column-gap: clamp(1.65rem, 4vw, 2.85rem) !important;
+    row-gap: 1rem !important;
+}
+
+.site-about-focus__items span {
+    padding: 0.18rem 0.1rem 0.82rem !important;
+}
+
+@media (min-width: 900px) {
+    .site-about-focus {
+        grid-template-columns: minmax(310px, 0.82fr) minmax(520px, 1.18fr) !important;
+    }
+}
+
+@media (min-width: 1180px) {
+    .site-about-focus {
+        max-width: 1140px !important;
+    }
+}
+
+/* ========================================================================== 
+   Final hero background art-direction pass
+   --------------------------------------------------------------------------
+   Replaces the photo-like crop with a quieter strategic-map SVG: more compass,
+   route, grid, and X/O language; less hand and no readable word fragments.
+   ========================================================================== */
+
+.site-hero__texture {
+    background-image: url('/assets/img/compass-background-light-hero-map.webp') !important;
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    opacity: 0.52 !important;
+}
+
+/* ========================================================================== 
+   Hero background re-balance: return to original compass texture energy
+   --------------------------------------------------------------------------
+   The custom map-only background became too thin. This returns the hero to the
+   stronger original compass/planning texture, using the cleaned no-IGN crop and
+   a restrained opacity so it keeps the visual life without becoming noisy.
+   ========================================================================== */
+
+.site-hero__texture {
+    background-image: url('/assets/img/compass-background-light-noign.webp') !important;
+    background-position: 58% 48% !important;
+    background-repeat: no-repeat !important;
+    background-size: 116% !important;
+    filter: contrast(1.03) saturate(0.88) brightness(1.02) !important;
+    mix-blend-mode: normal !important;
+    opacity: 0.095 !important;
+}
+
+@media (max-width: 900px) {
+    .site-hero__texture {
+        background-position: 62% 42% !important;
+        background-size: cover !important;
+        opacity: 0.085 !important;
+    }
+}
+
+/* ========================================================================== 
+   Hero background final balance: more compass / less hand
+   --------------------------------------------------------------------------
+   Restores the original visual energy but uses a softened hand area and a
+   stronger compass/route crop so the hero reads more like navigation and less
+   like a stock planning image.
+   ========================================================================== */
+
+.site-hero__texture {
+    background-image: url('/assets/img/compass-background-light-compass-balanced.webp') !important;
+    background-position: 55% 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: 116% !important;
+    filter: contrast(1.03) saturate(0.86) brightness(1.02) !important;
+    mix-blend-mode: normal !important;
+    opacity: 0.098 !important;
+}
+
+@media (max-width: 900px) {
+    .site-hero__texture {
+        background-position: 52% 44% !important;
+        background-size: cover !important;
+        opacity: 0.086 !important;
+    }
+}
+
+/* ========================================================================== 
+   Hero background crop refinement: a little more compass, less hand
+   --------------------------------------------------------------------------
+   Keeps the balanced hero texture, but pulls the crop back slightly so the
+   hand reads smaller and more of the compass / route system is visible.
+   ========================================================================== */
+
+.site-hero__texture {
+    background-image: url('/assets/img/compass-background-light-compass-balanced.webp') !important;
+    background-position: 51% 51% !important;
+    background-repeat: no-repeat !important;
+    background-size: 106% !important;
+    filter: contrast(1.03) saturate(0.86) brightness(1.02) !important;
+    mix-blend-mode: normal !important;
+    opacity: 0.1 !important;
+}
+
+@media (max-width: 900px) {
+    .site-hero__texture {
+        background-position: 50% 46% !important;
+        background-size: cover !important;
+        opacity: 0.086 !important;
+    }
+}
+
+/* ========================================================================== 
+   Hero background crop pullback: more compass, smaller hand
+   --------------------------------------------------------------------------
+   Pulls back the hero texture further than the previous pass so the hand reads
+   smaller and the compass / route system has more presence.
+   ========================================================================== */
+
+.site-hero__texture {
+    background-image: url('/assets/img/compass-background-light-compass-balanced.webp') !important;
+    background-position: 43% 52% !important;
+    background-repeat: no-repeat !important;
+    background-size: 88% !important;
+    filter: contrast(1.04) saturate(0.86) brightness(1.02) !important;
+    mix-blend-mode: normal !important;
+    opacity: 0.105 !important;
+}
+
+@media (max-width: 900px) {
+    .site-hero__texture {
+        background-position: 46% 48% !important;
+        background-size: cover !important;
+        opacity: 0.086 !important;
+    }
+}
+
+/* ========================================================================== 
+   Hero background crop correction: wide source, no hard edge
+   --------------------------------------------------------------------------
+   The pullback pass exposed the edge of the cropped image. This uses a wider
+   hero-specific asset so the background can remain cover-sized while still
+   showing more compass / route structure and making the hand feel smaller.
+   ========================================================================== */
+
+.site-hero__texture {
+    background-image: url('/assets/img/compass-background-light-compass-wide.webp') !important;
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    filter: contrast(1.04) saturate(0.86) brightness(1.02) !important;
+    mix-blend-mode: normal !important;
+    opacity: 0.108 !important;
+}
+
+@media (max-width: 900px) {
+    .site-hero__texture {
+        background-position: 48% 48% !important;
+        background-size: cover !important;
+        opacity: 0.086 !important;
+    }
+}
+
+
+/* ========================================================================== 
+   Hero background: light version from original uncropped compass source
+   --------------------------------------------------------------------------
+   Uses the original compass-background composition, tone-mapped lighter instead
+   of relying on a cropped generated version. This keeps the composition intact,
+   preserves more compass/route structure, and keeps the hand receded.
+   ========================================================================== */
+
+.site-hero__texture {
+    background-image: url('/assets/img/compass-background-light-original-source.webp') !important;
+    background-position: 50% 53% !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    filter: contrast(1.02) saturate(0.9) brightness(1.01) !important;
+    mix-blend-mode: normal !important;
+    opacity: 0.34 !important;
+}
+
+@media (max-width: 900px) {
+    .site-hero__texture {
+        background-position: 50% 50% !important;
+        background-size: cover !important;
+        opacity: 0.22 !important;
+    }
+}
+
+/* Final hero background strength pass: CSS-only, no image replacement */
+.site-hero__texture {
+    background-image: url('/assets/img/compass-background-light-original-source.webp') !important;
+    background-position: 50% 53% !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    filter: contrast(1.02) saturate(0.9) brightness(1.01) !important;
+    mix-blend-mode: normal !important;
+    opacity: 0.46 !important;
+}
+
+@media (max-width: 900px) {
+    .site-hero__texture {
+        background-position: 50% 50% !important;
+        background-size: cover !important;
+        opacity: 0.26 !important;
+    }
+}
+
+/* ========================================================================== 
+   Subtle visual anchor pass: process route, skill marks, recommendation quotes
+   --------------------------------------------------------------------------
+   Adds small non-clickable graphic cues to the three plainest middle sections
+   without changing the site structure or adding heavy decoration.
+   ========================================================================== */
+
+.site-framework-route {
+    align-items: center;
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(4, 1fr);
+    margin: -0.25rem 0 1.05rem;
+    position: relative;
+}
+
+.site-framework-route::before {
+    background-image: linear-gradient(90deg, rgba(0, 71, 99, 0.22) 50%, transparent 0);
+    background-position: center;
+    background-size: 12px 2px;
+    content: "";
+    height: 2px;
+    left: 2.2rem;
+    position: absolute;
+    right: 2.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.site-framework-route span {
+    background: rgba(255, 251, 242, 0.9);
+    border: 1px solid rgba(0, 71, 99, 0.2);
+    border-radius: 999px;
+    box-shadow: 0 10px 24px rgba(7, 31, 53, 0.06);
+    height: 0.72rem;
+    justify-self: center;
+    position: relative;
+    width: 0.72rem;
+    z-index: 1;
+}
+
+.site-framework-route span::after {
+    background: var(--site-warm-accent);
+    border-radius: 999px;
+    content: "";
+    height: 0.34rem;
+    left: 50%;
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.34rem;
+}
+
+.site-step-card {
+    position: relative;
+}
+
+.site-step-card::after {
+    background: linear-gradient(180deg, rgba(0, 71, 99, 0.16), transparent);
+    border-radius: 999px;
+    content: "";
+    height: 2.8rem;
+    opacity: 0.55;
+    position: absolute;
+    right: 1.15rem;
+    top: 1.15rem;
+    width: 2px;
+}
+
+ .site-info-card {
+    min-height: 100%;
+    padding-top: 1.35rem;
+    position: relative;
+}
+
+.site-info-card__mark {
+    align-items: center;
+    background: linear-gradient(135deg, rgba(0, 71, 99, 0.055), rgba(184, 155, 99, 0.045));
+    border: 1px solid rgba(0, 71, 99, 0.12);
+    border-radius: 0.75rem;
+    color: #004763;
+    display: inline-flex;
+    height: 2.1rem;
+    justify-content: center;
+    margin-bottom: 0.95rem;
+    opacity: 0.92;
+    width: 2.1rem;
+}
+
+.site-info-card__mark svg {
+    display: block;
+    height: 1.28rem;
+    width: 1.28rem;
+}
+
+.site-info-card__mark path,
+.site-info-card__mark circle,
+.site-info-card__mark rect {
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.75;
+}
+
+.site-info-card__mark .warm {
+    stroke: var(--site-warm-accent);
+}
+
+.site-info-card__mark .warm-fill {
+    fill: var(--site-warm-accent);
+    stroke: none;
+}
+
+.site-info-card:nth-child(2) .site-info-card__mark,
+.site-info-card:nth-child(5) .site-info-card__mark {
+    border-radius: 999px;
+}
+
+.site-quote-card {
+    overflow: hidden;
+    position: relative;
+}
+
+.site-quote-card::before {
+    background: linear-gradient(180deg, rgba(184, 155, 99, 0.72), rgba(184, 155, 99, 0.08));
+    content: "";
+    inset: 0 auto 0 0;
+    position: absolute;
+    width: 3px;
+}
+
+.site-quote-card__mark {
+    color: rgba(184, 155, 99, 0.34);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 1;
+    position: absolute;
+    right: 1.05rem;
+    top: 0.65rem;
+}
+
+.site-quote-card h3,
+.site-quote-card .site-quote-card__title,
+.site-quote-card blockquote {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 899px) {
+    .site-framework-route {
+        display: none;
+    }
+
+    .site-step-card::after {
+        display: none;
+    }
+}
+
+@media (max-width: 679px) {
+    .site-info-card__mark {
+        height: 1.95rem;
+        margin-bottom: 0.75rem;
+        width: 1.95rem;
+    }
+
+    .site-info-card__mark svg {
+        height: 1.15rem;
+        width: 1.15rem;
+    }
+
+    .site-quote-card__mark {
+        font-size: 3.5rem;
+        opacity: 0.85;
+    }
+}
+
+
+/* ==========================================================================
+   Final launch guard: approved hero, about band, and visual accents
+   --------------------------------------------------------------------------
+   Keeps the last approved visual state and prevents earlier experimental rules
+   or cached partial changes from flattening the hero card or About signal band.
+   ========================================================================== */
+
+.site-hero__texture {
+    background-image: url('/assets/img/compass-background-light-original-source.webp') !important;
+    background-position: 50% 53% !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    filter: contrast(1.02) saturate(0.9) brightness(1.01) !important;
+    mix-blend-mode: normal !important;
+    opacity: 0.46 !important;
+}
+
+.site-hero-anchor {
+    background:
+        radial-gradient(circle at 82% 8%, rgba(184, 155, 99, 0.12), transparent 34%),
+        linear-gradient(145deg, rgba(255, 251, 242, 0.78), rgba(238, 246, 243, 0.64)) !important;
+    border: 1px solid rgba(7, 31, 53, 0.1) !important;
+    border-radius: 1.85rem !important;
+    box-shadow: 0 18px 42px rgba(7, 31, 53, 0.105) !important;
+    max-width: 432px !important;
+    padding: clamp(0.78rem, 1.65vw, 1rem) !important;
+    position: relative !important;
+}
+
+.site-hero-anchor__image {
+    aspect-ratio: 1.08 / 1 !important;
+    border: 4px solid rgba(255, 251, 242, 0.92) !important;
+    border-radius: 1.18rem !important;
+    box-shadow: 0 16px 34px rgba(7, 31, 53, 0.14) !important;
+    margin: 0 clamp(0.2rem, 1vw, 0.45rem) -1.9rem auto !important;
+    max-width: 226px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    transform: none !important;
+    width: min(50vw, 226px) !important;
+    z-index: 2 !important;
+}
+
+.site-hero-anchor__image img {
+    display: block !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 42% !important;
+    width: 100% !important;
+}
+
+.site-hero-anchor__panel {
+    background: rgba(255, 251, 242, 0.84) !important;
+    border: 1px solid rgba(7, 31, 53, 0.09) !important;
+    border-radius: 1.32rem !important;
+    padding: clamp(3.5rem, 5.05vw, 3.9rem) clamp(1.18rem, 2vw, 1.38rem) clamp(1.28rem, 2.15vw, 1.48rem) !important;
+}
+
+.site-hero-anchor__panel p:not(.site-card-label) {
+    color: #304959 !important;
+    font-size: 0.98rem !important;
+    line-height: 1.66 !important;
+    margin: 0 !important;
+}
+
+.site-hero-anchor__note {
+    border-top: 0 !important;
+    color: #263d4c !important;
+    font-size: 0.94rem !important;
+    font-weight: 530 !important;
+    line-height: 1.56 !important;
+    margin-top: 0.68rem !important;
+    padding-top: 0 !important;
+}
+
+.site-about-focus {
+    align-items: start !important;
+    background: linear-gradient(135deg, rgba(255, 251, 242, 0.68), rgba(248, 250, 247, 0.9)) !important;
+    border: 1px solid rgba(7, 31, 53, 0.1) !important;
+    border-left: 5px solid rgba(184, 155, 99, 0.88) !important;
+    border-radius: 1.35rem !important;
+    box-shadow: 0 14px 32px rgba(7, 31, 53, 0.052) !important;
+    display: grid !important;
+    gap: clamp(1.6rem, 4vw, 2.75rem) !important;
+    margin: 0 auto clamp(1.8rem, 4vw, 2.8rem) !important;
+    max-width: 1140px !important;
+    padding: clamp(1.45rem, 3vw, 2.05rem) clamp(1.55rem, 3.5vw, 2.35rem) !important;
+    width: 100% !important;
+}
+
+.site-about-focus__intro p:not(.site-section-label) {
+    color: #425968 !important;
+    font-size: 1.02rem !important;
+    line-height: 1.7 !important;
+    margin: 0 !important;
+}
+
+.site-about-focus__items {
+    align-self: center !important;
+    column-gap: clamp(1.65rem, 4vw, 2.85rem) !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    row-gap: 1rem !important;
+}
+
+.site-about-focus__items span {
+    align-items: start !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(7, 31, 53, 0.075) !important;
+    border-radius: 0 !important;
+    color: #1b3342 !important;
+    display: grid !important;
+    font-size: 0.95rem !important;
+    font-weight: 640 !important;
+    grid-template-columns: 0.7rem minmax(0, 1fr) !important;
+    justify-content: stretch !important;
+    justify-self: stretch !important;
+    line-height: 1.42 !important;
+    min-height: auto !important;
+    padding: 0.18rem 0.1rem 0.82rem !important;
+    width: auto !important;
+}
+
+.site-about-focus__items span::before {
+    background: rgba(184, 155, 99, 0.82) !important;
+    border-radius: 999px !important;
+    content: '' !important;
+    height: 0.3rem !important;
+    margin-top: 0.46rem !important;
+    width: 0.3rem !important;
+}
+
+@media (min-width: 700px) {
+    .site-about-focus__items {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (min-width: 900px) {
+    .site-about-focus {
+        grid-template-columns: minmax(310px, 0.82fr) minmax(520px, 1.18fr) !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .site-hero__texture {
+        background-position: 50% 50% !important;
+        background-size: cover !important;
+        opacity: 0.26 !important;
+    }
+}
