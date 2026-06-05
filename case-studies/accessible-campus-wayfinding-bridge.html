@@ -1,77 +1,335 @@
 ---
 title: "Roger Ehmpke - Accessible Campus Wayfinding Bridge"
-ai_context: Case study about Roger Ehmpke building an internal React-based accessible campus wayfinding bridge for KCC to reduce reliance on inaccessible PDF maps, support WCAG 2.1 AA alignment, avoid an estimated $25K first-year vendor cost, and provide a bridge ahead of future physical signage improvements.
+ai_context: Case study about Roger Ehmpke building an internal React and Vite accessible campus wayfinding bridge for Kankakee Community College to reduce reliance on static PDF maps, support WCAG 2.1 AA readiness and POUR accessibility principles, avoid a premature vendor commitment, and provide a maintainable bridge ahead of planned 2027 physical wayfinding work.
 schema_type: "WebPage"
 schema_main_entity_type: "CreativeWork"
 schema_main_entity_id: "#creativework"
 schema_project_name: "Accessible Campus Wayfinding Bridge"
-schema_description: "Case study about Roger Ehmpke building an internal React-based accessible campus wayfinding bridge for KCC to reduce reliance on inaccessible PDF maps, support WCAG 2.1 AA alignment, avoid an estimated $25K first-year vendor cost, and provide a bridge ahead of future physical signage improvements."
-schema_outcome: "Built an internal React-based accessible campus wayfinding system to reduce accessibility risk, avoid a first-year vendor platform cost, and bridge KCC to future physical signage improvements."
+schema_description: "Case study about Roger Ehmpke building an internal React and Vite accessible campus wayfinding bridge for Kankakee Community College to reduce reliance on static PDF maps, support WCAG 2.1 AA readiness and POUR accessibility principles, avoid a premature vendor commitment, and provide a maintainable bridge ahead of planned 2027 physical wayfinding work."
+schema_outcome: "Built an internal, maintainable campus wayfinding bridge with searchable destinations, structured location data, accessible direction modes, text alternatives, user testing, stakeholder review, and JSON/CSV export workflows."
 schema_about_primary: "Accessible campus wayfinding"
 schema_about_topics: 
   - "React application development"
+  - "Vite prototyping"
   - "WCAG 2.1 AA"
-  - "cost avoidance"
+  - "POUR accessibility principles"
   - "accessible maps"
   - "higher education wayfinding"
+  - "structured location data"
+  - "accessibility program support"
 schema_keywords: 
   - "React"
+  - "Vite"
   - "accessible wayfinding"
   - "WCAG 2.1 AA"
-  - "cost avoidance"
+  - "POUR"
   - "campus map"
   - "higher education"
   - "accessibility UX"
+  - "structured data"
+  - "JSON export"
 schema_organization: "Kankakee Community College"
 schema_date_range: "2026/2027"
 layout: page-layout
 ---
 
 {% include micro-top.html %}
-<section class="space-top space-bottom" style="padding-left: 1em;padding-right: 1em;">
+<section class="space-top space-bottom case-study-page" style="padding-left: 1em; padding-right: 1em;">
     <div class="container" style="grid-column: 1; grid-row: 8; line-height: 1.6;">
-        <div style="margin: 0 auto; max-width: 900px;">
+        <article style="margin: 0 auto; max-width: 980px;">
+            <style>
+                .case-study-page .eyebrow {
+                    color: #004763;
+                    font-weight: 800;
+                    letter-spacing: .14em;
+                    text-transform: uppercase;
+                    margin-bottom: .75rem;
+                }
+                .case-study-page .lede {
+                    font-size: clamp(1.12rem, 2vw, 1.28rem);
+                    line-height: 1.65;
+                    color: #314247;
+                    max-width: 850px;
+                }
+                .case-study-page .snapshot {
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                    gap: .85rem;
+                    margin: 2rem 0;
+                }
+                .case-study-page .snapshot div,
+                .case-study-page .proof-card,
+                .case-study-page .decision-card,
+                .case-study-page .quiet-card {
+                    border: 1px solid rgba(0, 71, 99, .14);
+                    border-radius: 18px;
+                    background: rgba(255,255,255,.86);
+                    box-shadow: 0 18px 45px rgba(0, 42, 56, .06);
+                }
+                .case-study-page .snapshot div {
+                    padding: 1rem 1.1rem;
+                }
+                .case-study-page .snapshot strong {
+                    display: block;
+                    color: #004763;
+                    font-size: .82rem;
+                    letter-spacing: .08em;
+                    text-transform: uppercase;
+                    margin-bottom: .2rem;
+                }
+                .case-study-page .section-block {
+                    margin-top: 2.65rem;
+                }
+                .case-study-page .proof-grid,
+                .case-study-page .decision-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                    gap: 1rem;
+                    margin-top: 1.1rem;
+                }
+                .case-study-page .proof-card,
+                .case-study-page .decision-card,
+                .case-study-page .quiet-card {
+                    padding: 1.25rem;
+                }
+                .case-study-page .proof-card h4,
+                .case-study-page .decision-card h4 {
+                    margin-top: 0;
+                    margin-bottom: .45rem;
+                    color: #12323d;
+                }
+                .case-study-page .pull-quote {
+                    border-left: 5px solid #004763;
+                    background: rgba(234, 244, 243, .74);
+                    border-radius: 0 18px 18px 0;
+                    padding: 1.35rem 1.5rem;
+                    margin: 1.4rem 0;
+                    color: #18343d;
+                    font-size: 1.08rem;
+                }
+                .case-study-page .two-col {
+                    display: grid;
+                    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                    gap: 1.25rem;
+                    align-items: start;
+                }
+                .case-study-page .compact-list {
+                    margin-top: .4rem;
+                }
+                .case-study-page .compact-list li {
+                    margin-bottom: .35rem;
+                }
+                .case-study-page .callout-bar {
+                    background: linear-gradient(135deg, rgba(0,71,99,.08), rgba(236,244,241,.85));
+                    border: 1px solid rgba(0,71,99,.15);
+                    border-radius: 24px;
+                    padding: 1.4rem 1.55rem;
+                    margin-top: 1.25rem;
+                }
+                .case-study-page .back-link {
+                    display: inline-block;
+                    margin-top: 2.5rem;
+                    color: #004763;
+                    font-weight: 700;
+                }
+                @media (max-width: 760px) {
+                    .case-study-page .snapshot,
+                    .case-study-page .proof-grid,
+                    .case-study-page .decision-grid,
+                    .case-study-page .two-col {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+
+            <p class="eyebrow">Case Study</p>
             <h2>Accessible Campus Wayfinding Bridge</h2>
-            <p><strong>Kankakee Community College</strong><br />React-based accessible wayfinding / WCAG bridge / cost-avoidance project</p>
-
-            <h3>Overview</h3>
-            <p>
-                KCC needed a more accessible alternative to PDF-based campus maps, which created WCAG 2.1 AA concerns for users relying on assistive technologies. Vendor wayfinding platforms were available, but comparable options involved significant setup and recurring annual costs. A broader physical wayfinding and signage project was also expected later, so the college needed a practical bridge solution rather than a long-term vendor commitment.
-            </p>
-            <p>
-                I built an internal React-based campus wayfinding system to address the accessibility problem, preserve flexibility, and avoid an estimated $25,000 first-year vendor platform cost. The project also provided a real institutional use case for modern front-end application architecture because the experience behaved more like an application than a static web page.
+            <p class="lede">
+                Built an internal React/Vite campus map bridge that moved KCC away from relying only on static PDF maps and toward a searchable, structured, accessibility-informed wayfinding experience that a small team could maintain.
             </p>
 
-            <h3>Problem</h3>
-            <p>
-                Static PDF maps were not enough for accessible digital wayfinding. They were difficult to make fully usable for people using assistive technologies and created a compliance and user-experience gap as KCC advanced WCAG 2.1 AA readiness.
-            </p>
+            <div class="snapshot" aria-label="Project snapshot">
+                <div><strong>Institution</strong>Kankakee Community College</div>
+                <div><strong>Role</strong>Concept, product direction, accessibility framing, React/Vite build, testing, and content/data structure</div>
+                <div><strong>Context</strong>Small web team supporting a major accessibility program push and WCAG 2.1 AA readiness work</div>
+                <div><strong>Bridge need</strong>Digital wayfinding improvement ahead of planned 2027 physical wayfinding work</div>
+                <div><strong>Tools</strong>React, Vite, Leaflet-style map interaction, JSON/CSV workflows, Lighthouse, WAVE</div>
+                <div><strong>Validation</strong>Student testing with five students, stakeholder review, accessibility group coordination, and iterative refinements</div>
+            </div>
 
-            <h3>Key constraints</h3>
-            <ul>
-                <li>PDF campus maps created accessibility concerns.</li>
-                <li>Third-party wayfinding tools involved significant setup and annual licensing costs.</li>
-                <li>A future physical wayfinding/signage project was already expected.</li>
-                <li>The college needed a bridge solution that could be delivered quickly and maintained internally.</li>
-                <li>The solution needed to support multi-campus wayfinding, structured location data, and task-based navigation.</li>
-            </ul>
+            <section class="section-block">
+                <h3>Overview</h3>
+                <p>
+                    KCC’s public campus map experience relied heavily on static PDF documents, including a general campus map and additional floor or location-specific PDFs. That approach was familiar, but it created a practical accessibility and usability problem as the college prepared for WCAG 2.1 AA expectations under the DOJ Title II web accessibility timeline.
+                </p>
+                <p>
+                    The issue was not simply whether a PDF could be remediated. A blueprint-style map is visual, spatial, and document-based by nature. Even if a PDF is tagged, users may still be forced to interpret building relationships, entrances, parking, room ranges, landmarks, and accessible routes from a static image. That does not naturally fit the POUR structure behind WCAG: perceivable, operable, understandable, and robust.
+                </p>
+                <div class="pull-quote">
+                    The project turned a difficult PDF accessibility problem into a structured, searchable, internally maintainable wayfinding bridge.
+                </div>
+            </section>
 
-            <h3>Solution</h3>
-            <p>
-                I built a React-based accessible wayfinding bridge that supports multi-campus navigation, task-based user flows, structured location data, map interactions, and accessibility-informed interface patterns. React was appropriate because the system needed state, conditional rendering, reusable components, map-layer behavior, and application-like interaction patterns.
-            </p>
+            <section class="section-block">
+                <h3>The problem with the PDF map model</h3>
+                <div class="proof-grid">
+                    <div class="proof-card">
+                        <h4>Perceivable</h4>
+                        <p>Campus map information was primarily visual and spatial, making it harder to communicate building relationships, entrances, parking, and services through assistive technology.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Operable</h4>
+                        <p>A static PDF map does not naturally support keyboard-based discovery, filtering, searchable destinations, selected locations, or task-based wayfinding flows.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Understandable</h4>
+                        <p>Users had to choose from separate map documents and interpret the right PDF rather than search by destination, service, room range, entrance, or access need.</p>
+                    </div>
+                </div>
+                <div class="callout-bar">
+                    <p style="margin: 0;">
+                        The deeper issue was that the old model treated wayfinding as document retrieval. Users needed a usable digital wayfinding system: searchable locations, plain-language arrival guidance, access information, text alternatives, and structured data that could be maintained over time.
+                    </p>
+                </div>
+            </section>
 
-            <h3>Business value</h3>
-            <p>
-                The project avoided an estimated first-year vendor cost of roughly $25,000, including setup and annual platform fees, while giving the college a maintainable, internally controlled bridge solution until the broader signage project could move forward.
-            </p>
+            <section class="section-block">
+                <h3>Decision point</h3>
+                <p>
+                    A vendor platform was one possible path. I was approached by Campus3D, and a vendor solution could have provided a more advanced long-term wayfinding product. But given the timing, cost, small-team workload, and planned 2027 physical wayfinding work, a major vendor commitment was not the only reasonable answer.
+                </p>
+                <div class="decision-grid">
+                    <div class="decision-card">
+                        <h4>Option 1: Keep remediating PDFs</h4>
+                        <p>This would still leave the core wayfinding experience locked inside static visual documents.</p>
+                    </div>
+                    <div class="decision-card">
+                        <h4>Option 2: Buy a vendor platform</h4>
+                        <p>This could solve some needs, but it introduced significant setup and recurring cost for a bridge period.</p>
+                    </div>
+                    <div class="decision-card">
+                        <h4>Option 3: Build a bridge</h4>
+                        <p>I built an internal React/Vite solution focused on the immediate accessibility, usability, and maintainability gap.</p>
+                    </div>
+                </div>
+            </section>
 
-            <h3>Strategic value</h3>
-            <p>
-                This project demonstrated how internal web strategy and development capacity can reduce accessibility risk, avoid unnecessary recurring costs, and deliver a practical user-facing system faster than a typical vendor implementation cycle.
-            </p>
+            <section class="section-block">
+                <h3>Solution</h3>
+                <p>
+                    I built the map as an application-style prototype using React and Vite because the project needed state, structured data, reusable interface patterns, conditional panels, map interaction, searchable destinations, and fast iteration. The goal was not to replace every future wayfinding need. It was to create a practical bridge that reduced reliance on static PDFs and supported the college’s accessibility program while longer-term wayfinding work continued.
+                </p>
+                <div class="two-col">
+                    <div class="quiet-card">
+                        <h4>Public-facing wayfinding features</h4>
+                        <ul class="compact-list">
+                            <li>Campus selector for multiple campus contexts</li>
+                            <li>Searchable destinations and services</li>
+                            <li>Directory browsing by category</li>
+                            <li>Marker filtering for buildings, parking, entrances, and landmarks</li>
+                            <li>Accessible entrance and parking guidance</li>
+                            <li>Task-based direction modes for common visitor needs</li>
+                            <li>Visible keyboard guidance and text alternative content</li>
+                        </ul>
+                    </div>
+                    <div class="quiet-card">
+                        <h4>Structured location content</h4>
+                        <ul class="compact-list">
+                            <li>Location name and building area</li>
+                            <li>Plain-language description</li>
+                            <li>Arrival and access notes</li>
+                            <li>Parking and accessible parking guidance</li>
+                            <li>Entrance, elevator, and restroom guidance</li>
+                            <li>Room ranges and exceptions</li>
+                            <li>Available services and resources by floor</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-            <p><a href="/case-studies/" style="color:#004763; font-weight:700;">← Back to case studies</a></p>
-        </div>
+            <section class="section-block">
+                <h3>The popup content became the accessibility layer</h3>
+                <p>
+                    Each marker was designed as a structured wayfinding record, not just a dot on a map. For example, a building entrance popup can explain the closest general parking, closest accessible parking, the recommended route from nearby lots, which entrance to use, where elevators and restrooms are located, how room ranges work by floor, and which student services are available in the building.
+                </p>
+                <p>
+                    That content matters because it gives users plain-language guidance that a static map image cannot easily provide. The map became more than a visual reference. It became a readable, searchable, maintainable layer of campus navigation information.
+                </p>
+            </section>
+
+            <section class="section-block">
+                <h3>Maintainable map management workflow</h3>
+                <p>
+                    Maintainability was a key part of the solution. The map can be updated when room locations, services, entrances, or map images change. On the editing side, markers can be clicked or dragged into position, and each location can be edited through a feature editor tied to the directory.
+                </p>
+                <p>
+                    The system can save and export the location data as JSON or CSV so the information can be updated, imported, exported, and integrated into the main website by the web developer. This reduced the risk of creating a fragile one-off prototype and made the project more realistic for a small team to support.
+                </p>
+                <div class="proof-grid">
+                    <div class="proof-card">
+                        <h4>Replace map images</h4>
+                        <p>Updated map images can be swapped in when rooms, floors, or building diagrams change.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Reposition markers</h4>
+                        <p>Markers can be adjusted visually through the editing interface instead of requiring every change to be hard-coded.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Export structured data</h4>
+                        <p>JSON and CSV workflows make the location data easier to maintain and hand off for website integration.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>Research, testing, and iteration</h3>
+                <p>
+                    I reviewed how other accessibility-focused community colleges handled campus map access and wayfinding information. That helped confirm that the map needed to be easy to find, not just easier to use. One recommendation was to add a direct Campus Map link in the global footer so the tool is reachable from every page of the main site.
+                </p>
+                <p>
+                    I also tested the prototype with five students and reviewed it with stakeholders connected to accessibility, facilities, web, and campus operations. Feedback helped validate the direction and led to practical refinements around interface behavior, labels, guidance, and location content.
+                </p>
+            </section>
+
+            <section class="section-block">
+                <h3>Accessibility validation approach</h3>
+                <p>
+                    I used Google Lighthouse and the WAVE browser extension as early accessibility screening tools while building the prototype. They helped catch obvious structural, label, contrast, ARIA, and keyboard-guidance issues before broader review.
+                </p>
+                <p>
+                    I treated automated tools as smell tests, not as final proof of WCAG conformance. The more important improvement was architectural: moving campus wayfinding information out of static PDFs and into searchable content, structured destination records, visible text alternatives, keyboard-aware patterns, and maintainable data.
+                </p>
+            </section>
+
+            <section class="section-block">
+                <h3>Outcome</h3>
+                <p>
+                    The project created a tested, internally maintainable campus wayfinding bridge that supports KCC’s accessibility program while reducing dependence on static PDF maps. It also avoided a premature vendor commitment during a period when the college needed a practical solution quickly and had longer-term physical wayfinding work planned for 2027.
+                </p>
+                <div class="proof-grid">
+                    <div class="proof-card">
+                        <h4>Reduced accessibility risk</h4>
+                        <p>The experience moved key map information into searchable, structured, text-supported interface patterns.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Protected team capacity</h4>
+                        <p>The bridge supported a small team already carrying a heavy accessibility workload.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Improved institutional control</h4>
+                        <p>The college gained a maintainable data structure instead of relying only on static documents or a new vendor platform.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>Next improvements</h3>
+                <p>
+                    After launch, the strongest next step is to watch how users search, where they get stuck, and which destinations matter most. Future improvements could include additional usability testing, screen reader review with real users, analytics on searches and failed searches, continued room/location cleanup with building managers, and refinements after the 2027 physical wayfinding work.
+                </p>
+            </section>
+
+            <a class="back-link" href="/case-studies/">← Back to case studies</a>
+        </article>
     </div>
 </section>
