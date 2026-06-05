@@ -2,11 +2,11 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./assets/js/src/contact.js"
+/***/ "./assets/js/src/contact.js":
 /*!**********************************!*\
   !*** ./assets/js/src/contact.js ***!
   \**********************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -60,13 +60,13 @@ function contactMe() {
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (contactMe);
 
-/***/ },
+/***/ }),
 
-/***/ "./assets/js/src/footer.js"
+/***/ "./assets/js/src/footer.js":
 /*!*********************************!*\
   !*** ./assets/js/src/footer.js ***!
   \*********************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -84,13 +84,13 @@ class Footer {
   }
 }
 
-/***/ },
+/***/ }),
 
-/***/ "./assets/js/src/lazyload.js"
+/***/ "./assets/js/src/lazyload.js":
 /*!***********************************!*\
   !*** ./assets/js/src/lazyload.js ***!
   \***********************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -126,19 +126,19 @@ function lazyLoad() {
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (lazyLoad);
 
-/***/ },
+/***/ }),
 
-/***/ "./assets/scss/style.scss"
+/***/ "./assets/scss/style.scss":
 /*!********************************!*\
   !*** ./assets/scss/style.scss ***!
   \********************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
-/***/ }
+/***/ })
 
 /******/ 	});
 /************************************************************************/
@@ -160,12 +160,6 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		if (!(moduleId in __webpack_modules__)) {
-/******/ 			delete __webpack_module_cache__[moduleId];
-/******/ 			var e = new Error("Cannot find module '" + moduleId + "'");
-/******/ 			e.code = 'MODULE_NOT_FOUND';
-/******/ 			throw e;
-/******/ 		}
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
