@@ -1,0 +1,165 @@
+/* Header correction 2026-06-05: final applied header system
+   Source SCSS version. This should compile into assets/css/style.css. */
+.site-subpage-top {
+    background:
+        radial-gradient(circle at 12% 18%, rgba(184, 155, 99, 0.20), transparent 32%),
+        linear-gradient(135deg, #f8fbf7 0%, #edf5f2 52%, #dfeeea 100%) !important;
+    border-bottom: 1px solid rgba(7, 31, 53, 0.12) !important;
+    box-shadow: 0 18px 48px rgba(7, 31, 53, 0.055) !important;
+    isolation: isolate !important;
+    min-height: auto !important;
+    overflow: hidden !important;
+    padding-block: clamp(1.65rem, 3.15vw, 2.45rem) !important;
+    position: relative !important;
+}
+
+.site-subpage-top__texture {
+    background-image: url('/assets/img/compass-background-light-original-source.webp') !important;
+    background-position: 82% 42% !important;
+    background-repeat: no-repeat !important;
+    background-size: min(780px, 72vw) auto !important;
+    inset: 0 !important;
+    mix-blend-mode: multiply !important;
+    opacity: 0.24 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    z-index: -1 !important;
+}
+
+.site-subpage-top::after {
+    background: linear-gradient(90deg, rgba(248, 251, 247, 0.94) 0%, rgba(248, 251, 247, 0.74) 44%, rgba(248, 251, 247, 0.28) 100%) !important;
+    content: '' !important;
+    inset: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    z-index: -1 !important;
+}
+
+.site-subpage-top__inner {
+    align-items: center !important;
+    display: grid !important;
+    gap: clamp(1.25rem, 4vw, 3.25rem) !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    margin-inline: auto !important;
+    max-width: 1120px !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.site-subpage-top__brand {
+    max-width: 640px !important;
+}
+
+.site-subpage-top__logo,
+.site-subpage-top .site-logo {
+    color: #071f35 !important;
+    display: inline-block !important;
+    font-family: 'IBM Plex Sans', Verdana, sans-serif !important;
+    font-size: clamp(1.18rem, 1.6vw, 1.42rem) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.035em !important;
+    line-height: 1.05 !important;
+    text-decoration: none !important;
+}
+
+.site-subpage-top__logo:hover,
+.site-subpage-top__logo:focus {
+    color: #005468 !important;
+    text-decoration: none !important;
+}
+
+.site-subpage-top p {
+    color: rgba(52, 80, 101, 0.92) !important;
+    font-size: clamp(0.96rem, 1.12vw, 1.08rem) !important;
+    line-height: 1.42 !important;
+    margin: 0.48rem 0 0 !important;
+    max-width: 620px !important;
+}
+
+.site-subpage-top__nav {
+    align-items: center !important;
+    background: rgba(255, 255, 255, 0.52) !important;
+    border: 1px solid rgba(7, 31, 53, 0.10) !important;
+    border-radius: 999px !important;
+    box-shadow: 0 10px 28px rgba(7, 31, 53, 0.06) !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 0.18rem !important;
+    justify-content: flex-end !important;
+    padding: 0.38rem !important;
+    position: relative !important;
+    white-space: nowrap !important;
+    z-index: 1 !important;
+}
+
+.site-subpage-top__nav a {
+    border-radius: 999px !important;
+    color: #071f35 !important;
+    display: inline-flex !important;
+    font-family: 'IBM Plex Sans', Verdana, sans-serif !important;
+    font-size: clamp(0.78rem, 0.88vw, 0.86rem) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.005em !important;
+    line-height: 1 !important;
+    padding: 0.58rem 0.72rem !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+    transition: background-color 160ms ease, color 160ms ease !important;
+}
+
+.site-subpage-top__nav a + a::before {
+    content: none !important;
+}
+
+.site-subpage-top__nav a:hover,
+.site-subpage-top__nav a:focus {
+    background: rgba(0, 84, 104, 0.10) !important;
+    color: #005468 !important;
+    outline: none !important;
+    text-decoration: none !important;
+}
+
+.site-subpage-top__nav a:focus-visible,
+.site-subpage-top__logo:focus-visible {
+    outline: 3px solid rgba(184, 155, 99, 0.72) !important;
+    outline-offset: 3px !important;
+}
+
+@media (max-width: 940px) {
+    .site-subpage-top__inner {
+        grid-template-columns: 1fr !important;
+    }
+
+    .site-subpage-top__nav {
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
+        padding: 0.35rem !important;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 620px) {
+    .site-subpage-top {
+        padding-block: 1.25rem !important;
+    }
+
+    .site-subpage-top__texture {
+        background-position: 60% 45% !important;
+        background-size: 720px auto !important;
+        opacity: 0.14 !important;
+    }
+
+    .site-subpage-top::after {
+        background: rgba(248, 251, 247, 0.86) !important;
+    }
+
+    .site-subpage-top__nav {
+        border-radius: 18px !important;
+        flex-wrap: wrap !important;
+        white-space: normal !important;
+    }
+
+    .site-subpage-top__nav a {
+        padding: 0.56rem 0.66rem !important;
+    }
+}

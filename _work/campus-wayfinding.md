@@ -12,6 +12,6 @@ skill_labels:
   - label: Wayfinding
   - label: Accessible UX
 case_study_url: "/case-studies/accessible-campus-wayfinding-bridge"
-case_description: "Built an internal React/Vite campus wayfinding bridge over approximately three months to reduce reliance on static PDF maps, support WCAG-informed access, add searchable structured location data, and create a maintainable JSON/CSV workflow ahead of planned 2027 physical wayfinding work."
+case_description: "Designed and built an internal React/Vite campus wayfinding platform over approximately three months to reduce reliance on static PDF maps, support WCAG-informed access, add searchable structured location data, and create a maintainable JSON/CSV workflow ahead of planned 2027 physical wayfinding work."
 value_line: "Shows how accessibility strategy, product thinking, quick prototyping, testing, and maintainable data workflows can solve a real institutional gap."
 ---
