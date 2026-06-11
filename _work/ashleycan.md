@@ -11,5 +11,5 @@ skill_labels:
   - label: UX Guidance
   - label: Nonprofit
 current_site: "#"
-case_description: "Provided strategic guidance to help improve AshleyCan's existing Squarespace website and landing page, focusing on messaging clarity, information hierarchy, and user experience. The recommendations refined an existing site to better support the organization's mission and the families it serves."
+case_description: "Provided strategic guidance to improve AshleyCan's existing Squarespace website and landing page, focusing on messaging clarity, information hierarchy, and user experience. The recommendations refined an existing site to better support the organization's mission and the families it serves."
 ---
