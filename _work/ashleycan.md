@@ -1,9 +1,9 @@
 ---
-work_name: "AshleyCan Website Guidance"
+work_name: "AshleyCan Website Strategy Support"
 order: 5
 featured: false
 marker: "05"
-card_label: "Earlier Digital Systems Work"
+card_label: "Additional Digital Strategy Work"
 skill_labels:
   - label: Squarespace
   - label: Website Strategy
@@ -11,5 +11,5 @@ skill_labels:
   - label: UX Guidance
   - label: Nonprofit
 current_site: "#"
-case_description: "Provided advisory support for improvements to AshleyCan's existing Squarespace website and landing page, focusing on messaging clarity, information hierarchy, and user experience. The work refined an existing site to better support its mission and the families it serves."
+case_description: "Provided strategic guidance to improve AshleyCan's existing Squarespace website and landing page, focusing on messaging clarity, information hierarchy, and user experience. The work refined an existing site to better support the organization's mission and the families it serves."
 ---
