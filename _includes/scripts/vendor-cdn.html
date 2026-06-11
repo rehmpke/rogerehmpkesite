@@ -98,6 +98,11 @@ If the user asks a short or vague question, infer that they may be asking about 
 
         if (!input) return;
 
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            event: "ai_chat_submit"
+        });
+
         const log = document.getElementById("ai-widget-log");
 
         const cleanInput = window.DOMPurify
