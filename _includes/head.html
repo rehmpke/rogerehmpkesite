@@ -30,7 +30,7 @@
     {% include styles/vendor.html %}
     <meta property="og:type" content="{{ page_og_type }}" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:title" content="{{ page.title | escape }}" />
+    <meta property="og:title" content="{{ page.og_title | default: page.title | escape }}">
     <meta property="og:description" content="{{ page_description | escape }}" />
     <meta property="og:site_name" content="Roger Ehmpke" />
     <meta property="og:url" content="{{ canonical_url }}" />
