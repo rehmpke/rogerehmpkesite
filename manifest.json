@@ -4,7 +4,7 @@
     "id": "/",
     "start_url": "/",
     "scope": "/",
-    "display": "browser",
+    "display": "standalone",
     "background_color": "#071f35",
     "theme_color": "#071f35",
     "description": "Digital strategy, governance, accessibility, analytics, and AI-ready systems for complex organizations.",
