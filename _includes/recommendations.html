@@ -10,20 +10,13 @@
         <div class="site-card-grid site-card-grid--three">
             {% assign sorted_recommendations = site.recommendations | sort: "order" %}
             {% for recommendation in sorted_recommendations %}
-            <article class="site-quote-card" itemscope itemtype="https://schema.org/Review">
+            <article class="site-quote-card">
                 <span class="site-quote-card__mark" aria-hidden="true">“</span>
 
-                <div itemprop="author" itemscope itemtype="https://schema.org/Person">
-                    <h3 itemprop="name">{{ recommendation.recommended_person }}</h3>
-                    <p class="site-quote-card__title" itemprop="jobTitle">{{ recommendation.recommended_title }}</p>
-                </div>
+                <h3>{{ recommendation.recommended_person }}</h3>
+                <p class="site-quote-card__title">{{ recommendation.recommended_title }}</p>
 
-                <blockquote itemprop="reviewBody">{{ recommendation.recommended_quote }}</blockquote>
-
-                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Person">
-                    <meta itemprop="name" content="Roger J. Ehmpke">
-                    <meta itemprop="url" content="{{ site.url }}/">
-                </div>
+                <blockquote>{{ recommendation.recommended_quote }}</blockquote>
             </article>
             {% endfor %}
         </div>
