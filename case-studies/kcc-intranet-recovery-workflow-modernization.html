@@ -1,82 +1,667 @@
 ---
-title: "Roger Ehmpke - KCC Intranet Recovery and Workflow Modernization"
-og_title: "Roger Ehmpke - KCC Intranet Recovery and Workflow Modernization"
+title: "Roger Ehmpke - MyKCC Portal Modernization and Digital Workplace Transformation"
+og_title: "Roger Ehmpke - MyKCC Portal Modernization and Digital Workplace Transformation"
 og_type: article
-ai_context: Case study about Roger Ehmpke managing KCC's cross-department intranet recovery and platform transition from a retiring Microsoft/SharePoint environment to SharePoint Online, Ellucian Experience, update.kcc.edu, newsroom.kcc.edu, and Power Automate workflows before the legacy system disappeared.
+ai_context: Case study about Roger Ehmpke helping lead Kankakee Community College's transition from a legacy SharePoint 2013 and Ellucian portal environment to a modern digital workplace ecosystem built on SharePoint Online, Ellucian Experience, Power Automate, Jekyll-based publishing workflows, governance, documentation, and sustained operational ownership.
 schema_type: "WebPage"
 schema_main_entity_type: "CreativeWork"
 schema_main_entity_id: "#creativework"
-schema_project_name: "KCC Intranet Recovery and Workflow Modernization"
-schema_description: "Case study about Roger Ehmpke managing KCC’s cross-department intranet recovery and platform transition from a retiring Microsoft/SharePoint environment to SharePoint Online, Ellucian Experience, update.kcc.edu, newsroom.kcc.edu, and Power Automate workflows before the legacy system disappeared."
-schema_outcome: "Managed a cross-department intranet recovery and platform transition, migrated critical content, learned Power Automate on the fly, created supporting publishing workflows, trained users, and delivered before the legacy system disappeared."
-schema_about_primary: "Intranet recovery and workflow modernization"
-schema_about_topics: 
-  - "SharePoint Online"
-  - "Ellucian Experience"
-  - "Power Automate"
-  - "content migration"
-  - "workflow modernization"
-  - "cross-department project management"
-schema_keywords: 
-  - "SharePoint Online"
-  - "Ellucian Experience"
-  - "Power Automate"
-  - "intranet recovery"
-  - "content migration"
-  - "workflow automation"
-  - "project management"
+schema_project_name: "MyKCC Portal Modernization and Digital Workplace Transformation"
+schema_description: "Case study about Roger Ehmpke helping lead Kankakee Community College's MyKCC modernization from a
+legacy SharePoint 2013 and Ellucian portal environment to SharePoint Online, Ellucian Experience, Power Automate, and
+sustainable information governance workflows."
+schema_outcome: "Modernized KCC's MyKCC portal and intranet architecture, established SharePoint Online information
+sites, created the MyKCC Info Sites framework, supported Ellucian Experience card planning, built publishing workflows,
+developed documentation, and supported sustained platform adoption."
+schema_about_primary: "Higher education intranet modernization"
+schema_about_topics:
+- "SharePoint Online"
+- "Ellucian Experience"
+- "Power Automate"
+- "information architecture"
+- "digital workplace governance"
+- "content migration"
+- "higher education portal modernization"
+- "institutional communications workflows"
+schema_keywords:
+- "SharePoint Online"
+- "Ellucian Experience"
+- "Power Automate"
+- "intranet modernization"
+- "digital workplace"
+- "content governance"
+- "higher education"
+- "portal migration"
+- "workflow modernization"
 schema_organization: "Kankakee Community College"
-schema_date_range: "2020/.."
+schema_date_range: "2022/2026"
 layout: page-layout
 ---
 
 {% include micro-top.html %}
-<section class="space-top space-bottom" style="padding-left: 1em;padding-right: 1em;">
+<section class="space-top space-bottom case-study-page" style="padding-left: 1em; padding-right: 1em;">
     <div class="container" style="grid-column: 1; grid-row: 8; line-height: 1.6;">
-        <div style="margin: 0 auto; max-width: 900px;">
-            <h2>KCC Intranet Recovery, SharePoint Migration &amp; Workflow Modernization</h2>
-            <p><strong>Kankakee Community College</strong><br />Intranet architecture / SharePoint Online / Ellucian Experience / Power Automate / content migration</p>
+        <article style="margin: 0 auto; max-width: 980px;">
+            <style>
+                .case-study-page .eyebrow {
+                    color: #004763;
+                    font-weight: 800;
+                    letter-spacing: .14em;
+                    text-transform: uppercase;
+                    margin-bottom: .75rem;
+                }
 
-            <h3>Overview</h3>
-            <p>
-                KCC needed to replace and recover its intranet architecture during a forced transition from an older Microsoft/SharePoint environment that was being retired. The existing intranet model was underused, poorly understood, and at risk of disappearing as the legacy environment approached its end date.
+                .case-study-page .lede {
+                    font-size: clamp(1.12rem, 2vw, 1.28rem);
+                    line-height: 1.65;
+                    color: #314247;
+                    max-width: 850px;
+                }
+
+                .case-study-page .snapshot {
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                    gap: .85rem;
+                    margin: 2rem 0;
+                }
+
+                .case-study-page .snapshot div,
+                .case-study-page .proof-card,
+                .case-study-page .decision-card,
+                .case-study-page .quiet-card {
+                    border: 1px solid rgba(0, 71, 99, .14);
+                    border-radius: 18px;
+                    background: rgba(255, 255, 255, .86);
+                    box-shadow: 0 18px 45px rgba(0, 42, 56, .06);
+                }
+
+                .case-study-page .snapshot div {
+                    padding: 1rem 1.1rem;
+                }
+
+                .case-study-page .snapshot strong {
+                    display: block;
+                    color: #004763;
+                    font-size: .82rem;
+                    letter-spacing: .08em;
+                    text-transform: uppercase;
+                    margin-bottom: .2rem;
+                }
+
+                .case-study-page .section-block {
+                    margin-top: 2.65rem;
+                }
+
+                .case-study-page .proof-grid,
+                .case-study-page .decision-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                    gap: 1rem;
+                    margin-top: 1.1rem;
+                }
+
+                .case-study-page .proof-card,
+                .case-study-page .decision-card,
+                .case-study-page .quiet-card {
+                    padding: 1.25rem;
+                }
+
+                .case-study-page .proof-card h4,
+                .case-study-page .decision-card h4,
+                .case-study-page .quiet-card h4 {
+                    margin-top: 0;
+                    margin-bottom: .45rem;
+                    color: #12323d;
+                }
+
+                .case-study-page .pull-quote {
+                    border-left: 5px solid #004763;
+                    background: rgba(234, 244, 243, .74);
+                    border-radius: 0 18px 18px 0;
+                    padding: 1.35rem 1.5rem;
+                    margin: 1.4rem 0;
+                    color: #18343d;
+                    font-size: 1.08rem;
+                }
+
+                .case-study-page .two-col {
+                    display: grid;
+                    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                    gap: 1.25rem;
+                    align-items: start;
+                }
+
+                .case-study-page .compact-list {
+                    margin-top: .4rem;
+                }
+
+                .case-study-page .compact-list li {
+                    margin-bottom: .35rem;
+                }
+
+                .case-study-page .callout-bar {
+                    background: linear-gradient(135deg, rgba(0, 71, 99, .08), rgba(236, 244, 241, .85));
+                    border: 1px solid rgba(0, 71, 99, .15);
+                    border-radius: 24px;
+                    padding: 1.4rem 1.55rem;
+                    margin-top: 1.25rem;
+                }
+
+                .case-study-page .metric-strip {
+                    display: grid;
+                    grid-template-columns: repeat(6, minmax(0, 1fr));
+                    gap: .75rem;
+                    margin: 1.9rem 0 2.1rem;
+                }
+
+                .case-study-page .metric-strip div {
+                    border: 1px solid rgba(0, 71, 99, .14);
+                    border-radius: 18px;
+                    background: linear-gradient(180deg, rgba(255, 255, 255, .9), rgba(242, 248, 247, .86));
+                    box-shadow: 0 14px 34px rgba(0, 42, 56, .055);
+                    padding: 1rem .9rem;
+                    text-align: center;
+                }
+
+                .case-study-page .metric-strip strong {
+                    color: #004763;
+                    display: block;
+                    font-size: clamp(1.08rem, 2vw, 1.35rem);
+                    letter-spacing: -.02em;
+                    line-height: 1.05;
+                    margin-bottom: .35rem;
+                }
+
+                .case-study-page .metric-strip span {
+                    color: #4f6272;
+                    display: block;
+                    font-size: .78rem;
+                    font-weight: 700;
+                    letter-spacing: .08em;
+                    line-height: 1.35;
+                    text-transform: uppercase;
+                }
+
+                .case-study-page .outcome-list {
+                    display: grid;
+                    gap: .7rem;
+                    list-style: none;
+                    margin: 1rem 0 0;
+                    padding: 0;
+                }
+
+                .case-study-page .outcome-list li {
+                    background: rgba(255, 255, 255, .72);
+                    border: 1px solid rgba(0, 71, 99, .12);
+                    border-radius: 14px;
+                    padding: .8rem .9rem .8rem 2rem;
+                    position: relative;
+                }
+
+                .case-study-page .outcome-list li::before {
+                    background: #c7b08b;
+                    border-radius: 999px;
+                    content: "";
+                    height: .45rem;
+                    left: .9rem;
+                    position: absolute;
+                    top: 1.15rem;
+                    width: .45rem;
+                }
+
+                .case-study-page .back-link {
+                    display: inline-block;
+                    margin-top: 2.5rem;
+                    color: #004763;
+                    font-weight: 700;
+                }
+
+                @media (max-width: 980px) {
+                    .case-study-page .metric-strip {
+                        grid-template-columns: repeat(2, minmax(0, 1fr));
+                    }
+                }
+
+                @media (max-width: 760px) {
+
+                    .case-study-page .snapshot,
+                    .case-study-page .proof-grid,
+                    .case-study-page .decision-grid,
+                    .case-study-page .two-col,
+                    .case-study-page .metric-strip {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+
+            <p class="eyebrow">Case Study</p>
+            <h2>MyKCC Portal Modernization and Digital Workplace Transformation</h2>
+            <p class="lede">
+                Helped lead the transition from a legacy SharePoint 2013 intranet and portal environment to a modern
+                digital workplace ecosystem built on Ellucian Experience, SharePoint Online, Power Automate, and
+                supporting publishing workflows.
             </p>
-            <p>
-                At the time, I was serving as a web designer/developer, but the project required much more than web production. I managed the project across departments, personally migrated critical SharePoint content, adapted quickly to SharePoint Online, learned Power Automate on the fly, and worked with my web developer from the main kcc.edu site to create supporting publishing sites including update.kcc.edu and newsroom.kcc.edu.
-            </p>
 
-            <h3>Problem</h3>
-            <p>
-                KCC’s older Microsoft/SharePoint environment was going away within months, creating a hard deadline to preserve critical internal content and rebuild the college’s intranet structure. A simple one-to-one migration was not enough because Ellucian Experience could surface cards from public-facing web sources, but could not directly pull from KCC’s internal network or SharePoint content.
-            </p>
+            <div class="metric-strip" aria-label="Project highlights">
+                <div><strong>May 2023</strong><span>Portal Launch</span></div>
+                <div><strong>~16</strong><span>Info Sites</span></div>
+                <div><strong>22+</strong><span>Update Contributors</span></div>
+                <div><strong>63K+</strong><span>Launch Sessions</span></div>
+                <div><strong>125K+</strong><span>2026 Sessions</span></div>
+                <div><strong>3+ Years</strong><span>Active Platform</span></div>
+            </div>
 
-            <h3>My role</h3>
-            <ul>
-                <li>Managed the project across departments.</li>
-                <li>Migrated critical SharePoint content myself before the old system disappeared.</li>
-                <li>Adapted older SharePoint knowledge to SharePoint Online.</li>
-                <li>Learned Power Automate during the project and used it to support publishing workflows.</li>
-                <li>Coordinated with the web developer on update.kcc.edu and newsroom.kcc.edu.</li>
-                <li>Helped define how SharePoint Online, Ellucian Experience, and supporting sites would work together.</li>
-                <li>Trained users on editing and publishing in the new model.</li>
-            </ul>
+            <div class="snapshot" aria-label="Project snapshot">
+                <div><strong>Institution</strong>Kankakee Community College</div>
+                <div><strong>Role</strong>SharePoint architecture, information architecture, governance planning,
+                    content migration, workflow design, communications, training, documentation, and ongoing stewardship
+                </div>
+                <div><strong>Context</strong>Forced transition from a legacy SharePoint 2013 and Ellucian portal
+                    environment approaching end-of-life</div>
+                <div><strong>Architecture</strong>Ellucian Experience for portal access, SharePoint Online for employee
+                    information sites, and custom publishing workflows for institutional communications</div>
+                <div><strong>Platforms</strong>SharePoint Online, Ellucian Experience, Power Automate, Jekyll, FTP-based
+                    publishing workflows, Microsoft 365</div>
+                <div><strong>Validation</strong>Preview communications, stakeholder review, launch analytics,
+                    contributor adoption, and sustained usage through 2026</div>
+            </div>
 
-            <h3>Solution</h3>
-            <p>
-                I helped create a multi-platform intranet architecture that assigned the right role to each system. SharePoint Online became the internal editing, collaboration, and content management layer. Ellucian Experience became the user-facing portal layer for surfacing key internal information through cards. update.kcc.edu and newsroom.kcc.edu became supporting web properties that allowed content to be published in a format Ellucian Experience could access and display. Power Automate supported workflow and publishing processes where manual coordination would have created bottlenecks.
-            </p>
+            <section class="section-block">
+                <h3>The problem</h3>
+                <p>
+                    Kankakee Community College's legacy MyKCC environment was built on SharePoint 2013 with Ellucian
+                    portal functionality layered on top. The platform served as a central destination for students,
+                    faculty, and staff, providing access to applications, departmental resources, team sites,
+                    institutional communications, and campus services.
+                </p>
+                <p>
+                    When the legacy portal approached end-of-life, the college faced a hard deadline. Critical employee
+                    resources, departmental information, institutional communications, and operational content needed to
+                    be preserved before the old environment disappeared.
+                </p>
+                <p>
+                    A simple one-to-one migration was not enough. There was no direct migration path between the legacy
+                    environment and the new architecture. Existing governance models did not translate directly to
+                    SharePoint Online, departmental information was distributed across multiple sites and repositories,
+                    student and employee needs differed significantly, and existing publishing workflows depended on
+                    infrastructure that would not survive the transition.
+                </p>
+                <div class="pull-quote">
+                    This was not simply a portal replacement project. It became an institutional information
+                    architecture and governance initiative that happened to involve a platform transition.
+                </div>
+            </section>
 
-            <h3>Outcome</h3>
-            <p>
-                The new intranet architecture was completed before the legacy Microsoft/SharePoint environment went away. The system has remained operational for several years and continues to support internal communications, updates, newsroom-style content, and institutional information access.
-            </p>
+            <section class="section-block">
+                <h3>My role</h3>
+                <p>
+                    At the time of the project, I served as Coordinator of Web Content and Design. While my formal
+                    responsibilities focused on web design, development, content management, and digital communications,
+                    the MyKCC initiative required broader leadership across governance, information architecture,
+                    stakeholder coordination, communications planning, content rationalization, training, documentation,
+                    and implementation strategy.
+                </p>
+                <p>
+                    Because SharePoint Online expertise within the project was limited during implementation, I assumed
+                    primary responsibility for researching, designing, documenting, implementing, and supporting much of
+                    the SharePoint Online environment. While I completed introductory SharePoint Online training through
+                    LinkedIn Learning, much of the implementation required independently learning modern SharePoint
+                    Online architecture, identifying Microsoft implementation patterns, researching platform
+                    capabilities, and adapting those patterns to institutional needs under project deadlines.
+                </p>
+                <p>
+                    I ultimately built most of the SharePoint Online information sites, lists, libraries, navigation
+                    structures, and governance components that became part of the new MyKCC environment. I also
+                    personally migrated and reconstructed significant amounts of institutional content from the legacy
+                    environment, evaluated what should be preserved, and worked with departments to determine future
+                    ownership.
+                </p>
+                <p>
+                    I learned Power Automate during the project and used it to help solve publishing and workflow
+                    challenges that emerged as the new architecture took shape. Working alongside ITS, Marketing,
+                    Administrative Information Systems, departmental stakeholders, and project leadership, I helped
+                    shape how the platform would be organized, governed, maintained, and adopted across the institution.
+                </p>
+            </section>
 
-            <h3>Strategic value</h3>
-            <p>
-                This project required both project management and hands-on technical execution. It showed the ability to diagnose a poorly understood institutional system, preserve critical content, adapt quickly to shifting platform requirements, coordinate across departments, build workflow automation, and train users under a hard deadline.
-            </p>
+            <section class="section-block">
+                <h3>The legacy environment</h3>
+                <p>
+                    The previous MyKCC environment consisted of numerous departmental resources connected through
+                    SharePoint 2013. Examples included Human Resources, Institutional Effectiveness, Financial Aid,
+                    Advising, Veterans Benefits, Teaching and Learning Center, Curriculum and Assessment, Foundation,
+                    Admissions and Registration, Health Careers, and Adjunct Faculty Resources.
+                </p>
+                <p>
+                    These sites contained document libraries, FAQ systems, announcements, forms, department resources,
+                    institutional documents, and operational information. While valuable, the experience depended
+                    heavily on navigating between separate sites with differing layouts, ownership models, and
+                    maintenance practices.
+                </p>
+                <div class="callout-bar">
+                    <p style="margin: 0;">
+                        The challenge was preserving institutional knowledge while modernizing the user experience and
+                        creating a more sustainable ownership model.
+                    </p>
+                </div>
+            </section>
 
-            <p><a href="/case-studies/" style="color:#004763; font-weight:700;">← Back to case studies</a></p>
-        </div>
+            <section class="section-block">
+                <h3>Decision point</h3>
+                <p>
+                    Several paths were possible, but each carried different governance, maintenance, and user-experience
+                    tradeoffs.
+                </p>
+                <div class="decision-grid">
+                    <div class="decision-card">
+                        <h4>Option 1: Recreate the legacy portal</h4>
+                        <p>This would preserve familiarity, but it risked carrying forward the same ownership,
+                            navigation, and maintenance problems into a new environment.</p>
+                    </div>
+                    <div class="decision-card">
+                        <h4>Option 2: Move everything into Experience</h4>
+                        <p>This would simplify the dashboard layer, but Ellucian Experience was not designed to replace
+                            deep departmental information repositories.</p>
+                    </div>
+                    <div class="decision-card">
+                        <h4>Option 3: Build a hybrid architecture</h4>
+                        <p>The final model used Ellucian Experience for portal access, SharePoint Online for
+                            departmental information, and supporting workflows for institutional communications.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>The architecture</h3>
+                <p>
+                    The new architecture assigned the right role to each platform. Ellucian Experience became the
+                    user-facing portal layer for applications, student services, personalized resources, institutional
+                    communications, and card-based discovery. SharePoint Online became the employee information layer
+                    for department resources, policies, forms, procedures, contacts, and internal documentation.
+                </p>
+                <p>
+                    Supporting publishing workflows connected SharePoint Online, Power Automate, FTP delivery, static
+                    publishing infrastructure, and Ellucian Experience. This allowed the college to preserve key
+                    publishing needs while working around platform limitations.
+                </p>
+                <div class="two-col">
+                    <div class="quiet-card">
+                        <h4>SharePoint Online layer</h4>
+                        <ul class="compact-list">
+                            <li>Department information sites</li>
+                            <li>Employee resources</li>
+                            <li>Lists and libraries</li>
+                            <li>Policies, procedures, and forms</li>
+                            <li>Content ownership and governance</li>
+                        </ul>
+                    </div>
+                    <div class="quiet-card">
+                        <h4>Ellucian Experience layer</h4>
+                        <ul class="compact-list">
+                            <li>Card-based portal experience</li>
+                            <li>Student services and applications</li>
+                            <li>Employee application access</li>
+                            <li>Audience-specific resources</li>
+                            <li>Centralized discovery and feedback</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>Key decision: separate student and employee experiences</h3>
+                <p>
+                    The legacy SharePoint 2013 environment included student-facing sites and departmental resources.
+                    During implementation, similar approaches were evaluated within SharePoint Online.
+                </p>
+                <p>
+                    Testing revealed governance and permission challenges that made broad student access difficult to
+                    manage safely and sustainably. Unlike the previous environment, SharePoint Online did not provide a
+                    practical way to deliver the same student-facing experience while maintaining appropriate control
+                    over content and site structure.
+                </p>
+                <p>
+                    Rather than recreating the legacy model, student experiences were intentionally centered within
+                    Ellucian Experience through audience-specific cards, application integrations, student services, and
+                    institutional resources. SharePoint Online information sites became primarily employee-facing
+                    resources supporting departmental knowledge, policies, procedures, and operational information.
+                </p>
+            </section>
+
+            <section class="section-block">
+                <h3>The MyKCC Info Sites framework</h3>
+                <p>
+                    One of the most important architectural decisions was creating the MyKCC Info Sites framework.
+                </p>
+                <p>
+                    While Ellucian Experience provided a modern dashboard and application layer, employees still needed
+                    access to departmental procedures, forms, policies, contacts, operational resources, and
+                    institutional knowledge that had historically lived within SharePoint.
+                </p>
+                <p>
+                    To bridge this gap, department-owned SharePoint Online information sites were connected to Ellucian
+                    Experience through a centralized MyKCC Info Sites card. Departments retained ownership of content
+                    while users gained centralized discovery through the portal.
+                </p>
+                <div class="pull-quote">
+                    The MyKCC Info Sites card became one of the primary bridges between the legacy portal model and the
+                    modern digital workplace environment.
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>Launch card ecosystem</h3>
+                <p>
+                    The new portal introduced a broad collection of audience-specific cards supporting students,
+                    faculty, and staff.
+                </p>
+                <div class="proof-grid">
+                    <div class="proof-card">
+                        <h4>Employee resources</h4>
+                        <ul class="compact-list">
+                            <li>Employee Applications</li>
+                            <li>Informer</li>
+                            <li>Faculty Alert Submission</li>
+                            <li>Office 365 Apps</li>
+                            <li>Google Apps</li>
+                            <li>TLC Events</li>
+                            <li>MyKCC Info Sites</li>
+                            <li>Update Newsletter</li>
+                        </ul>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Student resources</h4>
+                        <ul class="compact-list">
+                            <li>Student Applications</li>
+                            <li>Financial Aid</li>
+                            <li>Student Financials</li>
+                            <li>Register for Classes</li>
+                            <li>Canvas LMS</li>
+                            <li>Communication History</li>
+                            <li>Student Success Team</li>
+                            <li>Request Assistance</li>
+                        </ul>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Shared resources</h4>
+                        <ul class="compact-list">
+                            <li>KCC News</li>
+                            <li>KCC Events</li>
+                            <li>Share Your Thoughts</li>
+                            <li>Student Life</li>
+                            <li>Google Apps</li>
+                            <li>Office 365 Apps</li>
+                            <li>Bookmarks and Links</li>
+                            <li>Update access points</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>Content migration and rationalization</h3>
+                <p>
+                    Because no automated migration path existed, content often required manual reconstruction. Methods
+                    included content exports, command-line extraction, manual review, department interviews, content
+                    analysis, stakeholder meetings, and content restructuring.
+                </p>
+                <p>
+                    Not all content was migrated. Throughout implementation, departmental stakeholders helped evaluate
+                    which resources should be migrated, rebuilt, consolidated, or retired.
+                </p>
+                <p>
+                    Financial Aid and Veterans Benefits provide examples of this approach. During review, it became
+                    clear that much of the information planned for those sites duplicated content already maintained on
+                    KCC.edu or primarily directed users back to public website resources. Rather than maintaining
+                    duplicate content repositories across multiple systems, those sites were retired and users were
+                    directed to authoritative content maintained on the college website.
+                </p>
+                <div class="callout-bar">
+                    <p style="margin: 0;">
+                        The goal was not to recreate the old environment. The goal was to create a more sustainable one.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>Solving the Update publishing problem</h3>
+                <p>
+                    One of the most technically challenging aspects of the project involved preserving the institution's
+                    Update newsletter process.
+                </p>
+                <p>
+                    Native SharePoint Online approaches did not provide a straightforward method for exposing
+                    institutional content through Ellucian Experience. RSS feeds, public access limitations, content
+                    distribution, image handling, and cross-system delivery all required alternate solutions.
+                </p>
+                <p>
+                    Working with ITS and internal development resources, I helped design a publishing architecture
+                    connecting SharePoint Online, Power Automate, FTP delivery, static publishing platforms, and
+                    Ellucian Experience content consumption.
+                </p>
+                <div class="decision-grid">
+                    <div class="decision-card">
+                        <h4>Authoring</h4>
+                        <p>Update authors used a SharePoint Online editor environment with structured lists and
+                            libraries.</p>
+                    </div>
+                    <div class="decision-card">
+                        <h4>Workflow</h4>
+                        <p>Power Automate processed content and moved generated files through FTP-based publishing
+                            workflows.</p>
+                    </div>
+                    <div class="decision-card">
+                        <h4>Distribution</h4>
+                        <p>Static publishing infrastructure exposed content in a format the portal and archive systems
+                            could consume.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>Launch, adoption, and training</h3>
+                <p>
+                    The rollout included preview environments, staff review periods, documentation, card inventories,
+                    launch communications, student communications, contributor training, and feedback mechanisms.
+                </p>
+                <p>
+                    Because vendor documentation did not fully address institutional needs, extensive
+                    institution-specific documentation was created. Training and documentation covered SharePoint Online
+                    information sites, lists and libraries, permissions models, content ownership, Update publishing
+                    workflows, contributor onboarding, and portal navigation.
+                </p>
+                <p>
+                    The Update publishing environment eventually supported 22 unique article authors, demonstrating
+                    adoption across multiple institutional areas while reinforcing the governance and publishing
+                    structures established during implementation.
+                </p>
+            </section>
+
+            <section class="section-block">
+                <h3>Validation</h3>
+                <p>
+                    The implementation was validated through departmental stakeholder reviews, preview communications,
+                    launch planning, cross-functional collaboration, ongoing contributor onboarding, and sustained
+                    platform usage after launch.
+                </p>
+                <p>
+                    The strongest validation came after implementation. The platform remained actively used and
+                    maintained, additional information resources were created, governance practices expanded, and
+                    contributor workflows continued to grow.
+                </p>
+            </section>
+
+            <section class="section-block">
+                <h3>Results</h3>
+                <div class="proof-grid">
+                    <div class="proof-card">
+                        <h4>Architecture</h4>
+                        <p>Replaced a legacy end-of-life portal environment with a hybrid architecture combining
+                            SharePoint Online, Ellucian Experience, and supporting publishing workflows.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Governance</h4>
+                        <p>Established ownership models for departmental information resources, reduced duplication, and
+                            created more sustainable maintenance practices.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Communications</h4>
+                        <p>Preserved institutional communications through a custom publishing architecture that bridged
+                            SharePoint Online, Power Automate, static publishing, and Experience.</p>
+                    </div>
+                </div>
+                <ul class="outcome-list">
+                    <li>Built and organized approximately 16 SharePoint Online information sites</li>
+                    <li>Created the MyKCC Info Sites framework for employee information resources</li>
+                    <li>Supported more than 20 Update contributors across the institution</li>
+                    <li>Reduced duplicate content repositories through rationalization and consolidation</li>
+                    <li>Preserved institutional knowledge while modernizing delivery mechanisms</li>
+                    <li>Continued platform growth, governance, and enhancement after launch</li>
+                </ul>
+            </section>
+
+            <section class="section-block">
+                <h3>Adoption metrics</h3>
+                <p>
+                    During the first four months following launch, MyKCC recorded more than 63,000 sessions, 2,500
+                    active users, nearly 794,000 tracked events, and a 57% engagement rate.
+                </p>
+                <p>
+                    The platform continued to show sustained use several years later. Between January and mid-June 2026,
+                    MyKCC recorded more than 125,000 sessions, 334,000 views, 4,000 active users, nearly 1.8 million
+                    tracked events, and a 70% engagement rate.
+                </p>
+            </section>
+
+            <section class="section-block">
+                <h3>Long-term impact</h3>
+                <p>
+                    The MyKCC initiative became far more than a portal replacement project.
+                </p>
+                <p>
+                    Rather than simply migrating technology, the project transformed MyKCC from a legacy portal
+                    environment into a governed digital workplace ecosystem. The initiative established clearer
+                    ownership models, reduced content duplication, modernized employee information resources, improved
+                    discoverability, created sustainable publishing workflows, and provided a foundation for future
+                    Microsoft 365 initiatives.
+                </p>
+                <p>
+                    Several years after launch, the platform continues to support institutional communications, employee
+                    resources, departmental information sites, and student services while serving as a foundation for
+                    ongoing digital workplace improvements.
+                </p>
+            </section>
+
+            <section class="section-block">
+                <h3>Looking ahead</h3>
+                <p>
+                    The strongest next step is continued stewardship: maintaining information-site governance, refining
+                    portal content, monitoring analytics, supporting contributors, and improving how institutional
+                    resources are surfaced across MyKCC, SharePoint Online, and the public website.
+                </p>
+            </section>
+
+            <a class="back-link" href="/case-studies/">← Back to case studies</a>
+        </article>
     </div>
 </section>
