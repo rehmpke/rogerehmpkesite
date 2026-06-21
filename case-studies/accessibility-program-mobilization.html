@@ -1,182 +1,883 @@
 ---
-title: Roger Ehmpke - Institutional Accessibility Program Mobilization
-og_title: Roger Ehmpke - Institutional Accessibility Program Mobilization
+title: "Roger Ehmpke - Institutional Accessibility Program Development and Governance"
+og_title: "Roger Ehmpke - Institutional Accessibility Program Development and Governance"
 og_type: article
-ai_context: Case study about Roger Ehmpke's institutional accessibility program work, including accessibility governance, DOJ Title II and WCAG 2.1 AA readiness, risk-based remediation, PDF strategy, intake workflows, training, vendor governance, and higher-ed digital strategy leadership.
+ai_context: Case study about Roger Ehmpke helping establish Kankakee Community College's institution-wide accessibility program by developing governance structures, remediation workflows, vendor accessibility documentation practices, training coordination, reporting infrastructure, and sustainable operational processes aligned with DOJ Title II requirements and WCAG 2.1 AA.
 schema_type: "WebPage"
 schema_main_entity_type: "CreativeWork"
 schema_main_entity_id: "#creativework"
-schema_project_name: "Institutional Accessibility Program Mobilization"
-schema_description: "Case study about Roger Ehmpke’s institutional accessibility program work, including accessibility governance, DOJ Title II and WCAG 2.1 AA readiness, risk-based remediation, PDF strategy, intake workflows, training, vendor governance, and higher-ed digital strategy leadership."
-schema_outcome: "Built a governance-first accessibility program with intake workflows, risk-based remediation priorities, vendor evidence review, training coordination, and system-level improvement across KCC’s public digital ecosystem."
-schema_about_primary: "Institutional accessibility governance"
-schema_about_topics: 
-  - "DOJ Title II"
-  - "WCAG 2.1 AA"
-  - "risk-based remediation"
-  - "vendor accessibility evidence"
-  - "PDF remediation"
-  - "higher education digital governance"
-schema_keywords: 
-  - "accessibility governance"
-  - "DOJ Title II"
-  - "WCAG 2.1 AA"
-  - "risk-based remediation"
-  - "vendor evidence"
-  - "PDF strategy"
-  - "intake workflow"
-  - "higher education"
+schema_project_name: "Institutional Accessibility Program Development and Governance"
+schema_description: "Case study about Roger Ehmpke helping establish an institution-wide accessibility program at Kankakee Community College through governance development, remediation strategy, vendor accessibility review, training coordination, workflow design, reporting, and long-term compliance planning."
+schema_outcome: "Established an institutional accessibility governance framework, implemented intake and workflow processes, created vendor accessibility documentation practices, supported remediation across public-facing digital systems, deployed reporting infrastructure, and helped shift accessibility from isolated remediation activity to an ongoing institutional capability."
+schema_about_primary: "Higher education accessibility governance"
+schema_about_topics:
+- "digital accessibility"
+- "WCAG 2.1 AA"
+- "DOJ Title II"
+- "accessibility governance"
+- "higher education compliance"
+- "vendor accessibility review"
+- "VPAT management"
+- "accessibility remediation"
+- "content governance"
+- "institutional digital strategy"
+schema_keywords:
+- "accessibility governance"
+- "WCAG 2.1 AA"
+- "DOJ Title II"
+- "higher education accessibility"
+- "VPAT"
+- "ACR"
+- "PDF remediation"
+- "digital governance"
+- "vendor compliance"
+- "accessibility program"
 schema_organization: "Kankakee Community College"
-schema_date_range: "2025-06/.."
+schema_date_range: "2025/Present"
 layout: page-layout
 ---
 
 {% include micro-top.html %}
-<section class="space-top space-bottom" style="padding-left: 1em;padding-right: 1em;">
-    <div class="container" style="grid-column: 1; grid-row: 8; line-height: 1.6; text-align: center;">
-        <div style="margin: 0 auto; max-width: 900px;">
+<section class="space-top space-bottom case-study-page" style="padding-left: 1em; padding-right: 1em;">
+    <div class="container" style="grid-column: 1; grid-row: 8; line-height: 1.6;">
+        <article style="margin: 0 auto; max-width: 980px;">
+            <style>
+                .case-study-page .eyebrow {
+                    color: #004763;
+                    font-weight: 800;
+                    letter-spacing: .14em;
+                    text-transform: uppercase;
+                    margin-bottom: .75rem;
+                }
 
-            <h2 style="margin-bottom: 1rem;">Institutional Accessibility Program Mobilization</h2>
+                .case-study-page .lede {
+                    font-size: clamp(1.12rem, 2vw, 1.28rem);
+                    line-height: 1.65;
+                    color: #314247;
+                    max-width: 850px;
+                }
 
-            <p style="margin-bottom: 1.5rem;">
-                Kankakee Community College needed to rapidly align its public-facing digital ecosystem with federal
-                accessibility requirements under the DOJ Title II Final Rule and WCAG 2.1 AA.
+                .case-study-page .snapshot {
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                    gap: .85rem;
+                    margin: 2rem 0;
+                }
+
+                .case-study-page .snapshot div,
+                .case-study-page .proof-card,
+                .case-study-page .decision-card,
+                .case-study-page .quiet-card {
+                    border: 1px solid rgba(0, 71, 99, .14);
+                    border-radius: 18px;
+                    background: rgba(255, 255, 255, .86);
+                    box-shadow: 0 18px 45px rgba(0, 42, 56, .06);
+                }
+
+                .case-study-page .snapshot div {
+                    padding: 1rem 1.1rem;
+                }
+
+                .case-study-page .snapshot strong {
+                    display: block;
+                    color: #004763;
+                    font-size: .82rem;
+                    letter-spacing: .08em;
+                    text-transform: uppercase;
+                    margin-bottom: .2rem;
+                }
+
+                .case-study-page .section-block {
+                    margin-top: 2.65rem;
+                }
+
+                .case-study-page .proof-grid,
+                .case-study-page .decision-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                    gap: 1rem;
+                    margin-top: 1.1rem;
+                }
+
+                .case-study-page .proof-card,
+                .case-study-page .decision-card,
+                .case-study-page .quiet-card {
+                    padding: 1.25rem;
+                }
+
+                .case-study-page .proof-card h4,
+                .case-study-page .decision-card h4,
+                .case-study-page .quiet-card h4 {
+                    margin-top: 0;
+                    margin-bottom: .45rem;
+                    color: #12323d;
+                }
+
+                .case-study-page .pull-quote {
+                    border-left: 5px solid #004763;
+                    background: rgba(234, 244, 243, .74);
+                    border-radius: 0 18px 18px 0;
+                    padding: 1.35rem 1.5rem;
+                    margin: 1.4rem 0;
+                    color: #18343d;
+                    font-size: 1.08rem;
+                }
+
+                .case-study-page .two-col {
+                    display: grid;
+                    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                    gap: 1.25rem;
+                    align-items: start;
+                }
+
+                .case-study-page .compact-list {
+                    margin-top: .4rem;
+                }
+
+                .case-study-page .compact-list li {
+                    margin-bottom: .35rem;
+                }
+
+                .case-study-page .callout-bar {
+                    background: linear-gradient(135deg, rgba(0, 71, 99, .08), rgba(236, 244, 241, .85));
+                    border: 1px solid rgba(0, 71, 99, .15);
+                    border-radius: 24px;
+                    padding: 1.4rem 1.55rem;
+                    margin-top: 1.25rem;
+                }
+
+                .case-study-page .metric-strip {
+                    display: grid;
+                    grid-template-columns: repeat(6, minmax(0, 1fr));
+                    gap: .75rem;
+                    margin: 1.9rem 0 2.1rem;
+                }
+
+                .case-study-page .metric-strip div {
+                    border: 1px solid rgba(0, 71, 99, .14);
+                    border-radius: 18px;
+                    background: linear-gradient(180deg, rgba(255, 255, 255, .9), rgba(242, 248, 247, .86));
+                    box-shadow: 0 14px 34px rgba(0, 42, 56, .055);
+                    padding: 1rem .9rem;
+                    text-align: center;
+                }
+
+                .case-study-page .metric-strip strong {
+                    color: #004763;
+                    display: block;
+                    font-size: clamp(1.08rem, 2vw, 1.35rem);
+                    letter-spacing: -.02em;
+                    line-height: 1.05;
+                    margin-bottom: .35rem;
+                }
+
+                .case-study-page .metric-strip span {
+                    color: #4f6272;
+                    display: block;
+                    font-size: .78rem;
+                    font-weight: 700;
+                    letter-spacing: .08em;
+                    line-height: 1.35;
+                    text-transform: uppercase;
+                }
+
+                .case-study-page .outcome-list {
+                    display: grid;
+                    gap: .7rem;
+                    list-style: none;
+                    margin: 1rem 0 0;
+                    padding: 0;
+                }
+
+                .case-study-page .outcome-list li {
+                    background: rgba(255, 255, 255, .72);
+                    border: 1px solid rgba(0, 71, 99, .12);
+                    border-radius: 14px;
+                    padding: .8rem .9rem .8rem 2rem;
+                    position: relative;
+                }
+
+                .case-study-page .outcome-list li::before {
+                    background: #c7b08b;
+                    border-radius: 999px;
+                    content: "";
+                    height: .45rem;
+                    left: .9rem;
+                    position: absolute;
+                    top: 1.15rem;
+                    width: .45rem;
+                }
+
+                .case-study-page .back-link {
+                    display: inline-block;
+                    margin-top: 2.5rem;
+                    color: #004763;
+                    font-weight: 700;
+                }
+
+                @media (max-width: 980px) {
+                    .case-study-page .metric-strip {
+                        grid-template-columns: repeat(2, minmax(0, 1fr));
+                    }
+                }
+
+                @media (max-width: 760px) {
+
+                    .case-study-page .snapshot,
+                    .case-study-page .proof-grid,
+                    .case-study-page .decision-grid,
+                    .case-study-page .two-col,
+                    .case-study-page .metric-strip {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+
+            <p class="eyebrow">Case Study</p>
+            <h2>Institutional Accessibility Program Development and Governance</h2>
+            <p class="lede">
+                Helped establish an institution-wide accessibility program aligned with evolving DOJ Title II
+                requirements and WCAG 2.1 AA standards by creating governance structures, accountability models,
+                remediation processes, vendor review practices, and long-term operational workflows.
             </p>
 
-            <p style="margin-bottom: 2rem;">
-                <strong>Kankakee Community College</strong><br />
-                June 2025 – Present
-            </p>
-
-            <hr
-                style="margin: 2rem auto 2.5rem auto; width: 80%; border: none; height: 1px; background-color: rgba(0, 0, 0, 0.1);" />
-
-            <div style="text-align: left;">
-
-                <h3>Overview</h3>
-                <p>
-                    The institution had no formal accessibility governance structure, a decentralized content ecosystem,
-                    and significant legacy document exposure. I led the development of an institution-wide accessibility
-                    program, shifting the approach from reactive remediation to structured, risk-aligned execution.
-                </p>
-
-                <h3>Institutional Context</h3>
-                <p>
-                    The initiative spanned public-facing websites, institutional documents, and systems used across
-                    academic and administrative departments. Accessibility responsibilities were distributed, with no
-                    centralized intake, prioritization, or accountability framework.
-                </p>
-
-                <h3>Problem</h3>
-                <ul style="padding-left: 1.25rem;">
-                    <li>No centralized accessibility governance</li>
-                    <li>Distributed ownership across departments</li>
-                    <li>High volume of legacy PDFs and content</li>
-                    <li>Limited vendor accessibility accountability</li>
-                    <li>No intake, tracking, or escalation workflow</li>
-                </ul>
-                <p>
-                    These conditions created both legal exposure and operational ambiguity.
-                </p>
-
-                <h3>Strategic Approach</h3>
-
-                <h4>Governance Before Remediation</h4>
-                <p>
-                    Established an Accessibility Coordination Group and secured VP-level sponsorship. Defined a clear
-                    institutional compliance posture to guide prioritization and execution.
-                </p>
-
-                <h4>Defining Defensible Compliance</h4>
-                <ul style="padding-left: 1.25rem;">
-                    <li>Governance structure operational</li>
-                    <li>Intake and workflow processes defined</li>
-                    <li>High-risk content prioritized</li>
-                    <li>System-level improvements underway</li>
-                    <li>Phased remediation strategy documented</li>
-                </ul>
-
-                <h4>Risk-Based Prioritization</h4>
-                <p>
-                    Implemented a risk × usage model to focus remediation efforts on high-impact content and
-                    student-facing systems.
-                </p>
-
-                <h4>System-Level Improvements</h4>
-                <ul style="padding-left: 1.25rem;">
-                    <li>Aligned CMS templates to WCAG standards</li>
-                    <li>Implemented accessible form standards</li>
-                    <li>Prioritized HTML alternatives over PDFs where appropriate</li>
-                    <li>Improved accessibility of institutional email communications</li>
-                </ul>
-
-                <h4>Scalable PDF Strategy</h4>
-                <ul style="padding-left: 1.25rem;">
-                    <li>Conducted vendor sampling with PDF remediation partners</li>
-                    <li>Built cost models for outsourced remediation planning</li>
-                    <li>Executed targeted vendor remediation for priority documents</li>
-                    <li>Established internal remediation workflows</li>
-                    <li>Defined phased backlog strategy</li>
-                </ul>
-
-                <h4>Intake &amp; Workflow Infrastructure</h4>
-                <ul style="padding-left: 1.25rem;">
-                    <li>Centralized accessibility intake form</li>
-                    <li>Triage model led by Web Strategy</li>
-                    <li>Structured case logging</li>
-                    <li>Defined escalation paths</li>
-                </ul>
-
-                <h4>Training &amp; Adoption</h4>
-                <ul style="padding-left: 1.25rem;">
-                    <li>Partnered with HR and Teaching &amp; Learning</li>
-                    <li>Supported accessibility training deployment</li>
-                    <li>Built a departmental support model for shared accessibility practices</li>
-                </ul>
-
-                <h4>Vendor Governance</h4>
-                <ul style="padding-left: 1.25rem;">
-                    <li>Centralized VPAT and accessibility conformance evidence</li>
-                    <li>Integrated accessibility review into vendor and procurement workflows</li>
-                    <li>Initiated vendor accessibility evaluations and documentation practices</li>
-                </ul>
-
-                <h3>Results</h3>
-                <ul style="padding-left: 1.25rem;">
-                    <li>100+ high-priority pages remediated</li>
-                    <li>Major public-facing sections prioritized and actively remediated</li>
-                    <li>Accessibility statement deployed sitewide</li>
-                    <li>Governance and intake workflows operational</li>
-                    <li>Training actively deployed across departments</li>
-                    <li>Vendor remediation and review strategy established</li>
-                </ul>
-
-                <h3>Outcome</h3>
-                <p>
-                    Established a defensible, risk-aligned accessibility posture ahead of the federal deadline by
-                    prioritizing high-impact remediation, formalizing governance, and reducing future accessibility risk
-                    through system-level improvements.
-                </p>
-
-                <h3>Key Insight</h3>
-                <p>
-                    Accessibility at institutional scale is not achieved through full remediation under deadline
-                    pressure. It is achieved through governance, prioritization, system design, and continuous
-                    execution.
-                </p>
-
-                <h3>Leadership</h3>
-                <p>
-                    This initiative required aligning executive leadership, technical teams, content owners, and
-                    external vendors into a coordinated, sustainable accessibility program embedded within institutional
-                    operations.
-                </p>
-
-                <p style="margin-top: 2rem;">
-                    <a href="/case-studies/" style="color:#004763; font-weight:700;">← Back to Case Studies</a>
-                </p>
-
+            <div class="metric-strip" aria-label="Project highlights">
+                <div><strong>2025</strong><span>Program Formation</span></div>
+                <div><strong>100+</strong><span>Pages Remediated</span></div>
+                <div><strong>83%</strong><span>Staff Training</span></div>
+                <div><strong>VPAT</strong><span>Repository Built</span></div>
+                <div><strong>WCAG 2.1</strong><span>AA Alignment</span></div>
+                <div><strong>Ongoing</strong><span>Governance Model</span></div>
             </div>
-        </div>
+
+            <div class="snapshot" aria-label="Project snapshot">
+                <div><strong>Institution</strong>Kankakee Community College</div>
+                <div><strong>Role</strong>Accessibility program planning, governance development, workflow design,
+                    remediation prioritization, vendor accessibility coordination, training support, reporting, and
+                    stakeholder engagement</div>
+                <div><strong>Context</strong>Emerging DOJ Title II accessibility requirements expanded the scope of
+                    accessibility from web quality practices into an institution-wide governance and compliance challenge</div>
+                <div><strong>Operating Model</strong>Centralized governance and coordination with distributed ownership
+                    across departments, content owners, technical teams, and vendor stakeholders</div>
+                <div><strong>Scope</strong>Public websites, CMS templates, documents, forms, media, email communications,
+                    vendor systems, training, reporting, and long-term monitoring</div>
+                <div><strong>Validation</strong>Operational governance, tracking infrastructure, training participation,
+                    cross-functional adoption, vendor documentation practices, and sustained remediation work</div>
+            </div>
+
+            <section class="section-block">
+                <h3>Context</h3>
+                <p>
+                    Accessibility had long been a consideration within Web Services, particularly for public-facing
+                    websites and digital content. Efforts generally focused on improving accessibility where practical
+                    opportunities existed, but no formal institution-wide accessibility program had been established.
+                </p>
+                <p>
+                    Early awareness of the evolving DOJ Title II accessibility requirements emerged through vendor
+                    discussions and industry communications related to digital accessibility and higher education
+                    technology. While evaluating accessibility-related projects and platform considerations, it became
+                    clear that accessibility obligations extended far beyond websites alone.
+                </p>
+                <p>
+                    Further review revealed that accessibility responsibilities touched nearly every area of the
+                    institution's digital ecosystem, including websites, forms, documents, media, communications, and
+                    third-party systems.
+                </p>
+                <p>
+                    At the same time, existing operational challenges became more apparent. Content ownership was
+                    distributed across departments, accessibility practices varied, and no centralized framework existed
+                    for governance, prioritization, reporting, or accountability.
+                </p>
+                <div class="pull-quote">
+                    What initially appeared to be a web accessibility concern quickly revealed itself as a broader
+                    institutional challenge requiring a coordinated and sustainable response.
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>The problem</h3>
+                <p>
+                    The institution faced a challenge common to many colleges and universities: accessibility
+                    responsibilities were distributed across multiple departments, content owners, systems, and
+                    technologies.
+                </p>
+                <p>
+                    Public websites, digital forms, PDFs, videos, email communications, and third-party platforms each
+                    presented different accessibility considerations. While accessibility improvements were occurring in
+                    various areas, no centralized operational framework existed to coordinate those efforts.
+                </p>
+                <ul class="outcome-list">
+                    <li>No centralized accessibility governance structure</li>
+                    <li>No formal intake or escalation process</li>
+                    <li>Large inventory of legacy digital content requiring evaluation</li>
+                    <li>Distributed ownership across academic and administrative departments</li>
+                    <li>Inconsistent accessibility practices across content creators</li>
+                    <li>Limited visibility into remediation progress and institutional risk</li>
+                    <li>No centralized process for reviewing and maintaining vendor accessibility documentation</li>
+                </ul>
+                <div class="callout-bar">
+                    <p style="margin: 0;">
+                        Without a coordinated program, accessibility efforts risked becoming reactive, fragmented, and
+                        difficult to sustain.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>My role</h3>
+                <p>
+                    At the time of the initiative, I served as Senior Coordinator of Web Design and Development.
+                </p>
+                <p>
+                    Although accessibility-related work had historically been associated with Web Services, the scope of
+                    the emerging requirements extended far beyond traditional web management responsibilities.
+                </p>
+                <p>
+                    As awareness of the DOJ requirements increased, I began researching their potential impact on the
+                    institution and evaluating how accessibility obligations would affect websites, documents, forms,
+                    communications, media, and third-party systems.
+                </p>
+                <p>
+                    As the initiative expanded, I helped shape the program framework, coordinated implementation efforts
+                    across departments, developed governance and reporting structures, supported remediation planning,
+                    and worked with institutional stakeholders to establish a sustainable accessibility model.
+                </p>
+                <div class="two-col">
+                    <div class="quiet-card">
+                        <h4>Program leadership</h4>
+                        <ul class="compact-list">
+                            <li>Accessibility program planning</li>
+                            <li>Governance development</li>
+                            <li>Workflow design</li>
+                            <li>Remediation prioritization</li>
+                            <li>Long-term compliance strategy</li>
+                        </ul>
+                    </div>
+                    <div class="quiet-card">
+                        <h4>Operational coordination</h4>
+                        <ul class="compact-list">
+                            <li>Accessibility reporting</li>
+                            <li>Vendor accessibility coordination</li>
+                            <li>Training support and adoption planning</li>
+                            <li>Stakeholder communication</li>
+                            <li>Cross-functional engagement</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>
+                    While remediation work occurred across many areas of the institution, my primary focus centered on
+                    building the systems, processes, and governance structures necessary to support accessibility at
+                    scale.
+                </p>
+            </section>
+
+            <section class="section-block">
+                <h3>Early discovery and awareness</h3>
+                <p>
+                    The initiative did not begin as a formal compliance project.
+                </p>
+                <p>
+                    Initial awareness emerged through vendor outreach and industry discussions related to digital
+                    accessibility. Conversations surrounding accessibility-focused solutions, including campus mapping
+                    technologies and other higher education platforms, highlighted evolving accessibility expectations
+                    and increased attention on DOJ requirements.
+                </p>
+                <p>
+                    As research continued, it became clear that the implications extended well beyond a single website
+                    or application.
+                </p>
+                <p>
+                    The more the institution's digital ecosystem was evaluated, the more interconnected the challenge
+                    became. Public websites, PDFs, online forms, video content, email communications, vendor systems,
+                    and department-managed resources all represented potential areas requiring accessibility
+                    consideration.
+                </p>
+                <div class="pull-quote">
+                    What began as a technology discussion evolved into an institutional governance challenge.
+                </div>
+                <p>
+                    The question was no longer how to make a specific system accessible. The question became how to
+                    create an operational model capable of supporting accessibility across an entire institution.
+                </p>
+            </section>
+
+            <section class="section-block">
+                <h3>Decision point</h3>
+                <p>
+                    As accessibility requirements became clearer, several possible approaches emerged.
+                </p>
+                <div class="decision-grid">
+                    <div class="decision-card">
+                        <h4>Option 1: Remediate everything immediately</h4>
+                        <p>One approach focused on correcting as many accessibility issues as possible within a short
+                            period of time. While appealing in theory, the volume of content, distributed ownership, and
+                            diversity of systems made broad remediation difficult to sustain without additional
+                            structure.</p>
+                    </div>
+                    <div class="decision-card">
+                        <h4>Option 2: Treat accessibility as a web-only issue</h4>
+                        <p>This would have limited the work to public website remediation, but the emerging scope
+                            included documents, forms, media, vendor systems, communications, and department-managed
+                            resources.</p>
+                    </div>
+                    <div class="decision-card">
+                        <h4>Option 3: Build governance first</h4>
+                        <p>The final approach focused on governance, accountability, workflows, reporting, and
+                            prioritization before scaling remediation across the institution.</p>
+                    </div>
+                </div>
+                <div class="callout-bar">
+                    <p style="margin: 0;">
+                        The program ultimately prioritized governance first. This decision shaped every aspect of the
+                        initiative moving forward.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>Building the accessibility operating model</h3>
+                <p>
+                    The operating model was designed to make accessibility manageable across a decentralized
+                    institution. The goal was not to centralize every remediation task inside Web Services. The goal was
+                    to create a structure that could coordinate work, clarify ownership, support reporting, and help
+                    departments participate in long-term accessibility practices.
+                </p>
+                <div class="proof-grid">
+                    <div class="proof-card">
+                        <h4>Governance</h4>
+                        <p>Created a cross-functional coordination model with shared accountability, executive
+                            visibility, escalation paths, and ongoing program oversight.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Operations</h4>
+                        <p>Developed intake, tracking, triage, remediation monitoring, and reporting practices to move
+                            accessibility work from informal requests into managed workflows.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Adoption</h4>
+                        <p>Supported training, guidance, documentation, and departmental participation so accessibility
+                            could become a shared institutional responsibility.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>Governance and coordination</h3>
+                <p>
+                    One of the earliest priorities involved establishing a governance structure capable of supporting
+                    accessibility across multiple departments and systems.
+                </p>
+                <p>
+                    A cross-functional accessibility coordination model was developed to bring together stakeholders
+                    responsible for content creation, technology systems, reporting, operational support, and
+                    institutional communications.
+                </p>
+                <div class="two-col">
+                    <div class="quiet-card">
+                        <h4>Governance framework</h4>
+                        <ul class="compact-list">
+                            <li>Shared accountability</li>
+                            <li>Defined ownership expectations</li>
+                            <li>Escalation procedures</li>
+                            <li>Executive visibility</li>
+                            <li>Cross-functional coordination</li>
+                            <li>Ongoing program oversight</li>
+                        </ul>
+                    </div>
+                    <div class="quiet-card">
+                        <h4>Institutional participation</h4>
+                        <ul class="compact-list">
+                            <li>Web Services</li>
+                            <li>Information Technology Services</li>
+                            <li>Institutional reporting functions</li>
+                            <li>Library services</li>
+                            <li>Department-level content owners</li>
+                            <li>Vendor and procurement stakeholders</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pull-quote">
+                    Accessibility became an institutional responsibility rather than the responsibility of a single
+                    department.
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>Accessibility intake and workflow management</h3>
+                <p>
+                    As accessibility efforts expanded, informal requests and ad hoc communication became increasingly
+                    difficult to manage.
+                </p>
+                <p>
+                    To address this challenge, structured intake and workflow processes were developed to support
+                    accessibility reporting, issue management, prioritization, and follow-up activities.
+                </p>
+                <div class="proof-grid">
+                    <div class="proof-card">
+                        <h4>Intake</h4>
+                        <p>Centralized accessibility concerns and requests so issues could be routed, reviewed, and
+                            tracked more consistently.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Triage</h4>
+                        <p>Created a pathway for evaluating issues, identifying ownership, and escalating items when
+                            additional institutional support was needed.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Follow-up</h4>
+                        <p>Supported remediation monitoring, stakeholder communication, status updates, and progress
+                            reporting.</p>
+                    </div>
+                </div>
+                <div class="callout-bar">
+                    <p style="margin: 0;">
+                        These systems transformed accessibility from an informal activity into a managed operational
+                        function.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>Accessibility dashboard and program tracking</h3>
+                <p>
+                    As the program matured, visibility became increasingly important.
+                </p>
+                <p>
+                    To support planning and decision-making, a centralized accessibility dashboard and supporting
+                    tracking systems were developed to monitor remediation activity, document review efforts, training
+                    participation, vendor documentation, and overall program progress.
+                </p>
+                <div class="proof-grid">
+                    <div class="proof-card">
+                        <h4>Visibility</h4>
+                        <p>Created a clearer view of program status, remediation activity, and outstanding operational
+                            categories.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Prioritization</h4>
+                        <p>Supported risk-based decisions about which issues, systems, and content types required
+                            earlier attention.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Reporting</h4>
+                        <p>Provided more consistent updates for program coordination, leadership awareness, and
+                            long-term monitoring.</p>
+                    </div>
+                </div>
+                <p>
+                    Rather than relying on isolated spreadsheets and departmental updates, accessibility efforts could
+                    be viewed as part of a coordinated institutional program.
+                </p>
+            </section>
+
+            <section class="section-block">
+                <h3>Defining defensible compliance</h3>
+                <p>
+                    One of the most important strategic decisions involved defining what successful accessibility
+                    execution would look like.
+                </p>
+                <p>
+                    Rather than pursuing complete remediation of every accessibility issue simultaneously, the program
+                    adopted a risk-based prioritization model.
+                </p>
+                <div class="two-col">
+                    <div class="quiet-card">
+                        <h4>Priority areas</h4>
+                        <ul class="compact-list">
+                            <li>Student-facing content</li>
+                            <li>High-traffic resources</li>
+                            <li>Required institutional information</li>
+                            <li>High-impact accessibility barriers</li>
+                            <li>Systems with broad institutional reach</li>
+                        </ul>
+                    </div>
+                    <div class="quiet-card">
+                        <h4>Operating posture</h4>
+                        <ul class="compact-list">
+                            <li>Risk-based prioritization</li>
+                            <li>Measurable progress</li>
+                            <li>Sustainable remediation</li>
+                            <li>Documented workflows</li>
+                            <li>Continuous improvement</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pull-quote">
+                    The objective was not perfection. The objective was establishing a defensible, measurable, and
+                    sustainable compliance posture.
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>Auditing and remediation operations</h3>
+                <p>
+                    Accessibility review and remediation efforts expanded across multiple content types and platforms.
+                </p>
+                <div class="proof-grid">
+                    <div class="proof-card">
+                        <h4>Web and CMS</h4>
+                        <p>Accessibility work included public-facing website content, CMS templates, program pages,
+                            navigation patterns, and other high-visibility web experiences.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Documents and forms</h4>
+                        <p>PDFs, downloadable documents, and digital forms became priority categories for review,
+                            tracking, and remediation planning.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Media and communications</h4>
+                        <p>Video, captioning, email communications, HTML newsletters, and related publishing practices
+                            became part of the broader accessibility scope.</p>
+                    </div>
+                </div>
+                <p>
+                    Accessibility work ultimately spanned all major public-facing digital systems and student-facing
+                    tools across the institution.
+                </p>
+                <p>
+                    The initiative also encouraged movement toward more sustainable accessibility practices, including
+                    greater use of web-based content where appropriate and reduction of unnecessary document
+                    dependencies.
+                </p>
+            </section>
+
+            <section class="section-block">
+                <h3>Vendor accessibility governance</h3>
+                <p>
+                    Accessibility responsibilities extended beyond institutionally managed content.
+                </p>
+                <p>
+                    Many critical services relied on third-party vendors and software providers, making vendor
+                    accessibility an important component of the overall program.
+                </p>
+                <p>
+                    To support this work, processes were established for collecting, reviewing, and maintaining vendor
+                    accessibility documentation.
+                </p>
+                <div class="decision-grid">
+                    <div class="decision-card">
+                        <h4>Documentation</h4>
+                        <p>Established centralized tracking for VPATs, Accessibility Conformance Reports, and related
+                            vendor accessibility evidence.</p>
+                    </div>
+                    <div class="decision-card">
+                        <h4>Review</h4>
+                        <p>Created a process for identifying accessibility risks, documenting concerns, and supporting
+                            mitigation planning.</p>
+                    </div>
+                    <div class="decision-card">
+                        <h4>Procurement awareness</h4>
+                        <p>Integrated accessibility considerations into broader vendor evaluation and procurement
+                            discussions.</p>
+                    </div>
+                </div>
+                <div class="callout-bar">
+                    <p style="margin: 0;">
+                        A centralized repository was established to maintain accessibility documentation and support
+                        ongoing review activities.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>Training and adoption</h3>
+                <p>
+                    Long-term accessibility success required participation from content creators, administrators,
+                    faculty, and operational departments.
+                </p>
+                <p>
+                    The program supported accessibility adoption through faculty and staff training initiatives,
+                    practical guidance, departmental support, process documentation, and ongoing communication.
+                </p>
+                <div class="two-col">
+                    <div class="quiet-card">
+                        <h4>Training support</h4>
+                        <ul class="compact-list">
+                            <li>Faculty training initiatives</li>
+                            <li>Staff training initiatives</li>
+                            <li>Participation tracking</li>
+                            <li>Follow-up communication</li>
+                        </ul>
+                    </div>
+                    <div class="quiet-card">
+                        <h4>Adoption support</h4>
+                        <ul class="compact-list">
+                            <li>Department-level guidance</li>
+                            <li>Documentation development</li>
+                            <li>Awareness efforts</li>
+                            <li>Ongoing consultation</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>
+                    The objective was not simply to remediate content centrally, but to improve accessibility capability
+                    throughout the institution.
+                </p>
+                <div class="pull-quote">
+                    This shift helped move accessibility from a specialized technical topic toward a shared
+                    institutional responsibility.
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>Cross-functional participation</h3>
+                <p>
+                    The initiative required coordination across a broad range of institutional functions.
+                </p>
+                <div class="proof-grid">
+                    <div class="proof-card">
+                        <h4>Digital and technical teams</h4>
+                        <ul class="compact-list">
+                            <li>Web Services</li>
+                            <li>Information Technology Services</li>
+                            <li>Vendor and platform support</li>
+                        </ul>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Institutional support areas</h4>
+                        <ul class="compact-list">
+                            <li>Institutional reporting functions</li>
+                            <li>Library services</li>
+                            <li>Administrative offices</li>
+                        </ul>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Content and service areas</h4>
+                        <ul class="compact-list">
+                            <li>Academic departments</li>
+                            <li>Student service areas</li>
+                            <li>Content owners and contributors</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>
+                    This cross-functional participation helped establish accessibility as an institution-wide effort
+                    rather than a departmental initiative.
+                </p>
+            </section>
+
+            <section class="section-block">
+                <h3>Results</h3>
+                <div class="proof-grid">
+                    <div class="proof-card">
+                        <h4>Governance</h4>
+                        <p>Established an institution-wide accessibility governance framework with coordination,
+                            ownership expectations, escalation paths, and executive visibility.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Operations</h4>
+                        <p>Implemented accessibility intake, workflow, tracking, reporting, and remediation planning
+                            infrastructure.</p>
+                    </div>
+                    <div class="proof-card">
+                        <h4>Vendor oversight</h4>
+                        <p>Created centralized vendor accessibility documentation practices and incorporated accessibility
+                            review into vendor evaluation workflows.</p>
+                    </div>
+                </div>
+                <ul class="outcome-list">
+                    <li>Accessibility coordination structure operational</li>
+                    <li>Accessibility intake and workflow processes implemented</li>
+                    <li>Centralized vendor accessibility documentation repository created</li>
+                    <li>Accessibility dashboard and reporting infrastructure deployed</li>
+                    <li>Accessibility review practices incorporated into vendor evaluation processes</li>
+                    <li>More than 100 public-facing web pages remediated</li>
+                    <li>High-priority document remediation initiatives launched</li>
+                    <li>Accessibility efforts expanded across websites, forms, documents, media, communications, and vendor platforms</li>
+                    <li>Accessibility training deployed across faculty and staff populations</li>
+                    <li>Cross-functional participation established across academic, administrative, and student service areas</li>
+                </ul>
+            </section>
+
+            <section class="section-block">
+                <h3>Training metrics</h3>
+                <p>
+                    Training completion was tracked through institutional learning systems, providing measurable
+                    visibility into participation and adoption.
+                </p>
+                <div class="metric-strip" aria-label="Training participation metrics">
+                    <div><strong>185</strong><span>Staff Completed</span></div>
+                    <div><strong>223</strong><span>Staff Assigned</span></div>
+                    <div><strong>83%</strong><span>Staff Completion</span></div>
+                    <div><strong>58</strong><span>Faculty Completed</span></div>
+                    <div><strong>178</strong><span>Faculty Assigned</span></div>
+                    <div><strong>33%</strong><span>Faculty Completion</span></div>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>Before and after</h3>
+                <div class="two-col">
+                    <div class="quiet-card">
+                        <h4>Before the initiative</h4>
+                        <ul class="compact-list">
+                            <li>Accessibility efforts were largely decentralized</li>
+                            <li>Ownership expectations varied by department</li>
+                            <li>No formal intake process existed</li>
+                            <li>Vendor accessibility documentation was not centrally managed</li>
+                            <li>Progress reporting was limited</li>
+                            <li>Accessibility activities were often reactive</li>
+                        </ul>
+                    </div>
+                    <div class="quiet-card">
+                        <h4>After implementation</h4>
+                        <ul class="compact-list">
+                            <li>Governance structures were established</li>
+                            <li>Accessibility workflows became operational</li>
+                            <li>Vendor accessibility review processes were defined</li>
+                            <li>Reporting and dashboard systems provided visibility</li>
+                            <li>Accessibility responsibilities became more clearly distributed</li>
+                            <li>Accessibility became part of broader institutional planning</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pull-quote">
+                    The transformation was not simply technical. It was organizational.
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>Long-term impact</h3>
+                <p>
+                    The accessibility initiative became far more than a compliance effort.
+                </p>
+                <p>
+                    Rather than focusing solely on correcting individual accessibility issues, the program established
+                    governance structures, accountability models, reporting systems, vendor oversight practices, training
+                    initiatives, and operational workflows that continue to support accessibility across the institution.
+                </p>
+                <p>
+                    Accessibility evolved from a collection of isolated remediation activities into an ongoing
+                    institutional capability embedded within daily operations.
+                </p>
+                <p>
+                    The initiative also helped establish accessibility as a strategic consideration within content
+                    management, digital communications, vendor evaluation, procurement discussions, and long-term
+                    planning efforts.
+                </p>
+                <div class="callout-bar">
+                    <p style="margin: 0;">
+                        Several years from now, the most important outcome will not be the number of pages remediated or
+                        documents reviewed. The most important outcome will be the existence of a sustainable framework
+                        capable of supporting accessibility long after the original compliance deadlines have passed.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h3>Looking ahead</h3>
+                <p>
+                    Future efforts continue to focus on legacy content remediation, accessibility maturity across
+                    departments, vendor accessibility accountability, expanded training and adoption, continuous
+                    monitoring and reporting, and long-term compliance sustainability.
+                </p>
+                <p>
+                    The foundation established through this initiative positions accessibility as an ongoing
+                    institutional responsibility rather than a deadline-driven project.
+                </p>
+            </section>
+
+            <a class="back-link" href="/case-studies/">← Back to case studies</a>
+        </article>
     </div>
 </section>
