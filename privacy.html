@@ -1,87 +1,353 @@
 ---
 title: Privacy Policy — Roger Ehmpke
 og_title: Privacy Policy — Roger Ehmpke
-ai_context: Privacy Policy page for Roger Ehmpke's website, covering data collection, data use, cookies or analytics, contact form submissions, AI assistant interactions, and third-party services.
-schema_type: "PrivacyPolicy"
-schema_description: "Privacy Policy for Roger Ehmpke’s website, covering contact form submissions, analytics, server and security logs, AI assistant processing through AWS and OpenAI, temporary sessionStorage, and third-party services."
-schema_keywords: 
-  - "privacy policy"
-  - "analytics"
-  - "Google Analytics 4"
-  - "OpenAI"
-  - "AWS Lambda"
-  - "contact form"
-  - "sessionStorage"
+description: Privacy policy for RogerEhmpke.com covering contact form submissions, analytics, hosting and security logs, browser storage, AI assistant interactions, and third-party services.
+ai_context: Privacy Policy page for Roger Ehmpke's website, explaining how contact form submissions, analytics data, hosting logs, browser storage, AI assistant interactions, and third-party services are handled.
+schema_type: "WebPage"
+schema_description: "Privacy policy for RogerEhmpke.com covering contact form submissions, Google Analytics, hosting and security logs, temporary browser storage, AI assistant processing through AWS and OpenAI, and third-party services."
+schema_keywords:
+- "privacy policy"
+- "Google Analytics 4"
+- "website analytics"
+- "OpenAI API"
+- "AWS Lambda"
+- "AWS Amplify"
+- "contact form"
+- "sessionStorage"
 layout: page-layout
 ---
 
 {% include micro-top.html %}
-<section class="space-top space-bottom" style="padding-left: 1em;padding-right: 1em;">
-    <div class="container" style="grid-column: 1;grid-row: 8;line-height: 20px;text-align: center;">
-        <div style="margin:0 auto;max-width:900px;">
-            <h2>Privacy Policy</h2>
-            <p><strong>Effective Date: April 30, 2025</strong> • <strong>Last updated:</strong> May 28, 2026</p>
 
-            <p style="margin-bottom: 1.5rem;">This website values your privacy. This policy explains how data is collected, used, and protected when visiting <a href="/" style="color:#004763; font-weight:700;">rogerehmpke.com</a>.</p>
-<hr
-    style="margin: 2rem auto 2.5rem auto; width: 80%; border: none; height: 1px; background-color: rgba(0, 0, 0, 0.1);" />
-            <h3 style="text-align: left;">What Data We Collect</h3>
-            <p style="text-align: left;"><strong>Contact Form:</strong> If you submit a message via the contact form, your name, email address, and message are collected solely to respond to
-            your inquiry. No data is sold, shared, or reused for marketing purposes.</p>
+<section class="space-top space-bottom" aria-labelledby="privacy-page-title"
+    style="padding-left: 1em; padding-right: 1em;">
+    <div class="container" style="
+            grid-column: 1;
+            grid-row: 8;
+            line-height: 1.6;
+            text-align: center;
+        ">
+        <div style="margin: 0 auto; max-width: 900px;">
 
-            <p style="text-align: left;"><strong>Analytics:</strong> Google Analytics 4 (via Google Tag Manager) is used to understand site performance and user interaction.
-            It may collect anonymized technical data such as browser type, device, screen size, approximate location (city-level),
-            and pages visited.
-            IP addresses are not stored, and reports are aggregated. Analytics data helps improve site structure, content,
-            accessibility, and performance.</p>
+            <h1 id="privacy-page-title" style="
+                    margin: 0 0 0.75rem;
+                    color: #071f35;
+                    font-size: clamp(2.5rem, 5vw, 4rem);
+                    line-height: 1.08;
+                    font-weight: 700;
+                ">
+                Privacy Policy
+            </h1>
 
-            <p style="text-align: left;"><strong>Server and Security Logs:</strong> Our hosting provider automatically collects limited technical information—such as IP address, browser type, device
-            identifiers, and access timestamps—for the purpose of maintaining security, detecting abuse, and ensuring system
-            reliability. These logs are not used to personally identify visitors.</p>
+            <p style="margin: 0 0 1rem;">
+                <strong>Effective date:</strong>
+                <time datetime="2025-04-30">April 30, 2025</time>
+                <span aria-hidden="true"> • </span>
+                <strong>Last updated:</strong>
+                <time datetime="2026-06-30">June 30, 2026</time>
+            </p>
 
-            <p style="text-align: left;"><strong>Site Chat Assistant:</strong></p>
-            <ul style="text-align: left;">
-                <li>Your question is transmitted securely via HTTPS to an AWS Lambda function.</li>
-                <li>The message is then processed by OpenAI's GPT API to generate a contextual response.</li>
-                <li>Chat messages are not intentionally stored for long-term use by this website.</li>
-                <li>Your browser may temporarily store chat history in 
-                    <code>sessionStorage</code> for your convenience.</li>
-                <li>Please avoid submitting sensitive or personal information in chat interactions.</li>
-            </ul>
+            <p style="margin: 0 auto 1.5rem; max-width: 760px;">
+                This website values your privacy. This policy explains what information may be collected,
+                how it is used, and how it is handled when you visit
+                <a href="/" style="color: #004763; font-weight: 700;">RogerEhmpke.com</a>.
+            </p>
 
-            <hr />
+            <hr style="
+                    margin: 2rem auto 2.5rem;
+                    width: 80%;
+                    border: none;
+                    height: 1px;
+                    background-color: rgba(0, 0, 0, 0.1);
+                ">
 
-            <h3 style="text-align: left;">How Data Is Used</h3>
-            <ul style="text-align: left;">
-                <li>To respond to inquiries submitted through the contact form.</li>
-                <li>To improve the usability, content, and accessibility of the website.</li>
-                <li>To assess site performance using anonymized analytics data.</li>
-                <li>To process chat input in real time to provide context-based responses (without data retention).</li>
-            </ul>
+            <div style="text-align: left;">
 
-            <hr />
+                <section aria-labelledby="data-collected-title">
+                    <h2 id="data-collected-title" style="
+                            margin: 0 0 1rem;
+                            color: #071f35;
+                            font-size: clamp(2rem, 4vw, 3rem);
+                            line-height: 1.1;
+                        ">
+                        What Information Is Collected
+                    </h2>
 
-            <h3 style="text-align: left;">Third-Party Services</h3>
-            <p style="text-align: left;">The following services support this site's functionality and security:</p>
-            <ul style="text-align: left;">
-                <li><strong>Google Tag Manager/Analytics:</strong> Collects anonymized usage data and event metrics.</li>
-                <li><strong>OpenAI:</strong> Provides the GPT model that powers the site's chat assistant.</li>
-                <li><strong>AWS (Amazon Web Services):</strong> Hosts the backend service that securely delivers chat requests and responses.</li>
-            </ul>
-            <p style="text-align: left;">Each third party adheres to its own privacy policy and complies with applicable data protection standards.
-            <br>You can review their policies here:</p>
-            <ul style="text-align: left;">
-                <li><strong>Google:</strong> <a href="https://policies.google.com/privacy" rel="noopener noreferrer" style="color:#004763; font-weight:700;">policies.google.com/privacy</a></li>
-                <li><strong>OpenAI:</strong> <a href="https://openai.com/privacy" rel="noopener noreferrer" style="color:#004763; font-weight:700;">openai.com/privacy</a></li>
-                <li><strong>Amazon Web Services:</strong> <a href="https://aws.amazon.com/privacy" rel="noopener noreferrer" style="color:#004763; font-weight:700;">aws.amazon.com/privacy</a></li>
-            </ul>
-            <hr />
+                    <p>
+                        <strong>Contact form:</strong>
+                        If you submit a message through the contact form, the information you provide—such
+                        as your name, email address, and message—is used to respond to your inquiry.
+                        Contact information is not sold or used for marketing. It may be processed by the
+                        technical services required to transmit, deliver, and respond to the message.
+                    </p>
 
-            <h3 style="text-align: left;">Your Rights &amp; Contact</h3>
-            <p style="text-align: left;">You may request deletion of messages submitted via the contact form or ask questions about this policy by using the
-                <a href="/#contact" style="color:#004763; font-weight:700;">contact form</a>.</p>
-            <p style="text-align: left;">This privacy policy will be updated as needed to reflect new tools, AI functionality, or legal compliance
-                requirements.</p>
+                    <p>
+                        <strong>Analytics:</strong>
+                        Google Analytics 4, delivered through Google Tag Manager, is used to understand
+                        website performance and general visitor interaction. It may collect information
+                        such as browser type, device category, screen size, approximate geographic
+                        location, referring pages, pages visited, and interactions with the site.
+                    </p>
+
+                    <p>
+                        Google Analytics reports do not provide me with individual visitor IP addresses.
+                        Analytics information is used to improve site structure, content, accessibility,
+                        usability, and performance.
+                    </p>
+
+                    <p>
+                        <strong>Cookies and browser storage:</strong>
+                        Google Analytics may use first-party cookies to distinguish browser sessions and
+                        measure site activity. The site chat assistant uses
+                        <code>sessionStorage</code> to temporarily preserve conversation history within
+                        the current browser tab or session. Cookies and stored site data can be removed
+                        through your browser settings.
+                    </p>
+
+                    <p>
+                        <strong>Hosting and security logs:</strong>
+                        AWS Amplify and related AWS services may automatically process limited technical
+                        information associated with requests to the site. This may include IP address,
+                        browser or user-agent information, requested URLs, access timestamps, response
+                        status, and diagnostic information.
+                    </p>
+
+                    <p>
+                        These records support website delivery, security monitoring, abuse prevention,
+                        troubleshooting, and system reliability. They are not used by this website to
+                        create marketing profiles of individual visitors.
+                    </p>
+
+                    <p>
+                        <strong>Site chat assistant:</strong>
+                        When you use the chat assistant, your question and recent conversation history
+                        from the current browser tab are transmitted securely through an AWS-hosted API.
+                        The request is processed using OpenAI’s API to generate a contextual response.
+                    </p>
+
+                    <ul>
+                        <li>
+                            This website does not create a user account or intentionally maintain a
+                            permanent archive of chat conversations.
+                        </li>
+                        <li>
+                            Chat history may remain temporarily in your browser’s
+                            <code>sessionStorage</code> until the tab or browser session is closed or
+                            stored site data is cleared.
+                        </li>
+                        <li>
+                            AWS, OpenAI, and related technical services may process or temporarily retain
+                            request and response data according to their service configurations, terms,
+                            and privacy policies.
+                        </li>
+                        <li>
+                            Do not submit passwords, financial information, health information, or other
+                            sensitive personal information through the chat assistant.
+                        </li>
+                    </ul>
+                </section>
+
+                <hr style="
+                        margin: 2rem auto;
+                        width: 100%;
+                        border: none;
+                        height: 1px;
+                        background-color: rgba(0, 0, 0, 0.1);
+                    ">
+
+                <section aria-labelledby="data-use-title">
+                    <h2 id="data-use-title" style="
+                            margin: 0 0 0.75rem;
+                            color: #071f35;
+                            font-size: clamp(2rem, 4vw, 3rem);
+                            line-height: 1.1;
+                        ">
+                        How Information Is Used
+                    </h2>
+
+                    <ul>
+                        <li>To respond to messages submitted through the contact form.</li>
+                        <li>To deliver and secure the website and its interactive features.</li>
+                        <li>To understand site performance and general usage patterns.</li>
+                        <li>To improve the usability, content, accessibility, and performance of the site.</li>
+                        <li>To process chat questions and provide contextual responses.</li>
+                        <li>To identify technical errors, misuse, or security concerns.</li>
+                    </ul>
+
+                    <p>
+                        Personal information submitted directly through the site is not sold or used for
+                        advertising. Information is shared only as needed with service providers supporting
+                        the site’s hosting, analytics, communications, security, and chat functionality.
+                    </p>
+                </section>
+
+                <hr style="
+                        margin: 2rem auto;
+                        width: 100%;
+                        border: none;
+                        height: 1px;
+                        background-color: rgba(0, 0, 0, 0.1);
+                    ">
+
+                <section aria-labelledby="retention-title">
+                    <h2 id="retention-title" style="
+                            margin: 0 0 0.75rem;
+                            color: #071f35;
+                            font-size: clamp(2rem, 4vw, 3rem);
+                            line-height: 1.1;
+                        ">
+                        How Long Information Is Kept
+                    </h2>
+
+                    <p>
+                        Contact-form messages are retained only as long as reasonably needed to respond to
+                        the inquiry and maintain relevant communication records.
+                    </p>
+
+                    <p>
+                        Google Analytics data is retained according to the settings configured for the
+                        site’s Analytics property. Aggregated reports and metrics may remain available
+                        separately from user-level and event-level information.
+                    </p>
+
+                    <p>
+                        Hosting, security, API, and diagnostic records are retained according to the
+                        configurations and policies of the applicable AWS and technical services.
+                    </p>
+
+                    <p>
+                        Chat history stored in <code>sessionStorage</code> remains on your device for the
+                        current browser-tab session. It is not a permanent website account or conversation
+                        history.
+                    </p>
+                </section>
+
+                <hr style="
+                        margin: 2rem auto;
+                        width: 100%;
+                        border: none;
+                        height: 1px;
+                        background-color: rgba(0, 0, 0, 0.1);
+                    ">
+
+                <section aria-labelledby="third-party-title">
+                    <h2 id="third-party-title" style="
+                            margin: 0 0 0.75rem;
+                            color: #071f35;
+                            font-size: clamp(2rem, 4vw, 3rem);
+                            line-height: 1.1;
+                        ">
+                        Third-Party Services
+                    </h2>
+
+                    <p>
+                        The following services support the operation, measurement, security, and
+                        functionality of this website:
+                    </p>
+
+                    <ul>
+                        <li>
+                            <strong>Google Tag Manager and Google Analytics:</strong>
+                            Deliver analytics scripts and collect site-usage and event information.
+                        </li>
+                        <li>
+                            <strong>Google Fonts:</strong>
+                            Delivers font resources used in the site’s presentation.
+                        </li>
+                        <li>
+                            <strong>AWS Amplify:</strong>
+                            Hosts and delivers the website.
+                        </li>
+                        <li>
+                            <strong>AWS API Gateway and Lambda:</strong>
+                            Receive and process requests made through the site chat assistant.
+                        </li>
+                        <li>
+                            <strong>OpenAI:</strong>
+                            Provides the language model used to generate responses from the site chat
+                            assistant.
+                        </li>
+                        <li>
+                            <strong>cdnjs and Cloudflare:</strong>
+                            Deliver the DOMPurify library used to sanitize chat content.
+                        </li>
+                    </ul>
+
+                    <p>
+                        Information processed by these providers is governed by their respective service
+                        configurations, terms, and privacy policies.
+                    </p>
+
+                    <ul>
+                        <li>
+                            <strong>Google:</strong>
+                            <a href="https://policies.google.com/privacy"
+                                style="color: #004763; font-weight: 700;">Google Privacy Policy</a>
+                        </li>
+
+                        <li>
+                            <strong>OpenAI:</strong>
+                            <a href="https://openai.com/policies/privacy-policy/"
+                                style="color: #004763; font-weight: 700;">OpenAI Privacy Policy</a>
+                        </li>
+
+                        <li>
+                            <strong>Amazon Web Services:</strong>
+                            <a href="https://aws.amazon.com/privacy/" style="color: #004763; font-weight: 700;">AWS
+                                Privacy Notice</a>
+                        </li>
+
+                        <li>
+                            <strong>Cloudflare:</strong>
+                            <a href="https://www.cloudflare.com/privacypolicy/"
+                                style="color: #004763; font-weight: 700;">Cloudflare Privacy Policy</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <hr style="
+                        margin: 2rem auto;
+                        width: 100%;
+                        border: none;
+                        height: 1px;
+                        background-color: rgba(0, 0, 0, 0.1);
+                    ">
+
+                <section aria-labelledby="choices-title">
+                    <h2 id="choices-title" style="
+                            margin: 0 0 0.75rem;
+                            color: #071f35;
+                            font-size: clamp(2rem, 4vw, 3rem);
+                            line-height: 1.1;
+                        ">
+                        Your Choices and Contact
+                    </h2>
+
+                    <p>
+                        You can disable or remove cookies and other stored site data through your browser
+                        settings. Blocking analytics-related storage may reduce the amount of usage
+                        information collected but should not prevent access to the site’s primary content.
+                    </p>
+
+                    <p>
+                        You may ask questions about this policy or request access to, correction of, or
+                        deletion of information you submitted directly through the contact form by
+                        <a href="/#contact" style="color: #004763; font-weight: 700;">contacting me</a>.
+                    </p>
+
+                    <p>
+                        Requests involving information processed independently by Google, AWS, OpenAI, or
+                        Cloudflare may also be subject to those providers’ privacy-request procedures and
+                        retention requirements.
+                    </p>
+
+                    <p>
+                        This privacy policy may be updated when the site’s tools or data practices change.
+                        The most recent revision date will appear at the top of this page.
+                    </p>
+                </section>
+
+            </div>
         </div>
     </div>
 </section>
