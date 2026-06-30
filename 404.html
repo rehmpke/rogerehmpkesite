@@ -1,20 +1,108 @@
 ---
-title: 404
-og_title: 404
+title: Page Not Found | Roger Ehmpke
+og_title: Page Not Found | Roger Ehmpke
+description: The requested page could not be found on RogerEhmpke.com.
+ai_context: This is the 404 page for RogerEhmpke.com. It helps visitors return to the homepage, browse case studies, or contact Roger Ehmpke.
+schema_type: "WebPage"
+schema_description: "The requested page could not be found on RogerEhmpke.com."
 layout: page-layout
-ai_context: This page helps when stuck with a 404 error. please contact Roger Ehmpke through the contact form
 permalink: /404.html
-baseurl: /
+sitemap: false
+robots: noindex,follow
 ---
 
 {% include micro-top.html %}
-<section class="error" id="Error" style="padding-left: 1em;padding-right: 1em;">
-    <div class="container">
-        <div class="row space-top">
-            <div class="col text-center">
-                <h2>404 Error your page is not found on rogerehmpke.com</h2>
-                <hr class="primary" />
-                <p>For now only one page exists and that is the <a href="/" style="color:#146C82;">home page</a>.</p><br/></div>
+
+<main id="main-content">
+    <section class="space-top space-bottom" aria-labelledby="page-not-found-title"
+        style="padding-left: 1em; padding-right: 1em;">
+        <div class="container" style="
+                grid-column: 1;
+                grid-row: 8;
+                line-height: 1.6;
+                text-align: center;
+            ">
+            <div style="margin: 0 auto; max-width: 760px;">
+
+                <p aria-hidden="true" style="
+                        margin: 0 0 0.5rem;
+                        color: #004763;
+                        font-size: 1rem;
+                        font-weight: 700;
+                        letter-spacing: 0.08em;
+                        text-transform: uppercase;
+                    ">
+                    Error 404
+                </p>
+
+                <h1 id="page-not-found-title" style="
+                        margin: 0 0 1.25rem;
+                        color: #071f35;
+                        font-size: clamp(2.5rem, 5vw, 4rem);
+                        line-height: 1.08;
+                        font-weight: 700;
+                    ">
+                    Page not found
+                </h1>
+
+                <p style="
+                        margin: 0 auto 1rem;
+                        max-width: 650px;
+                        font-size: 1.1rem;
+                    ">
+                    The page may have moved, the address may be incomplete, or the content may no longer be available.
+                </p>
+
+                <p style="margin: 0 auto 2rem; max-width: 650px;">
+                    You can return to the homepage, browse selected case studies, or contact me if you were looking for
+                    something specific.
+                </p>
+
+                <nav aria-label="Page not found options" style="
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 0.75rem;
+                    ">
+                    <a href="/" style="
+                            display: inline-block;
+                            padding: 0.75rem 1rem;
+                            border: 2px solid #071f35;
+                            border-radius: 0.5rem;
+                            background-color: #071f35;
+                            color: #ffffff;
+                            font-weight: 700;
+                            text-decoration: none;
+                        ">
+                        Return home
+                    </a>
+
+                    <a href="/case-studies/" style="
+                            display: inline-block;
+                            padding: 0.75rem 1rem;
+                            border: 2px solid #071f35;
+                            border-radius: 0.5rem;
+                            color: #071f35;
+                            font-weight: 700;
+                            text-decoration: none;
+                        ">
+                        View case studies
+                    </a>
+
+                    <a href="/#contact" style="
+                            display: inline-block;
+                            padding: 0.75rem 1rem;
+                            border: 2px solid #071f35;
+                            border-radius: 0.5rem;
+                            color: #071f35;
+                            font-weight: 700;
+                            text-decoration: none;
+                        ">
+                        Contact me
+                    </a>
+                </nav>
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</main>
