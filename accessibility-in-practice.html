@@ -1,105 +1,215 @@
 ---
 title: Roger Ehmpke - Accessibility in Practice
 og_title: Roger Ehmpke - Accessibility in Practice
-ai_context: Accessibility page for Roger Ehmpke's website, explaining his practical approach to accessibility governance, WCAG/Section 508 alignment, inclusive UX, content clarity, CMS patterns, documentation, and sustainable web systems.
-schema_type: "AboutPage"
-schema_description: "Accessibility in Practice explains Roger Ehmpke’s practical approach to accessibility governance, WCAG and Section 508 alignment, inclusive UX, content clarity, CMS patterns, documentation, and sustainable digital systems."
-schema_keywords: 
-  - "accessibility governance"
-  - "WCAG"
-  - "Section 508"
-  - "ADA Title II readiness"
-  - "inclusive UX"
-  - "content clarity"
-  - "CMS accessibility"
-  - "digital governance"
+description: Roger Ehmpke's practical approach to accessibility governance and the accessibility target, testing methods, feedback process, and ongoing maintenance practices used for RogerEhmpke.com.
+ai_context: Accessibility statement for Roger Ehmpke's website, explaining his practical approach to accessibility governance, the site's WCAG 2.2 Level AA target, evaluation methods, feedback process, and ongoing accessibility maintenance.
+schema_type: "WebPage"
+schema_description: "Roger Ehmpke's practical approach to accessibility governance and the accessibility target, testing
+methods, feedback process, and ongoing maintenance practices used for RogerEhmpke.com."
+schema_keywords:
+- "accessibility governance"
+- "WCAG 2.2 AA"
+- "Section 508"
+- "ADA Title II readiness"
+- "inclusive UX"
+- "content clarity"
+- "CMS accessibility"
+- "digital governance"
 layout: page-layout
 ---
 
 {% include micro-top.html %}
-<section class="space-top space-bottom" style="padding-left: 1em;padding-right: 1em;">
-    <div class="container" style="grid-column: 1; grid-row: 8; line-height: 1.6; text-align: center;">
-        <div style="margin: 0 auto; max-width: 900px;">
-            <h2 style="margin-bottom: 1rem;">Accessibility in Practice</h2>
 
-            <p style="margin-bottom: 1.5rem;">
+<section class="space-top space-bottom" aria-labelledby="accessibility-page-title"
+    style="padding-left: 1em; padding-right: 1em;">
+    <div class="container" style="
+            grid-column: 1;
+            grid-row: 8;
+            line-height: 1.6;
+            text-align: center;
+        ">
+        <div style="margin: 0 auto; max-width: 900px;">
+
+            <h1 id="accessibility-page-title" style="
+                    display: block !important;
+                    margin: 0 0 1.25rem;
+                    color: #071f35;
+                    font-size: clamp(2.5rem, 5vw, 4rem);
+                    line-height: 1.08;
+                    font-weight: 700;
+                ">
+                Accessibility in Practice
+            </h1>
+
+            <p style="
+                    margin: 0 auto 1.5rem;
+                    max-width: 760px;
+                    font-size: 1.05rem;
+                ">
                 Accessibility is not a feature added at the end of a project. It is part of how digital systems are
-                planned,
-                structured, written, built, reviewed, and governed. My work focuses on making accessibility practical,
-                repeatable, and sustainable across content, CMS architecture, front-end patterns, analytics, and
-                institutional
-                workflows.
+                planned, structured, written, built, reviewed, and governed. My work focuses on making accessibility
+                practical, repeatable, and sustainable across content, CMS architecture, front-end patterns,
+                analytics, and institutional workflows.
             </p>
 
-            <hr
-                style="margin: 2rem auto 2.5rem auto; width: 80%; border: none; height: 1px; background-color: rgba(0, 0, 0, 0.1);" />
+            <hr style="
+                    margin: 2rem auto 2.5rem;
+                    width: 80%;
+                    border: none;
+                    height: 1px;
+                    background-color: rgba(0, 0, 0, 0.1);
+                ">
 
             <div style="text-align: left;">
-                <h3>My accessibility work focuses on practical, system-level improvement:</h3>
+
+                <h2 style="
+                        margin: 0 0 1.25rem;
+                        color: #071f35;
+                        font-size: clamp(2rem, 4vw, 3.25rem);
+                        line-height: 1.08;
+                    ">
+                    My accessibility work focuses on practical, system-level improvement
+                </h2>
 
                 <dl style="display: grid; gap: 1.25rem; margin: 0;">
                     <div>
-                        <dt style="font-weight: 600; margin-bottom: 0.25rem;">Inclusive UX</dt>
+                        <dt style="font-weight: 700; margin-bottom: 0.25rem;">
+                            Inclusive UX
+                        </dt>
+
                         <dd style="margin: 0; padding-left: 1rem;">
                             Designing and reviewing digital experiences with
                             <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener"
-                                style="color:#004763; font-weight:700;">WCAG</a>,
-                            <a href="https://www.w3.org/WAI/ARIA/" style="color:#004763; font-weight:700;"
-                                target="_blank" rel="noopener">ARIA</a>, and
-                            <a href="https://www.section508.gov/" style="color:#004763; font-weight:700;"
-                                target="_blank" rel="noopener">Section 508</a>
+                                style="color: #004763; font-weight: 700;">WCAG</a>,
+                            <a href="https://www.w3.org/WAI/ARIA/" target="_blank" rel="noopener"
+                                style="color: #004763; font-weight: 700;">ARIA</a>, and
+                            <a href="https://www.section508.gov/" target="_blank" rel="noopener"
+                                style="color: #004763; font-weight: 700;">Section 508</a>
                             in mind while preserving usability, performance, and clarity.
                         </dd>
                     </div>
 
                     <div>
-                        <dt style="font-weight: 600; margin-bottom: 0.25rem;">Content Clarity</dt>
+                        <dt style="font-weight: 700; margin-bottom: 0.25rem;">
+                            Content Clarity
+                        </dt>
+
                         <dd style="margin: 0; padding-left: 1rem;">
-                            Helping teams write, structure, and maintain content that works for real users, including
-                            people using assistive
-                            technologies.
+                            Helping teams write, structure, and maintain content that works for real users,
+                            including people using assistive technologies.
                         </dd>
                     </div>
 
                     <div>
-                        <dt style="font-weight: 600; margin-bottom: 0.25rem;">Governable Systems</dt>
+                        <dt style="font-weight: 700; margin-bottom: 0.25rem;">
+                            Governable Systems
+                        </dt>
+
                         <dd style="margin: 0; padding-left: 1rem;">
-                            Building CMS structures, templates, and content workflows that support accessible patterns
-                            by default instead of
-                            relying on one-time fixes.
+                            Building CMS structures, templates, and content workflows that support accessible
+                            patterns by default instead of relying on one-time fixes.
                         </dd>
                     </div>
 
                     <div>
-                        <dt style="font-weight: 600; margin-bottom: 0.25rem;">Documentation &amp; Training</dt>
+                        <dt style="font-weight: 700; margin-bottom: 0.25rem;">
+                            Documentation &amp; Training
+                        </dt>
+
                         <dd style="margin: 0; padding-left: 1rem;">
                             Supporting long-term accessibility through documentation, shared standards, review
-                            practices, and practical
-                            guidance for content owners and teams.
+                            practices, and practical guidance for content owners and teams.
                         </dd>
                     </div>
                 </dl>
+
+                <p style="margin-top: 2.5rem;">
+                    Whether remediating legacy content or designing a new system, accessibility needs to be part
+                    of the strategy, not a separate cleanup phase.
+                </p>
+
+                <p>
+                    My approach connects compliance, usability, content governance, and maintainability so
+                    accessibility work can scale beyond individual pages or isolated fixes.
+                </p>
+
+                <hr style="
+                        margin: 2.5rem auto;
+                        width: 80%;
+                        border: none;
+                        height: 1px;
+                        background-color: rgba(0, 0, 0, 0.1);
+                    ">
+
+                <section aria-labelledby="website-accessibility-title">
+
+                    <h2 id="website-accessibility-title" style="
+                            margin: 0 0 0.75rem;
+                            color: #071f35;
+                            font-size: clamp(2rem, 4vw, 3rem);
+                            line-height: 1.1;
+                        ">
+                        Accessibility of this website
+                    </h2>
+
+                    <p>
+                        RogerEhmpke.com is designed and maintained with WCAG 2.2 Level AA as its accessibility
+                        target.
+                    </p>
+
+                    <h3 style="
+                            margin: 1.5rem 0 0.5rem;
+                            color: #071f35;
+                            font-size: clamp(1.5rem, 3vw, 2rem);
+                            line-height: 1.15;
+                        ">
+                        Testing and review
+                    </h3>
+
+                    <p>
+                        I evaluate the site using automated tools such as WAVE and Lighthouse, together with
+                        keyboard-only navigation, zoom and reflow testing, color-contrast review, semantic HTML
+                        inspection, content review, and periodic screen-reader testing.
+                    </p>
+
+                    <p>
+                        Automated tools cannot identify every accessibility barrier, so manual review is also
+                        part of the evaluation process.
+                    </p>
+
+                    <h3 style="
+                            margin: 1.5rem 0 0.5rem;
+                            color: #071f35;
+                            font-size: clamp(1.5rem, 3vw, 2rem);
+                            line-height: 1.15;
+                        ">
+                        Feedback and assistance
+                    </h3>
+
+                    <p>
+                        If you encounter an accessibility barrier or need information in another format, please
+                        <a href="/#contact" style="color: #004763; font-weight: 700;">contact me</a>.
+                        Including the page URL and a brief description of the issue will help me investigate and
+                        correct it.
+                    </p>
+
+                    <h3 style="
+                            margin: 1.5rem 0 0.5rem;
+                            color: #071f35;
+                            font-size: clamp(1.5rem, 3vw, 2rem);
+                            line-height: 1.15;
+                        ">
+                        Ongoing improvement
+                    </h3>
+
+                    <p>
+                        Accessibility is part of the ongoing maintenance of this site. Pages, components, and
+                        interactive features are reviewed as the site changes, and identified barriers are
+                        corrected as they are found.
+                    </p>
+
+                </section>
             </div>
-
-            <p style="margin-top: 2.5rem;text-align: left;">
-                Whether remediating legacy content or designing a new system, accessibility needs to be part of the
-                strategy, not a
-                separate cleanup phase.
-            </p>
-
-            <p style="text-align: left;">
-                My approach connects compliance, usability, content governance, and maintainability so accessibility
-                work can scale
-                beyond individual pages or isolated fixes.
-            </p>
-
-            <p style="margin-top: 1.5rem;text-align: left;">
-                Strong accessibility practice depends on clear ownership, repeatable patterns, and systems that make the
-                accessible
-                path easier to follow. Learn more
-                <a href="/#about" style="color:#004763; font-weight:700;">about my approach</a> to web leadership and
-                strategy.
-            </p>
         </div>
     </div>
 </section>
