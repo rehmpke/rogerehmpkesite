@@ -4714,289 +4714,54 @@ body > section.space-top.space-bottom li {
     opacity: 0.26 !important;
   }
 }
-/* Secondary page header final polish
-   Keeps inner pages tied to the homepage without using the homepage pill tags. */
-.site-subpage-top {
-  background: radial-gradient(circle at 16% 20%, rgba(199, 176, 139, 0.22), transparent 30%), linear-gradient(135deg, #fbfcf8 0%, #eef6f5 58%, #e4f0ee 100%);
-  border-bottom: 1px solid rgba(7, 31, 53, 0.1);
-  padding-block: clamp(1.75rem, 3vw, 2.45rem);
+/* ========================================================================== 
+   Case studies index
+   --------------------------------------------------------------------------
+   Scoped heading styles preserve the correct H1/H2 document structure while
+   preventing the global heading rules from changing the intended presentation.
+   ========================================================================== */
+.case-studies-index__title {
+  color: var(--site-ink);
+  display: block;
+  font-family: "IBM Plex Sans", Verdana, sans-serif;
+  font-size: clamp(2.1rem, 5vw, 3.0375rem);
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  text-align: center;
 }
 
-.site-subpage-top__texture {
-  background-image: url("/assets/img/compass-background.webp");
-  background-position: center 48%;
-  background-size: cover;
-  opacity: 0.18;
-  mix-blend-mode: multiply;
+.case-studies-index__card-title {
+  color: var(--site-ink);
+  display: block;
+  font-family: "IBM Plex Sans", Verdana, sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.2175rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
 }
 
-.site-subpage-top__inner {
-  align-items: center;
-  display: grid;
-  gap: clamp(1rem, 3vw, 2rem);
-  grid-template-columns: minmax(0, 1fr) auto;
+.case-studies-index__title {
+  color: var(--site-ink);
+  font-family: "Roboto Slab", Georgia, serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+  margin: 0 0 1rem;
+  text-align: center;
 }
 
-.site-subpage-top__brand {
-  max-width: 560px;
-}
-
-.site-subpage-top__logo,
-.site-subpage-top .site-logo {
+.case-studies-index__card-title {
   color: var(--site-ink);
   font-family: "IBM Plex Sans", Verdana, sans-serif;
-  font-size: clamp(1.12rem, 1.65vw, 1.35rem);
-  font-weight: 800;
-  letter-spacing: -0.035em;
-  line-height: 1.05;
-}
-
-.site-subpage-top p {
-  color: var(--site-muted);
-  font-size: clamp(0.98rem, 1.55vw, 1.18rem);
-  line-height: 1.35;
-  margin: 0.55rem 0 0;
-}
-
-.site-subpage-top__nav {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem 0.72rem;
-  justify-content: flex-end;
-}
-
-.site-subpage-top__nav a {
-  color: var(--site-ink);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.13em;
-  line-height: 1;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.site-subpage-top__nav a + a::before {
-  color: rgba(7, 31, 53, 0.34);
-  content: "/";
-  margin-right: 0.72rem;
-}
-
-.site-subpage-top__nav a:hover,
-.site-subpage-top__nav a:focus {
-  color: var(--site-teal);
-  text-decoration: underline;
-  text-underline-offset: 0.28em;
-}
-
-@media (max-width: 760px) {
-  .site-subpage-top__inner {
-    grid-template-columns: 1fr;
-  }
-  .site-subpage-top__nav {
-    justify-content: flex-start;
-  }
-}
-/* Secondary page header v4: calmer, roomier, and closer to homepage system */
-.site-subpage-top {
-  background: radial-gradient(circle at 14% 18%, rgba(199, 176, 139, 0.18), transparent 28%), linear-gradient(135deg, #fbfcf8 0%, #eef6f5 56%, #e4f0ee 100%) !important;
-  border-bottom: 1px solid rgba(7, 31, 53, 0.1) !important;
-  min-height: clamp(128px, 12vw, 156px) !important;
-  padding-block: clamp(2.15rem, 3.65vw, 3rem) !important;
-}
-
-.site-subpage-top__texture {
-  background-image: url("/assets/img/compass-background.webp") !important;
-  background-position: 72% 46% !important;
-  background-size: cover !important;
-  inset: 0 0 0 28% !important;
-  mix-blend-mode: multiply !important;
-  opacity: 0.16 !important;
-}
-
-.site-subpage-top__inner {
-  align-items: center !important;
-  display: grid !important;
-  gap: clamp(1.5rem, 4vw, 3rem) !important;
-  grid-template-columns: minmax(360px, 0.9fr) minmax(300px, auto) !important;
-}
-
-.site-subpage-top__brand {
-  max-width: 680px !important;
-}
-
-.site-subpage-top__logo,
-.site-subpage-top .site-logo {
-  color: var(--site-ink) !important;
-  font-family: "IBM Plex Sans", Verdana, sans-serif !important;
-  font-size: clamp(1.18rem, 1.45vw, 1.38rem) !important;
-  font-weight: 800 !important;
-  letter-spacing: -0.035em !important;
-  line-height: 1.05 !important;
-}
-
-.site-subpage-top p {
-  color: rgba(52, 80, 101, 0.92) !important;
-  font-size: clamp(0.98rem, 1.25vw, 1.12rem) !important;
-  line-height: 1.35 !important;
-  margin: 0.52rem 0 0 !important;
-  max-width: 660px !important;
-}
-
-.site-subpage-top__nav {
-  align-items: center !important;
-  display: flex !important;
-  flex-wrap: nowrap !important;
-  gap: 0.7rem !important;
-  justify-content: flex-end !important;
-  white-space: nowrap !important;
-}
-
-.site-subpage-top__nav a {
-  color: var(--site-ink) !important;
-  font-size: 0.72rem !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.105em !important;
-  line-height: 1 !important;
-  text-decoration: none !important;
-  text-transform: uppercase !important;
-}
-
-.site-subpage-top__nav a + a::before {
-  color: rgba(0, 84, 104, 0.62) !important;
-  content: "/" !important;
-  font-weight: 700 !important;
-  margin-right: 0.7rem !important;
-}
-
-.site-subpage-top__nav a:hover,
-.site-subpage-top__nav a:focus {
-  color: var(--site-teal) !important;
-  text-decoration: underline !important;
-  text-underline-offset: 0.32em !important;
-}
-
-@media (max-width: 860px) {
-  .site-subpage-top__texture {
-    inset: 0 !important;
-    opacity: 0.1 !important;
-  }
-  .site-subpage-top__inner {
-    grid-template-columns: 1fr !important;
-  }
-  .site-subpage-top__nav {
-    flex-wrap: wrap !important;
-    justify-content: flex-start !important;
-  }
-}
-/* Secondary page header v5: aligned, calmer navigation, pattern moved off the brand */
-.site-subpage-top {
-  background: radial-gradient(circle at 8% 35%, rgba(199, 176, 139, 0.12), transparent 30%), linear-gradient(135deg, #fbfcf8 0%, #eef6f5 58%, #e5f1ef 100%) !important;
-  border-bottom: 1px solid rgba(7, 31, 53, 0.1) !important;
-  min-height: clamp(142px, 12vw, 168px) !important;
-  overflow: hidden !important;
-  padding-block: clamp(2.35rem, 3.8vw, 3.15rem) !important;
-}
-
-.site-subpage-top__texture {
-  background-image: url("/assets/img/compass-background.webp") !important;
-  background-position: 78% 46% !important;
-  background-size: cover !important;
-  inset: 0 0 0 36% !important;
-  mix-blend-mode: multiply !important;
-  opacity: 0.18 !important;
-}
-
-.site-subpage-top__inner {
-  align-items: center !important;
-  display: grid !important;
-  gap: clamp(2rem, 6vw, 4rem) !important;
-  grid-template-columns: minmax(0, 1fr) auto !important;
-  max-width: 1120px !important;
-}
-
-.site-subpage-top__brand {
-  max-width: 620px !important;
-  position: relative !important;
-  z-index: 1 !important;
-}
-
-.site-subpage-top__logo,
-.site-subpage-top .site-logo {
-  color: var(--site-ink) !important;
-  font-family: "Roboto Slab", Georgia, serif !important;
-  font-size: clamp(1.12rem, 1.35vw, 1.32rem) !important;
-  font-weight: 700 !important;
-  letter-spacing: -0.02em !important;
-  line-height: 1.08 !important;
-}
-
-.site-subpage-top p {
-  color: rgba(52, 80, 101, 0.94) !important;
-  font-size: clamp(0.96rem, 1.08vw, 1.08rem) !important;
-  line-height: 1.4 !important;
-  margin: 0.56rem 0 0 !important;
-  max-width: 600px !important;
-}
-
-.site-subpage-top__nav {
-  align-items: center !important;
-  display: flex !important;
-  flex-wrap: nowrap !important;
-  gap: 0.95rem !important;
-  justify-content: flex-end !important;
-  position: relative !important;
-  white-space: nowrap !important;
-  z-index: 1 !important;
-}
-
-.site-subpage-top__nav a {
-  color: var(--site-ink) !important;
-  font-size: clamp(0.78rem, 0.9vw, 0.88rem) !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.015em !important;
-  line-height: 1 !important;
-  text-decoration: none !important;
-  text-transform: none !important;
-}
-
-.site-subpage-top__nav a + a::before {
-  color: rgba(0, 84, 104, 0.72) !important;
-  content: "·" !important;
-  font-size: 1.05em !important;
-  font-weight: 700 !important;
-  margin-right: 0.95rem !important;
-}
-
-.site-subpage-top__nav a:hover,
-.site-subpage-top__nav a:focus {
-  color: var(--site-teal) !important;
-  text-decoration: underline !important;
-  text-underline-offset: 0.28em !important;
-}
-
-@media (max-width: 860px) {
-  .site-subpage-top {
-    min-height: auto !important;
-    padding-block: 1.65rem !important;
-  }
-  .site-subpage-top__texture {
-    background-position: 55% 45% !important;
-    inset: 0 !important;
-    opacity: 0.1 !important;
-  }
-  .site-subpage-top__inner {
-    gap: 1rem !important;
-    grid-template-columns: 1fr !important;
-  }
-  .site-subpage-top__nav {
-    flex-wrap: wrap !important;
-    gap: 0.55rem 0.8rem !important;
-    justify-content: flex-start !important;
-  }
-  .site-subpage-top__nav a + a::before {
-    margin-right: 0.8rem !important;
-  }
+  font-size: clamp(1.55rem, 2.8vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin: 0 0 0.75rem;
 }
 
 /*# sourceMappingURL=style.css.map*/
