@@ -123,6 +123,7 @@
 
     .ai-widget-header h2 {
         margin: 0;
+        color: #071f35;
         font-size: 1.25rem;
         line-height: 1.25;
     }
@@ -144,6 +145,7 @@
 
     .ai-widget-intro {
         margin: 0 0 1rem;
+        color: #071f35;
         font-size: 0.9rem;
         line-height: 1.45;
     }
@@ -153,6 +155,7 @@
         overflow-y: auto;
         margin-bottom: 1rem;
         padding-right: 0.25rem;
+        color: #071f35;
         font-size: 0.9rem;
         line-height: 1.45;
     }
@@ -162,6 +165,7 @@
         padding: 0.65rem;
         border-radius: 0.5rem;
         background: #f2f5f7;
+        color: #071f35;
     }
 
     .ai-widget-message p {
@@ -176,36 +180,73 @@
         white-space: pre-wrap;
     }
 
-    #ai-widget-form {
+    /*
+     * Scoped form reset prevents contact-form styles elsewhere on the site
+     * from changing the widget background, spacing, or text colors.
+     */
+    #ai-widget-box #ai-widget-form {
         display: grid;
         gap: 0.5rem;
+        width: auto;
+        min-width: 0;
+        max-width: none;
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        color: #071f35;
+        box-shadow: none;
+        text-align: left;
     }
 
-    #ai-widget-form label {
+    #ai-widget-box #ai-widget-form label {
+        display: block;
+        margin: 0;
+        padding: 0;
+        color: #071f35;
+        font: inherit;
         font-weight: 700;
+        line-height: 1.4;
     }
 
-    #ai-widget-input {
+    #ai-widget-box #ai-widget-input {
+        display: block;
         width: 100%;
+        min-width: 0;
         min-height: 5rem;
         box-sizing: border-box;
+        margin: 0;
         padding: 0.6rem;
         border: 1px solid #707b85;
         border-radius: 0.35rem;
         background: #ffffff;
-        color: #000000;
+        color: #071f35;
         font: inherit;
+        line-height: 1.4;
         resize: vertical;
+        box-shadow: none;
     }
 
-    .ai-widget-help {
+    #ai-widget-box #ai-widget-input::placeholder {
+        color: #5f6368;
+        opacity: 1;
+    }
+
+    #ai-widget-box .ai-widget-help {
         margin: 0;
+        padding: 0;
+        background: transparent;
+        color: #071f35;
         font-size: 0.78rem;
         line-height: 1.4;
     }
 
-    #ai-widget-submit {
+    #ai-widget-box #ai-widget-submit {
         justify-self: start;
+        width: auto;
+        margin: 0;
         padding: 0.6rem 1rem;
         border: 2px solid #071f35;
         border-radius: 0.4rem;
@@ -213,7 +254,13 @@
         color: #ffffff;
         font: inherit;
         font-weight: 700;
+        line-height: 1.4;
         cursor: pointer;
+        box-shadow: none;
+    }
+
+    #ai-widget-submit:hover {
+        background: #18334f;
     }
 
     #ai-widget-submit:disabled {
@@ -221,10 +268,14 @@
         opacity: 0.7;
     }
 
-    .ai-widget-status {
+    #ai-widget-box .ai-widget-status {
         min-height: 1.4em;
         margin: 0.75rem 0 0;
+        padding: 0;
+        background: transparent;
+        color: #071f35;
         font-size: 0.85rem;
+        line-height: 1.4;
     }
 
     @media (max-width: 480px) {
@@ -332,23 +383,27 @@ If the user asks a short or vague question, infer that they may be asking about 
 
         function appendMessage(role, content, includeContactLink = false) {
             const message = document.createElement("div");
-            message.className = `ai-widget-message ai-widget-message--${role}`;
+            message.className =
+                `ai-widget-message ai-widget-message--${role}`;
 
             const paragraph = document.createElement("p");
 
             const speaker = document.createElement("strong");
-            speaker.textContent = role === "user" ? "You: " : "Assistant: ";
+            speaker.textContent =
+                role === "user" ? "You: " : "Assistant: ";
 
             const messageContent = document.createElement("span");
             messageContent.className = "ai-widget-message-content";
 
-            if (
-                role === "assistant" &&
-                window.DOMPurify
-            ) {
-                messageContent.innerHTML = window.DOMPurify.sanitize(content, {
-                    USE_PROFILES: { html: true }
-                });
+            if (role === "assistant" && window.DOMPurify) {
+                messageContent.innerHTML = window.DOMPurify.sanitize(
+                    content,
+                    {
+                        USE_PROFILES: {
+                            html: true
+                        }
+                    }
+                );
             } else {
                 messageContent.textContent = content;
             }
@@ -438,7 +493,8 @@ If the user asks a short or vague question, infer that they may be asking about 
             const input = inputField.value.trim();
 
             if (!input) {
-                status.textContent = "Enter a question before submitting.";
+                status.textContent =
+                    "Enter a question before submitting.";
                 inputField.focus();
                 return;
             }
@@ -504,7 +560,8 @@ If the user asks a short or vague question, infer that they may be asking about 
                     "I could not connect to the assistant. Please try again or use the contact form.";
 
                 appendMessage("assistant", errorMessage);
-                status.textContent = "The assistant could not be reached.";
+                status.textContent =
+                    "The assistant could not be reached.";
             } finally {
                 requestInProgress = false;
                 submitButton.disabled = false;
