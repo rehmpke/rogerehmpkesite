@@ -3713,3 +3713,11 @@ body > section.space-top.space-bottom li {
     line-height: 1.2;
     margin: 0 0 0.75rem;
 }
+
+.home-hero__role {
+    margin: 0.15rem 0 0.85rem;
+    color: #315268;
+    font-size: clamp(0.95rem, 1.1vw, 1.08rem);
+    font-weight: 700;
+    line-height: 1.35;
+}
