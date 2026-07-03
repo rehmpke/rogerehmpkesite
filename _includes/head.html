@@ -6,6 +6,7 @@
     {% assign page_description = page.schema_description | default: page.ai_context | default: site.description | strip_newlines %}
     {% assign canonical_url = page.url | absolute_url %}
     {% assign page_og_type = page.og_type | default: "website" %}
+    {% assign robots_directive = page.robots | default: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" %}
     <link rel="preload" as="image" href="/assets/img/compass-background-light-original-source.webp">
     <link rel="preload" as="image" href="/assets/img/roger.webp" imagesrcset="/assets/img/roger.webp 1x" imagesizes="(max-width: 600px) 300px, 300px" fetchpriority="high" />
     <title>{{ page.title }}</title>
@@ -15,7 +16,7 @@
     {% else %}
     <meta name="keywords" content="Roger Ehmpke, higher education web strategy, higher ed digital governance, accessibility governance, WCAG, ADA Title II, Section 508, UX strategy, CMS architecture, content strategy, AI-ready content, GA4, web leadership" />
     {% endif %}
-    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="robots" content="{{ robots_directive }}">
     <meta name="copyright" content="© 2026 Roger Ehmpke. All rights reserved.">
     <meta name="license" content="All Rights Reserved">
     <meta name="referrer" content="strict-origin-when-cross-origin" />
