@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "description": "Modern Jekyll + Webpack build pipeline for rogerehmpke.com",
   "author": "Roger Ehmpke",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "NODE_ENV=production webpack --mode production",
