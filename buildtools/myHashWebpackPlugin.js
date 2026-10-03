@@ -16,13 +16,8 @@ class myHashWebpackPlugin{
       const outputPath = options.path;
       const fileName = options.fileName;
       const output = path.resolve(__dirname, outputPath, fileName);
-      fs.writeFile(output, content, (err) => {
-        if (err) {
-          console.error(err)
-          return
-        }
-      //file written successfully
-      })
+      // Finish writing before Webpack exits so Jekyll reads the current hash.
+      fs.writeFileSync(output, content);
    });
   }
 };
