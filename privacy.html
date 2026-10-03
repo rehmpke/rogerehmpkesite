@@ -1,10 +1,10 @@
 ---
 title: Privacy Policy — Roger Ehmpke
 og_title: Privacy Policy — Roger Ehmpke
-description: Privacy policy for RogerEhmpke.com covering contact form submissions, analytics, hosting and security logs, browser storage, AI assistant interactions, and third-party services.
-ai_context: Privacy Policy page for Roger Ehmpke's website, explaining how contact form submissions, analytics data, hosting logs, browser storage, AI assistant interactions, and third-party services are handled.
+description: Privacy policy for RogerEhmpke.com covering contact form submissions, Cloudflare Turnstile verification, analytics, hosting and security logs, browser storage, AI assistant interactions, and third-party services.
+ai_context: Privacy Policy page for Roger Ehmpke's website, explaining how contact form submissions, Cloudflare Turnstile verification, analytics data, hosting logs, browser storage, AI assistant interactions, and third-party services are handled.
 schema_type: "WebPage"
-schema_description: "Privacy policy for RogerEhmpke.com covering contact form submissions, Google Analytics, hosting and security logs, temporary browser storage, AI assistant processing through AWS and OpenAI, and third-party services."
+schema_description: "Privacy policy for RogerEhmpke.com covering contact form submissions, Cloudflare Turnstile verification, Google Analytics, hosting and security logs, temporary browser storage, AI assistant processing through AWS and OpenAI, and third-party services."
 schema_keywords:
 - "privacy policy"
 - "Google Analytics 4"
@@ -13,6 +13,7 @@ schema_keywords:
 - "AWS Lambda"
 - "AWS Amplify"
 - "contact form"
+- "Cloudflare Turnstile"
 - "sessionStorage"
 layout: page-layout
 ---
@@ -44,7 +45,7 @@ layout: page-layout
                 <time datetime="2025-04-30">April 30, 2025</time>
                 <span aria-hidden="true"> • </span>
                 <strong>Last updated:</strong>
-                <time datetime="2026-06-30">June 30, 2026</time>
+                <time datetime="2026-10-03">October 3, 2026</time>
             </p>
 
             <p style="margin: 0 auto 1.5rem; max-width: 760px;">
@@ -77,8 +78,21 @@ layout: page-layout
                         <strong>Contact form:</strong>
                         If you submit a message through the contact form, the information you provide—such
                         as your name, email address, and message—is used to respond to your inquiry.
+                        Submissions are processed through AWS API Gateway and Lambda for email delivery.
                         Contact information is not sold or used for marketing. It may be processed by the
                         technical services required to transmit, deliver, and respond to the message.
+                    </p>
+
+                    <p>
+                        <strong>Contact form verification:</strong>
+                        The contact form uses Cloudflare Turnstile to help distinguish human visitors from
+                        automated traffic and reduce spam. Cloudflare processes technical signals such as
+                        your IP address, browser information, connection characteristics, and the website
+                        origin. A verification token is sent with your contact-form submission to the
+                        AWS-hosted contact service. Cloudflare also uses these signals to improve its bot
+                        detection, as described in its
+                        <a href="https://www.cloudflare.com/turnstile-privacy-policy/"
+                            style="color: #004763; font-weight: 700;">Turnstile Privacy Addendum</a>.
                     </p>
 
                     <p>
@@ -213,6 +227,7 @@ layout: page-layout
                     <p>
                         Hosting, security, API, and diagnostic records are retained according to the
                         configurations and policies of the applicable AWS and technical services.
+                        Turnstile verification data is handled according to Cloudflare's policies.
                     </p>
 
                     <p>
@@ -260,7 +275,8 @@ layout: page-layout
                         </li>
                         <li>
                             <strong>AWS API Gateway and Lambda:</strong>
-                            Receive and process requests made through the site chat assistant.
+                            Receive and process contact-form submissions for email delivery and requests
+                            made through the site chat assistant.
                         </li>
                         <li>
                             <strong>OpenAI:</strong>
@@ -268,7 +284,11 @@ layout: page-layout
                             assistant.
                         </li>
                         <li>
-                            <strong>cdnjs and Cloudflare:</strong>
+                            <strong>Cloudflare Turnstile:</strong>
+                            Provides contact-form verification to help reduce automated submissions.
+                        </li>
+                        <li>
+                            <strong>cdnjs / Cloudflare CDN:</strong>
                             Deliver the DOMPurify library used to sanitize chat content.
                         </li>
                     </ul>
