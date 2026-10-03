@@ -112,7 +112,17 @@ This regenerates the site and serves it from _site/ while Webpack handles live a
 
 ### Contact Form
 
-The contact form is backed by a small AWS Lambda function. Submissions are handled server-side without a dedicated app server, keeping the architecture lightweight while still avoiding client-only email hacks.
+The contact form submits to AWS API Gateway, which invokes the `SendContactEmail` Lambda function. Submissions are handled server-side without a dedicated app server.
+
+Cloudflare Turnstile is integrated into the footer contact form to help reduce automated submissions. The browser requires a Turnstile token before submitting and sends it to the endpoint as `turnstileToken`. The widget resets after each submission attempt.
+
+Frontend integration:
+
+- `_includes/footer.html` — contact form and Turnstile widget
+- `_includes/scripts/vendor-cdn.html` — Cloudflare Turnstile script
+- `assets/js/src/contact.js` — form validation, token submission, and widget reset
+
+The Lambda handler and Cloudflare widget configuration are managed outside this repository. The handler must validate the token with Cloudflare's Siteverify API before processing a submission; the frontend widget alone does not enforce server-side protection. Keep the Turnstile secret key in the backend configuration, outside the browser and repository.
 
 ---
 
@@ -141,6 +151,8 @@ No manual S3 uploads are required.
 - **Custom Webpack Hash Plugin** — cache busting
 - **AWS Amplify** — CI/CD + hosting
 - **AWS Lambda** — serverless handler for contact form submissions
+- **AWS API Gateway** — contact form API endpoint
+- **Cloudflare Turnstile** — contact form bot protection widget
 
 ---
 
