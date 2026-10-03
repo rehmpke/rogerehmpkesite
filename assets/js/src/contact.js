@@ -1,54 +1,88 @@
 function contactMe() {
-  const form = document.querySelector("form");
+  const form = document.getElementById("contact");
+  if (!form) return;
+
+  const senderNameInput = document.getElementById("name");
+  const senderEmailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
+  const button = document.getElementById("contact-submit");
+  const resultText = document.getElementById("result-text");
+
+  if (
+    !senderNameInput ||
+    !senderEmailInput ||
+    !messageInput ||
+    !button ||
+    !resultText
+  ) {
+    return;
+  }
+
+  let sending = false;
+
   form.addEventListener("submit", async (event) => {
-    // prevent the form submit from refreshing the page
     event.preventDefault();
+    if (sending) return;
 
-    // Access form elements directly by their IDs
-    const senderNameInput = document.getElementById("name");
-    const senderEmailInput = document.getElementById("email");
-    const messageInput = document.getElementById("message");
+    const senderName = senderNameInput.value.trim();
+    const senderEmail = senderEmailInput.value.trim();
+    const message = messageInput.value.trim();
+    const tokenInput = form.querySelector(
+      '[name="cf-turnstile-response"]'
+    );
+    const turnstileToken = tokenInput ? tokenInput.value : "";
 
-    // Check if the inputs are found before accessing their values
-    if (senderNameInput && senderEmailInput && messageInput) {
-      const senderName = senderNameInput.value;
-      const senderEmail = senderEmailInput.value;
-      const message = messageInput.value;
+    if (!senderName || !senderEmail || !message) {
+      resultText.textContent =
+        "Please enter your name, email, and message.";
+      return;
+    }
 
-      // Use your API endpoint URL you copied from the previous step
-      const endpoint =
-        "https://f1gpiut934.execute-api.us-east-1.amazonaws.com/default/SendContactEmail";
+    if (!turnstileToken) {
+      resultText.textContent =
+        "Please wait for verification, then try sending again.";
+      return;
+    }
 
-      // We use JSON.stringify here so the data can be sent as a string via HTTP
-      const body = JSON.stringify({
-        senderName,
-        senderEmail,
-        message,
+    sending = true;
+    button.disabled = true;
+    resultText.textContent = "Sending…";
+
+    const endpoint =
+      "https://f1gpiut934.execute-api.us-east-1.amazonaws.com/default/SendContactEmail";
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        body: JSON.stringify({
+          senderName,
+          senderEmail,
+          message,
+          turnstileToken,
+        }),
       });
 
-      const requestOptions = {
-        method: "POST",
-        body,
-      };
+      const result = await response.json();
 
-      try {
-        const response = await fetch(endpoint, requestOptions);
-
-        if (!response.ok) {
-          throw new Error("Error in fetch");
-        }
-
-        const result = await response.json();
-
-        document.getElementById("result-text").innerText =
-          "Email sent successfully!";
-      } catch (error) {
-        console.error('An unknown error occurred:', error);
-        document.getElementById("result-text").innerText =
-          "An unknown error occurred.";
+      if (!response.ok) {
+        throw new Error(
+          result.message || "Unable to send your message."
+        );
       }
-    } else {
-      console.error('Form elements not found or undefined.');
+
+      resultText.textContent = "Email sent successfully!";
+      form.reset();
+    } catch (error) {
+      console.error("Contact form error:", error);
+      resultText.textContent =
+        "Unable to send your message. Your message is still here; please try again.";
+    } finally {
+      sending = false;
+      button.disabled = false;
+
+      if (window.turnstile) {
+        window.turnstile.reset("#contact-turnstile");
+      }
     }
   });
 }

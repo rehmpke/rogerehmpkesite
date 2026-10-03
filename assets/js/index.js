@@ -13,48 +13,62 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 function contactMe() {
-  const form = document.querySelector("form");
+  const form = document.getElementById("contact");
+  if (!form) return;
+  const senderNameInput = document.getElementById("name");
+  const senderEmailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
+  const button = document.getElementById("contact-submit");
+  const resultText = document.getElementById("result-text");
+  if (!senderNameInput || !senderEmailInput || !messageInput || !button || !resultText) {
+    return;
+  }
+  let sending = false;
   form.addEventListener("submit", async event => {
-    // prevent the form submit from refreshing the page
     event.preventDefault();
-
-    // Access form elements directly by their IDs
-    const senderNameInput = document.getElementById("name");
-    const senderEmailInput = document.getElementById("email");
-    const messageInput = document.getElementById("message");
-
-    // Check if the inputs are found before accessing their values
-    if (senderNameInput && senderEmailInput && messageInput) {
-      const senderName = senderNameInput.value;
-      const senderEmail = senderEmailInput.value;
-      const message = messageInput.value;
-
-      // Use your API endpoint URL you copied from the previous step
-      const endpoint = "https://f1gpiut934.execute-api.us-east-1.amazonaws.com/default/SendContactEmail";
-
-      // We use JSON.stringify here so the data can be sent as a string via HTTP
-      const body = JSON.stringify({
-        senderName,
-        senderEmail,
-        message
-      });
-      const requestOptions = {
+    if (sending) return;
+    const senderName = senderNameInput.value.trim();
+    const senderEmail = senderEmailInput.value.trim();
+    const message = messageInput.value.trim();
+    const tokenInput = form.querySelector('[name="cf-turnstile-response"]');
+    const turnstileToken = tokenInput ? tokenInput.value : "";
+    if (!senderName || !senderEmail || !message) {
+      resultText.textContent = "Please enter your name, email, and message.";
+      return;
+    }
+    if (!turnstileToken) {
+      resultText.textContent = "Please wait for verification, then try sending again.";
+      return;
+    }
+    sending = true;
+    button.disabled = true;
+    resultText.textContent = "Sending…";
+    const endpoint = "https://f1gpiut934.execute-api.us-east-1.amazonaws.com/default/SendContactEmail";
+    try {
+      const response = await fetch(endpoint, {
         method: "POST",
-        body
-      };
-      try {
-        const response = await fetch(endpoint, requestOptions);
-        if (!response.ok) {
-          throw new Error("Error in fetch");
-        }
-        const result = await response.json();
-        document.getElementById("result-text").innerText = "Email sent successfully!";
-      } catch (error) {
-        console.error('An unknown error occurred:', error);
-        document.getElementById("result-text").innerText = "An unknown error occurred.";
+        body: JSON.stringify({
+          senderName,
+          senderEmail,
+          message,
+          turnstileToken
+        })
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.message || "Unable to send your message.");
       }
-    } else {
-      console.error('Form elements not found or undefined.');
+      resultText.textContent = "Email sent successfully!";
+      form.reset();
+    } catch (error) {
+      console.error("Contact form error:", error);
+      resultText.textContent = "Unable to send your message. Your message is still here; please try again.";
+    } finally {
+      sending = false;
+      button.disabled = false;
+      if (window.turnstile) {
+        window.turnstile.reset("#contact-turnstile");
+      }
     }
   });
 }
@@ -143,17 +157,17 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	});
 /************************************************************************/
 /******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
+/******/ 	const __webpack_module_cache__ = {};
 /******/ 	
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		const cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
 /******/ 			return cachedModule.exports;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 		const module = __webpack_module_cache__[moduleId] = {
 /******/ 			// no module.id needed
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
@@ -162,7 +176,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// Execute the module function
 /******/ 		if (!(moduleId in __webpack_modules__)) {
 /******/ 			delete __webpack_module_cache__[moduleId];
-/******/ 			var e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 			const e = new Error("Cannot find module '" + moduleId + "'");
 /******/ 			e.code = 'MODULE_NOT_FOUND';
 /******/ 			throw e;
 /******/ 		}
@@ -174,35 +188,27 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
+/******/ 	// define getter/value functions for harmony exports
+/******/ 	__webpack_require__.d = (exports, definition) => {
+/******/ 		for(var key in definition) {
+/******/ 			if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 				Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 			}
-/******/ 		};
-/******/ 	})();
+/******/ 		}
+/******/ 	};
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
+/******/ 	__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop));
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = (exports) => {
+/******/ 		Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
+let __webpack_exports__ = {};
 // This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
 (() => {
 /*!********************************!*\
