@@ -234,13 +234,13 @@ permalink: /case-studies/accessible-campus-wayfinding-bridge/
             <section class="section-block">
                 <h3>The problem</h3>
                 <p>
-                    Kankakee Community College relied primarily on static PDF campus maps that were difficult to search, difficult to maintain, and challenging to use for visitors navigating campus destinations.
+                    KCC relied primarily on static PDF campus maps that were difficult to search and maintain, especially for visitors trying to find a destination.
                 </p>
                 <p>
-                    At the same time, the college was executing a major accessibility initiative tied to WCAG 2.1 AA readiness and broader digital accessibility goals. While a full physical wayfinding modernization effort was planned for 2027, the institution needed a practical interim solution that could improve navigation immediately without significant vendor cost or implementation complexity.
+                    The college needed better digital wayfinding during its WCAG 2.1 AA readiness work, ahead of planned physical wayfinding improvements in 2027.
                 </p>
                 <p>
-                    Commercial wayfinding solutions were evaluated, but the institution needed a cost-conscious approach that could be delivered quickly by a small internal team while supporting accessibility objectives.
+                    Commercial options were evaluated, but timing, cost, and small-team capacity favored an internally maintained bridge.
                 </p>
                 <div class="pull-quote">
                     The project turned a difficult PDF accessibility problem into a structured, searchable, internally maintainable wayfinding bridge.
@@ -250,10 +250,10 @@ permalink: /case-studies/accessible-campus-wayfinding-bridge/
             <section class="section-block">
                 <h3>My role</h3>
                 <p>
-                    I led the concept, product direction, accessibility framing, content structure, and front-end implementation for the internal bridge solution. The project developed incrementally over approximately three months while I continued supporting ongoing web governance, accessibility remediation, content management, analytics, and digital strategy responsibilities across the institution.
+                    I led the concept, product direction, accessibility approach, content structure, and React/Vite implementation. I built the application incrementally over approximately three months alongside ongoing web, analytics, governance, and accessibility responsibilities.
                 </p>
                 <p>
-                    The work evolved through research, prototyping, coordination with the Accessibility Program Coordination Group, student testing, stakeholder review, and iterative refinements. The goal was to support the college's accessibility program without adding unnecessary vendor cost or creating another hard-to-maintain system for a small team.
+                    Research, prototyping, coordination with the Accessibility Program Coordination Group, student testing, and stakeholder reviews guided the work.
                 </p>
             </section>
 
@@ -275,8 +275,8 @@ permalink: /case-studies/accessible-campus-wayfinding-bridge/
                 </div>
                 <div class="callout-bar">
                     <p style="margin: 0;">
-                        The deeper issue was that the old model treated wayfinding as document retrieval. Users needed a usable digital wayfinding system: searchable locations, plain-language arrival guidance, access information, text alternatives, and structured data that could be maintained over time.
-                    </p>
+                    Visitors needed searchable destinations, plain-language arrival guidance, access information, text alternatives, and structured location data that could be maintained over time.
+                </p>
                 </div>
             </section>
 
@@ -304,13 +304,13 @@ permalink: /case-studies/accessible-campus-wayfinding-bridge/
             <section class="section-block">
                 <h3>The solution</h3>
                 <p>
-                    I designed and developed a React/Vite campus wayfinding bridge that transformed static map information into a searchable, structured navigation system.
+                    The application combines interactive maps, directory browsing, and structured location guidance.
                 </p>
                 <p>
-                    The solution combined interactive map navigation, directory-based browsing, accessibility-informed content structure, and maintainable data management workflows. Administrative editing tools were included to support ongoing campus changes through JSON and CSV import/export workflows, allowing future updates without rebuilding the application.
+                    Administrative tools support JSON and CSV import/export so campus information can be updated without rebuilding the application.
                 </p>
                 <p>
-                    The system was intentionally designed as a bridge solution that could serve the college until larger campus wayfinding improvements are implemented.
+                    The bridge supports immediate needs ahead of the planned physical wayfinding improvements.
                 </p>
                 <div class="two-col">
                     <div class="quiet-card">
@@ -346,27 +346,27 @@ permalink: /case-studies/accessible-campus-wayfinding-bridge/
                     I led the product design and built the React/Vite application. My web developer adapted it for integration into KCC’s Jekyll and CloudCannon website. Vite-built JavaScript and CSS load the React interface directly into the Campus Maps page, alongside the college’s shared navigation, page layout, and footer.
                 </p>
                 <p>
-                    Visitors can reach the launched tool through the Campus Maps link in KCC’s global footer. This gives the wayfinding application a consistent entry point within the public website and connects the interactive experience to the existing publishing architecture.
+                    KCC’s global Campus Maps footer link gives visitors a consistent entry point to the live tool.
                 </p>
             </section>
 
             <section class="section-block">
-                <h3>The popup content became the accessibility layer</h3>
+                <h3>Location guidance</h3>
                 <p>
-                    Each marker was designed as a structured wayfinding record, not just a dot on a map. For example, a building entrance popup can explain the closest general parking, closest accessible parking, the recommended route from nearby lots, which entrance to use, where elevators and restrooms are located, how room ranges work by floor, and which student services are available in the building.
+                    Each marker holds a structured destination record. Entrance guidance can explain general and accessible parking, routes from nearby lots, which entrance to use, elevator and restroom locations, room ranges, and student services.
                 </p>
                 <p>
-                    That content matters because it gives users plain-language guidance that a static map image cannot easily provide. The map became more than a visual reference. It became a readable, searchable, maintainable layer of campus navigation information.
+                    Plain-language location records make navigation information readable and searchable alongside the visual map.
                 </p>
             </section>
 
             <section class="section-block">
                 <h3>Maintainable map management workflow</h3>
                 <p>
-                    Maintainability was a key part of the solution. The map can be updated when room locations, services, entrances, or map images change. On the editing side, markers can be clicked or dragged into position, and each location can be edited through a feature editor tied to the directory.
+                    The editing interface supports room, service, entrance, and map-image changes. Editors can click or drag markers and update records through a feature editor connected to the directory.
                 </p>
                 <p>
-                    The system can save and export the location data as JSON or CSV so the information can be updated, imported, exported, and integrated into the main website by the web developer. This reduced the risk of creating a fragile one-off prototype and made the project more realistic for a small team to support.
+                    JSON and CSV export supports updates, import, and handoff for website integration. This gives the small web team a repeatable way to maintain campus information.
                 </p>
                 <div class="proof-grid">
                     <div class="proof-card">
@@ -387,27 +387,27 @@ permalink: /case-studies/accessible-campus-wayfinding-bridge/
             <section class="section-block">
                 <h3>Research, testing, and iteration</h3>
                 <p>
-                    I reviewed how other accessibility-focused community colleges handled campus map access and wayfinding information. That helped confirm that the map needed to be easy to find, not just easier to use. The launched tool is linked from the global footer through Campus Maps, giving visitors a consistent route to the map across the main site.
+                    I reviewed how accessibility-focused community colleges handled campus maps, including how users discover the tool. The live KCC map is available from the global footer.
                 </p>
                 <p>
-                    I also tested the prototype with five students and reviewed it with stakeholders connected to accessibility, facilities, web, and campus operations. Feedback helped validate the direction and led to practical refinements around interface behavior, labels, guidance, and location content.
+                    Five students tested the prototype, and accessibility, facilities, web, and campus stakeholders reviewed it. Feedback led to refinements in interface behavior, labels, guidance, and location content.
                 </p>
             </section>
 
             <section class="section-block">
                 <h3>Results</h3>
                 <p>
-                    Student testing with five students, stakeholder review sessions, Accessibility Program Coordination Group feedback, and iterative refinements informed the final experience. The resulting system achieved Lighthouse scores of 100 across all categories and was reviewed against WCAG 2.1 AA expectations using keyboard testing and WAVE accessibility evaluation.
+                    The system achieved Lighthouse scores of 100 across all categories and was reviewed against WCAG 2.1 AA expectations using keyboard testing and WAVE.
                 </p>
                 <p>
-                    I treated automated tools as screening tools, not as the only measure of accessibility. The more important improvement was architectural: moving campus wayfinding information out of static PDFs and into searchable content, structured destination records, visible text alternatives, keyboard-aware patterns, and maintainable data.
+                    Automated scores are screening results, not a complete measure of accessibility. Manual review and student feedback also informed the experience.
                 </p>
             </section>
 
             <section class="section-block">
                 <h3>Outcomes</h3>
                 <p>
-                    The project delivered a launched, tested, internally maintainable campus wayfinding bridge that supports KCC’s accessibility program while reducing dependence on static PDF maps. It also avoided a premature vendor commitment during a period when the college needed a practical solution quickly and had longer-term physical wayfinding work planned for 2027.
+                    The launched tool supports KCC’s accessibility program and reduces dependence on static PDF maps. The internal approach avoided a premature vendor commitment while preserving capacity for other accessibility work.
                 </p>
                 <ul class="outcome-list">
                     <li>Reduced reliance on static PDF-only campus navigation</li>
@@ -424,7 +424,7 @@ permalink: /case-studies/accessible-campus-wayfinding-bridge/
             <section class="section-block">
                 <h3>Next improvements</h3>
                 <p>
-                    With the tool live, the next step is to watch how users search, where they get stuck, and which destinations matter most. Future improvements could include additional usability testing, screen reader review with real users, analytics on searches and failed searches, continued room/location cleanup with building managers, and refinements after the 2027 physical wayfinding work.
+                    Next steps include search and failed-search analytics, further usability and screen-reader testing with real users, location review with building managers, and refinements after the planned 2027 physical wayfinding work.
                 </p>
             </section>
 
