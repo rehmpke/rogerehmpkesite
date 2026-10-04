@@ -12,6 +12,6 @@ skill_labels:
   - label: Content Migration
   - label: Project Management
 case_study_url: "/case-studies/kcc-intranet-recovery-workflow-modernization/"
-case_description: "Managed a cross-department intranet recovery and platform transition as KCC moved from a retiring Microsoft/SharePoint environment to SharePoint Online and Ellucian Experience. Migrated critical content, built Power Automate workflows, supported new publishing sites, trained users, and delivered before the legacy system disappeared."
-value_line: "Shows project management, technical adaptation, workflow automation, and deadline delivery."
+case_description: "Helped lead a replacement for KCC’s retiring portal, preserving critical content and clarifying ownership before the legacy system disappeared. Coordinated content migration, publishing workflows, and training across departments; the new model remains in use years after launch."
+value_line: "Connected student and employee needs to distinct experiences and sustainable publishing workflows."
 ---
