@@ -35,6 +35,14 @@
     .site-project-card--system:nth-child(3) h3 { font-size: clamp(1.65rem, 2.2vw, 2rem); }
     #specialties .site-card-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
 }
+/* One portrait panel, with the image crossing its upper edge. These overrides
+   replace the legacy component's important declarations without affecting other panels. */
+.site-hero__aside--story { padding-top: 1.25rem; }
+.site-hero-anchor { padding: 0 !important; }
+.site-hero-anchor::before { display: none; }
+.site-hero-anchor__image { margin: -1.25rem 1.25rem 0 auto !important; border-width: 3px !important; box-shadow: 0 10px 24px rgba(7,31,53,.12) !important; }
+.site-hero-anchor__panel { background: transparent !important; border: 0 !important; border-radius: 0 !important; padding: 1.25rem 1.5rem 1.6rem !important; }
+.site-supporting-work__cards { display: grid; gap: 1.25rem; }
 /* Shared case-study layout: preserve highlights and comparison panels; let prose breathe. */
 .case-study-page { background: var(--editorial-paper); }
 .case-study-page h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; letter-spacing: -.03em; max-width: 28ch; }

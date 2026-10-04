@@ -2,7 +2,7 @@
 
 Branch: `design/editorial-refinement`. This is a review branch; it is not merged into `master`.
 
-The branch preserves the original graphic identity: compass textures, portrait framing, project artwork, varied project cards (wide governance and portal features, paired wayfinding and public-web projects), warm accents, icons, and the process route. Refinements are selective: plainer headings and tone, quieter supporting labels, open skills and recommendation layouts, and less boxing around ordinary case-study prose. Metric highlights, project snapshots, and decision comparisons retain distinct panel treatments. The four case studies retain their full text, metrics, links, and collaboration credit. No new dependencies are required.
+The branch preserves the original graphic identity: compass textures, portrait framing, project artwork, varied project cards (wide governance and portal features, paired wayfinding and public-web projects), warm accents, icons, and the process route. The introduction names web strategy, digital experience, accessibility governance, and platform modernization alongside work with teams and institutional leaders. The portrait overlaps one panel, and the earlier-work cards have explicit spacing. Refinements are selective: plainer headings and tone, quieter supporting labels, open skills and recommendation layouts, and less boxing around ordinary case-study prose. Metric highlights, project snapshots, and decision comparisons retain distinct panel treatments. The four case studies retain their full text, metrics, links, and collaboration credit. No new dependencies are required.
 
 From your existing local checkout, with local changes saved first:
 
