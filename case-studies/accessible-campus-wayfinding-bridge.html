@@ -2,17 +2,17 @@
 title: "Roger Ehmpke - Accessible Campus Wayfinding Bridge"
 og_title: "Roger Ehmpke - Accessible Campus Wayfinding Bridge"
 og_type: article
-ai_context: Case study about Roger Ehmpke building an internal React and Vite accessible campus wayfinding bridge for Kankakee Community College to reduce reliance on static PDF maps, support WCAG 2.1 AA readiness and POUR accessibility principles, avoid a premature vendor commitment, and provide a maintainable bridge ahead of planned 2027 physical wayfinding work.
+ai_context: Case study about Roger Ehmpke building a launched React and Vite campus wayfinding application integrated into Kankakee Community College's Jekyll and CloudCannon website to reduce reliance on static PDF maps, support WCAG 2.1 AA readiness and POUR accessibility principles, avoid a premature vendor commitment, and provide a maintainable bridge ahead of planned 2027 physical wayfinding work.
 schema_type: "WebPage"
 schema_main_entity_type: "CreativeWork"
 schema_main_entity_id: "#creativework"
 schema_project_name: "Accessible Campus Wayfinding Bridge"
-schema_description: "Case study about Roger Ehmpke building an internal React and Vite accessible campus wayfinding bridge for Kankakee Community College to reduce reliance on static PDF maps, support WCAG 2.1 AA readiness and POUR accessibility principles, avoid a premature vendor commitment, and provide a maintainable bridge ahead of planned 2027 physical wayfinding work."
-schema_outcome: "Built an internal, maintainable campus wayfinding bridge with searchable destinations, structured location data, accessible direction modes, text alternatives, user testing, stakeholder review, and JSON/CSV export workflows."
+schema_description: "Case study about Roger Ehmpke building a launched React and Vite campus wayfinding application integrated into Kankakee Community College's Jekyll and CloudCannon website to reduce reliance on static PDF maps, support WCAG 2.1 AA readiness and POUR accessibility principles, avoid a premature vendor commitment, and provide a maintainable bridge ahead of planned 2027 physical wayfinding work."
+schema_outcome: "Delivered a live React/Vite wayfinding application within KCC's Jekyll/CloudCannon website, linked from its footer, with searchable destinations, structured location data, accessible direction modes, text alternatives, user testing, stakeholder review, and JSON/CSV export workflows."
 schema_about_primary: "Accessible campus wayfinding"
 schema_about_topics: 
   - "React application development"
-  - "Vite prototyping"
+  - "Vite production integration"
   - "WCAG 2.1 AA"
   - "POUR accessibility principles"
   - "accessible maps"
@@ -22,6 +22,8 @@ schema_about_topics:
 schema_keywords: 
   - "React"
   - "Vite"
+  - "Jekyll"
+  - "CloudCannon"
   - "accessible wayfinding"
   - "WCAG 2.1 AA"
   - "POUR"
@@ -205,8 +207,10 @@ permalink: /case-studies/accessible-campus-wayfinding-bridge/
             <p class="eyebrow">Case Study</p>
             <h2>Accessible Campus Wayfinding Bridge</h2>
             <p class="lede">
-                Designed and built a React/Vite campus wayfinding platform in approximately three months that moved KCC away from relying only on static PDF maps and toward a searchable, structured, accessibility-informed wayfinding experience that a small team could maintain.
+                Designed and built a React/Vite campus wayfinding application in approximately three months. The launched tool is integrated into KCC’s Jekyll and CloudCannon website, giving visitors searchable destinations, structured location guidance, and accessibility-informed navigation that a small team can maintain.
             </p>
+
+            <p><a href="https://www.kcc.edu/about/visitor-information/maps/" style="color: #004763; font-weight: 700;">View the live KCC campus map</a></p>
 
             <div class="metric-strip" aria-label="Project highlights">
                 <div><strong>3 Months</strong><span>Incremental Build</span></div>
@@ -222,7 +226,8 @@ permalink: /case-studies/accessible-campus-wayfinding-bridge/
                 <div><strong>Context</strong>Small web team supporting a major accessibility program push and WCAG 2.1 AA readiness work</div>
                 <div><strong>Bridge need</strong>Digital wayfinding improvement ahead of planned 2027 physical wayfinding work</div>
                 <div><strong>Development</strong>Built incrementally over approximately three months while supporting ongoing web, accessibility, content, and governance work</div>
-                <div><strong>Tools</strong>React, Vite, Leaflet-style map interaction, JSON/CSV workflows, Lighthouse, WAVE</div>
+                <div><strong>Status</strong>Launched on kcc.edu and linked from the site footer</div>
+                <div><strong>Tools</strong>React, Vite, Jekyll, CloudCannon, Leaflet-style map interaction, JSON/CSV workflows, Lighthouse, WAVE</div>
                 <div><strong>Validation</strong>Student testing with five students, stakeholder review, accessibility group coordination, and iterative refinements</div>
             </div>
 
@@ -336,6 +341,16 @@ permalink: /case-studies/accessible-campus-wayfinding-bridge/
             </section>
 
             <section class="section-block">
+                <h3>Integration into the public website</h3>
+                <p>
+                    The application runs within KCC’s existing Jekyll and CloudCannon website. Vite-built JavaScript and CSS load the React interface directly into the Campus Maps page, alongside the college’s shared navigation, page layout, and footer.
+                </p>
+                <p>
+                    Visitors can reach the launched tool through the Campus Maps link in KCC’s global footer. This gives the wayfinding application a consistent entry point within the public website and connects the interactive experience to the existing publishing architecture.
+                </p>
+            </section>
+
+            <section class="section-block">
                 <h3>The popup content became the accessibility layer</h3>
                 <p>
                     Each marker was designed as a structured wayfinding record, not just a dot on a map. For example, a building entrance popup can explain the closest general parking, closest accessible parking, the recommended route from nearby lots, which entrance to use, where elevators and restrooms are located, how room ranges work by floor, and which student services are available in the building.
@@ -372,7 +387,7 @@ permalink: /case-studies/accessible-campus-wayfinding-bridge/
             <section class="section-block">
                 <h3>Research, testing, and iteration</h3>
                 <p>
-                    I reviewed how other accessibility-focused community colleges handled campus map access and wayfinding information. That helped confirm that the map needed to be easy to find, not just easier to use. One recommendation was to add a direct Campus Map link in the global footer so the tool is reachable from every page of the main site.
+                    I reviewed how other accessibility-focused community colleges handled campus map access and wayfinding information. That helped confirm that the map needed to be easy to find, not just easier to use. The launched tool is linked from the global footer through Campus Maps, giving visitors a consistent route to the map across the main site.
                 </p>
                 <p>
                     I also tested the prototype with five students and reviewed it with stakeholders connected to accessibility, facilities, web, and campus operations. Feedback helped validate the direction and led to practical refinements around interface behavior, labels, guidance, and location content.
@@ -392,10 +407,12 @@ permalink: /case-studies/accessible-campus-wayfinding-bridge/
             <section class="section-block">
                 <h3>Outcomes</h3>
                 <p>
-                    The project created a tested, internally maintainable campus wayfinding bridge that supports KCC’s accessibility program while reducing dependence on static PDF maps. It also avoided a premature vendor commitment during a period when the college needed a practical solution quickly and had longer-term physical wayfinding work planned for 2027.
+                    The project delivered a launched, tested, internally maintainable campus wayfinding bridge that supports KCC’s accessibility program while reducing dependence on static PDF maps. It also avoided a premature vendor commitment during a period when the college needed a practical solution quickly and had longer-term physical wayfinding work planned for 2027.
                 </p>
                 <ul class="outcome-list">
                     <li>Reduced reliance on static PDF-only campus navigation</li>
+                    <li>Launched the React/Vite application within KCC’s Jekyll and CloudCannon website</li>
+                    <li>Provided access through the global Campus Maps footer link</li>
                     <li>Created searchable campus destinations and services</li>
                     <li>Added keyboard-aware navigation patterns and visible guidance</li>
                     <li>Established a maintainable JSON/CSV content management process</li>
@@ -407,7 +424,7 @@ permalink: /case-studies/accessible-campus-wayfinding-bridge/
             <section class="section-block">
                 <h3>Next improvements</h3>
                 <p>
-                    After launch, the strongest next step is to watch how users search, where they get stuck, and which destinations matter most. Future improvements could include additional usability testing, screen reader review with real users, analytics on searches and failed searches, continued room/location cleanup with building managers, and refinements after the 2027 physical wayfinding work.
+                    With the tool live, the next step is to watch how users search, where they get stuck, and which destinations matter most. Future improvements could include additional usability testing, screen reader review with real users, analytics on searches and failed searches, continued room/location cleanup with building managers, and refinements after the 2027 physical wayfinding work.
                 </p>
             </section>
 

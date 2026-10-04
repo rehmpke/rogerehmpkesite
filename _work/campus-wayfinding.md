@@ -12,6 +12,6 @@ skill_labels:
   - label: Wayfinding
   - label: Accessible UX
 case_study_url: "/case-studies/accessible-campus-wayfinding-bridge/"
-case_description: "Designed and built an internal React/Vite campus wayfinding platform over approximately three months to reduce reliance on static PDF maps, support WCAG-informed access, add searchable structured location data, and create a maintainable JSON/CSV workflow ahead of planned 2027 physical wayfinding work."
-value_line: "Shows how accessibility strategy, product thinking, quick prototyping, testing, and maintainable data workflows can solve a real institutional gap."
+case_description: "Designed and built a React/Vite campus wayfinding application over approximately three months, now live within KCC’s Jekyll and CloudCannon website and linked from its footer. The tool provides searchable destinations, accessibility-informed guidance, and maintainable JSON/CSV location workflows ahead of planned 2027 physical wayfinding work."
+value_line: "Shows how accessibility strategy, product thinking, testing, production integration, and maintainable data workflows can solve a real institutional gap."
 ---
