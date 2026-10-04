@@ -79,3 +79,7 @@
     .case-study-page .two-col, .case-study-page .snapshot { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* A quieter ending lets the contact form and links carry the footer. */
+.site-footer { background: #071f35; }
+.site-footer__texture { opacity: .04; }
