@@ -2,7 +2,7 @@
     <div class="site-shell">
         <header class="site-section-header site-section-header--center">
             <p class="site-section-label">Strategic Initiatives</p>
-            <h2 id="work-title">Proof through systems, not&nbsp;slogans</h2>
+            <h2 id="work-title">Selected projects</h2>
             <p>
                 A selection of institutional digital initiatives where I have led accessibility governance,
                 cost-conscious platform decisions, public web architecture, intranet recovery, workflow automation,
@@ -20,26 +20,26 @@
                 </div>
 
                 {% if work.visual_key %}
-                <div class="site-project-card__visual site-project-card__visual--{{ work.visual_key }}" aria-hidden="true">
+                <div class="site-project-card__visual site-project-card__visual--{{ work.visual_key }}">
                     {% case work.visual_key %}
                     {% when "accessibility" %}
-                    <div class="site-visual-diagram site-visual-diagram--governance">
+                    <div class="site-visual-diagram site-visual-diagram--governance" aria-label="Accessibility program components">
                         <span>Intake</span>
                         <span>Evidence</span>
                         <span>Training</span>
                         <span>Review</span>
                     </div>
                     {% when "wayfinding" %}
-                    <div class="site-visual-map">
-                        <span class="site-visual-map__route"></span>
-                        <span class="site-visual-map__pin site-visual-map__pin--one"></span>
-                        <span class="site-visual-map__pin site-visual-map__pin--two"></span>
-                        <span class="site-visual-map__pin site-visual-map__pin--three"></span>
+                    <div class="site-project-evidence">
+                        <p class="site-card-label">Wayfinding approach</p>
+                        <p>Static PDF maps</p>
+                        <span class="site-evidence-arrow" aria-hidden="true">↓</span>
+                        <p><strong>Searchable destinations</strong><br>Location and access guidance<br>Maintainable JSON / CSV records</p>
                     </div>
                     {% when "publicweb" %}
-                    <img src="/assets/img/kcc-screen.webp" width="720" height="405" alt="" loading="lazy" decoding="async">
+                    <img src="/assets/img/kcc-screen.webp" width="720" height="405" alt="KCC public website" loading="lazy" decoding="async">
                     {% when "intranet" %}
-                    <div class="site-visual-flow">
+                    <div class="site-visual-flow" aria-label="Platforms and publishing tools in the portal environment">
                         <span>SharePoint Online</span>
                         <span>Power Automate</span>
                         <span>Update / Newsroom</span>
@@ -76,7 +76,7 @@
         <div class="site-supporting-work" aria-labelledby="supporting-work-title">
             <div>
                 <p class="site-section-label">Additional Experience Across Sectors</p>
-                <h3 id="supporting-work-title">Earlier work, same operating principles</h3>
+                <h3 id="supporting-work-title">Earlier work across sectors</h3>
                 <p>
                     Earlier projects across local government, regional development, nonprofit, and small-business contexts
                     shaped the same patterns I use today: clearer architecture, maintainable CMS workflows,
