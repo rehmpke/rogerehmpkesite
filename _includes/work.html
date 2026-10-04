@@ -13,7 +13,7 @@
         <div class="site-project-grid site-project-grid--systems">
             {% assign featured_work = site.work | where: "featured", true | sort: "order" %}
             {% for work in featured_work %}
-            <article class="site-project-card site-project-card--system{% if work.visual_key == "wayfinding" %} site-project-card--wayfinding-study{% endif %}">
+            <article class="site-project-card site-project-card--system site-project-card--{{ work.visual_key }}{% if work.visual_key == "wayfinding" %} site-project-card--wayfinding-study{% endif %}">
                 <div class="site-project-card__topline">
                     <span class="site-project-card__mark" aria-hidden="true">{{ work.marker }}</span>
                     <span class="site-card-label">{{ work.card_label | default: "Strategic Initiative" }}</span>
@@ -24,10 +24,10 @@
                     {% case work.visual_key %}
                     {% when "accessibility" %}
                     <div class="site-visual-diagram site-visual-diagram--governance">
-                        <span>Intake</span>
-                        <span>Evidence</span>
-                        <span>Training</span>
-                        <span>Review</span>
+                        <span><b>01</b>Intake</span>
+                        <span><b>02</b>Evidence</span>
+                        <span><b>03</b>Training</span>
+                        <span><b>04</b>Review</span>
                     </div>
                     {% when "wayfinding" %}
                     <div class="site-wayfinding-evidence">
@@ -38,7 +38,13 @@
                         <span class="site-wayfinding-evidence__caption">Campus search, destinations &amp; access guidance</span>
                     </div>
                     {% when "publicweb" %}
-                    <img src="/assets/img/kcc-screen.webp" width="720" height="405" alt="" loading="lazy" decoding="async">
+                    <div class="site-publicweb-evidence">
+                        <span class="site-publicweb-evidence__label">Public website · kcc.edu</span>
+                        <div class="site-publicweb-evidence__screen">
+                            <img src="/assets/img/kcc-publicweb-live.jpg" width="1348" height="926" alt="" loading="lazy" decoding="async">
+                        </div>
+                        <span class="site-publicweb-evidence__caption">Institutional architecture in daily use</span>
+                    </div>
                     {% when "intranet" %}
                     <div class="site-visual-flow">
                         <span>SharePoint Online</span>
