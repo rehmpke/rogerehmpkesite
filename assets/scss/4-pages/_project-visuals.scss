@@ -1,0 +1,89 @@
+// Extend the visual study through project-specific forms, with quiet prose areas.
+.site-project-card--accessibility {
+    border-radius: 28px 3px 3px 3px;
+    &::before { background: #007b79; }
+    .site-project-card__mark { background: #006460; color: white; border: 0; }
+    .site-project-card__visual--accessibility {
+        background: #005c59;
+        &::before { display: none; }
+        &::after { opacity: .09; }
+    }
+    .site-visual-diagram--governance {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 1.5rem clamp(1.25rem, 3vw, 2rem);
+        counter-reset: none;
+        span {
+            justify-content: flex-start;
+            gap: 1rem;
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid rgba(255,255,255,.3);
+            border-radius: 0;
+            min-height: 60px;
+            text-align: left;
+            font-size: 1rem;
+            padding: .65rem 0;
+            &:last-child { border-bottom: 0; }
+        }
+        b { font-family: 'Roboto Slab', Georgia, serif; color: #a6e7da; font-size: 1.5rem; font-weight: 400; }
+    }
+}
+.site-project-card--publicweb {
+    border-radius: 3px 3px 28px 3px;
+    background: #fffaf3;
+    &::before { background: #a8472d; }
+    .site-project-card__mark { background: #963e25; color: white; border: 0; border-radius: 3px; }
+    .site-project-card__visual--publicweb {
+        height: auto;
+        background: #eddac2;
+        border: 0;
+        padding: 1.6rem clamp(1.2rem, 3vw, 2rem) 1.35rem;
+        &::before, &::after { display: none; }
+    }
+    .site-publicweb-evidence__label { display: block; font-size: .78rem; font-weight: 700; color: #66371f; margin-bottom: .8rem; }
+    .site-publicweb-evidence__screen {
+        border: 5px solid #fff;
+        background: #fff;
+        margin-left: 9px;
+        box-shadow: -9px 9px 0 #963e25;
+        img { height: auto; width: 100%; object-fit: contain; opacity: 1; }
+    }
+    .site-publicweb-evidence__caption { display: block; margin-top: 1.3rem; font-size: .78rem; color: #66371f; line-height: 1.5; }
+}
+.site-project-card--intranet {
+    border-radius: 3px 3px 3px 28px;
+    &::before { background: #6573ba; }
+    .site-project-card__mark { background: #354573; color: white; border: 0; border-radius: 3px; }
+    .site-project-card__visual--intranet {
+        background: #263450;
+        &::before {
+            inset: 0; height: auto; transform: none; border: 0;
+            background: repeating-linear-gradient(90deg, transparent 0 39px, rgba(255,255,255,.05) 39px 40px);
+        }
+        &::after { display: none; }
+    }
+    .site-visual-flow {
+        gap: .8rem;
+        padding: 1.75rem;
+        span {
+            background: #eef0fc;
+            border: 0;
+            border-left: 4px solid #a7b5f4;
+            color: #263450;
+            border-radius: 2px;
+            padding: .8rem 1rem;
+            min-height: 48px;
+            font-weight: 600;
+            &:nth-child(even) { margin-left: 1rem; }
+            &:not(:last-child)::after { content: ''; }
+        }
+    }
+}
+@media (max-width: 899px) {
+    .site-project-card--accessibility .site-project-card__visual--accessibility,
+    .site-project-card--intranet .site-project-card__visual--intranet { height: auto; }
+}
+@media (max-width: 599px) {
+    .site-project-card--publicweb .site-project-card__visual--publicweb { padding: 1.25rem 1rem; }
+}
