@@ -1,0 +1,54 @@
+// One-project visual study: actual product imagery, copper accent, varied form.
+.site-project-card--wayfinding-study {
+    border-radius: 3px 36px 3px 3px;
+    border-color: #b6a392;
+    background: #fffaf3;
+
+    &::before { background: #a8472d; height: 5px; }
+    .site-project-card__mark { background: #963e25; color: #fff; border: 0; border-radius: 3px; }
+    .site-card-label { color: #763521; }
+    .site-project-card__visual--wayfinding {
+        height: auto;
+        margin-top: 1.15rem;
+        padding: 1.6rem clamp(1.2rem, 3vw, 2rem) 1.35rem;
+        background: #193c43;
+        border: 0;
+        &::before {
+            inset: 0;
+            height: auto;
+            border: 0;
+            transform: none;
+            background: repeating-linear-gradient(120deg, transparent 0 35px, rgba(255,255,255,.06) 35px 36px);
+        }
+        &::after { display: none; }
+    }
+    .site-wayfinding-evidence__label {
+        display: inline-block;
+        margin: 0 0 .7rem;
+        padding: .35rem .7rem;
+        background: #f0b18c;
+        color: #392319;
+        font-size: .78rem;
+        font-weight: 700;
+        letter-spacing: .035em;
+    }
+    .site-wayfinding-evidence__screen {
+        background: #fff;
+        border: 5px solid #fff;
+        border-radius: 2px;
+        box-shadow: 9px 9px 0 #a8472d;
+        margin-right: 9px;
+        img { width: 100%; height: auto; object-fit: contain; opacity: 1; }
+    }
+    .site-wayfinding-evidence__caption {
+        display: block;
+        color: #f9e7d6;
+        font-size: .78rem;
+        line-height: 1.5;
+        margin-top: 1.25rem;
+    }
+    .site-project-card__value { border-left-color: #a8472d; }
+}
+@media (max-width: 599px) {
+    .site-project-card--wayfinding-study .site-project-card__visual--wayfinding { padding: 1.25rem 1rem; }
+}

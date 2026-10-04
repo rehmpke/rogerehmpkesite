@@ -13,7 +13,7 @@
         <div class="site-project-grid site-project-grid--systems">
             {% assign featured_work = site.work | where: "featured", true | sort: "order" %}
             {% for work in featured_work %}
-            <article class="site-project-card site-project-card--system">
+            <article class="site-project-card site-project-card--system{% if work.visual_key == "wayfinding" %} site-project-card--wayfinding-study{% endif %}">
                 <div class="site-project-card__topline">
                     <span class="site-project-card__mark" aria-hidden="true">{{ work.marker }}</span>
                     <span class="site-card-label">{{ work.card_label | default: "Strategic Initiative" }}</span>
@@ -30,11 +30,12 @@
                         <span>Review</span>
                     </div>
                     {% when "wayfinding" %}
-                    <div class="site-visual-map">
-                        <span class="site-visual-map__route"></span>
-                        <span class="site-visual-map__pin site-visual-map__pin--one"></span>
-                        <span class="site-visual-map__pin site-visual-map__pin--two"></span>
-                        <span class="site-visual-map__pin site-visual-map__pin--three"></span>
+                    <div class="site-wayfinding-evidence">
+                        <span class="site-wayfinding-evidence__label">Live on kcc.edu</span>
+                        <div class="site-wayfinding-evidence__screen">
+                            <img src="/assets/img/wayfinding-live.jpg" width="1049" height="936" alt="" loading="lazy" decoding="async">
+                        </div>
+                        <span class="site-wayfinding-evidence__caption">Campus search, destinations &amp; access guidance</span>
                     </div>
                     {% when "publicweb" %}
                     <img src="/assets/img/kcc-screen.webp" width="720" height="405" alt="" loading="lazy" decoding="async">
