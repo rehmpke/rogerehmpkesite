@@ -83,3 +83,8 @@
 /* A quieter ending lets the contact form and links carry the footer. */
 .site-footer { background: #071f35; }
 .site-footer__texture { opacity: .04; }
+
+/* Direct paths to the evidence without adding another panel. */
+.case-study-jumps { display: flex; flex-wrap: wrap; gap: .65rem 1.5rem; margin: 1.4rem 0 1.8rem; }
+.case-study-jumps a { color: #004763; font-size: .95rem; font-weight: 600; text-decoration: underline; text-underline-offset: .2em; }
+.case-study-page h3[id] { scroll-margin-top: 1.5rem; }
