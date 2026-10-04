@@ -1,5 +1,5 @@
 ---
-specialty_title: "AI & Automation Readiness"
+specialty_title: "AI Governance & Workflows"
 order: 6
-specialty_paragraph: "Ethical adoption of AI tools to support accessibility, governance, and operational efficiency."
+specialty_paragraph: "AI committee participation, policy discussions, and responsible implementation, alongside practical AI and automation workflows supporting accessibility and operational efficiency."
 ---
