@@ -157,3 +157,20 @@
     .case-study-page .metric-strip div { flex-basis: 45%; border-right: 0; text-align: left; }
     .case-index-body { padding: 1.25rem; }
 }
+
+/* Continuous reading, with disclosure reserved for supporting inventories. */
+.case-study-page p { max-width: 68ch; }
+.case-study-page .case-feature-band h4 { margin-top: 1.8rem; font-size: 1.1rem; }
+.case-detail { margin-top: 1.25rem; border-block: 1px solid #bac8c1; padding: .25rem 0; }
+.case-detail summary { color: #004763; cursor: pointer; padding: .9rem .25rem; font-weight: 650; }
+.case-detail[open] { padding-bottom: 1rem; }
+.case-detail summary:focus-visible, .evidence-enlarge:focus-visible,
+.evidence-viewer__close:focus-visible { outline: 3px solid #a84d35; outline-offset: 4px; }
+.evidence-enlarge, .evidence-viewer__close { display: inline-block; min-height: 44px; padding: .6rem 1rem; border: 1px solid #647e80; border-radius: 4px; background: #fffaf1; color: #004763; font: inherit; font-size: .95rem; font-weight: 650; cursor: pointer; }
+.evidence-enlarge { margin-top: 1rem; }
+.evidence-viewer { width: min(1200px, calc(100vw - 2rem)); max-width: calc(100vw - 2rem); max-height: calc(100dvh - 2rem); box-sizing: border-box; overflow: auto; padding: 1.25rem; border: 0; border-radius: 3px 24px 3px 3px; background: #fffaf1; color: #17343d; }
+.evidence-viewer::backdrop { background: rgba(7,31,53,.8); }
+.evidence-viewer__close { display: block; margin: 0 0 1rem auto; }
+.evidence-viewer img { display: block; width: 100%; height: auto; }
+.evidence-viewer p { margin: 1rem 0 0; max-width: 75ch; line-height: 1.6; }
+@media print { .case-detail > * { display: block !important; } .evidence-enlarge, .evidence-viewer { display: none !important; } }
