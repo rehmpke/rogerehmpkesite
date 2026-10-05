@@ -3809,11 +3809,15 @@ body > section.space-top.space-bottom li {
         font-size: 0.95rem;
     }
 }
-/* Background leads into the approach instead of leaving an empty column. */
-#about .site-about-grid { grid-template-columns: 1fr; gap: 2rem; }
-#about .site-copy-card { background: transparent; border: 0; border-radius: 0; box-shadow: none; padding: .5rem 0; max-width: 72ch; margin-inline: auto; }
+/* About uses an asymmetric composition without changing other site grids. */
+#about .site-about-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.75fr); gap: 2rem; align-items: center; }
+#about .site-copy-card { background: transparent; border: 0; border-left: 3px solid #b69768; border-radius: 0; box-shadow: none; padding: .5rem 0 .5rem 1.4rem; max-width: none; margin: 0; }
 #about .site-dark-card { width: 100%; box-sizing: border-box; }
 #about .site-dark-card > p, #about .site-dark-card h3 { max-width: 68ch; }
 #about .site-check-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.5rem; }
-#about .site-check-list li { margin: 0; }
+#about .site-check-list li { margin: 0; padding: 1rem 0 0; border: 0; border-top: 1px solid rgba(255,255,255,.28); border-radius: 0; background: transparent; box-shadow: none; }
+@media (max-width: 1020px) {
+    #about .site-about-grid { grid-template-columns: 1fr; align-items: start; }
+    #about .site-copy-card { max-width: 72ch; }
+}
 @media (max-width: 720px) { #about .site-check-list { grid-template-columns: 1fr; } }
