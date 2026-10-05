@@ -1,0 +1,32 @@
+/* A lighter texture and an open contact layout complete the page. */
+.site-footer .site-footer__texture { opacity: .08; }
+.site-footer .site-footer__contact {
+    background: transparent;
+    border: 0;
+    border-top: 2px solid rgba(184,155,99,.5);
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    padding: 1.25rem 0 0;
+}
+.site-footer .site-form {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: none;
+    width: 100%;
+    padding: 0;
+    margin-inline: 0;
+}
+.site-footer .site-form input,
+.site-footer .site-form textarea,
+.site-footer .site-form .site-button { border-radius: 5px; }
+.site-footer .site-footer__meta { align-self: start; padding-top: 4.5rem; }
+#work .site-project-card__mark { border-radius: 3px; }
+@media (min-width: 900px) {
+    .site-footer .site-footer__grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); }
+}
+@media (max-width: 899px) {
+    .site-footer .site-footer__meta { padding-top: 0; }
+}
