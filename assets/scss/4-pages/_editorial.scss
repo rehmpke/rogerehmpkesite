@@ -109,3 +109,34 @@
     .home-topbar__nav { gap: .15rem 1rem; }
     .case-study-evidence { padding: .8rem; }
 }
+
+/* Case evidence: platform relationships and shared responsibilities, with room for detail. */
+.case-study-evidence--wayfinding { background: #e1eeea; border-left-color: #14716d; border-radius: 24px 3px 3px 3px; }
+.case-study-evidence--wayfinding img { height: auto; max-height: 30rem; }
+.case-study-evidence--wayfinding figcaption { color: #214b49; }
+.case-architecture { margin: 1.8rem 0 2rem; padding: 1.5rem; background: #edf0f7; border-top: 4px solid #555c91; border-radius: 3px 28px 3px 3px; }
+.case-architecture__platforms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.case-architecture__platform { padding: 1.25rem; background: #fff; border: 1px solid #ced3e2; border-radius: 4px; }
+.case-architecture__label { display: block; color: #454d75; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.case-architecture__platform strong { display: block; margin: .6rem 0; color: #192d47; font-size: 1.4rem; }
+.case-architecture__platform > span:last-child { display: block; color: #35465a; line-height: 1.6; }
+.case-architecture__connector { margin: 1.25rem 0 1.75rem; padding-left: 1rem; border-left: 3px solid #555c91; color: #35465a; line-height: 1.6; }
+.case-architecture__workflow-label { margin-bottom: 1rem; }
+.case-architecture__workflow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.2rem; }
+.case-architecture__workflow > div { position: relative; border-top: 2px solid #797fa6; padding-top: .75rem; }
+.case-architecture__workflow > div:not(:last-child)::after { content: '→'; position: absolute; right: -1rem; top: .7rem; color: #555c91; }
+.case-architecture__workflow strong { display: block; color: #192d47; font-size: .9rem; }
+.case-architecture__workflow span { display: block; margin-top: .4rem; color: #35465a; font-size: .85rem; line-height: 1.5; }
+.case-architecture figcaption { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #ced3e2; color: #35465a; font-size: .9rem; line-height: 1.6; }
+.case-study-page .accessibility-model { gap: 1.25rem; }
+.case-study-page .accessibility-model .proof-card { border: 0; border-top: 4px solid #14716d; border-radius: 3px 22px 3px 3px; background: #e4efeb; padding: 1.5rem; box-shadow: none; }
+.case-study-page .accessibility-model .proof-card:nth-child(even) { background: #eff3e8; border-top-color: #69794d; }
+.case-study-page .accessibility-model h4 { color: #174c49; font-size: 1.1rem; line-height: 1.4; }
+.case-study-page .accessibility-model p { color: #304c48; line-height: 1.65; }
+@media (max-width: 760px) {
+    .case-architecture { padding: 1rem; }
+    .case-architecture__platforms { grid-template-columns: 1fr; gap: 1rem; }
+    .case-architecture__workflow { grid-template-columns: 1fr; gap: 1.4rem; }
+    .case-architecture__workflow > div { padding-left: 1rem; padding-top: 0; border-top: 0; border-left: 2px solid #797fa6; }
+    .case-architecture__workflow > div:not(:last-child)::after { content: '↓'; left: .75rem; right: auto; top: auto; bottom: -1.4rem; }
+}
