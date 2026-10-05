@@ -1,0 +1,7 @@
+<nav class="site-primary-nav" aria-label="Primary navigation">
+    <a href="/#about">About</a>
+    <a href="/#work">Projects</a>
+    <a href="/case-studies/"{% if page.url contains '/case-studies/' %} class="is-current"{% endif %}{% if page.url == '/case-studies/' or page.url == '/case-studies/index.html' %} aria-current="page"{% endif %}>Case Studies</a>
+    <a href="/assets/files/roger-ehmpke-resume.pdf" target="_blank" rel="noopener">Resume <span class="site-sr-only">(PDF, opens in a new tab)</span></a>
+    <a href="/#contact">Contact</a>
+</nav>
