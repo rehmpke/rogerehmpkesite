@@ -92,10 +92,6 @@
 /* Keep direct navigation in the opening without changing the hero artwork. */
 .home-topbar { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 1rem 2rem; flex-wrap: wrap; }
 .site-hero .home-topbar .site-logo { margin: 0; }
-.home-topbar__nav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
-.home-topbar__nav a { display: inline-flex; align-items: center; min-height: 44px; color: #004763; font-size: .95rem; font-weight: 600; text-decoration: underline; text-underline-offset: .25em; }
-.home-topbar__nav a:hover { color: #071f35; }
-.home-topbar__nav a:focus-visible { outline: 3px solid #004763; outline-offset: 4px; }
 .home-proof__item { display: block; text-decoration: none; }
 .home-proof__item:hover { text-decoration: none; background: rgba(0,71,99,.04); }
 .home-proof__item span { text-decoration: underline; text-underline-offset: .2em; }
@@ -106,8 +102,7 @@
 .case-study-evidence figcaption { margin-top: 1rem; color: #453729; font-size: .9rem; line-height: 1.6; }
 @media (max-width: 600px) {
     .home-topbar { gap: .5rem; }
-    .home-topbar__nav { gap: .15rem 1rem; }
-    .case-study-evidence { padding: .8rem; }
+        .case-study-evidence { padding: .8rem; }
 }
 
 /* Case evidence: platform relationships and shared responsibilities, with room for detail. */

@@ -41,9 +41,10 @@ permalink: /case-studies/kcc-intranet-recovery-workflow-modernization/
 ---
 
 {% include micro-top.html %}
-<section id="main-content" tabindex="-1" class="space-top space-bottom case-study-page" style="padding-left: 1em; padding-right: 1em;">
+<section id="main-content" tabindex="-1" class="space-top space-bottom case-study-page case-study-page--portal" style="padding-left: 1em; padding-right: 1em;">
     <div class="container" style="grid-column: 1; grid-row: 8; line-height: 1.6;">
         <article style="margin: 0 auto; max-width: 980px;">
+<div class="case-opening">
 <p class="eyebrow">Case Study</p>
             <h1 class="case-study-title">MyKCC Portal Modernization and Digital Workplace Transformation</h1>
             <p class="lede">
@@ -55,6 +56,32 @@ permalink: /case-studies/kcc-intranet-recovery-workflow-modernization/
                 <a href="#key-decision">Key decision</a>
                 <a href="#results">Results</a>
             </nav>
+            </div>
+
+                <figure id="portal-model" class="case-architecture case-architecture--feature" aria-labelledby="portal-model-caption">
+                    <div class="case-architecture__platforms">
+                        <div class="case-architecture__platform">
+                            <span class="case-architecture__label">Employee knowledge</span>
+                            <strong>SharePoint Online</strong>
+                            <span>Department resources, policies, forms, and internal documentation</span>
+                        </div>
+                        <div class="case-architecture__platform">
+                            <span class="case-architecture__label">Portal access &amp; discovery</span>
+                            <strong>Ellucian Experience</strong>
+                            <span>Applications, student services, audience-specific cards, and employee access points</span>
+                        </div>
+                    </div>
+                    <div class="case-architecture__connector">MyKCC Info Sites connects employees to department-owned SharePoint resources</div>
+                    <div class="case-architecture__label case-architecture__workflow-label">Update publishing workflow</div>
+                    <div class="case-architecture__workflow">
+                        <div><strong>SharePoint</strong><span>Author content</span></div>
+                        <div><strong>Power Automate</strong><span>Process content</span></div>
+                        <div><strong>FTP delivery</strong><span>Move files</span></div>
+                        <div><strong>Static publishing</strong><span>Publish communications</span></div>
+                        <div><strong>Experience</strong><span>Surface content</span></div>
+                    </div>
+                    <figcaption id="portal-model-caption">Different platforms serve different needs. Connected publishing preserves institutional communications within the modern portal.</figcaption>
+                </figure>
 
             <div class="metric-strip" aria-label="Project highlights">
                 <div><strong>May 2023</strong><span>Portal Launch</span></div>
@@ -156,30 +183,7 @@ permalink: /case-studies/kcc-intranet-recovery-workflow-modernization/
 
             <section class="section-block">
                 <h3>The architecture</h3>
-                <figure class="case-architecture" aria-labelledby="portal-model-caption">
-                    <div class="case-architecture__platforms">
-                        <div class="case-architecture__platform">
-                            <span class="case-architecture__label">Employee knowledge</span>
-                            <strong>SharePoint Online</strong>
-                            <span>Department resources, policies, forms, and internal documentation</span>
-                        </div>
-                        <div class="case-architecture__platform">
-                            <span class="case-architecture__label">Portal access &amp; discovery</span>
-                            <strong>Ellucian Experience</strong>
-                            <span>Applications, student services, audience-specific cards, and employee access points</span>
-                        </div>
-                    </div>
-                    <div class="case-architecture__connector">MyKCC Info Sites connects employees to department-owned SharePoint resources</div>
-                    <div class="case-architecture__label case-architecture__workflow-label">Update publishing workflow</div>
-                    <div class="case-architecture__workflow">
-                        <div><strong>SharePoint</strong><span>Author content</span></div>
-                        <div><strong>Power Automate</strong><span>Process content</span></div>
-                        <div><strong>FTP delivery</strong><span>Move files</span></div>
-                        <div><strong>Static publishing</strong><span>Publish communications</span></div>
-                        <div><strong>Experience</strong><span>Surface content</span></div>
-                    </div>
-                    <figcaption id="portal-model-caption">Different platforms serve different needs. Connected publishing preserves institutional communications within the modern portal.</figcaption>
-                </figure>
+                <p class="case-architecture-reference"><a href="#portal-model">See the connected platform and publishing diagram above</a></p>
                 <p>
                     Ellucian Experience provides portal access, applications, student services, personalized resources, communications, and card-based discovery. SharePoint Online holds employee department resources, policies, forms, procedures, contacts, and internal documentation.
                 </p>
