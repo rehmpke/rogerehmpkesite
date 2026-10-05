@@ -1,5 +1,5 @@
 ---
-work_name: "Institutional Accessibility Program Mobilization"
+work_name: "Institutional Accessibility Program"
 order: 1
 featured: true
 marker: "01"

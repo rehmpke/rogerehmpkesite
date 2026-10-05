@@ -88,3 +88,20 @@
 .case-study-jumps { display: flex; flex-wrap: wrap; gap: .65rem 1.5rem; margin: 1.4rem 0 1.8rem; }
 .case-study-jumps a { color: #004763; font-size: .95rem; font-weight: 600; text-decoration: underline; text-underline-offset: .2em; }
 .case-study-page h3[id] { scroll-margin-top: 1.5rem; }
+
+/* Keep direct navigation in the opening without changing the hero artwork. */
+.home-topbar { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 1rem 2rem; flex-wrap: wrap; }
+.site-hero .home-topbar .site-logo { margin: 0; }
+.home-topbar__nav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
+.home-topbar__nav a { display: inline-flex; align-items: center; min-height: 44px; color: #004763; font-size: .95rem; font-weight: 600; text-decoration: underline; text-underline-offset: .25em; }
+.home-topbar__nav a:hover { color: #071f35; }
+.home-topbar__nav a:focus-visible { outline: 3px solid #b69768; outline-offset: 4px; }
+.case-study-page .case-study-title { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; letter-spacing: -.03em; max-width: 28ch; margin: 0 0 1.5rem; }
+.case-study-evidence { margin: 1.5rem 0 2rem; border-left: 4px solid #a84d35; background: #f0e2cc; padding: 1.25rem; border-radius: 3px 24px 3px 3px; }
+.case-study-evidence img { display: block; width: 100%; max-height: 22rem; object-fit: contain; }
+.case-study-evidence figcaption { margin-top: 1rem; color: #453729; font-size: .9rem; line-height: 1.6; }
+@media (max-width: 600px) {
+    .home-topbar { gap: .5rem; }
+    .home-topbar__nav { gap: .15rem 1rem; }
+    .case-study-evidence { padding: .8rem; }
+}
