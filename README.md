@@ -1,188 +1,96 @@
 # rogerehmpke.com
 
-[![Amplify](https://img.shields.io/badge/AWS%20Amplify-Automated%20Deploys-ff9900?style=flat&logo=awsamplify&logoColor=white)]()
-![Node Version](https://img.shields.io/badge/Node-22.15.0-339933?style=flat&logo=node.js&logoColor=white)
-![Jekyll](https://img.shields.io/badge/Jekyll-Custom%20Build-CC0000?style=flat&logo=jekyll&logoColor=white)
-![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-lightgrey?style=flat)
+This repository powers [Roger Ehmpke’s personal portfolio](https://www.rogerehmpke.com): higher-ed web strategy, accessibility governance, CMS architecture, analytics, and search and AI discoverability.
 
-This repository powers [rogerehmpke.com](https://www.rogerehmpke.com), a clarity-led digital portfolio centered on UX strategy, accessibility, content governance, and sustainable web operations in higher education and public sector work.
+Jekyll renders the site. Webpack builds the JavaScript and CSS. AWS Amplify builds and deploys changes merged into `master`.
 
-The site is custom-built using Jekyll 4.4.x and a modern Webpack 5 pipeline (Babel, Sass, PostCSS/Autoprefixer, custom hash generation) with automatic CI/CD deployments via AWS Amplify.
+## Local setup
 
----
+Use Ruby **3.3.4** and Node **22.15.0**, as recorded in `.ruby-version` and `.nvmrc`. These files guide compatible version managers; they do not install or switch runtimes by themselves. With NVM installed, run `nvm install` and `nvm use` from the repository directory.
 
-## 🔧 Requirements
-
-Ruby Version: 3.3.4 (automatically applied via .ruby-version)
-
-### Jekyll & Bundler (Ruby)
+Install dependencies:
 
 ```bash
-$ gem install jekyll
-$ gem install bundler
-$ bundle install
+gem install bundler
+bundle install
+npm install
 ```
 
-### Nodejs / npm
+Jekyll is installed through the Gemfile; a separate global Jekyll installation is unnecessary. This repository currently ignores `Gemfile.lock` and `package-lock.json`, so dependency resolution can differ between fresh installs.
 
-I use **NVM (Node Version Manager)**:  
-https://github.com/creationix/nvm
+## Development
 
-- The `.nvmrc` file in this repo locks Node to **v22.15.0**  
-  (ensures consistent builds and avoids dependency issues)
-- Or install Node manually: https://nodejs.org/
-
-After installing NVM:
+Start the asset watcher:
 
 ```bash
-$ nvm use
+npm run dev
 ```
 
----
-
-## 🧱 Architecture Overview
-
-This project uses a split-pipeline workflow:
-
-### 1. Jekyll handles:
-
-- Page rendering  
-- Collections + includes  
-- Layout structure  
-- Sitemap generation (`jekyll-sitemap`)  
-- SEO, schema, and metadata  
-- Final HTML output (`_site`)  
-
-### 2. Webpack handles:
-
-- JavaScript bundling  
-- Sass → CSS via `sass-embedded`  
-- PostCSS + Autoprefixer for browser compatibility  
-- Babel transforms using Browserslist targets  
-- Custom `MyHashWebpackPlugin` writes `_data/hash.yml` for cache-busting  
-
-**Outputs:**
-
-- `assets/css/style.css`  
-- `assets/js/index.js`
-
-### 3. AWS Amplify handles:
-
-- Automated detection of changes to the master branch
-- Install + build (Node + Ruby)
-- Runs Webpack production build
-- Runs Jekyll production build
-- Deploys the generated _site directory
-
-This architecture keeps the project lightweight, predictable, and extremely maintainable.
-
-### Why Amplify?
-
-I use AWS Amplify here for simplicity. I manage CloudFront and lower-level AWS services in other projects, but for a single-maintainer portfolio, Amplify handles CI/CD, build, and static hosting in one place. The deployment workflow stays trivial: push to `master` → build → deploy, with no extra infrastructure to babysit.
-
-## 🚀 Development
-
-### Start Webpack (asset bundling)
+In a second terminal, serve the site:
 
 ```bash
-$ npm run dev
+bundle exec jekyll serve --livereload
 ```
 
-Webpack in **development** mode with:
+Open the local URL printed by Jekyll. Restart Jekyll after changing `_config.yml`.
 
-- File watching
-- Source maps for debugging
-- SCSS → CSS processing
-- Babel transpilation
-- Hash injection for template cache busting
+Webpack watches JavaScript and Sass sources, generates development source maps, and updates the asset hash used by Jekyll. Local contact and assistant requests still use the configured AWS endpoints; they are not mock services. Turnstile testing also depends on the widget’s configured hostnames.
 
----
+## Production build and deployment
 
-### Run Jekyll locally
-
-In a second terminal:
+Run Webpack before Jekyll so the generated HTML uses the latest assets and cache-busting hash:
 
 ```bash
-$ bundle exec jekyll serve --livereload
+npm run build
+JEKYLL_ENV=production bundle exec jekyll build --trace
 ```
 
-This regenerates the site and serves it from _site/ while Webpack handles live asset compilation.
+The finished site is in `_site/`. Amplify should run the same commands after installing Node and Ruby dependencies, then publish `_site` as its artifact directory. The active Amplify build specification is managed in AWS; there is no `amplify.yml` in this repository.
 
----
+Merging into `master` triggers deployment. Check Amplify’s deployment status before verifying the live page; a successful build alone does not confirm that the new version is serving. For CSS or JavaScript changes, compare the asset query-string hash in the live page source with `_data/hash.yml`. For content changes, look for the edited text in the live page source.
 
-### Contact Form
+## Architecture and editing map
 
-The contact form submits to AWS API Gateway, which invokes the `SendContactEmail` Lambda function. Submissions are handled server-side without a dedicated app server.
+| Location | Purpose |
+| --- | --- |
+| `index.html` | Homepage content and layout |
+| `case-studies/` | Case study index and individual stories |
+| `_includes/`, `_layouts/` | Shared Jekyll markup |
+| `assets/scss/` | Sass sources, including page and component styles |
+| `assets/js/src/` | JavaScript sources bundled by Webpack |
+| `assets/css/style.css`, `assets/js/index.js` | Generated production assets |
+| `buildtools/myHashWebpackPlugin.js`, `_data/hash.yml` | Webpack hash generation and Jekyll cache busting |
+| `_includes/head.html` | Titles, canonical links, descriptions, and sharing metadata |
+| `_includes/schema/jsonld.html` | Shared structured data |
+| `assets/img/og-card.svg`, `assets/img/og-card.png` | Editable sharing-card source and published image |
+| `assets/files/roger-ehmpke-resume.pdf` | Downloadable résumé |
+| `privacy.html`, `accessibility-in-practice.html` | Public privacy and accessibility statements |
+| `_config.yml` | Site configuration and sitemap plugin |
 
-Cloudflare Turnstile is integrated into the footer contact form to help reduce automated submissions. The browser requires a Turnstile token before submitting and sends it to the endpoint as `turnstileToken`. The widget resets after each submission attempt.
+Edit JavaScript and Sass sources rather than their generated output. After an asset change, rebuild and commit the generated CSS/JavaScript and `_data/hash.yml` together. HTML and content changes generally need only the Jekyll build.
 
-Frontend integration:
+Page frontmatter uses `description` for concise search and sharing summaries, `schema_description` for detailed structured data, and `ai_context` for page-specific assistant context. Keep these aligned with the visible content and supported evidence. The `jekyll-sitemap` plugin generates the sitemap during the build.
 
-- `_includes/footer.html` — contact form and Turnstile widget
-- `_includes/scripts/vendor-cdn.html` — Cloudflare Turnstile script
-- `assets/js/src/contact.js` — form validation, token submission, and widget reset
+## Contact form
 
-The Lambda handler and Cloudflare widget configuration are managed outside this repository. The handler must validate the token with Cloudflare's Siteverify API before processing a submission; the frontend widget alone does not enforce server-side protection. Keep the Turnstile secret key in the backend configuration, outside the browser and repository.
+The footer form sends requests to AWS API Gateway and the externally managed `SendContactEmail` Lambda function.
 
----
+- `_includes/footer.html` contains the form and Cloudflare Turnstile widget.
+- `assets/js/src/contact.js` validates the form, sends `turnstileToken`, and resets the widget after each submission attempt.
+- `_includes/scripts/vendor-cdn.html` loads the Turnstile script.
 
-## 📦 Production Build (Amplify)
+The Lambda handler and Cloudflare configuration are outside this repository. The handler must verify the token with Cloudflare’s Siteverify API before processing a submission. Keep the secret key in backend configuration. The browser stops waiting after 30 seconds and preserves the draft on failure; a timeout does not establish whether the backend delivered the message.
 
-AWS Amplify performs:
+## Portfolio assistant
 
-1. Install Ruby + Node dependencies
-2. Run Webpack production build
-3. Run Jekyll build
-4. Deploy _site as the live website
+The assistant’s interface and request handling live in `_includes/scripts/vendor-cdn.html`. It sends the question, page `ai_context`, shared portfolio context, and recent conversation history to an externally managed AWS API Gateway/Lambda endpoint. Browser conversation history uses session storage.
 
-Push to `master`→ automatic deployment.
+Update the shared context and exact terminology when Roger’s role or portfolio evidence changes. The assistant should ground answers in that context and avoid inventing outcomes or responsibilities. Requests stop waiting after 60 seconds and allow the visitor to retry.
 
-No manual S3 uploads are required.
+The assistant does not currently submit a Turnstile token. The contact form’s Turnstile integration does not protect the assistant endpoint. Backend model settings, access controls, and request handling are managed in AWS.
 
----
-
-## 🧰 Tech Stack
-
-- **Jekyll 4.4.x** — static site generation
-- **Webpack 5** — bundling and asset pipeline
-- **Babel** — ESNext → browser-ready JS
-- **Sass (sass-embedded)** — modern SCSS compiler
-- **PostCSS + Autoprefixer** — CSS transformations
-- **Custom Webpack Hash Plugin** — cache busting
-- **AWS Amplify** — CI/CD + hosting
-- **AWS Lambda** — serverless handler for contact form submissions
-- **AWS API Gateway** — contact form API endpoint
-- **Cloudflare Turnstile** — contact form bot protection widget
-
----
-
-## 📁 Key Directories
-
-A focused view of the directories involved in the Jekyll + Webpack pipeline.
-
-``` text
-rogerehmpkesite/
-├── assets/              # Source JS/SCSS + built output from Webpack
-├── _data/               # Contains hash.yml injected by Webpack for cache-busting
-├── buildtools/          # Custom MyHashWebpackPlugin
-├── _sass/               # SCSS partials (Webpack compiles these)
-├── _includes/           # Jekyll partials
-├── _layouts/            # Jekyll layouts
-├── _site/               # Built site output (ignored)
-│
-├── package.json         # Webpack/Babel/PostCSS config
-├── webpack.config.js    # Webpack pipeline config
-├── postcss.config.js    # Autoprefixer setup
-├── Gemfile              # Ruby & Jekyll dependencies
-├── .nvmrc               # Node 22.15.0
-└── .ruby-version        # Ruby 3.3.4
-```
-
----
-
-## 🔒 License
+## License
 
 © 2025 Roger Ehmpke. All rights reserved.
 
-This repository is publicly visible for transparency but not licensed for reuse.
-See the `LICENSE` file for full details.
+This repository is publicly visible for professional transparency and is not licensed for reuse. See [LICENSE](LICENSE). Third-party dependencies retain their own licenses.
