@@ -310,7 +310,11 @@
         const introText = `
 Hi there — I'm here to help you learn more about Roger Ehmpke's work.
 
-Roger leads higher-ed web strategy and digital experience, with a focus on accessibility governance, CMS architecture, UX, analytics, AI-ready content, and public-facing digital systems that are easier to govern and maintain.
+Roger is Director of Web Strategy and Digital Experience at Kankakee Community College. He leads a small web team and works across departments on web strategy, accessibility governance, CMS architecture, UX, analytics, and public-facing digital systems.
+
+His search and AI discoverability work includes SEO (Search Engine Optimization), AEO (Answer Engine Optimization), and GEO (Generative Engine Optimization). This work uses student-focused program content, metadata, schema, internal linking, and question-based content to support discovery through search engines and AI-generated answers. GA4 and Search Console inform priorities and review.
+
+Roger also serves on KCC’s AI committee, contributing to policy discussions, operational direction, and responsible implementation.
 
 His work connects institutional strategy with technical execution — helping teams improve accessibility, clarify content, strengthen digital governance, and prepare web systems for changing search, AI, and compliance expectations.
 
@@ -318,7 +322,8 @@ Ask about his work, selected projects, or digital leadership approach. Use the C
 `;
 
         const vagueQuestionInstruction = `
-If the user asks a short or vague question, infer that they may be asking about Roger Ehmpke's work, projects, experience, KCC role, accessibility governance, CMS architecture, AI-ready content, or higher-ed web strategy. Answer helpfully using the provided context instead of saying "No response."
+If the user asks a short or vague question, infer that they may be asking about Roger Ehmpke's work, projects, experience, KCC role, accessibility governance, CMS architecture, search and AI discoverability, or higher-ed web strategy. Answer helpfully using the provided context instead of saying "No response."
+AEO means Answer Engine Optimization. GEO means Generative Engine Optimization. Use these exact definitions. Ground answers in the supplied portfolio context; do not invent results or responsibilities. If a detail is not supported, say so briefly.
 `;
 
         const trigger = document.getElementById("ai-widget-button");
@@ -554,7 +559,7 @@ If the user asks a short or vague question, infer that they may be asking about 
                         answerText.toLowerCase() !== "no response." &&
                         answerText.toLowerCase() !== "no response"
                         ? answerText
-                        : "I can help with Roger's KCC work, accessibility governance, CMS architecture, AI-ready content, web strategy, or selected projects. Try asking: What does Roger do at KCC?";
+                        : "I can help with Roger's KCC work, accessibility governance, CMS architecture, search and AI discoverability, web strategy, or selected projects. Try asking: What does Roger do at KCC?";
 
                 appendMessage("assistant", rawAnswer, true);
                 addToHistory("assistant", rawAnswer);
