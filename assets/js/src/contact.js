@@ -51,8 +51,12 @@ function contactMe() {
     const endpoint =
       "https://f1gpiut934.execute-api.us-east-1.amazonaws.com/default/SendContactEmail";
 
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 30000);
+
     try {
       const response = await fetch(endpoint, {
+        signal: controller.signal,
         method: "POST",
         body: JSON.stringify({
           senderName,
@@ -74,9 +78,11 @@ function contactMe() {
       form.reset();
     } catch (error) {
       console.error("Contact form error:", error);
-      resultText.textContent =
-        "Unable to send your message. Your message is still here; please try again.";
+      resultText.textContent = controller.signal.aborted
+        ? "The request timed out. I couldn’t confirm delivery. Your message is still here."
+        : "Unable to confirm delivery. Your message is still here; please try again.";
     } finally {
+      clearTimeout(timeout);
       sending = false;
       button.disabled = false;
 

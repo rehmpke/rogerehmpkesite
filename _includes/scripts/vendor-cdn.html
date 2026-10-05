@@ -518,8 +518,12 @@ If the user asks a short or vague question, infer that they may be asking about 
 
             inputField.value = "";
 
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), 60000);
+
             try {
                 const response = await fetch(endpoint, {
+                    signal: controller.signal,
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -559,18 +563,27 @@ If the user asks a short or vague question, infer that they may be asking about 
             } catch (error) {
                 console.error("Chat fetch error:", error);
 
-                const errorMessage =
-                    "I could not connect to the assistant. Please try again or use the contact form.";
+                const errorMessage = controller.signal.aborted
+                    ? "The response took too long. Please try again or use the contact form."
+                    : "I could not connect to the assistant. Please try again or use the contact form.";
+
+                if (!inputField.value) {
+                    inputField.value = input;
+                }
 
                 appendMessage("assistant", errorMessage);
-                status.textContent =
-                    "The assistant could not be reached.";
+                status.textContent = controller.signal.aborted
+                    ? "The request timed out. Your question is ready to retry."
+                    : "The assistant could not be reached. Your question is ready to retry.";
             } finally {
+                clearTimeout(timeout);
                 requestInProgress = false;
                 submitButton.disabled = false;
                 submitButton.textContent = "Ask";
                 panel.removeAttribute("aria-busy");
-                inputField.focus();
+                if (!panel.hidden) {
+                    inputField.focus();
+                }
             }
         });
 
