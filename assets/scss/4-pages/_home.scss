@@ -3809,3 +3809,11 @@ body > section.space-top.space-bottom li {
         font-size: 0.95rem;
     }
 }
+/* Background leads into the approach instead of leaving an empty column. */
+#about .site-about-grid { grid-template-columns: 1fr; gap: 2rem; }
+#about .site-copy-card { background: transparent; border: 0; border-radius: 0; box-shadow: none; padding: .5rem 0; max-width: 72ch; margin-inline: auto; }
+#about .site-dark-card { width: 100%; box-sizing: border-box; }
+#about .site-dark-card > p, #about .site-dark-card h3 { max-width: 68ch; }
+#about .site-check-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.5rem; }
+#about .site-check-list li { margin: 0; }
+@media (max-width: 720px) { #about .site-check-list { grid-template-columns: 1fr; } }
