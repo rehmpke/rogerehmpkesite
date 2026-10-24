@@ -19,7 +19,8 @@
 #recommendations .site-quote-card { border: 0; border-top: 2px solid #b69768; border-radius: 0; background: transparent; box-shadow: none; padding: 1.5rem 0 0; }
 #recommendations .site-quote-card:hover { transform: none; box-shadow: none; }
 #recommendations .site-quote-card::before, #recommendations .site-quote-card__mark { display: none; }
-#recommendations .site-quote-card .site-quote-card__feedback { font-family: 'Roboto Slab', Georgia, serif; line-height: 1.7; margin-top: 1rem; }
+#recommendations .site-quote-card .site-quote-card__feedback,
+#recommendations .site-quote-card blockquote { font-family: 'Roboto Slab', Georgia, serif; line-height: 1.7; margin-top: 1rem; }
 @media (min-width: 900px) {
     /* Governance and portal work bookend the two product-focused projects. */
     .site-project-card--system:first-child, .site-project-card--system:last-child { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.5fr); }
