@@ -2,19 +2,17 @@
   <div class="recommendations__container">
     <div class="recommendations__content">
       <header class="recommendations__header">
-        <h2 id="recommendations-h2">Recommendations</h2>
-        <p class="intro">Here's what clients and collaborators say about working with me on web systems and strategy.</p>
+        <h2 id="recommendations-h2">Collaborator Feedback</h2>
+        <p class="intro">Paraphrased highlights of feedback shared by past clients and collaborators.</p>
       </header>
     </div>
     <div class="recommendations__list container">
       {% assign sorted_recommendation = site.recommendations | sort: "order" %}
       {% for recommendation in sorted_recommendation %}
-      <div class="recommendations__box space-bottom" itemscope itemtype="https://schema.org/Recommendation">
-        <h3 class="recommendations__name" itemprop="name">{{ recommendation.recommended_person }}</h3>
-        <p class="recommendations__title" itemprop="jobTitle">{{ recommendation.recommended_title }}</p>
-        <blockquote class="recommendations__quote" itemprop="reviewbody">
-          {{ recommendation.recommended_quote }}
-        </blockquote>
+      <div class="recommendations__box space-bottom">
+        <h3 class="recommendations__name" >{{ recommendation.recommended_person }}</h3>
+        <p class="recommendations__title" >{{ recommendation.recommended_title }}</p>
+        <p class="recommendations__quote">{{ recommendation.recommended_quote }}</p>
       </div>
       {% endfor %}
     </div>
